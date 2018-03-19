@@ -1,0 +1,62 @@
+Started GET "/" for 127.0.0.1 at 2018-03-19 15:23:29 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kate/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kate/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 184ms (Views: 6.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:23:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 532ms (Views: 529.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:41:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (197.6ms)
+Completed 500 Internal Server Error in 205ms
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book' for #<#<Class:0x00007ff50bcb3ec0>:0x00007ff50bcb0978>):
+    2: <ul>
+    3:   <% @tasks.each do |task| %>
+    4:     <li>
+    5:       <span class="title"><%= link_to task[:title], task_path(book[:id])%></span>
+    6:     </li>
+    7:   <% end %>
+    8: </ul>
+  
+app/views/tasks/index.html.erb:5:in `block in _app_views_tasks_index_html_erb__1930398860566025570_70345204409260'
+app/views/tasks/index.html.erb:3:in `each'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb__1930398860566025570_70345204409260'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:42:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:42:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 16.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:02:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 20ms (Views: 17.4ms)
+
+
+Started GET "/tasks/show.2" for 127.0.0.1 at 2018-03-19 16:02:37 -0700
+Processing by TasksController#show as 
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 61ms (Views: 36.2ms)
+
+
