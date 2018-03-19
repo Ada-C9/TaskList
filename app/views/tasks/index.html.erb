@@ -1,2 +1,11 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h2>Task List</h2>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <span class="short_desc">
+      <%= link_to task[:short_desc], index_path(task[:id]) %>
+    </span>
+    by <%= task[:due_date] %>
+  </li>
+  <% end %>
+</ul>
