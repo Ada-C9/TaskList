@@ -1,2 +1,11 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1>Task Waz Up</h1>
+<h2><%= @tasks[:task] %></h2>
+<p><%= @tasks[:description] %></p>
+<ul>
+  <% @tasks[:sub_tasks].each do |task| %>
+    <li>
+      <%= task %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "Tasks", tasks_path %>
