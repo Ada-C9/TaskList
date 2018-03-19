@@ -119,3 +119,17 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 37ms (Views: 34.7ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:49:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 431ms (Views: 167.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 15:50:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 32.9ms)
+
+

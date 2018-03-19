@@ -1,5 +1,10 @@
 class TasksController < ApplicationController
   def index
-    @tasks = [{task: "read textbook", status: "incomplete"},{task: "do laundry", status: "incomplete"}, {task: "finish website", status: "incomplete"}, {task: "practice derby edges", status: "incomplete"}]
+    @tasks = [
+      {task: "read textbook", status: :INCOMPLETE},
+      {task: "do laundry", status: :INCOMPLETE},
+      {task: "finish website", status: :INCOMPLETE},
+      {task: "practice derby edges", status: :INCOMPLETE},
+    ]
   end
 end
