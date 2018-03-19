@@ -1,0 +1,10 @@
+
+<h2>Your Taks List</h2>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+      <%= task[:name] %>
+      <%= task[:status] %>
+  </li>
+  <% end %>
+</ul>
