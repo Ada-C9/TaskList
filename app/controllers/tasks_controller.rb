@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   TASK_LIST = [
-    "Wash dog", "Make dinner", "Call mom"
+    "Wash dog", "Make dinner", "Call mom", "Finish homework", "Vacuum"
   ]
 
   def index
