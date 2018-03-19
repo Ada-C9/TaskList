@@ -9,4 +9,11 @@ class TasksController < ApplicationController
   def index
     @tasks = TASKS_LIST
   end
+
+  def show
+    id = params[:id]
+    @task = TASKS_LIST.find do |task|
+      task[:id] == id.to_i
+    end
+  end
 end
