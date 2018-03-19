@@ -1,0 +1,12 @@
+
+<h2>Welcome to Brenda's Tasks list! </h2>
+
+<p>She has to do this during this week:</p>
+
+<ul>
+  <%  @tasks.each do |task| %>
+  <li>
+    <strong><%= task %></strong>
+  </li>
+  <%end %>
+</ul>
