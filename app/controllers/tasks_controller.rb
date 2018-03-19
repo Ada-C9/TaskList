@@ -12,6 +12,10 @@ class TasksController < ApplicationController
   end
 
   def show
+    id = params[:id]
+    @tasks = TASK_LIST.find do |task|
+      task[:id] == id.to_i
+    end
   end
 
   def create

@@ -60,3 +60,78 @@ Processing by TasksController#show as
 Completed 200 OK in 61ms (Views: 36.2ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:16:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 23ms (Views: 20.1ms)
+
+
+Started GET "/tasks/show.1" for 127.0.0.1 at 2018-03-19 16:16:50 -0700
+Processing by TasksController#show as 
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 58ms (Views: 35.9ms)
+
+
+Started GET "/tasks/show.4" for 127.0.0.1 at 2018-03-19 16:16:56 -0700
+Processing by TasksController#show as 
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 59ms (Views: 38.8ms)
+
+
+Started GET "/tasks/show.1" for 127.0.0.1 at 2018-03-19 16:17:27 -0700
+Processing by TasksController#show as 
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 56ms (Views: 35.6ms)
+
+
+Started GET "/tasks/show.1" for 127.0.0.1 at 2018-03-19 16:18:24 -0700
+Processing by TasksController#show as 
+Completed 500 Internal Server Error in 93ms
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x00007ff5121100f8>):
+  
+app/controllers/tasks_controller.rb:15:in `show'
+Started GET "/tasks/show.1" for 127.0.0.1 at 2018-03-19 16:18:38 -0700
+Processing by TasksController#show as 
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 32.2ms)
+
+
+Started GET "/tasks/show.1" for 127.0.0.1 at 2018-03-19 16:19:24 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"show"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 37.7ms)
+
+
+Started GET "/tasks/show.4" for 127.0.0.1 at 2018-03-19 16:19:28 -0700
+Processing by TasksController#show as 
+  Parameters: {"id"=>"show"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 54ms (Views: 33.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:20:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 368ms (Views: 199.8ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-19 16:20:10 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 22.1ms)
+
+
