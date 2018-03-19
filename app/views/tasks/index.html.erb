@@ -1,10 +1,13 @@
 
-<h2>Your Taks List</h2>
+<section class="tasks-list">
+<h2>Your Taks </h2>
 <ul>
   <% @tasks.each do |task| %>
   <li>
+    <strong><%= task[:id] %>.</strong>
       <%= task[:name] %>
-      <%= task[:status] %>
+      <!-- <%= task[:status] %> -->
   </li>
   <% end %>
 </ul>
+</section>
