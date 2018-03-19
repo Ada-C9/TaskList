@@ -1,5 +1,11 @@
 class TasksController < ApplicationController
+
+  TASK_LIST = [
+    "Wash dog", "Make dinner", "Call mom"
+  ]
+
   def index
+    @tasks = TASK_LIST
   end
 
   def show
