@@ -1,0 +1,11 @@
+<h1>Tasks List</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <dl>
+        <dt><%= task[:id] %>. <%= link_to task[:name], task_path(task[:id]) %></dt>
+        <dd><%= task[:description] %></dd>
+      </dl>
+    </li>
+  <% end %>
+</ul>
