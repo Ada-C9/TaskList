@@ -1,0 +1,13 @@
+<h2>Welcome to your Task List</h2>
+
+<p>
+  Tasks to do
+</p>
+
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <%= task[:task].capitalize %>
+  </li>
+  <% end %>
+</ul>
