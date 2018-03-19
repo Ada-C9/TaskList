@@ -1,0 +1,12 @@
+<h2>Task List</h2>
+<ul>
+  <%@tasks.each do |task| %>
+  <li>
+    <%= link_to task[:task_type].upcase, task_path(task[:id]) %>
+     by
+    <span class="title">
+<%= task[:done_by] %>
+</span> 
+  </li>
+  <%end%>
+</ul>
