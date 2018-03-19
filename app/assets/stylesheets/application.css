@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  font-family: 'Oswald', sans-serif;
+}
+
+ul {
+   list-style-type: none;
+   font-size: 1.5em;
+ }
+
+body {
+  background-color: whitesmoke;
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
+.header {
+  font-size: 2em;
+  background-color: rgb(245, 217, 243);
+}

@@ -1,10 +1,15 @@
+<section class="header">
 <h1>Welcome to your personal Task Team!</h1>
 
-<p>Below is a list of tasks for you.</p>
-<p>Home list:</p>
+<h3>Below is a list of tasks for you.</h3>
+</section>
+<strong>Home list:</strong>
 
-<ul>
-  <% @home_list.each do |task| %>
-  <li><%= task %></li>
-  <% end %>
-</ul>
+  <ul>
+    <% @home_list.each do |task| %>
+    <li>
+      <input type="checkbox">
+      <%=task%>
+    </li>
+    <% end %>
+  </ul>
