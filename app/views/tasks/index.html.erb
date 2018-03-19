@@ -1,8 +1,10 @@
 <h2>Tasks List</h2>
-<ul>
+<ol>
   <% @tasks.each do |task| %>
   <li>
-    <%= task[:description] %>
+    <span class="description">
+      <%=  link_to task[:description], task_path(task[:id]), class: 'description-link' %>
+    </span>
   </li>
   <% end %>
-</ul>
+</ol>
