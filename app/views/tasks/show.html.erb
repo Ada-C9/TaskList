@@ -1,2 +1,15 @@
-<h2><%= @task[:id] %></h2>
-<h4><%= @task[:task] %></h3>
+<span>
+  <%= @task.id %>
+</span>
+<span>
+  <%= @task.description %>
+</span>
+
+<ul>
+  <li>
+    <%= link_to "Edit", edit_task_path %>
+  </li>
+  <li>
+    <%= link_to "Delete", task_path(@task.id), method: :delete %>
+  </li>
+</ul>

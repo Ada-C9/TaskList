@@ -4,14 +4,14 @@
   <ol>
     <% @tasks.each do |task| %>
     <li class="task">
-    <a class="title">
-      <%= link_to task[:task], task_path(task[:id]) %>
-    </a>
+      <span class="title">
+        <%= link_to task.description, task_path(task.id) %>
+      </span>
     </li>
     <%end%>
   </ol>
 </section>
 
-<div class="add-task-button">
+<!-- <div class="add-task-button">
   <h5>Add Task<h5>
-</div>
+</div> -->
