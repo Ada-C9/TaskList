@@ -4,8 +4,11 @@
 <p>Some more text</p>
 
 
-<ul>
+<ol>
   <% @tasks.each do |task| %>
-    <li><%= task %></li>
+    <li>
+      <h4><%=task.name%></h4>
+      <p><%=task.description%></p>
+    </li>
   <% end %>
-</ul>
+</ol>
