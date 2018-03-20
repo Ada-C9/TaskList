@@ -1,12 +1,17 @@
 <h1>Task List</h1>
 
-<ul>
-  <% @tasks.each do |task| %>
-  <li>
-    Task #<%= task[:id] %> --
-    <span class="title">
-      <%= link_to task[:title], task_path(task[:id]) %>
-    </span>
-  </li><br />
-  <% end %>
-</ul>
+<main>
+  <ol class="task-list">
+    <% @tasks.each do |task| %>
+    <li>
+      <span class="heading"><%= link_to task.name, task_path(task.id) %>
+      <div class="options">
+        <%= link_to "Delete", tasks_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </li>
+    <% end %>
+  </ol>
+</main>
+
+<!-- <%= link_to "Home", tasks_path %>
+<%= link_to "Add task", new_task_path %> -->

@@ -14,17 +14,38 @@
  *= require_self
  */
 body {
-  background-color: #F8C471;
+  background-color: #154360;
   font-family: monospace;
   font-size: 2em;
+  color: white;
+}
+
+aside ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+}
+
+.task-list li, a {
+  color: black;
+  text-decoration: none;
+  padding: 0;
+}
+
+.options {
+  font-size: .5em;
 }
 
 h1 {
   padding-left: 1em;
   border-bottom: dotted;
+  border-width: .1em;
 }
-span.title {
+
+.heading {
   font-weight: bold;
+  text-decoration: none;
 }
 
 main {
@@ -40,7 +61,8 @@ main {
   font-size: 1.1em;
 }
 
-main div {
+.task-page p {
   padding: .5em 0;
+  margin: 0;
   color: black;
 }

@@ -1,13 +1,16 @@
-<h1><%= @task[:title] %></h1>
+<h1><%= @task.name %></h1>
 
-<main>
-  <div>
-    <span class="title">Status:</span>
-    <%= @task[:status] %>
-  </div>
-  <div>
-    <span class="title">Description:</span> <br/>
-    <%= @task[:description] %>
-  </div>
-
+<main class="task-page">
+  <p>
+  <span class="heading">Status:</span>
+  <%= @task.status %>
+  </p>
+  <p>
+    <span class="heading">Due:</span>
+    <%= @task.due_date %>
+  </p>
+  <p>
+    <span class="heading">Description:</span> <br/>
+    <%= @task.description %>
+  </p>
 </main>
