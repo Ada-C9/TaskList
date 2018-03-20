@@ -1,0 +1,10 @@
+<h1>Tasks List</h1>
+<ul>
+<% @tasks.each do |task|%>
+  <li>
+  <span class="title">
+    <%=link_to task.name, task_path(task[:id]), class: 'title-link' %>
+  </span>
+  </li>
+<% end %>
+</ul>
