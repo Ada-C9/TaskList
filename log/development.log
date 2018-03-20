@@ -33,3 +33,81 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 28ms (Views: 25.5ms)
 
 
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-19 15:29:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 39.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:08:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 418ms (Views: 204.0ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-19 16:08:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 26.2ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-03-19 16:08:28 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 54ms (Views: 29.7ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-03-19 16:09:02 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 23.5ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-03-19 16:09:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 15.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:09:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 66ms (Views: 63.9ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2018-03-19 16:09:33 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 35.4ms)
+
+
+Started GET "/tasks/2" for 127.0.0.1 at 2018-03-19 16:09:35 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 42ms (Views: 39.2ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-19 16:09:37 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 58ms (Views: 53.2ms)
+
+
