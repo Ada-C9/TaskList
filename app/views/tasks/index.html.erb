@@ -3,9 +3,10 @@
 <p>We will make sure you have the tools to get things done.</p>
 
 <ul class="tasks">
-  <% @tasklist.each do |task| %>
+  <% @tasks.each do |task| %>
   <li>
-    <p> <%= task %> </p>
+    <p> <%= task.name %> start date: <%=task.start_date %> </p>
+    <p> <%= task.description %> </p>
   </li>
   <% end %>
 </ul>
