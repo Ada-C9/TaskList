@@ -9,3 +9,15 @@ li > ul {
 li > ul li:last-of-type {
   margin-bottom: 1.5em;
 }
+
+#priority {
+  background-color: red;
+}
+
+#medium {
+  background-color: yellow;
+}
+
+#low {
+  background-color: green;
+}

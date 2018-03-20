@@ -7,20 +7,46 @@
   <% sorted = Task.sort.reverse %>
   <ul>
     <% sorted.each do |task| %>
-    <li>
-      <ul>
-        <li>
-          <strong><%= task.name.capitalize %></strong>
-        </li>
-        <li>
-          <%= task.description %>
-        </li>
-        <li>
-          <%= "Priority: #{task.priority}" %>
-        </li>
 
-      </ul>
-    </li>
+      <li>
+        <% if task.priority == 5 %>
+        <ul id='priority'>
+          <li>
+            <strong><%= task.name.capitalize %></strong>
+          </li>
+          <li>
+            <%= task.description %>
+          </li>
+          <li>
+            <%= "Priority: #{task.priority}" %>
+          </li>
+        </ul>
+        <% elsif task.priority >= 3 && task.priority <= 4 %>
+          <ul id= 'medium'>
+            <li>
+              <strong><%= task.name.capitalize %></strong>
+            </li>
+            <li>
+              <%= task.description %>
+            </li>
+            <li>
+              <%= "Priority: #{task.priority}" %>
+            </li>
+          </ul>
+        <% else %>
+          <ul id= 'low'>
+            <li>
+              <strong><%= task.name.capitalize %></strong>
+            </li>
+            <li>
+              <%= task.description %>
+            </li>
+            <li>
+              <%= "Priority: #{task.priority}" %>
+            </li>
+          </ul>
+        <% end %>
+      </li>
     <% end %>
   </ul>
 </section>
