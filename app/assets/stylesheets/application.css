@@ -20,7 +20,12 @@ h1 {
 ul {
    list-style-type: none;
    font-size: 1.5em;
+   color: rgba(43, 4, 128, 0.96);
  }
+
+ul:hover {
+  color: rgb(34, 97, 12);
+}
 
 body {
   background-color: whitesmoke;
