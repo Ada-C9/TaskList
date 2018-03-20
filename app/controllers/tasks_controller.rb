@@ -8,4 +8,19 @@ class TasksController < ApplicationController
 
   def create
   end
+
+  def show
+    task_id = param[:id]
+
+    @task = Task.find(task_id)
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 end
