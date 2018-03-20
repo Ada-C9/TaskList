@@ -1,10 +1,12 @@
-<h1>Task List</h1>
+<h2>Daily To-Do</h2>
 
 <ul class="task-list">
     <% @tasks.each do |task| %>
       <li>
         <input type="checkbox">
-        <%= task[:task] %>
+        <strong><%= task.name %></strong>
+        <br />
+        <em><%= task.description %></em>
       </li>
     <% end %>
 </ul>
