@@ -1,0 +1,80 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+body {
+  background-color: #F0E7FD;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bolder;
+  color: #218C75;
+  text-align: center;
+}
+
+.each::before {
+  content: "📌";
+}
+
+.whole-list {
+display: flex;
+flex-flow: row wrap;
+}
+
+.task-list {
+  font-size: 1.5em;
+  display: flex;
+  flex-flow: row;
+  list-style-type: none;
+  padding-bottom: 5px;
+  border-style: double;
+  border-radius: 30%;
+  padding: 10px;
+  margin: 20px;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.each a {
+  font-weight: bolder;
+  color: #793EF6;
+  text-decoration: none;
+  width: 140px;
+  padding: 10px;
+  margin: auto;
+
+}
+
+.each a:hover {
+  color: #B0F63E;
+}
+
+.task-info p {
+  font-size: 2em;
+  margin-left: 50px;
+  color: #87B805;
+}
+
+.task-info {
+
+
+  border-style: double;
+  border-radius: 30%;
+  padding-left: 30px;
+  margin: 20px;
+
+  background-color: white;
+}

@@ -1,0 +1,12 @@
+<body>
+<h2>Get Shit Done:</h2>
+<ul class="whole-list">
+  <% @tasks.each do |task|%>
+  <li class="task-list">
+    <span class="each">
+    <%= link_to task[:task], task_path(task[:id]) %>
+    </span>
+  </li>
+  <% end %>
+</ul>
+</body>
