@@ -30,4 +30,5 @@ body {
 .header {
   font-size: 2em;
   background-color: rgb(245, 217, 243);
+  border-radius: 2%;
 }
