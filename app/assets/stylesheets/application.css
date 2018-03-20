@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+  text-align: center;
+}
+
+ul#site-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul#site-nav, ul#all-tasks {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
