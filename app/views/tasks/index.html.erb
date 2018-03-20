@@ -1,10 +1,14 @@
-<h1>My Task List</h1>
 
-<ul>
+<ol>
 <% @tasks.each do |task| %>
   <li>
-  <%= task[:task] %>
-  - <%= task[:status] %>
+  <strong>
+    <%= task.name.capitalize %>
+  </strong>
+  - <%= task.description %>
+  <em>
+    Complete by <%= task.complete_by %>
+  </em>
   </li>
 <% end %>
-</ul>
+</ol>

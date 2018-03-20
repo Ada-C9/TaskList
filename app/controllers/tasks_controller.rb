@@ -1,13 +1,31 @@
 class TasksController < ApplicationController
   def index
-    @tasks = [
-      { task: "Go to the gym", status: "incomplete"},
-      { task: "Go to class", status: "incomplete"},
-      { task: "Grocery shopping", status: "incomplete"},
-      { task: "Return library book", status: "incomplete"},
-      { task: "Make dinner", status: "incomplete"},
-      { task: "Do homework", status: "incomplete"}
-    ]
+    @tasks = Task.all
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def show
+    # Figure out which book the user wanted
+    task_id = params[:id]
+
+
+    # Load it from the DB
+    # Save it in an instance variable for the view
+    @tasks = Task.find(task_id)
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
 end
