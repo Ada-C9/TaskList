@@ -3,8 +3,9 @@
   <% @tasks.each do |task| %>
     <li>
       <dl>
-        <dt><%= task[:id] %>. <%= link_to task[:name], task_path(task[:id]) %></dt>
-        <dd><%= task[:description] %></dd>
+        <dt><%= task.id %>. <%= link_to task.name, task_path(task.id) %></dt>
+        <dd><%= task.description %></dd>
+        <dd>Completed? <%= task.completed %></dd>
       </dl>
     </li>
   <% end %>
