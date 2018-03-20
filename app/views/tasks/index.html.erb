@@ -1,11 +1,12 @@
+
 <h2>Task List</h2>
 <ul>
 <% @tasks.each do |task| %>
   <li>
-    <span class="short_desc">
-      <%= link_to task[:short_desc], index_path(task[:id]) %>
+    <span class="task_name">
+      <%= link_to task.name, index_path(task[:id]) %>
     </span>
-    by <%= task[:due_date] %>
+    due by <%= task.completion_date %>
   </li>
   <% end %>
 </ul>
