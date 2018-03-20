@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>show</title>
-  </head>
-  <body>
-    <section class="task">
-      <h2><%= @task.name.upcase %></h2>
-      <p>
-        Due by - <%= @task.completion_date %>
-      </p>
-    </section>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title>show</title>
+</head>
+<body>
+  <ul>
+    <li>
+      <%= link_to "Edit", edit_task_path %>
+    </li>
+    <li>
+      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
+    </li>
+  </ul>
+  <section class="task">
+    <h2><%= @task.name.upcase %></h2>
+    <p>
+      Due by - <%= @task.completion_date %>
+    </p>
+  </section>
+</body>
 </html>
