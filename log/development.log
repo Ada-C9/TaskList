@@ -793,3 +793,64 @@ Migrating to CreateTasks (20180320204713)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Take dog out"], ["description", "walk for at least two blocks and get some bread."], ["created_at", "2018-03-20 20:57:27.350258"], ["updated_at", "2018-03-20 20:57:27.350258"]]
   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 14:00:43 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 93ms (Views: 82.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 14:05:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (19.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"tasks"}, missing required keys: [:id]):
+     5:   <% @tasks.each do |task| %>
+     6:   <li>
+     7:     <strong><%= task[:id] %>.</strong>
+     8:       <%= link_to task.name, task_path %>
+     9:       <!-- <%= task[:status] %> -->
+    10:   </li>
+    11:   <% end %>
+  
+app/views/tasks/index.html.erb:8:in `block in _app_views_tasks_index_html_erb__3964698722363534515_70091506986900'
+app/views/tasks/index.html.erb:5:in `_app_views_tasks_index_html_erb__3964698722363534515_70091506986900'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 14:06:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 85ms (Views: 78.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 14:06:47 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 26ms (Views: 21.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 14:06:49 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/2?class=title-link" for 127.0.0.1 at 2018-03-20 14:06:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"2"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
