@@ -6,7 +6,7 @@
 <ul>
   <%  @tasks.each do |task| %>
   <li>
-    <strong><%= task %></strong>
+    <%= "#{task[:name]}: #{task[:description]} on #{task[:completion_date]}" %>
   </li>
   <%end %>
 </ul>

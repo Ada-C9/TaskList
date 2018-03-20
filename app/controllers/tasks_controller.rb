@@ -3,8 +3,10 @@ class TasksController < ApplicationController
   def index
 
 
-    @tasks = ["Cleaning", "Laundry", "Cooking", "Dishes"]
-    
+    # @tasks = ["Cleaning", "Laundry", "Cooking", "Dishes"]
+
+    @tasks = Task.all
+
   end
 
 
@@ -17,7 +19,8 @@ class TasksController < ApplicationController
   end
 
   def show
-
+    task_id = params[:id]
+    @task = Task.find(task_id)
   end
 
   def edit
