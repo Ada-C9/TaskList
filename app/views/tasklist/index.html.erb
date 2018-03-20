@@ -1,0 +1,11 @@
+<h2>Welcome to Kiera's Tasklist</h2>
+
+<p>We will make sure you have the tools to get things done.</p>
+
+<ul class="tasks">
+  <% @tasklist.each do |task| %>
+  <li>
+    <p> <%= task %> </p>
+  </li>
+  <% end %>
+</ul>
