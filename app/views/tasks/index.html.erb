@@ -1,12 +1,13 @@
 
-<h2>Welcome to Brenda's Tasks list! </h2>
 
-<p>She has to do this during this week:</p>
+<p>This is my task list for the next weeks:</p>
 
 <ul>
   <%  @tasks.each do |task| %>
   <li>
-    <%= "#{task[:name]}: #{task[:description]} on #{task[:completion_date]}" %>
+    <strong><%= "#{task[:name]}"%></strong>
+    <p><%="#{task[:description]}"%></p>
+    <p><i>Date: <%="#{task[:completion_date]}" %></i></p>
   </li>
-  <%end %>
+  <%end%>
 </ul>
