@@ -3,8 +3,8 @@ class TasksController < ApplicationController
   TASKS_LIST = [
     {id: 1, task: "do the thing", misc_notes: "stuff about this task", completed: false},
     {id: 2, task: "do the thing", misc_notes: "stuff about this task", completed: false},
-    {id: 3, task: "walk the puppy", misc_notes: "stuff about this task", completed: false},
-    {id: 4, task: "finish that poodr book", misc_notes: "secret agenda", completed: false}
+    {id: 3, task: "do the thing", misc_notes: "stuff about this task", completed: false},
+    {id: 4, task: "do the thing", misc_notes: "secret agenda", completed: false}
   ]
 
   def index
