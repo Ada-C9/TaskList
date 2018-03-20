@@ -1,14 +1,12 @@
 class TasksController < ApplicationController
 
-  TASK_LIST = [
-    "Wash dog", "Make dinner", "Call mom", "Finish homework", "Vacuum"
-  ]
-
   def index
-    @tasks = TASK_LIST
+    @tasks = Task.all
   end
 
   def show
+    id = params[:id]
+    @task = Task.find(id)
   end
 
   def new
@@ -27,5 +25,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    id = params[:id]
+    @task = Task.find(id)
+    @task.destroy
   end
 end

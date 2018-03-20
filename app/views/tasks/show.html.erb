@@ -1,2 +1,19 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<h1><%=@task.title %></h1>
+<p>
+  Description: <%= @task.description %>
+</p>
+<p>
+  Location: <%= @task.location %>
+</p>
+<p>
+  Priority: <%= @task.priority %>
+</p>
+<p>
+  Status:
+    <% if @task.complete.nil?%>
+      incomplete
+    <% else %>
+      <%= @task.complete %>
+      <% end %>
+</p>
+<%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
