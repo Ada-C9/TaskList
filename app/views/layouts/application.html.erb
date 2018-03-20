@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+  <header>
+    <h1>Welcome to Octos LIbrary</h1>
+    <nav>
+    </nav>
+  </header>
+
+  <main>
     <%= yield %>
-  </body>
+  </main>
+
+  <footer>
+    <p>&copy Emilce Sanchez</p>
+  </footer>
+
+</body>
 </html>

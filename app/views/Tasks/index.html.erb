@@ -1,0 +1,9 @@
+<h3>You have a lot to do today!</h3>
+
+<ul>
+  <% @tasks.each do |index| %>
+    <li>
+      <%= index[:task] %>
+    </li>
+  <% end %>
+</ul>
