@@ -6,9 +6,9 @@
   </head>
   <body>
     <section class="task">
-      <h2><%= @task[:task_type].upcase %></h2>
+      <h2><%= @task.name.upcase %></h2>
       <p>
-        Status: complete - <%= @task[:complete].capitalize %>
+        Due by - <%= @task.completion_date %>
       </p>
     </section>
   </body>
