@@ -1,10 +1,17 @@
-<h2 class=page-title>Task List</h2>
-<ul>
-<% @tasks.each do |task| %>
-  <li>
-    <span class="title">
+<h1 class=page-title>Task List</h2>
+<section class="task-summary">
+  <h2>Your Tasks</h2>
+  <ol>
+    <% @tasks.each do |task| %>
+    <li class="task">
+    <a class="title">
       <%= link_to task[:task], task_path(task[:id]) %>
-    </span>
-  </li>
-<%end%>
-</ul>
+    </a>
+    </li>
+    <%end%>
+  </ol>
+</section>
+
+<div class="add-task-button">
+  <h5>Add Task<h5>
+</div>
