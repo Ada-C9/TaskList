@@ -1,0 +1,20 @@
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:31:59 -0700
+
+NameError - Couldn't find tasksHelper, expected it to be defined in helpers/tasks_helper.rb:
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/6080c79d0f10ec19/variables" for 127.0.0.1 at 2018-03-19 16:32:00 -0700
+Started POST "/__better_errors/6080c79d0f10ec19/variables" for 127.0.0.1 at 2018-03-19 16:32:20 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:33:23 -0700
+Processing by tasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 548ms (Views: 269.8ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-19 16:33:25 -0700
+Processing by tasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 29.7ms)
