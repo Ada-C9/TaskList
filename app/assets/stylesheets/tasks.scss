@@ -1,3 +1,44 @@
-// Place all the styles related to the Task controller here.
+// Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+ list-style-type: none;
+ margin:0;
+ padding:0;
+}
+
+body, html {
+ height: 100%;
+ font-family: Georgia, Serif, "Times New Roman", Times, serif;
+ background-color: rgb(180, 219, 221);
+}
+
+body {
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/disp/c8b32127075137.5635f930a8c2d.gif");
+  /* background-image: url("../images/tasks.gif"); */
+  background-size: cover;
+}
+
+
+ul {
+ display: flex;
+justify-content: space-around;
+flex-flow: column wrap;
+}
+
+h2 {
+text-decoration: underline;
+margin-bottom: .5em;
+}
+
+.title {font-style: italic;}
+
+.tasks, .task {
+  margin: 1em;
+  border: 1px solid rgb(127, 128, 249);
+  position: absolute;
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, .2);
+  background-color:inherit;
+}
