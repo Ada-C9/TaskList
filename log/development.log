@@ -330,3 +330,249 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 353ms (Views: 343.2ms | ActiveRecord: 5.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:34:16 -0700
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 322ms (Views: 286.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:36:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 53ms (Views: 42.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:40:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ':', expecting ')'
+..._buffer.append=( index[:name] : index[:description] is due i...
+...                              ^
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...:name] : index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:6:in `'
+
+Started POST "/__better_errors/2928d2be3824811c/variables" for 127.0.0.1 at 2018-03-20 16:40:49 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:41:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:6:in `'
+
+Started POST "/__better_errors/7d8cf6f878e40142/variables" for 127.0.0.1 at 2018-03-20 16:41:29 -0700
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:41:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:6:in `'
+
+Started POST "/__better_errors/c892c92d84302d12/variables" for 127.0.0.1 at 2018-03-20 16:41:30 -0700
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:42:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/b38b0501e2cc565a/variables" for 127.0.0.1 at 2018-03-20 16:42:43 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:42:48 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/6c2a50b76422516e/variables" for 127.0.0.1 at 2018-03-20 16:42:49 -0700
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:43:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/b416eb7fd5656111/variables" for 127.0.0.1 at 2018-03-20 16:43:30 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:43:31 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:name] index[:description] is due index[:...
+...                          ^~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:11: syntax error, unexpected tIDENTIFIER, expecting ')'
+...x[:name] index[:description] is due index[:completion_date])...
+...                             ^~:
+  app/views/tasks/index.html.erb:11:in `'
+
+Started POST "/__better_errors/3d1bfb059fca38d0/variables" for 127.0.0.1 at 2018-03-20 16:43:31 -0700
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:43:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:43:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...fer.append=( index[:task] index[:name] );@output_buffer.safe...
+...                          ^~~~~:
+  app/views/tasks/index.html.erb:6:in `'
+
+Started POST "/__better_errors/cecbf1ef08c34bcc/variables" for 127.0.0.1 at 2018-03-20 16:44:00 -0700
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:44:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:44:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected ')', expecting '='
+...x[:name], index[:description] );@output_buffer.safe_append='
+...                              ^
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:8: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+            ^~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:12: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/Emilce/Documents/Ada/Rails/TaskList/app/views/tasks/index.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/index.html.erb:6:in `'
+
+Started POST "/__better_errors/8c5ad10432f29a47/variables" for 127.0.0.1 at 2018-03-20 16:44:59 -0700
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:45:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:46:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:47:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:47:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:47:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:48:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+

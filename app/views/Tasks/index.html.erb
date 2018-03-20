@@ -3,7 +3,9 @@
 <ul>
   <% @tasks.each do |index| %>
     <li>
-      <%= index[:task] %>
+      <%= index[:name] %>
+      requires you to <%= index[:description] %>
+      due on <%= index[:completion_date] %>
     </li>
   <% end %>
 </ul>

@@ -1,13 +1,11 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
-
     # [
     #   { task: "Buy a trash can"},
     #   { task: "Make lightning talk"},
     #   { task: "Learn elbow stand"}
     # ]
-    
   end
 
 
