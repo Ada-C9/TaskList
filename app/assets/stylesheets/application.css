@@ -17,27 +17,38 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 body {
+  padding: 10px;
   font-family: 'Muli', sans-serif;
+  margin: 10px
+  color: black;
 }
 
+
 .tasks-list {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
   border: 1px solid black;
   border-radius: 5%;
   width: 290px;
-
 }
 
 .tasks-list h2{
   text-align: center;
 }
 
-.tasks-list ul{
+ ul {
   list-style-type: none;
+
   padding: 10px;
   padding-left: 30px;
   font-size: 1.3em;
 }
 
+a {
+  text-decoration: none;
+}
+
 .tasks-list ul li{
   padding: 20px;
+
 }
