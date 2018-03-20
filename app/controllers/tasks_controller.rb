@@ -1,10 +1,12 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = TASKS_LIST
+    @tasks = Tasks.all
   end
 
   def show
+    id = params[:id]
+    @task = Tasks.all.find { |task| task.id == id.to_i }
   end
 
   def new
@@ -23,5 +25,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    id = params[:id]
+    @task = Tasks.all.find { |task| task.id == id.to_i }
+    @task.destroy
   end
 end
