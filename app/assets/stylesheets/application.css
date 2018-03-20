@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+h1 {
+   font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+.list-title {
+  margin-left: 40px;
+}
+
+body {
+   margin: 100px;
+   font-family: 'Inconsolata', monospace;
+}
+
+.nav-bar {
+   list-style-type: none;
+   line-height: 2.0;
+   display: flex;
+   justify-content: flex-start;
+   margin-bottom: 50px;
+}
+
+.nav-bar > li {
+  margin-right: 60px;
+}

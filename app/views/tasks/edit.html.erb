@@ -1,2 +1,8 @@
 <h1>Tasks#edit</h1>
 <p>Find me in app/views/tasks/edit.html.erb</p>
+
+<ul>
+  <li>
+    <%= link_to "Update", task_path(@task.id), method: :patch %>
+  </li>
+</ul>

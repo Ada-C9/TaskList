@@ -2,18 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  margin: 60px 60px;
-}
-
-h1 {
-  font-size: 4em;
-}
-
-h2 {
-  font-size: 3em;
-  text-align: center;
-}
 
 .task-summary {
   border: 1px solid black;
@@ -32,4 +20,19 @@ ol {
 a {
   text-decoration: none;
   color: black;
+}
+
+.show-footer {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-start;
+  margin-top: 100px;
+}
+
+.show-footer > li {
+  margin-right: 60px;
+}
+
+.task-details {
+  display: flex;
 }

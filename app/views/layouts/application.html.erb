@@ -6,17 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+
+
   </head>
 
   <body>
     <header>
       <nav>
-        <ul>
+        <ul class="nav-bar">
           <li>
             <%= link_to "Home", tasks_path %>
           </li>
           <li>
-            <%= link_to "Add a Book", new_task_path %>
+            <%= link_to "Add a Task", new_task_path %>
           </li>
         </ul>
       </nav>
