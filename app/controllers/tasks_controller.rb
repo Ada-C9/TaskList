@@ -16,8 +16,8 @@ class TasksController < ApplicationController
     @task = Task.new
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
-    @task.save
-    redirect_to tasks_path 
+    redirect_to tasks_path if @task.save
+
   end
 
   def edit
@@ -30,6 +30,7 @@ class TasksController < ApplicationController
     id = params[:id]
     @task = Task.find(id)
     @task.destroy
+      redirect_to tasks_path
   end
 
   def complete
