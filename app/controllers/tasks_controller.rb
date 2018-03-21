@@ -3,10 +3,14 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
-  def new
-  end
+  def new; end
 
   def create
+    task = Task.new(name: params[:name], description: params[:description], complete_by: params[:complete_by])
+
+    if task.save
+      redirect_to '/tasks'
+    end
   end
 
   def show
@@ -16,7 +20,7 @@ class TasksController < ApplicationController
 
     # Load it from the DB
     # Save it in an instance variable for the view
-    @tasks = Task.find(task_id)
+    @task = Task.find(task_id)
   end
 
   def edit
