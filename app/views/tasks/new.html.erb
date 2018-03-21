@@ -1,23 +1,15 @@
-<form action="/tasks" method="post">
+
+<%= form_for @task do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br /><br />
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br /><br />
 
 
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+  <%= f.submit %>
 
-  <!-- Fields to be filled by user: -->
-  <br />
-  <label for="name"> Task: </label>
-  <br />
-  <input type="name" name="task[name]" id="name">
-
-  <br />
-  <label for="description"> Task: </label>
-  <br />
-  <input type="description" name="task[description]" id="description">
-
-  <!-- button -->
-  <br />
-  <input type="submit" name="submit" value="Add Task">
-
-
-</form>
+<% end %>
