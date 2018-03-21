@@ -9,6 +9,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <%=link_to "Home", tasks_path %>
+          </li>
+          <li>
+            <%=link_to "Add a task", new_task_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

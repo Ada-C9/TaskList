@@ -1,2 +1,19 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<!-- <h1>Tasks#index</h1>
+<p>Find me in app/views/tasks/index.html.erb</p> -->
+
+<h2> TASKLIST </h2>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <span class="title">
+      <%=link_to "Task: #{task.name}. ", task_path(task[:id]) %>
+    </span>
+    <p> </p>
+
+      <span class="description">
+        <%= "- #{task.description}  (#{task.owner})" %>
+      </span>
+    </p>
+  </li>
+  <% end%>
+</ul>

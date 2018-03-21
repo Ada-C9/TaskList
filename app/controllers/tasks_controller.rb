@@ -1,22 +1,29 @@
 class TasksController < ApplicationController
   def index
-  end
+     @tasks = Task.all
+   end
 
-  def show
-  end
+   def show
+     id = params[:id]
+     @task = Task.find(id)
+   end
 
-  def new
-  end
+   def new
+   end
 
-  def create
-  end
+   def create
+   end
 
-  def edit
-  end
+   def edit
+   end
 
-  def update
-  end
+   def update
+   end
 
-  def destroy
-  end
+   def destroy
+     id = params[:id]
+     @task = Task.find(id)
+     @task.destroy
+   end
+
 end
