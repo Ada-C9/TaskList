@@ -3,13 +3,21 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
-  def new; end
+  def new
+    @task = Task.new
+  end
 
   def create
-    task = Task.new(name: params[:name], description: params[:description], complete_by: params[:complete_by])
+    # Switched to Rails form_for and created params structure
+    task_data = params[:task]
+
+    task = Task.new
+    task.name = task_data[:name]
+    task.description = task_data[:description]
+    task.complete_by = task_data[:complete_by]
 
     if task.save
-      redirect_to '/tasks/index'
+      redirect_to tasks_path
     end
   end
 
@@ -24,9 +32,23 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find(params[:id])
   end
 
   def update
+    task_data = params[:task]
+
+    task = Task.find(params[:id])
+
+    task.update_attributes(
+      name: task_data[:name],
+      description: task_data[:description],
+      complete_by: task_data[:complete_by]
+    )
+
+    if task.save
+      redirect_to task_path(tasks)
+    end
   end
 
   def destroy
