@@ -5,7 +5,7 @@
     <% @tasks.each do |task| %>
     <li>
       <span class="heading"><%= link_to task.name, task_path(task.id) %>
-      <span class="status"> <%= task.status %> </span>
+      <span class="status"> <%= task.status %> 
     </li>
     <% end %>
   </ol>
