@@ -6,8 +6,10 @@
   <%  @tasks.each do |task| %>
   <li>
     <strong><%= "#{task[:name]}"%></strong>
-    <p><%="#{task[:description]}"%></p>
-    <p><i>Date: <%="#{task[:completion_date]}" %></i></p>
+    <!-- <p><%="#{task[:description]}"%></p>
+    <p><i>Date: <%="#{task[:completion_date]}" %></i></p> -->
   </li>
+
+  <%= link_to("Go to the Task", task_path(task)) %>
   <%end%>
 </ul>
