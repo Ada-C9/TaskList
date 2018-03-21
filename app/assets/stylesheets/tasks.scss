@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 * {
- list-style-type: none;
  margin:0;
  padding:0;
 }
@@ -19,12 +18,32 @@ body {
   background-size: cover;
 }
 
+nav > ul{
+  display: flex;
+  justify-content: space-around;
+  margin: .5em;
+}
+
 
 ul {
  display: flex;
 justify-content: space-around;
 flex-flow: column wrap;
+font-family: fantasy;
 }
+
+
+.tasklist {
+  background: #cce5ff;
+  margin: 5px;
+}
+
+.tasklist li {
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
+}
+
 
 h2 {
 text-decoration: underline;

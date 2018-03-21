@@ -5,14 +5,16 @@
   <title>show</title>
 </head>
 <body>
-  <ul>
-    <li>
-      <%= link_to "Edit", edit_task_path %>
-    </li>
-    <li>
-      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
-    </li>
-  </ul>
+  <nav>
+    <ul>
+      <li>
+        <%= link_to "Edit", edit_task_path %>
+      </li>
+      <li>
+        <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
+      </li>
+    </ul>
+  </nav>
   <section class="task">
     <h2><%= @task.name.upcase %></h2>
     <p>
