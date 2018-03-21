@@ -9,7 +9,7 @@ class TasksController < ApplicationController
     task = Task.new(name: params[:name], description: params[:description], complete_by: params[:complete_by])
 
     if task.save
-      redirect_to '/tasks'
+      redirect_to '/tasks/index'
     end
   end
 
