@@ -1,21 +1,19 @@
 class TasksController < ApplicationController
 
-  TASK_LIST = [
-    {id: 1, task_title: "Walk dog", notes: "Don't forget poop bags", due: "3/10/18"},
-    {id: 2, task_title: "Stop to smell the roses", notes: "Be careful on the roses", due: "4/1/18"},
-    {id: 3, task_title: "Eat ice cream", notes: "At least three scoops", due: "3/20/18"},
-    {id: 4, task_title: "Buy more ice cream", notes: "Choclate chip cookie dough or Chaco Tacos", due: "3/25/18"}
-  ]
+  # TASK_LIST = [
+  #   {id: 1, task_title: "Walk dog", description: "Don't forget poop bags", due: "3/10/18"},
+  #   {id: 2, task_title: "Stop to smell the roses", description: "Be careful on the roses", due: "4/1/18"},
+  #   {id: 3, task_title: "Eat ice cream", description: "At least three scoops", due: "3/20/18"},
+  #   {id: 4, task_title: "Buy more ice cream", description: "Choclate chip cookie dough or Chaco Tacos", due: "3/25/18"}
+  # ]
 
   def index
-    @task = TASK_LIST
+    @task = Task.all
   end
 
   def show
     id = params[:id]
-    @task = TASK_LIST.find do |task|
-      task[:id] == id.to_i
-    end
+    @task = Task.find(id)
   end
 
   def new
@@ -31,6 +29,9 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    id = params[:id]
+    @task = task.find(id)
+    @task.destroy
   end
 
 end

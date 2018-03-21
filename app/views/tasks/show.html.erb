@@ -1,4 +1,16 @@
 <div class='show-container'>
-  <h2><%= @task[:task_title] %></h2>
-  <p class="notes"><%= @task[:notes] %></p>
+  <h2><%= @task.task_name %></h2>
+  <p class="notes"><%= @task.description %></p>
+  <p><%= @task.completion_date %></p>
+  <ul class="task-options">
+    <li>
+      <a> <%= link_to "Mark Complete", edit_task_path%> </a>
+    </li>
+    <li>
+      <a> <%= link_to "Edit", edit_task_path%> </a>
+    </li>
+    <li>
+      <a> <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%> </a>
+    </li>
+  </ul>
 </div>

@@ -14,36 +14,44 @@
  *= require_self
  */
 
-.task-link {
-   font-weight: bold;
-   text-decoration: none;
-   color: #000;
- }
+.list {
+  list-style: none;
+}
+.list::before {
+ content: "❍";
+ padding-right: 1em;
+}
 
- .list::before {
-   content: "❍";
-   padding-right: 1em;
-   /* */
- }
- .list {
-   list-style: none;
-   /* display: flex;
-   justify-content: center; */
+a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  }
 
- }
+.show-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
- h2 {
-   /* text-align: left; */
-   padding-left: 5%;
- }
- .notes {
-   text-align:left;
- }
+.task-options{
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 1em;
+}
 
- .show-container {
-   text-align: center;
-   /* padding-left: 5%; */
-   display: flex;
-   flex-direction: column;
- }
-/*  */
+.task-options a::before {
+  content: "|";
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.task-options :last-child a::after {
+  content: "|";
+  padding-left: 1em;
+}
+
+nav ul {
+  list-style: none;
+}
