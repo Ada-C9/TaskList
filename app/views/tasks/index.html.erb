@@ -8,15 +8,10 @@
   </li>
 </ul>
 
-<h3>YOUR TASKS</h3>
-<%= @tasks %>
+<h3>WENJIE'S TASKS</h3>
 <ol>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-  <li>
-  </li>
-</ul>
+<% @tasks.each do |task| %>
+<li> Task: <%= task.name %> <strong>|</strong> Due Date: <span class=due_date> <%= task.due_date %> </span>
+</li>
+<% end %>
+</ol>

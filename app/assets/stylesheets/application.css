@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+
+div {
+  background: linear-gradient(white, rgb(224, 116, 191));
+}
+
+ul {
+  background: linear-gradient(whitesmoke, teal)
+}
+ol {
+  display: flex;
+  flex-direction: column;
+}
+ol > li {
+  background: linear-gradient(white, rgb(224, 116, 191));
+  font-size: 2em;
+  padding: 10px;
+}
+
+li > strong {
+  font-weight: bold;
+}
+
+.due_date {
+  color: teal;
+}

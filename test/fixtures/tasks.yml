@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  priority: MyString
+  start_date: 
+  due_date: 
+  status: MyString
+
+two:
+  description: MyString
+  priority: MyString
+  start_date: 
+  due_date: 
+  status: MyString
