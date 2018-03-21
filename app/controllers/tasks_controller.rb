@@ -1,34 +1,33 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
-    # [
-    #   { task: "Buy a trash can"},
-    #   { task: "Make lightning talk"},
-    #   { task: "Learn elbow stand"}
-    # ]
   end
-
 
   # def new
   # end
-  #
+
   # def create
   # end
-  #
-  # def show
-  ## Load it from the DB
-  ## Save it in an instance variable for the view
 
-  # task_id = params[:id]
-  # @task = Task.find(task_id)
-  # end
-  #
+  def show
+    # is there a hash created (once a form exits?)
+    # there's a name, description and completion_date
+    # books included title and author
+    raw_task = params[:task]
+
+    task = Task.new # must create a local instance of a book
+
+    task.name = raw_task[:description]
+    task.completion_date = raw_task[:completion_date]
+
+  end
+
   # def edit
   # end
-  #
+
   # def update
   # end
-  #
+  
   # def destroy
   # end
 
