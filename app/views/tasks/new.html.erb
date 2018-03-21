@@ -1,0 +1,14 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+
+
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label "Complete By" %>
+  <%= f.text_area :complete_by %>
+  <%= f.submit %>
+<% end %>

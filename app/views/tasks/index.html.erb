@@ -1,0 +1,23 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+<header>
+<h1>Tasks</h1>
+</header>
+
+<p id="list_container">
+<ol>
+  <% @tasks.each do |task| %>
+
+      <li>  <%= link_to task.name, task_path(task.id) %></li>
+      <ul>
+      <li>Description: <%= task.description.capitalize %></li>
+      <li>Completion Date: <%= task.complete_by %></li>
+    </ul>
+  <% end %>
+</ol>
+</p>
+
+<aside>
+  <p>
+    <%= link_to "Add Task", new_task_path, class: "button" %>
+  </p>
+</aside>
