@@ -9,6 +9,11 @@
     <li>
       <h4><%=task.name%></h4>
       <p><%=task.description%></p>
+
+      <%= link_to("Edit", edit_task_path(task)) %>
+
     </li>
   <% end %>
 </ol>
+
+<%= link_to("Add a new Task", new_task_path) %>
