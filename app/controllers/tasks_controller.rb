@@ -18,6 +18,10 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new
+    @task.name = params[:name]
+    @task.description = params[:description]
+    @task.save
   end
 
   def update
