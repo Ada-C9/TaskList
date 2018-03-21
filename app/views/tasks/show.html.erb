@@ -1,12 +1,12 @@
-<h2 id="task_header"><%= @task.name %></h2>
-<p id="task description"> Details: <%= @task.description %></p>
-<p id="complete_by">Complete By: <%= @task.comp_date %></p>
+<h2 id="task-header"><%= @task.name %></h2>
+<p id="task-description"> Details: <%= @task.description %></p>
+<p id="complete-by">Complete By: <%= @task.comp_date %></p>
 
-<ul>
-  <li>
+<ul id="task-options">
+  <li id="edit">
     <%= link_to "Edit Task", edit_task_path %>
   </li>
-  <li>
+  <li id="delete">
     <%= link_to "Delete Task", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%>
   </li>
 </ul>

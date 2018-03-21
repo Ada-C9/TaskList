@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ul {
+  list-style-type: none;
+}
+
 h1 {
   text-align: center;
 }
@@ -21,13 +25,38 @@ h1 {
 ul#site-nav {
   display: flex;
   justify-content: space-evenly;
+  margin: 0;
+  background-color: mediumaquamarine;
+}
+
+ul#task-options {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+ul#task-options li {
+  padding-right: 1em;
 }
 
 ul#site-nav, ul#all-tasks {
-  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
+ul#all-tasks li {
+  padding-bottom: 1em;
 }
 
 ul li a {
   text-decoration: none;
   color: black;
+}
+
+li#edit a {
+  color: blue;
+}
+
+li#delete a {
+  color: red;
 }
