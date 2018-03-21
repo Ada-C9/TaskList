@@ -1,0 +1,9 @@
+<h1>Check out Your Todos!</h1>
+<ul>
+  <% @tasks.each do |task|%>
+  <li>
+    <%= task[:todo] %> : <%= task[:add_description_to_task] %> ; <%= task[:due_date] =%>
+  </li>
+
+  <%end%>
+</ul>
