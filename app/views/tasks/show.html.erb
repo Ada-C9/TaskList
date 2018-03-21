@@ -10,7 +10,7 @@
       <a> <%= link_to "Edit", edit_task_path%> </a>
     </li>
     <li>
-      <a> <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%> </a>
+      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%>
     </li>
   </ul>
 </div>
