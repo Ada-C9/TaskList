@@ -18,6 +18,20 @@ body {
   background-size: cover;
 }
 
+form {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column wrap;
+  margin: 1em;
+  border: 1px solid rgb(127, 128, 249);
+  position: absolute;
+  padding: 0.5em;
+  border-radius: 10px;
+  box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, .2);
+  background-color:inherit;
+}
+
+
 nav > ul{
   display: flex;
   justify-content: space-around;
