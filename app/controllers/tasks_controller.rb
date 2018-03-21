@@ -17,7 +17,6 @@ class TasksController < ApplicationController
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
     redirect_to tasks_path if @task.save
-
   end
 
   def edit
