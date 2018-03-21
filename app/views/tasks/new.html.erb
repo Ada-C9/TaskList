@@ -1,2 +1,23 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<form action="/tasks" method="post">
+
+
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <!-- Fields to be filled by user: -->
+  <br />
+  <label for="name"> Task: </label>
+  <br />
+  <input type="name" name="task[name]" id="name">
+
+  <br />
+  <label for="description"> Task: </label>
+  <br />
+  <input type="description" name="task[description]" id="description">
+
+  <!-- button -->
+  <br />
+  <input type="submit" name="submit" value="Add Task">
+
+
+</form>

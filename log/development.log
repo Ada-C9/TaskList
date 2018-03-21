@@ -1763,3 +1763,139 @@ Processing by TasksController#show as HTML
 Completed 200 OK in 60ms (Views: 53.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 15:39:24 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 225ms (Views: 177.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 16:03:16 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (7.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 91ms (Views: 76.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:04:18 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 82ms (Views: 75.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 16:08:12 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 66ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-20 16:08:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 61ms (Views: 57.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 16:12:16 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-20 16:49:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 96ms (Views: 69.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 12:42:57 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 400ms (Views: 371.7ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:43:01 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/1?class=title-link" for 127.0.0.1 at 2018-03-21 12:46:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 20.5ms | ActiveRecord: 27.9ms)
+
+
+Started GET "/tasks/1/edit" for 127.0.0.1 at 2018-03-21 12:47:08 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:47:18 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:54:09 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-03-21 12:54:52 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"rMvpOSPN5ReLotlV/xlVO7lzyyl9PXA+l56HI4ef878Fky5TsLr7IWmpp3EMqUfTPsLY/XRZOvlLQ2Dcu+e2yg==", "task"=>{"name"=>"Water plants", "description"=>"Jasmine and orchids"}, "submit"=>"Add Task"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Water plants"], ["description", "Jasmine and orchids"], ["created_at", "2018-03-21 19:54:52.822960"], ["updated_at", "2018-03-21 19:54:52.822960"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering tasks/create.html.erb within layouts/application
+  Rendered tasks/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 52ms (Views: 26.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 12:54:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/tasks/3?class=title-link" for 127.0.0.1 at 2018-03-21 12:55:01 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"3"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 49ms (Views: 39.1ms | ActiveRecord: 0.7ms)
+
+
