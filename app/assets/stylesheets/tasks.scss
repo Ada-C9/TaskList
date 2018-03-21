@@ -6,9 +6,22 @@
 .task-summary {
   border: 1px solid black;
   border-radius: 15px;
-  width: 400px;
+  width: 600px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.task-options {
+  display: flex;
+  font-size: .5em;
+}
+
+.option {
+  margin-right: 30px;
+}
+
+.task {
+  margin-bottom: 20px;
 }
 
 ol {
@@ -35,4 +48,23 @@ a {
 
 .task-details {
   display: flex;
+}
+
+.new_task {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+input[type="text"] {
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    background: #8C8C69;
+    border: black 2px solid;
+    padding: 20px;
+    text-transform: uppercase;
 }

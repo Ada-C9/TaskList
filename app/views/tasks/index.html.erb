@@ -6,6 +6,17 @@
     <li class="task">
       <span class="title">
         <%= link_to task.name, task_path(task.id) %>
+      </span><br />
+      <span class="task-options">
+        <div class="option">
+            <%= link_to "Edit", edit_task_path(task.id) %>
+        </div>
+        <div class="option">
+            <%= link_to "Delete", task_path(task.id), method: :delete %>
+        </div>
+        <div class="option">
+            <%= link_to "Mark as Completed", task_path(task.id), method: :edit %>
+        </div>
       </span>
     </li>
     <%end%>
