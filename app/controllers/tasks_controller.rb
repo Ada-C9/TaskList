@@ -14,17 +14,16 @@ class TasksController < ApplicationController
   end
 
   def create
-  task = Task.new
-  task.name = params[:task][:name]
-  task.completion_date = params[:task][:completion_date]
-  task.description = params[:task][:description]
+    task = Task.new
+    task.name = params[:task][:name]
+    task.completion_date = params[:task][:completion_date]
+    task.description = params[:task][:description]
 
-  if task.save #it worked
-    redirect_to books_path
-  else
-    render :new
+    if task.save #it worked
+      redirect_to index_path
+    else
+      render :new
+    end
   end
-
-end
 
 end
