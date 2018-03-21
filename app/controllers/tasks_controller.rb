@@ -1,21 +1,46 @@
 class TasksController < ApplicationController
 
-  TASKS_LIST = [
-    {id: 1, description: "Wash the dishes"},
-    {id: 2, description: "Finish HW"},
-    {id: 3, description: "Walk the dog"},
-    {id: 4, description: "Take a shower"}
-  ]
 
   def index
-    @tasks = TASKS_LIST
+    @tasks = Task.all
   end
 
   def show
     id = params[:id]
-    @task = TASKS_LIST.find do |task|
-      task[:id] == id.to_i
-    end
+    @task = Task.find(id)
   end
+
+
+def new
+  @task = Task.new
+end
+
+def create
+  task = Task.new
+  task.name = params[:task][:name]
+  task.description = params[:task][:description]
+  task.completion_date = params[:task][:completion_date]
+
+
+  if task.save
+    redirect_to tasks_path
+  else
+    render :new
+  end
+end
+
+def edit
+end
+
+def update
+end
+
+def destroy
+  id = params[:id]
+  @task = task.find(id)
+  @task.destroy
+end
+
+
 
 end

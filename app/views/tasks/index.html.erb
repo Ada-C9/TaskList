@@ -2,9 +2,10 @@
 <ol>
   <% @tasks.each do |task| %>
   <li>
-    <span class="description">
-      <%=  link_to task[:description], task_path(task[:id]), class: 'description-link' %>
+    <span class="name">
+      <%=  link_to task.name, task_path(task.id), class: 'name-link' %>
     </span>
+     due by <%= task.completion_date %>
   </li>
   <% end %>
 </ol>
