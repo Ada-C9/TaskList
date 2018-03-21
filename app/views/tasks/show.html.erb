@@ -1,5 +1,5 @@
 <h3>
-  Task: <%= "#{@task.name}" %>
+  <%= "#{@task.name}" %>
 </h3>
 
 <ul>
@@ -10,6 +10,5 @@
     Priority: <%= "#{@task.priority}" %>
   </li>
 </ul>
-<br>
 
 <%= link_to('Edit', edit_task_path) %>
