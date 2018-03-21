@@ -44,8 +44,7 @@ ul {
 justify-content: space-around;
 flex-flow: column wrap;
 font-family: fantasy;
-}
-
+list-style-type: circle; }
 
 .tasklist {
   background: #cce5ff;
@@ -53,7 +52,6 @@ font-family: fantasy;
 }
 
 .tasklist li {
-  background: #ffe5e5;
   padding: 5px;
   margin-left: 35px;
 }
@@ -66,7 +64,7 @@ margin-bottom: .5em;
 
 .title {font-style: italic;}
 
-.tasks, .task {
+.tasks, .task, .add{
   margin: 1em;
   border: 1px solid rgb(127, 128, 249);
   position: absolute;
@@ -74,4 +72,15 @@ margin-bottom: .5em;
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(255, 255, 255, .2);
   background-color:inherit;
+}
+
+.add {
+position: static;
+list-style-type: none;
+box-sizing: content-box;
+width: 20%;
+border: solid #5B6DCD 2px;
+padding: 3px;
+box-shadow: 3px 3px 2px 1px rgba(255, 255, 255, .2);
+
 }
