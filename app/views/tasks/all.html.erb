@@ -6,20 +6,18 @@
           <a><%= link_to "Add Task", new_task_path %></a>
         </li>
         <li>
-          <a><%= link_to "All Tasks", all_tasks_path %></a>
+          <a><%= link_to "Home", tasks_path %></a>
         </li>
       </ul>
     </nav>
   </section>
   <section class="priority">
-    <h1>Your #1 Priority Tasks:</h1>
+    <h1>All Your Tasks:</h1>
     <ul>
-      <% @featured.each do |task| %>
+      <% @tasks.each do |task| %>
         <li class="list">
-          <p class="chore">
-            🥦
-            <a ><%= link_to task.title, task_path(task.id) %></a>
-          </p>
+          <a>🥦</a>
+          <a><%= link_to task.title, task_path(task.id) %></a>
           <p>
             <a>Status:
               <% if task.complete.nil?%>

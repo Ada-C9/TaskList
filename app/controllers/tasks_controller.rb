@@ -2,6 +2,11 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @featured = @tasks.select { |task| task.priority == 1 }
+  end
+
+  def all
+    @tasks = Task.order(:priority)
   end
 
   def show

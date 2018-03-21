@@ -14,18 +14,76 @@
  *= require_self
  */
 
- h2 {
+ /* * {
+   border: black 1px solid;
+ } */
+
+ /* - -- - -- BASELINE - -- -- -  */
+ h1 {
    font-family: sans-serif;
  }
+
  span.title {
    font-weight: bold;
  }
 
- .nav ul {
+ a {
+     text-decoration: none;
+ }
+
+header {
    text-align: center;
+   background-color: pink;
+   padding-top: .2em;
+   padding-bottom: .2em;
+   border-radius: 15px;
+   letter-spacing: .1em;
  }
 
  ul {
    list-style-type: none;
    line-height: 2em;
+   font-family: sans-serif;
  }
+
+ nav ul {
+    text-align: left;
+    background-color: pink;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 15px;
+  }
+
+  a {
+      color: black;
+  }
+
+ /* - -- - -- INDEX - -- -- -  */
+.priority {
+  border: dotted 1em red;
+  text-align: center;
+  margin-left: 1em;
+  width: 75%;
+  margin-top: 1em;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 35%;
+}
+
+.chore {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+ /* - -- - -- ALL - -- -- -  */
+.list {
+  background-color: #EEE5E9;
+  border-radius: 15px;
+  margin-right: 3em;
+}
