@@ -18,6 +18,7 @@
 
 .option {
   margin-right: 30px;
+  font-style: oblique;
 }
 
 .task {
@@ -67,4 +68,11 @@ input[type="submit"] {
     border: black 2px solid;
     padding: 20px;
     text-transform: uppercase;
+}
+
+.description {
+  border: 1px solid black;
+  width: 500px;
+  padding-left: 30px;
+  padding-bottom: 30px;
 }

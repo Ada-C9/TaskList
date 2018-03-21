@@ -17,6 +17,9 @@
         <div class="option">
             <%= link_to "Mark as Completed", task_path(task.id), method: :edit %>
         </div>
+        <div class="option">
+          <%= link_to "See description", task_path(task.id) %>
+        </div>
       </span>
     </li>
     <%end%>

@@ -27,7 +27,8 @@ h2 {
 }
 
 body {
-   margin: 100px;
+   margin-top: 50px;
+   margin-left: 100px;
    font-family: 'Inconsolata', monospace;
 }
 
