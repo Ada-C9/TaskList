@@ -1,27 +1,29 @@
 class TasksController < ApplicationController
 
-  TASKS_LIST = [
-    {id: 1, task: "do the thing", misc_notes: "stuff about this task", completed: false},
-    {id: 2, task: "do the thing", misc_notes: "stuff about this task", completed: false},
-    {id: 3, task: "do the thing", misc_notes: "stuff about this task", completed: false},
-    {id: 4, task: "do the thing", misc_notes: "secret agenda", completed: false}
-  ]
 
   def index
-    @tasks = TASKS_LIST
+    @tasks = Task.all
   end
 
   def show
     id = params[:id]
-    @task = TASKS_LIST.find do |task|
-      task[:id] == id.to_i
-    end
+    @task = Task.find(id)
   end
 
   def new
+    @task = Task.new
   end
 
   def create
+    task = Task.new
+    task.task = params[:task][:task]
+    task.description = params[:task][:description]
+    task.completed = params[:task][:completed]
+    if task.save # == true - it worked!
+      redirect_to tasks_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -31,6 +33,9 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    id = params[:id]
+    @task = Task.find(id)
+    @task.destroy
   end
 
 end

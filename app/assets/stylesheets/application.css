@@ -16,47 +16,87 @@
 
 body {
   background-color: #F0E7FD;
+  background-image: url("background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  background-color: #6CB185;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-color: ##B8059A;
+  border-bottom-width: thin;
+  min-width: 30px;
+}
+
+.nav-links {
+  list-style-type: none;
+  text-decoration: none;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  background-color: white;
+  padding: 5px;
+  min-width: 20px;
+  margin-left: 20px;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 4em;
   font-weight: bolder;
-  color: #218C75;
+  color: white;
   text-align: center;
+  padding-top: 30px;
 }
 
 .each::before {
-  content: "📌";
+  content: "❏";
 }
 
 .whole-list {
 display: flex;
-flex-flow: row wrap;
+flex-flow:  column;
+background-color: white;
+border-style: solid;
+border-color: #B8059A;
+margin-left: auto;
+margin-right: auto;
+width: 800px;
 }
 
 .task-list {
   font-size: 1.5em;
-  display: flex;
-  flex-flow: row;
   list-style-type: none;
   padding-bottom: 5px;
-  border-style: double;
-  border-radius: 30%;
   padding: 10px;
   margin: 20px;
   justify-content: flex-start;
-  background-color: white;
+  /*background-color: white;*/
 }
 
 .each a {
   font-weight: bolder;
-  color: #793EF6;
+  color: #147A75;
   text-decoration: none;
   width: 140px;
   padding: 10px;
-  margin: auto;
+  /*margin: auto;*/
 
 }
+
 
 .each a:hover {
   color: #B0F63E;
@@ -64,17 +104,85 @@ flex-flow: row wrap;
 
 .task-info p {
   font-size: 2em;
-  margin-left: 50px;
+
   color: #87B805;
 }
 
 .task-info {
-
-
-  border-style: double;
-  border-radius: 30%;
-  padding-left: 30px;
-  margin: 20px;
-
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  height: auto;
   background-color: white;
+  border-style: solid;
+  border-color: #B8059A;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.edit_things {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-right: 30px;
+  margin: 10px;
+}
+
+.edit-list {
+  padding: 20px;
+  margin: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  background-color: white;
+  padding: 5px;
+}
+
+.change-task {
+  text-decoration: none;
+  color: #B8059A;
+  font-weight: bold;
+}
+
+.change-task:hover {
+  color: #0BADA5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  height: auto;
+  background-color: white;
+  border-style: solid;
+  border-color: #B8059A;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.form-text {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  padding: 10px;
+  color: #147A75;
+  font-size: 1.5em;
+}
+
+.submit-button {
+
+  margin-top: 30px;
+  color: #147A75;
+  t
 }

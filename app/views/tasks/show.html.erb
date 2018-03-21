@@ -1,7 +1,17 @@
-<h2 class="task-title">Task(<%= @task[:id] %>) To Do:</h2>
+<h2 class="task-title">To Do:</h2>
 <section class="task-info">
-  <p>Task 📌: <%= @task[:task]%></p>
-  <p>Notes about Task: <%= @task[:misc_notes]%></p>
-  <p> Completed? <%= @task[:completed]%></p>
+
+  <p>Task 📌: <%= @task.task%></p>
+  <p>Description: <%= @task.description%></p>
+  <p> Completed: <%= @task.completed%></p>
+
+  <ul class="edit_things">
+    <li class="edit-list">
+      <%= link_to "Edit", edit_task_path, class: "change-task" %>
+    </li>
+    <li class="edit-list">
+      <%= link_to "Delete", task_path(@task.id), class: "change-task", method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
 
 </section>

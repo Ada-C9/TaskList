@@ -1,2 +1,25 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h2> Add More Shit To Do:</h2>
+<main class="form">
+  <%= form_for @task do |f| %>
+
+  <div class="form-fields">
+    <%= f.label "Task: ", class: "form-text", for: "task_task" %>
+    <%= f.text_field :task %>
+  </div>
+
+  <div class="form-fields">
+    <%= f.label "Description: ", class: "form-text" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="form-fields">
+    <%= f.label "Completed? ", class: "form-text" %>
+    <%= f.text_field :completed %>
+  </div>
+
+  <!-- <%= button_tag 'Clear Fields', :type => 'reset', class: "form-fields" %> -->
+
+  <%= f.submit class: "form-fields", class: "submit-button" %>
+
+  <%end%>
+</main>

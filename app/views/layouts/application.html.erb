@@ -9,6 +9,19 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "Home: All Tasks", tasks_path, class: "nav-links" %>
+          </li>
+          <li>
+            <%= link_to "Add a Task", new_task_path, class: "nav-links" %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
+
   </body>
 </html>
