@@ -1,0 +1,9 @@
+<h2> Good morning Wini!</h2>
+<p> Your tasks for this week are:</p>
+<% @tasks.each do |task|%>
+    <li>
+      <%= link_to task.name, task_detail_path(task.id) %>
+    </li>
+    <%end%>
+  </ul>
+</p>
