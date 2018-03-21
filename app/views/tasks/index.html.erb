@@ -4,7 +4,8 @@
     <p>
       <span class="title"><%= link_to task.title, task_path(task.id), class: "task-list" %></span>
     </p>
-    <ul>
+    <ul class="actions">
+      <li><a href="#">Placeholder</a></li>
       <li><%= link_to "Edit", edit_task_path %></li>
       <li><%= link_to "Delete", task_path(task.id), method: :delete %></li>
     </ul>
