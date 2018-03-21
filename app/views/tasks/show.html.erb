@@ -1,10 +1,10 @@
 <h1><%= @task.name %></h1>
 
 <main class="task-page">
-  <p>
+  <!-- <p>
   <span class="heading">Status:</span>
   <%= @task.status %>
-  </p>
+  </p> -->
   <p>
     <span class="heading">Due:</span>
     <%= @task.due_date %>
@@ -14,3 +14,14 @@
     <%= @task.description %>
   </p>
 </main>
+
+<section class='edit-delete'>
+  <ul>
+    <li>
+      <%= link_to "Edit task", edit_task_path %>
+    </li>
+    <li>
+      <%= link_to "Delete task", task_path(@task.id), method: :delete %>
+    </li>
+  </ul>
+</section>

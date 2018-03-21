@@ -18,13 +18,44 @@ body {
   font-family: monospace;
   font-size: 2em;
   color: white;
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 15% 1fr;
+  grid-template-areas:
+  "title title"
+  "aside main";
 }
 
-aside ul {
+aside {
+  grid-area: aside;
+}
+
+.status {
+  font-size: .5em;
+  font-weight: thin;
+}
+
+.edit-delete {
+  grid-area: aside;
+  padding-top: 4.2em;
+  text-decoration: none
+}
+
+.edit-delete ul, .edit-delete ul li a {
+  list-style: none;
+  color: orange;
+}
+
+aside ul li a, aside ul li {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   color: white;
+}
+
+aside ul li:first-of-type {
+  text-decoration: underline;
+  padding-bottom: .75em;
 }
 
 .task-list li, a {
@@ -38,7 +69,9 @@ aside ul {
 }
 
 h1 {
-  padding-left: 1em;
+  grid-area: title;
+  display: flex;
+  justify-content: center;
   border-bottom: dotted;
   border-width: .1em;
 }
@@ -49,12 +82,9 @@ h1 {
 }
 
 main {
+  grid-area: main;
   height: auto;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  width: 550px;
   background-color: white;
   opacity: .7;
   padding-left: .5em;

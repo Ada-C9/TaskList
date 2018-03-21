@@ -1,0 +1,19 @@
+<h1>Add Task</h1>
+
+<section class="new-task">
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>:
+    <%= f.text_field :name %><br /><br />
+
+    <%= f.label :description %>:
+    <%= f.text_area :description %><br /><br />
+
+    <%= f.label :due_date %>:
+    <%= f.text_field :due_date %><br /><br />
+
+    <%= f.label :status %>:
+    <%= f.text_field :status %><br /><br />
+
+    <input type="submit" name="commit" value="Add Task" data-disable-with="Add Task">
+  <% end %>
+</section>
