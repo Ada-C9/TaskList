@@ -1,2 +1,24 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h2>Add a new Task</h2>
+
+<%= form_for @task do |f| %>
+
+  <%= f.label "Task Name:" %>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.label "Complete By:" %>
+  <p>
+    <%= f.text_field :comp_date %>
+  </p>
+
+  <%= f.label "Description:" %>
+  <p>
+    <%= f.text_area :description %>
+  </p>
+  
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
