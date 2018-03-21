@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = task.all
+    @tasks = Task.all
 
   end
 
@@ -9,12 +9,18 @@ class TasksController < ApplicationController
   end
 
   def create
-
+    task = Task.new(todo: params[:todo], add_description_to_task: params[:add_description_to_task], due_date: params[:due_date] )
+    if task.save
+      redirect_to '/tasks'
+    end
   end
 
   def show
     #allows the task I want to be identified
     task_id = params[:id]
+
+
+    @tasks = Task.find(task_id)
 
   end
 

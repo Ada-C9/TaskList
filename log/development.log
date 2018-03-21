@@ -129,3 +129,421 @@ Migrating to AddDueDateToTasks (20180320232011)
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "tasks" ("todo", "created_at", "updated_at", "add_description_to_task", "due_date") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["todo", "Vacuum"], ["created_at", "2018-03-20 23:38:31.676448"], ["updated_at", "2018-03-20 23:38:31.676448"], ["add_description_to_task", "room, hall and stairs"], ["due_date", "2018-03-23"]]
   [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/task" for 127.0.0.1 at 2018-03-21 11:03:32 -0700
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/task"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:03:40 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...= Task.new(params[:todo] params[:add_description_to_task] pa...
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...add_description_to_task] params[:due_date] )
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected ')', expecting keyword_end
+...on_to_task] params[:due_date] )
+...                              ^:
+  app/controllers/tasks_controller.rb:12:in `'
+
+Started POST "/__better_errors/3084557c991364e9/variables" for 127.0.0.1 at 2018-03-21 11:03:41 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:07:53 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...= Task.new(params[:todo] params[:add_description_to_task] pa...
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...add_description_to_task] params[:due_date] )
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected ')', expecting keyword_end
+...on_to_task] params[:due_date] )
+...                              ^:
+  app/controllers/tasks_controller.rb:12:in `'
+
+Started POST "/__better_errors/755398e80fb3f174/variables" for 127.0.0.1 at 2018-03-21 11:07:53 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:08:55 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...= Task.new(params[:todo] params[:add_description_to_task] pa...
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...add_description_to_task] params[:due_date] )
+...                         ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected ')', expecting keyword_end
+...on_to_task] params[:due_date] )
+...                              ^:
+  app/controllers/tasks_controller.rb:12:in `'
+
+Started POST "/__better_errors/a4664143c99cf533/variables" for 127.0.0.1 at 2018-03-21 11:09:05 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:10:28 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...[:todo] add_description_to_task: params[:add_description_to_...
+...        ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...d_description_to_task] due_date: params[:due_date] )
+...                       ^~~~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected ')', expecting keyword_end
+...] due_date: params[:due_date] )
+...                              ^:
+  app/controllers/tasks_controller.rb:12:in `'
+
+Started POST "/__better_errors/c9ef4332e98de66d/variables" for 127.0.0.1 at 2018-03-21 11:10:29 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:10:55 -0700
+
+SyntaxError - syntax error, unexpected tIDENTIFIER, expecting ')'
+...[:todo] add_description_to_task:params[:add_description_to_t...
+...        ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+...d_description_to_task] due_date:params[:due_date] )
+...                       ^~~~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/controllers/tasks_controller.rb:12: syntax error, unexpected ')', expecting keyword_end
+...k] due_date:params[:due_date] )
+...                              ^:
+  app/controllers/tasks_controller.rb:12:in `'
+
+Started POST "/__better_errors/d27b31651920ba48/variables" for 127.0.0.1 at 2018-03-21 11:10:55 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:12:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (26.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (50.9ms)
+Completed 200 OK in 374ms (Views: 333.3ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 11:14:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 25.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 11:14:22 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 11:14:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `task' for #<TasksController:0x00007fbd7bcce580>
+Did you mean?  task_id:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/bb887668818e7565/variables" for 127.0.0.1 at 2018-03-21 11:14:27 -0700
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 11:48:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `task' for #<TasksController:0x00007fbd80aa2888>
+Did you mean?  task_id:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/2167320a6738ef71/variables" for 127.0.0.1 at 2018-03-21 11:48:38 -0700
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 11:51:08 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `task' for #<TasksController:0x00007fbd7ff03c98>
+Did you mean?  task_id:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/2b157b1d76d8a333/variables" for 127.0.0.1 at 2018-03-21 11:51:09 -0700
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 11:52:14 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTask Load (6.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 22ms (ActiveRecord: 11.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=index:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/71ecbd7c89eaf707/variables" for 127.0.0.1 at 2018-03-21 11:52:15 -0700
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 11:58:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.6ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=index:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/d7fdd251e0bfb5f7/variables" for 127.0.0.1 at 2018-03-21 11:58:36 -0700
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 12:07:54 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/index" for 127.0.0.1 at 2018-03-21 12:08:01 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"index"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 12:08:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 31ms (Views: 21.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:08:17 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (283.1ms)
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `tasks_index_path' for #<#<Class:0x00007fbd839464a0>:0x00007fbd82862058>
+Did you mean?  tasks_new_path:
+  app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225957688560'
+
+Started POST "/__better_errors/a2fcf4debfb39359/variables" for 127.0.0.1 at 2018-03-21 12:08:18 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:09:52 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (473.8ms)
+Completed 500 Internal Server Error in 489ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `tasks' for #<#<Class:0x00007fbd839464a0>:0x00007fbd7fb77b38>
+Did you mean?  tasks_url:
+  app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225943398620'
+
+Started POST "/__better_errors/e43858cde81d2a57/variables" for 127.0.0.1 at 2018-03-21 12:09:53 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:10:46 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (377.3ms)
+Completed 500 Internal Server Error in 395ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `tasks_index_path' for #<#<Class:0x00007fbd839464a0>:0x00007fbd7bcbe1d0>
+Did you mean?  tasks_new_path:
+  app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225901254140'
+
+Started POST "/__better_errors/00b360bda8064cd7/variables" for 127.0.0.1 at 2018-03-21 12:10:47 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:24 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:33 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 36ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:34 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:35 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:35 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 52ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:36 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-03-21 12:12:42 -0700
+Processing by TasksController#create as HTML
+  Parameters: {"authenticity_token"=>"9itYmbD2Cmi71roYbB3dEpIvhtd0Q3Tz/u8qHHGxMVNpfwHrzAFrUwunhHKQQG6c9HwxUAdzCIod5Hn3YTBQHA==", "todo"=>"", "add_description_to_task"=>"", "due_date"=>""}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.6ms)[0m  [1m[32mINSERT INTO "tasks" ("todo", "created_at", "updated_at", "add_description_to_task") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["todo", ""], ["created_at", "2018-03-21 19:12:42.707273"], ["updated_at", "2018-03-21 19:12:42.707273"], ["add_description_to_task", ""]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 27ms (ActiveRecord: 23.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 12:12:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:46 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:12:48 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:13:16 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:13:53 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:13:57 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/show" for 127.0.0.1 at 2018-03-21 12:15:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Task with 'id'=show:
+  app/controllers/tasks_controller.rb:23:in `show'
+
+Started POST "/__better_errors/b8ec5afb5ef829b7/variables" for 127.0.0.1 at 2018-03-21 12:15:25 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-03-21 12:19:07 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 31ms (Views: 24.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:19:11 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:19:13 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 12:29:23 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (289.3ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `tasks_index_path' for #<#<Class:0x00007fbd80dd1b30>:0x00007fbd80dd9038>
+Did you mean?  tasks_path:
+  app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225943762800'
+
+Started POST "/__better_errors/de2e6787614f6cc7/variables" for 127.0.0.1 at 2018-03-21 12:29:24 -0700
