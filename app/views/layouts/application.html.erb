@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
   <body>
@@ -14,10 +15,10 @@
       <nav>
         <ul>
           <li>
-            <%= link_to('Main Page', tasks_path) %>
+            <%= link_to('Main Page', tasks_path, class: 'header-nav') %>
           </li>
           <li>
-            <%= link_to('Add a new task', new_task_path) %>
+            <%= link_to('New Task', new_task_path, class: 'header-nav') %>
           </li>
         </ul>
       </nav>
