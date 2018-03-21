@@ -1,9 +1,27 @@
-<h2>Task List</h2>
+<body>
+  <h2 class="task-list-header">TASKLIST</h2>
 
-<% @tasks.each do |task| %>
-  <ul>
-    <li>
-      <%= task[:id] %>. <%= task[:description] %>
-    </li>
-  </ul>
-<% end %>
+  <div class="container">
+    <div class="buttons">
+      <span><%= link_to "Add Task", new_task_path %></span>
+      <span>All Tasks</span>
+    </div>
+
+    <div class="your-tasks">
+      <h2>YOUR TASKS</h2>
+      <% @tasks.each do |task| %>
+        <ul>
+          <li>
+            <a><%= task.id %>. <%= link_to task.name, task_path(task.id) %></a>
+          </li>
+          <p> Mark Complete | <%= link_to "Edit", edit_task_path(task.id) %> |
+            <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+          </p>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</body>
+<footer>
+    <p class="copyright ">Copyright 2018</p>
+</footer>
