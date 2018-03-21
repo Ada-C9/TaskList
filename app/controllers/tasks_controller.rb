@@ -32,5 +32,8 @@ class TasksController < ApplicationController
   end
 
   def delete
+    id = params[:id]
+    @task = Task.find(id)
+    @task.destroy
   end
 end
