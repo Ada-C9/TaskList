@@ -18,7 +18,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.task = params[:task][:task]
     task.description = params[:task][:description]
-    task.completed = params[:task][:completed]
+    task.completed = "no"  #default answer is no
     if task.save # == true - it worked!
       redirect_to tasks_path
     else

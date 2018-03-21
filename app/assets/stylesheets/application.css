@@ -37,9 +37,9 @@ nav ul {
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom-style: solid;
-  border-bottom-color: ##B8059A;
+  border-bottom-color: #B8059A;
   border-bottom-width: thin;
-  min-width: 30px;
+  position: fixed;
 }
 
 .nav-links {
@@ -50,8 +50,13 @@ nav ul {
   border-radius: 20%;
   background-color: white;
   padding: 5px;
-  min-width: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-left: 20px;
+}
+
+.nav-links:hover {
+  color: #0BADA5;
 }
 
 h2 {
@@ -103,14 +108,14 @@ width: 800px;
 }
 
 .task-info p {
+  padding-left: 30px;
   font-size: 2em;
-
   color: #87B805;
 }
 
 .task-info {
   padding-top: 30px;
-  padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 30px;
   height: auto;
   background-color: white;
@@ -178,6 +183,11 @@ width: 800px;
   padding: 10px;
   color: #147A75;
   font-size: 1.5em;
+}
+
+.form-field {
+  height: 1.5em;
+  margin-top: 15px;
 }
 
 .submit-button {
