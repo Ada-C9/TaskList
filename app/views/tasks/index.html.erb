@@ -1,11 +1,12 @@
 <div class="all-tasks-list">
   <h2>Tasks List</h2>
-  <ul>
     <% @tasks.each do |task| %>
-      <li>
-        <span class="title"><%= link_to task.title, task_path(task.id), :class => "task-list" %></span>
-      </li>
+    <p>
+      <span class="title"><%= link_to task.title, task_path(task.id), class: "task-list" %></span>
+    </p>
+    <ul>
+      <li><%= link_to "Edit", edit_task_path %></li>
+      <li><%= link_to "Delete", task_path(task.id), method: :delete %></li>
+    </ul>
     <% end %>
-  </ul>
-
 </div>
