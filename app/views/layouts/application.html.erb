@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskList</title>
+    <title>Check It</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="page-wrapper">
+      <header>
+        <h1>LeBeuof JUST DO IT</h1>
+        <%= link_to "Add New Task", new_task_path, class: "add-new" %>
+      </header>
+      <aside>
+        <%= link_to "List All Tasks", tasks_path, class: "all-tasks" %>
+      </aside>
+      <section>
+        <%= yield %>
+      </section>
+      <footer>
+        <p>Placeholder</p>
+      </footer>
+    </div>
   </body>
 </html>

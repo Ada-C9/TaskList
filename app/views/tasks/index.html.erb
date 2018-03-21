@@ -1,8 +1,11 @@
-<h1>Tasks List</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <span class="title"><%= link_to task.title, task_path(task.id), :class => "task-list" %></span>
-    </li>
-  <% end %>
-</ul>
+<div class="all-tasks-list">
+  <h2>Tasks List</h2>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li>
+        <span class="title"><%= link_to task.title, task_path(task.id), :class => "task-list" %></span>
+      </li>
+    <% end %>
+  </ul>
+
+</div>

@@ -1,0 +1,49 @@
+body {
+  font-family: 'Mina', sans-serif;
+  font-size: 15px;
+  color: #A9A9A9;
+}
+
+.page-wrapper {
+  margin: 10px;
+  padding: 2%;
+  background-color: #efefef;
+  border: 2px solid #A9A9A9;
+  display: grid;
+  grid-template: 10% auto 10% / 15% auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 30px;
+  align-items: center;
+}
+
+header, footer {
+  grid-column: 1 / -1;
+}
+
+header {
+  display: flex;
+  justify-content:space-around;
+  align-items: flex-end;
+}
+
+.add-new, .all-tasks {
+  padding: 20px;
+  background-color: #ff3b3f;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #ffffff;
+}
