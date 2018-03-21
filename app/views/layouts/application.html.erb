@@ -3,7 +3,8 @@
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
-
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower" >
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,14 +15,13 @@
       <nav>
         <ul>
           <li><h1>ToDo List</h1></li>
-          <div class="content-underline"></div>
           <li>Add Task</li>
           <li>All Tasks</li>
         </ul>
       </nav>
     </header>
 
-    <main id="list">
+    <main>
       <%= yield %>
     </main>
 

@@ -1,9 +1,13 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#list ol {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-content: center;
+main h1 {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+}
+
+ol>li, main strong {
+  font-size: 1.5em;
 }
