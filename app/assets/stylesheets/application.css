@@ -14,12 +14,12 @@
  *= require_self
  */
 
-ul {
-  list-style-type: none;
-}
+/* OVERALL SITE */
 
-h1 {
-  text-align: center;
+.site-flex {
+  display: flex;
+  flex-direction: column;
+  border: black 1px solid;
 }
 
 ul#site-nav {
@@ -27,30 +27,46 @@ ul#site-nav {
   justify-content: space-evenly;
   margin: 0;
   background-color: mediumaquamarine;
-}
-
-ul#task-options {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0;
-}
-
-ul#task-options li {
-  padding-right: 1em;
-}
-
-ul#site-nav, ul#all-tasks {
   text-align: center;
   padding: 0;
 }
 
-ul#all-tasks li {
-  padding-bottom: 1em;
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 1.5rem;
 }
 
 ul li a {
   text-decoration: none;
   color: black;
+}
+
+/* MAIN PAGE */
+
+h1 {
+  text-align: center;
+}
+
+li#description {
+  font-size: 1rem;
+  padding-bottom: 1em;
+}
+
+/* SHOW PAGE */
+
+h2 {
+  text-align: center;
+}
+
+ul#task-options {
+  padding-right: 1em;
+}
+
+ul#task-options li {
+  font-size: 1rem;
 }
 
 li#edit a {
@@ -59,4 +75,27 @@ li#edit a {
 
 li#delete a {
   color: red;
+}
+
+/* NEW TASK PAGE */
+
+h2.form {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
+label, input, textarea {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+input.submit {
+  width: fit-content;
 }

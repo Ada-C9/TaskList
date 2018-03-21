@@ -1,24 +1,17 @@
-<h2>Add a new Task</h2>
+
+<h2 class="form">Add a new Task</h2>
 
 <%= form_for @task do |f| %>
 
-  <%= f.label "Task Name:" %>
-  <p>
-    <%= f.text_field :name %>
-  </p>
+  <%= f.label "Task Name:", class: "form"%>
+  <%= f.text_field :name, class: "form"%>
 
-  <%= f.label "Complete By:" %>
-  <p>
-    <%= f.text_field :comp_date %>
-  </p>
+  <%= f.label "Complete By:", class: "form"%>
+  <%= f.text_field :comp_date, class: "form" %>
 
-  <%= f.label "Description:" %>
-  <p>
-    <%= f.text_area :description %>
-  </p>
-  
-  <p>
-    <%= f.submit %>
-  </p>
+  <%= f.label "Description:", class: "form"%>
+  <%= f.text_area :description, class: "form"%>
+
+  <%= f.submit class: "submit"%>
 
 <% end %>
