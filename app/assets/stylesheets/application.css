@@ -15,3 +15,26 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.task-name {
+  font-weight: 500;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.task-name + ul {
+  margin-left: 2em;
+}

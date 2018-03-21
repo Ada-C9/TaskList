@@ -1,2 +1,21 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<section class="task-details">
+  <h2>Task Details</h2>
+  <p class="task-name">
+    <%= @task.name %>
+  </p>
+  <ul>
+    <li>Due:  <%= @task.due %></li>
+    <li>Status: <%= @task.status %></li>
+    <li>Description: <%= @task.description %></li>
+  </ul>
+</section>
+
+<section class="task-options">
+  <h2>Options</h2>
+  <ul>
+    <li><%= link_to "✅ Completed", mark_complete_task_path(@task.id), method: :mark_complete %></li>
+    <li><%= link_to "📝 Edit", edit_task_path %></li>
+    <li><%= link_to "❌ Delete", task_path(@task.id), method: :delete,
+      data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</section>

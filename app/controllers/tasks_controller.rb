@@ -13,6 +13,11 @@ class TasksController < ApplicationController
   end
 
   def create
+    @task = Task.new
+    @task.title = params[:task][:title]
+    @task.author = params[:task][:author]
+    @task.description = params[:task][:description]
+    @task.save
   end
 
   def edit
@@ -22,6 +27,9 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
+    id = params[:id]
+    @task = Task.all.find { |task| task.id == id.to_i }
+    @task.status = "complete"
   end
 
   def destroy
