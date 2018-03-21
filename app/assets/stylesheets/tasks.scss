@@ -4,6 +4,7 @@
 
 li > ul {
   list-style-type: none;
+  width: 25vw;
 }
 
 li > ul li:last-of-type {
@@ -11,13 +12,13 @@ li > ul li:last-of-type {
 }
 
 #priority {
-  background-color: red;
+  background-color: rgb(207, 119, 119);
 }
 
 #medium {
-  background-color: yellow;
+  background-color: rgb(223, 216, 165);
 }
 
 #low {
-  background-color: green;
+  background-color: rgb(174, 242, 160);
 }
