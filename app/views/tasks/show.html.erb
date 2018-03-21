@@ -1,1 +1,18 @@
 <h2><%= @task[:title] %></h2>
+<h3>To complete this task, you need to: </h3><p><ul><li><%= @task[:description]%></li></ul></p></h>
+  <h3>Your deadline is scheduled for:</h3><%= @task[:duedate] %>
+  <ul>
+    <li>
+      <%= link_to "Edit Task", edit_task_path %>
+    </li>
+    <li>
+      <%= link_to "Delete Task", task_path(@task.id),
+         method: :delete %>
+    </li>
+
+
+
+
+
+
+  </ul>

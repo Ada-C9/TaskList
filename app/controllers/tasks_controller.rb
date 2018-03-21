@@ -1,27 +1,26 @@
 class TasksController < ApplicationController
-TASK_LIST = [
-
-  {id: 1, title: "Task One", completed: false, action: "edit", erase: "delete"},
-  {id: 2, title: "Task Two", completed: false, action: "edit", erase: "delete"},
-  {id: 3, title: "Task Three", completed: false, action: "edit", erase: "delete"},
-  {id: 4, title: "Task Four", completed: false, action: "edit", erase: "delete"}
-]
-
   def index
-    @tasks = TASK_LIST
+    @tasks = Task.all
   end
 
   def show
     id = params[:id]
-    @task = TASK_LIST.find do |task|
-      task[:id] == id.to_i
+    @task = Task.find(id)
   end
-end
 
   def new
+    @task = Task.new
   end
 
   def create
+    @task = Task.new
+    @task.title = params[:task][:title]
+    @task.duedate = params[:task][:duedate]
+    @task.description = params[:task][:description]
+    if @task.save
+      redirect_to tasks_path
+    end
+
   end
 
   def edit
@@ -34,5 +33,8 @@ end
   end
 
   def destroy
+    id = params[:id]
+    @task = Task.find(id)
+    @task.destroy
   end
 end

@@ -12,6 +12,18 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to "Home", tasks_path %>
+          </li>
+          <li>
+            <%= link_to "Add a Task", new_task_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
       <%= yield %>
     </main>

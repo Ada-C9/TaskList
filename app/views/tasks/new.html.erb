@@ -1,2 +1,40 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<!-- <h2>Create a New Task</h2>
+
+<form action="/tasks" method="post">
+
+  <fieldset>
+    <legend> Create a new Task</legend>
+  <input name="authenticity_token" value="<%= form_authenticity_token %>"
+    type="hidden">
+
+  <label for="title">Title:</label>
+  <input name="title" value="" id="title" type="text">
+  <br  />
+  <label for="duedate">Date Due:</label>
+  <input name="duedate" id="title" type="text">
+
+  <label for="description">Description of Task:</label>
+  <textarea name="description" id="description" >
+  </textarea>
+  <input name="submit" value="Create Task"
+    type="submit">
+  </fieldset>
+
+</form> -->
+
+
+
+
+<%= form_for @task do |f| %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :duedate %>
+<%= f.text_field :duedate%>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.submit %>
+<% end %>

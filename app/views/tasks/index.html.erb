@@ -1,11 +1,10 @@
 <h2>Tasks List</h2>
 <ul>
-<% @taskss.each do |task| %>
+<% @tasks.each do |task| %>
   <li>
       <span class="title">
         <%= link_to task[:title], task_path(task[:id]), class: 'title-link' %>
       </span>
-      by <%= task[:author] %>
   </li>
 <% end %>
 </ul>
