@@ -17,7 +17,6 @@ class TasksController < ApplicationController
     task = Task.new
     task.name = params[:task][:name]
     task.description = params[:task][:description]
-    # redirect_to tasks_path if @task.save
     task.save ? (redirect_to tasks_path) : (render :new)
   end
 
