@@ -19,16 +19,29 @@
 .site-flex {
   display: flex;
   flex-direction: column;
-  border: black 1px solid;
+  /* border: black 1px solid; */
 }
 
-ul#site-nav {
+body {
+  margin: 6em;
+}
+
+ul#site-nav, ul#site-footer {
   display: flex;
   justify-content: space-evenly;
   margin: 0;
   background-color: mediumaquamarine;
   text-align: center;
   padding: 0;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+ul#site-footer p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 ul {

@@ -29,15 +29,27 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find_by(id: params[:id])
   end
 
   def update
+    @task = Task.find_by(id: params[:id])
+    if !@task.nil?
+      if @task.update(name: params[:task][:name], description: params[:task][:description], comp_date: params[:task][:comp_date])
+
+        redirect_to task_path
+      else
+        render :edit
+      end
+    else
+      redirect_to tasks_path
+    end
   end
 
   def destroy
     id = params[:id]
-    @book = Task.find(id)
-    @book.destroy
+    @task = Task.find(id)
+    @task.destroy
     redirect_to tasks_path
   end
 end
