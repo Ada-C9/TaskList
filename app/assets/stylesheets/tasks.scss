@@ -8,12 +8,36 @@ main h1 {
   text-decoration: underline;
 }
 
+main ol {
+  counter-reset: oli;
+  list-style-type: none;
+}
+
+main ol li {
+  counter-increment:oli;
+}
+
+main ol li:before {
+  content:counter(oli)". ";
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
 ol>li, main strong {
   font-size: 1.5em;
 }
 
 ol>li p {
   display: inline-block;
+}
+
+p a {
+  text-decoration: none;
+  color: rgb(18,55,78);
+}
+
+p a:hover {
+  font-weight: bold;
 }
 
 .task-list-link {

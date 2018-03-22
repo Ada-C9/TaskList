@@ -12,7 +12,9 @@
     (by <%= task.complete_by %> )
   </em>
   <br>
-  <p> Mark Complete | </p>
+  <p id="complete?">
+    Mark Complete |
+  </p>
   <p>
     <%= link_to("Edit |", edit_task_path(task.id)) %>
   </p>
