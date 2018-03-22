@@ -9,12 +9,12 @@ class TasksController < ApplicationController
   end
 
   def create
-    raw_task = params[:task]
+    new_task = params[:task]
 
     task = Task.new
-    task.name = raw_task[:name]
-    task.details = raw_task[:details]
-    task.completed = raw_task[:completed]
+    task.name = new_task[:name]
+    task.details = new_task[:details]
+    task.complete = new_task[:complete]
 
     if task.save
       redirect_to '/tasks'
@@ -31,16 +31,15 @@ class TasksController < ApplicationController
   end
 
   def update
-    raw_book = params[:task]
-    task = Task.find(raw_book)
-    task.assign_attributes(
-    task.name = raw_task[:name],
-    task.details = raw_task[:details],
-    task.completed = raw_task[:completed]
-    )
+    new_task = params[:task]
+
+    task = Task.find(params[:id])
+    task.name = new_task[:name]
+    task.details = new_task[:details]
+    task.complete = new_task[:complete]
 
     if task.save
-      redirect_to book_path(task)
+      redirect_to tasks_path(task)
     end
   end
 

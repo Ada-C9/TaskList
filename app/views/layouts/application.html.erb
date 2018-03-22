@@ -10,9 +10,15 @@
   </head>
 
   <body>
-    <header>
-      <h1>Welcome to your personal Task Team!</h1>
+    <header class="header">
+      <h1>Welcome to Taskless!</h1>
     </header>
+    <nav class="home">
+      <ul>
+          <li><%= link_to('All Tasks', tasks_path) %></li>
+          <li><%= link_to('Add New Task', new_task_path) %></li>
+        </ul>
+    </nav>
     </main>
       <%= yield %>
     </main>

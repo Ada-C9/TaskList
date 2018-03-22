@@ -1,15 +1,19 @@
 <h3>Below is a list of tasks for you:</h3>
 
-  <ul>
-    <% @tasks.each do |task| %>
-    <li>
-      <input type="checkbox">
+<ul>
+  <% @tasks.each do |task| %>
+  <li class="row"><input type="checkbox">
+    <span>
       <%= link_to( task.name, task_path(task))%>:
-      Task: <%= task.details %> --
+      <%= task.details %>
       Due by: <%= task.complete %>
       <button>
         <%= link_to("Edit", edit_task_path(task)) %>
       </button>
-    </li>
-    <% end %>
-  </ul>
+      <button>
+        <%= link_to("Delete", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete Task, #{task.name}?" }) %>
+      </button>
+    </span>
+  </li>
+  <% end %>
+</ul>
