@@ -3,9 +3,9 @@
 <ol>
 <% @tasks.each do |task| %>
   <li>
-    <strong><%= task.name %></strong> -- <%= task.description %>
-    <%= link_to("Task Details", task_path(task)) %>
-    <%= link_to("Edit", edit_task_path(task)) %>
+    <strong><%= link_to("#{task.name}", task_path(task)) %></strong><br>
+    <%= link_to("Mark Complete", complete_task_path(task), method: :patch) %> |
+    <%= link_to("Edit", edit_task_path(task)) %> |
     <%= link_to("Delete", task_path(task), method: :delete, data: {confirm: "Are you sure you want to delete #{task.name}?" }) %>
   </li>
 <% end %>
