@@ -2,3 +2,5 @@
 <p> <strong>Details:</strong> <%= @task[:description] %></p>
 <p> <strong>Due Date </strong><%= @task[:duedate] %></p>
 <p> <strong>Complete </strong><%= @task[:complete] %></p>
+<%= link_to("Edit task", edit_task_path) %>
+<%= link_to("Delete task", task_path, method: :delete, data: { confirm: "Are you sure?" }) %>
