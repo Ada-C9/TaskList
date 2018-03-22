@@ -28,8 +28,8 @@ class TasksController < ApplicationController
   end
 
   def update
-  
-    @task = Task.find(params[:id])
+
+  @task = Task.find(params[:id])
   @task.update(title: params[:title], duedate: params[:duedate], description: params[:description])
   redirect_to task_path(@task)
 
@@ -42,8 +42,8 @@ class TasksController < ApplicationController
   def destroy
     id = params[:id]
     @task = Task.find(id)
-    if @task.destroy
+  @task.destroy
       redirect_to tasks_path
     end
-  end
+
 end

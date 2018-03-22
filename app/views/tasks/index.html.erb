@@ -7,6 +7,11 @@
       </span>
       <span class="edit">
         <%= link_to "Edit", edit_task_path(task[:id]),class: 'edit-link' %></span>
+        <span class ="delete"> <%= link_to 'Delete', task_path(task),
+              method: :delete,
+              data: { confirm: 'This will delete your task. Are you sure?' } %></span>
+
+
 
   </li>
 <% end %>
