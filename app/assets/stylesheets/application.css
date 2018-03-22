@@ -68,9 +68,9 @@ li#description {
   /* padding-bottom: 1em; */
 }
 
-/* input.book-button {
-  padding-bottom: 1em;
-} */
+li a.complete {
+  text-decoration: line-through;
+}
 
 /* SHOW PAGE */
 

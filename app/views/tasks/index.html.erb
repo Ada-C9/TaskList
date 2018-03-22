@@ -3,7 +3,13 @@
 <ul id="all-tasks">
   <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.name, task_path(task.id) %>
+      
+      <% if task.task_complete == false %>
+        <%= link_to task.name, task_path(task.id), class: "incomplete" %>
+      <% else %>
+        <%= link_to task.name, task_path(task.id), class: "complete" %>
+      <% end %>
+
     </li>
     <li id="description">
       <%= task.description %>
@@ -11,9 +17,5 @@
     <li>
       <input type="button" name="Complete?" value="Complete?" class="book-button" />
     </li>
-
-    <!-- <li>
-      <%= task.task_complete %>
-    </li> -->
   <% end %>
 </ul>
