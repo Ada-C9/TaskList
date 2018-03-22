@@ -1,0 +1,18 @@
+<form action="/tasks" method="post" accept-charset="utf-8">
+  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <form>
+    <label for="name">Location</label>
+    <input type="text" name="name" value="" id="name" />
+
+    <label for ="details">Description</label>
+    <input type="text" name="description" value="" id="details">
+
+    <label for="completed">Complete By</label>
+    <input type="text" name="date" value="" id="completed" />
+
+    <input type="submit" value="Add task" />
+
+
+  </form>
