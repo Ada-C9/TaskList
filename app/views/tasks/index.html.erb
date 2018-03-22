@@ -1,11 +1,15 @@
 <div class="all-tasks-list">
   <h2>Tasks List</h2>
+  <ol class="one-task">
     <% @tasks.each do |task| %>
-    <h3><span><%= task.id %>. </span><%= link_to task.title, task_path(task.id), class: "task-list" %></h3>
-    <ul class="actions">
-      <li><a href="#">Placeholder</a></li>
-      <li><%= link_to "Edit", edit_task_path, class: "edit" %></li>
-      <li><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></li>
-    </ul>
+      <li class="title"><%= link_to task.title, task_path(task.id), class: "task-list" %></li>
+
+        <div class="actions">
+          <p><a href="#">Mark Completed</a></p>
+          <p><%= link_to "Edit", edit_task_path, class: "edit" %></p>
+          <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
+        </div>
+
     <% end %>
+  </ol>
 </div>
