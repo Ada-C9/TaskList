@@ -1,9 +1,24 @@
 <h2>Edit Task:</h2>
 
-<main class="whole-list">
-  <p> I think a new form will be here.</p>
+<main class="form">
+  <%= form_for @task do |f| %>
+
+  <div class="form-fields">
+    <%= f.label "Task: ", class: "form-text", for: "task_task" %>
+    <%= f.text_field :task, class: "form-field" %>
+  </div>
+
+  <div class="form-fields">
+    <%= f.label "Description: ", class: "form-text" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="form-fields">
+    <%= f.label "Completed? ", class: "form-text" %>
+    <%= f.text_field :completed, class: "form-field" %>
+  </div>
+
+  <%= f.submit class: "form-fields", class: "submit-button" %>
+
+  <%end%>
 </main>
-
-
-<!-- <h1>Tasks#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p> -->
