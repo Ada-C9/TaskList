@@ -21,16 +21,21 @@ class TasksController < ApplicationController
   end
 
   def edit
-    
+    Task.find_by(id: params[:id]) ? (@task = Task.find_by(id: params[:id])) : (redirect_to tasks_path)
   end
 
   def update
-
+    task = Task.find_by(id: params[:id])
+    if !task.nil?
+      task.update(name: params[:task][:name], description: params[:task][:description] ) ? (redirect_to task_path) : (render :edit)
+    end
   end
 
   def destroy
     id = params[:id]
     @task = Task.find(id)
+
+    @task ? @task.destroy : (redirect_to tasks_path)
     @task.destroy
     redirect_to tasks_path
   end
