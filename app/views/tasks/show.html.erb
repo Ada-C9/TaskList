@@ -1,13 +1,23 @@
+<div class="form-style">
+
 <h2>Summary of Task <%= @task.id %></h2>
 
-<ul>
-  <li>
-    Name: <%= @task.name %>
-  </li>
-  <li>
-    Details: <%= @task.description %>
-  </li>
-  <li>
-    Deadline: <%= @task.complete_by %>
-  </li>
-</ul>
+  <ul>
+    <li>
+      Name: <%= @task.name %>
+      <hr>
+    </li>
+    <li>
+      Details: <%= @task.description %>
+      <hr>
+    </li>
+    <li>
+      Deadline: <%= @task.complete_by %>
+      <hr>
+    </li>
+    <li>
+      Status: <%= @task.status %>
+    </li>
+  </ul>
+
+</div>

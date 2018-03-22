@@ -15,13 +15,13 @@
  */
 
  html {
-   height: 100%;
-   overflow: hidden;
+   /* height: 100%; */
+   /* overflow: hidden; */
 }
 
 body {
-  height: 100%;
-  overflow: auto;
+  /* height: 100%;
+  overflow: auto; */
   margin: 0;
   padding: 1em;
   font-family: 'Indie Flower', cursive;
