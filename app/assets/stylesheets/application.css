@@ -48,10 +48,10 @@ h1 {
   display: inline;
   list-style: none;
   font-size: 2em;
-  background: teal;
   padding: 10px;
   border-radius: 10%;
   margin-right: 20px;
+  background-image: url("https://images.pexels.com/photos/5865/healthy-spring-young-green-5865.jpg?auto=compress&cs=tinysrgb&h=350");
 }
 
 .nav_bar > li > a {
@@ -64,7 +64,8 @@ a {
 }
 
 header {
-  background: linear-gradient(rgba(211, 223, 232, 0.07), rgba(88, 146, 213, 0.48))
+  padding-top: 30px;
+  background-image: url("https://images.pexels.com/photos/675977/blue-sky-merge-clouds-675977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .bottom {

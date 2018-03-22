@@ -1,6 +1,6 @@
 .main > ul {
   list-style: none;
-  background: linear-gradient(rgba(115, 180, 240, 0.39), rgba(100, 223, 102, 0.61));
+
   font-size: 2em;
 }
 .main .button {
