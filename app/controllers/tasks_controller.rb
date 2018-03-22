@@ -11,6 +11,7 @@ class TasksController < ApplicationController
     raw_task = params[:task]
     task = Task.new
     task.name = raw_task[:name]
+    task.status = 'TODO'
     task.description = raw_task[:description]
     task.priority = raw_task[:priority]
     task.completion_date = raw_task[:completion_date]

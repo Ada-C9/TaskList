@@ -5,27 +5,31 @@
   <% sorted.each do |task| %>
 
     <li>
-      <ul>
-        <li>
+      <section>
+        <p>
           <strong><%= task.name.capitalize %></strong>
-        </li>
-        <li>
+        </p>
+        <p>
           <%= task.description %>
-        </li>
-        <li>
+        </p>
+        <p>
           <% priority = "Priority: #{task.priority}" %>
           <% if task.priority == 5 %>
-            <span id = 'priority'><%= priority %></span>
+          <span id = 'priority'><%= priority %></span>
           <% elsif task.priority >= 3 && task.priority <= 4 %>
-            <span id = 'medium'><%= priority %></span>
+          <span id = 'medium'><%= priority %></span>
           <% else %>
-            <span id = 'low'><%= priority %></span>
+          <span id = 'low'><%= priority %></span>
           <% end %>
 
-          <br>
+        </p>
+        <p>
+          <%= link_to('Mark Complete', ) %>
+        </p>
+        <p>
           <%= link_to('View', task_path(task)) %>
-        </li>
-      </ul>
+        </p>
+      </section>
 
   <% end %>
 </ul>

@@ -44,6 +44,10 @@ nav > ul li:first-of-type {
   border-left: solid thin black;
 }
 
+a {
+  color: black;
+}
+
 a.header-nav {
   text-decoration: none;
 }
@@ -54,4 +58,51 @@ a:visited {
 
 a:hover {
   color: rgb(120, 28, 213);
+}
+
+/* for the website content */
+main {
+  font-family: 'Arimo', sans-serif;
+}
+
+li > ul {
+  list-style-type: none;
+  width: 25vw;
+}
+
+li > ul li:last-of-type {
+  margin-bottom: 1.5em;
+}
+
+/* index page */
+#priority {
+  background-color: rgb(207, 119, 119);
+}
+
+#medium {
+  background-color: rgb(223, 216, 165);
+}
+
+#low {
+  background-color: rgb(174, 242, 160);
+}
+
+li > section {
+  min-width: 20em;
+  padding: auto;
+  border: thin solid black;
+  margin-bottom: 5vw;
+
+}
+
+section > p {
+  padding: 0 3vw;
+}
+
+main > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
 }
