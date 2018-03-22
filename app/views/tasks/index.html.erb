@@ -5,6 +5,9 @@
       <span class="title">
         <%= link_to task[:title], task_path(task[:id]), class: 'title-link' %>
       </span>
+      <span class="edit">
+        <%= link_to "Edit", edit_task_path(task[:id]),class: 'edit-link' %></span>
+
   </li>
 <% end %>
 </ul>
