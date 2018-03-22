@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(name: params[:name], description: params[:description])
+    task = Task.new(name: params[:name], description: params[:description], completion_date: params[:completion_date])
     if task.save
       redirect_to "/tasks"
     end
@@ -34,6 +34,15 @@ class TasksController < ApplicationController
 
     if task.save
       redirect_to task
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+
+    if @task.destroy
+      redirect_to tasks_path
     end
   end
 
