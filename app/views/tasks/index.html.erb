@@ -1,17 +1,15 @@
-<h2>TASKLIST</h2>
 
-<ul>
-  <li>Add Task
-  </li>
 
-  <li>All Tasks
-  </li>
-</ul>
-
-<h3>WENJIE'S TASKS</h3>
-<ol>
-<% @tasks.each do |task| %>
-<li> Task: <%= task.name %> <strong>|</strong> Due Date: <span class=due_date> <%= task.due_date %> </span>
-</li>
-<% end %>
-</ol>
+<main class=main>
+  <ol>
+    <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task.name, task_path(task) %>
+      Status: <span class=status><%= task.status %></span>
+      <strong>|</strong>
+      Due Date: <span class=due_date> <%= task.due_date %> </span>
+      <%= link_to "Edit", edit_task_path(task) %>
+    </li>
+    <% end %>
+  </ol>
+</main>

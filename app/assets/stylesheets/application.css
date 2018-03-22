@@ -1,41 +1,69 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
-
-div {
-  background: linear-gradient(white, rgb(224, 116, 191));
-}
-
-ul {
-  background: linear-gradient(whitesmoke, teal)
-}
-ol {
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+header > .top {
+  margin-left: 100px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
-ol > li {
-  background: linear-gradient(white, rgb(224, 116, 191));
+
+header > .task_icon {
+  width: 120px;
+  height: 120px;
+}
+
+header > .top > .task_icon:hover {
+  border-radius: 50%;
+}
+
+h1 {
+  margin: 30px auto;
+  font-size: 3em;
+  margin-left: 10px;
+}
+
+.nav_bar {
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.nav_bar > li {
+  display: inline;
+  list-style: none;
   font-size: 2em;
+  background: teal;
   padding: 10px;
+  border-radius: 10%;
+  margin-right: 20px;
 }
 
-li > strong {
-  font-weight: bold;
+.nav_bar > li > a {
+  padding: 10px;
+  color: white;
 }
 
-.due_date {
-  color: teal;
+a {
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(rgba(211, 223, 232, 0.07), rgba(88, 146, 213, 0.48))
+}
+
+.bottom {
+  text-align: center;
+  background: linear-gradient(white ,rgb(176, 230, 150))
 }

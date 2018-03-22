@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <header class=header>
+    <div class=top>
+      <%= image_tag "task_icon.png", alt: "Task icon", class: "task_icon" %>
+      <h1>Welcome to Wenjie's TaskList Lab</h1>
+    </div>
+    <ul class=nav_bar>
+      <li><%= link_to "Task List", tasks_path %></li>
+      <li><%= link_to "Add Task", new_task_path %></li>
+    </ul>
+  </header>
+
+  <%= yield %>
+  <footer class=bottom>&copy; Traxiaojie, Inc</footer>
+</body>
 </html>
