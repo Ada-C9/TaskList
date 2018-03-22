@@ -13,13 +13,32 @@
  *= require_tree .
  *= require_self
  */
-h1 {
-  font-family: sans-serif;
-  font-size: 24pt;
-  font-weight: bold;
-  color: #F00
+ body {
+     height: 100%
+     display: grid;
+     grid-template-columns: 3fr 1fr 1fr;
+     grid-gap: 3px;
+     margin:0.5em;
+     background-color: rgb(169, 196, 215);
+     font-family: 'Londrina Solid',cursive; sans-serif;
+ }
+
+
+nav ul li {
+  list-style: none
+}
+ul li {
+  list-style: none;
 }
 
-body {
-  font-family: sans-serif;
+h1 {
+  font-size: 24pt;
+  font-weight: bold;
+  color: rgb(9, 8, 17);
+  margin-left: 30px;
+  border-style: dotted;
+  border-color: data-turbolinks-track;
+}
+h3 {
+margin-left: 30px;
 }
