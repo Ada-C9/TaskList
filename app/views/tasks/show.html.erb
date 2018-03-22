@@ -1,22 +1,49 @@
-<h1><%=@task.title %></h1>
-<p>
-  Description: <%= @task.description %>
-</p>
-<p>
-  Location: <%= @task.location %>
-</p>
-<p>
-  Priority: <%= @task.priority %>
-</p>
-<p>
-  Status:
-    <% if @task.complete.nil?%>
-      incomplete
-    <% else %>
-      <%= @task.complete %>
-      <% end %>
-</p>
-<p>
-  <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <%= link_to "Edit", edit_task_path %>
-</p>
+<section class="details">
+  <section class="sidebar">
+    <nav>
+      <ul>
+        <li>
+          <a><%= link_to "Add Task", new_task_path %></a>
+        </li>
+        <li>
+          <a><%= link_to "All Tasks", all_tasks_path %></a>
+        </li>
+        <li>
+          <a><%= link_to "Home", tasks_path %></a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section class="item">
+    <h1><%=@task.title %></h1>
+    <p>
+      Description: <%= @task.description %>
+    </p>
+    <p>
+      Location: <%= @task.location %>
+    </p>
+    <p>
+      Priority:
+        <% if @task.priority == 1%>
+          High
+          <%elsif @task.priority == 2 %>
+          Medium
+          <%elsif @task.priority == 3 %>
+          Low
+          <% end %>
+    </p>
+    <p>
+      Status:
+        <% if @task.complete.nil?%>
+          incomplete
+        <% else %>
+          <%= @task.complete %>
+          <% end %>
+    </p>
+    <p>
+      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      |
+      <%= link_to "Edit", edit_task_path %>
+    </p>
+  </section>
+</section>

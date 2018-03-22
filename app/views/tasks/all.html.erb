@@ -1,4 +1,4 @@
-<section class="homepage">
+<section class="all_page">
   <section class="sidebar">
     <nav>
       <ul>
@@ -11,28 +11,87 @@
       </ul>
     </nav>
   </section>
-  <section class="priority">
-    <h1>All Your Tasks:</h1>
-    <ul>
-      <% @tasks.each do |task| %>
-        <li class="list">
-          <a>🥦</a>
-          <a><%= link_to task.title, task_path(task.id) %></a>
-          <p>
-            <a>Status:
-              <% if task.complete.nil?%>
-                incomplete
-              <% else %>
-                <%= task.complete %>
+  <section class="priorities">
+    <article>
+      <h1>#1 Priority:</h1>
+      <ul>
+        <% @tasks.each do |task| %>
+          <li class="list">
+            <% if task.priority == 1%>
+              <p>🌶
+                <a><%= link_to task.title, task_path(task.id) %></a>
+              </p>
+              <p>
+                <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+                |
+                <a><%= link_to "Edit", edit_task_path(task.id) %></a>
               <% end %>
-            </a>
-            |
-            <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
-            |
-            <a><%= link_to "Edit", edit_task_path(task.id) %></a>
-          </p>
-        </li>
-      <% end %>
-    </ul>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+
+    <article>
+      <h1>#2 Priority:</h1>
+      <ul>
+        <% @tasks.each do |task| %>
+          <li class="list">
+            <% if task.priority == 2%>
+              <p>🥦
+                <a><%= link_to task.title, task_path(task.id) %></a>
+              </p>
+              <p>
+                <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+                |
+                <a><%= link_to "Edit", edit_task_path(task.id) %></a>
+              <% end %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+
+    <article>
+      <h1>#3 Priority:</h1>
+      <ul>
+        <% @tasks.each do |task| %>
+          <li class="list">
+            <% if task.priority == 3%>
+              <p>🥕
+                <a><%= link_to task.title, task_path(task.id) %></a>
+              </p>
+              <p>
+                <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+                |
+                <a><%= link_to "Edit", edit_task_path(task.id) %></a>
+              <% end %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+
+    <article>
+      <h1>Completed Tasks:</h1>
+      <ul>
+        <% @tasks.each do |task| %>
+          <li class="list">
+            <% if task.complete != nil%>
+              <p>🥕
+                <a><%= link_to task.title, task_path(task.id) %></a>
+              </p>
+              <p>
+                <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+                |
+                <a><%= link_to "Edit", edit_task_path(task.id) %></a>
+              <% end %>
+            </p>
+          </li>
+        <% end %>
+      </ul>
+    </article>
+
   </section>
+
 </section>

@@ -14,51 +14,49 @@
  *= require_self
  */
 
- /* * {
-   border: black 1px solid;
- } */
+/* - -- - -- BASELINE - -- -- -  */
 
- /* - -- - -- BASELINE - -- -- -  */
- h1 {
-   font-family: sans-serif;
- }
+h1 {
+  font-family: sans-serif;
+}
 
- span.title {
-   font-weight: bold;
- }
+span.title {
+  font-weight: bold;
+}
 
- a {
-     text-decoration: none;
- }
+a {
+  text-decoration: none;
+}
 
 header {
-   text-align: center;
-   background-color: pink;
-   padding-top: .2em;
-   padding-bottom: .2em;
-   border-radius: 15px;
-   letter-spacing: .1em;
- }
+  text-align: center;
+  background-color: pink;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  border-radius: 15px;
+  letter-spacing: .1em;
+}
 
- ul {
-   list-style-type: none;
-   line-height: 2em;
-   font-family: sans-serif;
- }
+ul {
+  list-style-type: none;
+  line-height: 2em;
+  font-family: sans-serif;
+}
 
- nav ul {
-    text-align: left;
-    background-color: pink;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    border-radius: 15px;
-  }
+nav ul {
+  text-align: left;
+  background-color: pink;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: 15px;
+}
 
-  a {
-      color: black;
-  }
+a {
+  color: black;
+}
 
- /* - -- - -- INDEX - -- -- -  */
+/* - -- - -- INDEX - -- -- -  */
+
 .priority {
   border: dotted 1em red;
   text-align: center;
@@ -69,7 +67,7 @@ header {
 
 .homepage {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
 }
 
 .sidebar {
@@ -79,11 +77,95 @@ header {
 .chore {
   font-size: 2em;
   font-weight: 400;
+  padding-top: 10px;
 }
 
- /* - -- - -- ALL - -- -- -  */
 .list {
-  background-color: #EEE5E9;
+  background-color: #F9DDD6;
   border-radius: 15px;
   margin-right: 3em;
+  margin-bottom: 1em;
 }
+
+/* - -- - -- ALL - -- -- -  */
+.all_page{
+  display: flex;
+  flex-direction: row;
+}
+
+.priorities {
+  /* border: dotted gray .1em; */
+  text-align: center;
+  margin-left: 1em;
+  width: 75%;
+  margin-top: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.priorities article {
+  border: dotted 1em red;
+  width: 40%;
+  margin-bottom: 2em;
+}
+
+.priorities article:nth-of-type(2) {
+  border: dotted 1em green;
+}
+
+.priorities article:nth-of-type(3) {
+  border: dotted 1em purple;
+}
+
+.priorities article:last-of-type {
+  border: dotted 1em gray;
+}
+
+.priorities h1 {
+  color: #B73838;
+  font-size: 1.5em;
+}
+/* - -- - -- NEW - -- -- -  */
+
+.add_task {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  border: dotted 1em blue;
+  text-align: center;
+  margin-left: 1em;
+  width: 75%;
+  margin-top: 1em;
+}
+
+.form article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.form a {
+  font-style: italic;
+}
+
+
+/* - -- - -- SHOW - -- -- -  */
+.details {
+  display: flex;
+  flex-direction: row;
+}
+
+.item {
+  border: dotted 1em green;
+  text-align: center;
+  margin-left: 1em;
+  width: 75%;
+  margin-top: 1em;
+}
+
+/* * {
+  border: black 1px solid;
+} */
