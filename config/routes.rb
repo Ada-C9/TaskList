@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post 'tasks/', to: 'tasks#create', as: 'create_task'
   get '/tasks/:id/edit', to: 'tasks#edit', as: 'edit_task'
   get '/tasks/:id', to: 'tasks#show', as: 'task'
-  get 'tasks/update'
+  patch '/tasks/:id', to: 'tasks#update'
   get 'tasks/destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
