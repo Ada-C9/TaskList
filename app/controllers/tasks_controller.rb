@@ -15,7 +15,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.name = raw_task[:name]
     task.description = raw_task[:description]
-    task.duedate = raw_task[:duedate]
+    task.due_date = raw_task[:due_date]
     task.complete = raw_task[:complete]
 
     if task.save
@@ -39,8 +39,12 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.name = raw_task[:name]
     task.description = raw_task[:description]
-    task.duedate = raw_task[:duedate]
+    task.due_date = raw_task[:due_date]
     task.complete = raw_task[:complete]
+
+    if task.complete == true
+      task.complete_date = Date.today
+    end
 
     if task.save
       redirect_to task_path

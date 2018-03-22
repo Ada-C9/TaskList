@@ -4,8 +4,8 @@
 <% @tasks.each do |task| %>
   <li>
     <strong><%= link_to(task.name, task_path(task)) %></strong>
-    (Do by: <%= task.duedate %>)
-    
+    (Do by: <%= task.due_date %>)
+
 
   </li>
 <% end %>
