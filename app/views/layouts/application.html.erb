@@ -9,15 +9,24 @@
 </head>
 
 <body>
-
   <header>
-    <h1>Welcome to my TaskList</h1>
-</header>
 
-  <main>
-    <%= yield %>
-  </main>
+        <h1>Welcome to Task List Application</h1>
+        <nav>
+          <ul>
+            <li><%= link_to "All Tasks", tasks_path %></li>
+            <li><%= link_to "New Task", new_task_path %></li>
+          </ul>
 
-  <footer>copyright Brenda Rios 20018</footer>
+        </nav>
+      </header>
+
+      <main>
+        <%= yield %>
+      </main>
+
+      <footer>
+        <p>&copy; Brenda Rios, 2018</p>
+      </footer>
 </body>
 </html>

@@ -26,23 +26,35 @@ class TasksController < ApplicationController
       redirect_to '/tasks'
     end
   end
-end
 
-def show
-  task_id = params[:id]
-  @task = Task.find(task_id)
-end
+  def show
+    task_id = params[:id]
+    @task = Task.find(task_id)
+  end
 
-def edit
-  @task = Task.find(params[:id])
-end
+  def edit
+    @task = Task.find(params[:id])
+  end
 
-def update
+  def update
+    raw_task = params[:task]
 
-end
+    task = Task.find(params[:id])
+    task.name = raw_task[:name]
+    task.description = raw_task[:description]
+    task.completion_date = raw_task[:completion_date]
+
+
+    if task.save
+      redirect_to task_path(task)
+    end
+
+  end
 
 
 
-def destroy
+  def destroy
+
+  end
 
 end
