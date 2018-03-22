@@ -1,8 +1,14 @@
-<h1>Task List</h1>
-<ul>
-  <% @tasks.each do |task|  %>
-    <li>
-      <%= task %>
-    </li>
-  <% end %>
-</ul>
+<div class="your-tasks">
+  <h1 class="index-head">Your Tasks</h1>
+  <ul class="index-tasks">
+    <% @tasks.each do |task|  %>
+      <li>
+        <% if task.completion_date == nil %>
+          <%= link_to task.task_name, task_path(task.id) %>
+        <% else %>
+          <%= link_to task.task_name, task_path(task.id), class: 'completed-task' %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

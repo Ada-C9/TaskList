@@ -15,5 +15,173 @@
  */
 
 body {
-  font-family: sans-serif;
+  font-family: 'Karla', sans-serif;
+  background: linear-gradient(
+  to bottom,
+  #92defc,
+  #92defc 50%,
+  #eaf5f9 50%,
+  #eaf5f9
+);
+/* The rectangle in which to repeat.
+   It can be fully wide in this case */
+background-size: 100% 20px;
+}
+
+header {
+  background-color: white;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #4289f4;
+  text-shadow: 0 0 10px #b2eaff;
+  border-bottom: dotted 2px black;
+  margin-top: .2em;
+  margin-bottom: .2em;
+}
+
+header ul {
+  display: flex;
+  margin-bottom: .5em;
+}
+
+header ul li {
+  margin: 1em;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #4289f4;
+  font-weight: bold;
+}
+
+ .completed-task {
+   text-decoration: line-through;
+ }
+
+header ul li a:hover {
+  color: black;
+}
+
+.your-tasks {
+  display: grid;
+  grid-template-rows: 100px auto;
+  max-width: 40%;
+  color: #4289f4;
+  border: double 2px black;
+  margin: 0 auto;
+  background-color: white;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+.index-head {
+  font-size: 2em;
+  margin-bottom: .5em;
+  text-align: center;
+  border-bottom: dotted 2px black;
+  color: #4289f4;
+  text-shadow: 0 0 3.5px #b2eaff;
+}
+
+.index-tasks li {
+  margin: 1em;
+  font-size: 1.5em;
+  margin-top: .5em;
+}
+
+.index-tasks li a {
+  text-decoration: none;
+  color: #4289f4;
+}
+
+.index-tasks li a:hover {
+  color: black;
+}
+
+.index-tasks li:last-child {
+  margin-bottom: 20%;
+}
+
+.show-task {
+  display: grid;
+  grid-template-rows: 2fr 3fr 1fr;
+  max-width: 40%;
+  color: #4289f4;
+  border: double 2px black;
+  margin: 0 auto;
+  background-color: white;
+
+}
+
+.task-options {
+  display: flex;
+  justify-content: space-around;
+  max-width: 30%;
+}
+
+.task-options li a {
+  text-decoration: none;
+  color: #4289f4;
+}
+
+.task-options li a:hover {
+  color: black;
+}
+
+.task-title {
+  font-size: 2em;
+  margin-bottom: .5em;
+  text-align: center;
+  border-bottom: dotted 2px black;
+  text-shadow: 0 0 3px #b2eaff;
+}
+
+.task-description {
+  border-bottom: dotted 2px black;
+  padding-left: 1em;
+}
+
+.new-task-view {
+  max-width: 40%;
+  color: #4289f4;
+  border: double 2px black;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.new-header {
+  border-bottom: dotted 2px black;
+}
+
+section h1 {
+  font-size: 2em;
+  text-align: center;
+}
+
+form {
+  max-width: 300px;
+}
+
+form label {
+  display: inline-block;
+  margin: 1em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+form input:last-child {
+  display: block;
+  margin-bottom: 2em;
+}
+
+.new_form {
+  margin: 1em;
 }

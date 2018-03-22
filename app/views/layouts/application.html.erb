@@ -6,9 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
 
   <body>
+    <header>
+      <h1>Task List</h1>
+      <ul>
+        <li>
+          <a><%= link_to "Home", tasks_path %></a>
+        </li>
+        <li>
+          <a><%= link_to "Add a Task", new_task_path%></a>
+        </li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
