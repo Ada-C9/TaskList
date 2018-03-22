@@ -1,19 +1,14 @@
-<section class="header">
-<h1>Welcome to your personal Task Team!</h1>
-
-<h3>Below is a list of tasks for you.</h3>
-</section>
-<strong>Home list:</strong>
+<h3>Below is a list of tasks for you:</h3>
 
   <ul>
     <% @tasks.each do |task| %>
     <li>
       <input type="checkbox">
-      <%= link_to( task.name, task_path(task.id))%>: 
+      <%= link_to( task.name, task_path(task))%>:
       Task: <%= task.details %> --
       Due by: <%= task.complete %>
       <button>
-        <%= link_to("Edit", edit_task_path(task.id)) %>
+        <%= link_to("Edit", edit_task_path(task)) %>
       </button>
     </li>
     <% end %>

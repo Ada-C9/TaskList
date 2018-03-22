@@ -32,13 +32,11 @@ class TasksController < ApplicationController
 
   def update
     raw_book = params[:task]
-
-    task = Task.find(params[:id])
-
+    task = Task.find(raw_book)
     task.assign_attributes(
-      task.name = raw_task[:name],
-      task.details = raw_task[:details],
-      task.completed = raw_task[:completed]
+    task.name = raw_task[:name],
+    task.details = raw_task[:details],
+    task.completed = raw_task[:completed]
     )
 
     if task.save
@@ -47,6 +45,8 @@ class TasksController < ApplicationController
   end
 
     def destroy
+      Task.destroy(params[:id])
+      redirect_to tasks_path
     end
 
 end

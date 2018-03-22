@@ -1,18 +1,13 @@
-<form action="/tasks" method="post" accept-charset="utf-8">
-  <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+<strong>New Task:</strong>
+<%= form_for @task do |t| %>
+<%= t.label :task_name %>
+<%= t.text_field :name %>
 
-  <form>
-    <label for="name">Location</label>
-    <input type="text" name="name" value="" id="name" />
+<%= t.label :description %>
+<%= t.text_field :details %>
 
-    <label for ="details">Description</label>
-    <input type="text" name="description" value="" id="details">
+<%= t.label :complete_by %>
+<%= t.date_field :complete %>
 
-    <label for="completed">Complete By</label>
-    <input type="text" name="date" value="" id="completed" />
-
-    <input type="submit" value="Add task" />
-
-
-  </form>
+<%= t.submit "Create!" %>
+<% end %>
