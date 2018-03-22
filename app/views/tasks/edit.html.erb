@@ -1,13 +1,20 @@
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<div class="form-style">
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+  <h2>Update task
+    <%= @task.id %>
+  :</h2>
 
-  <%= f.label :complete_by %>
-  <%= f.date_field :complete_by %>
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-  <%= f.submit "Add Task" %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
 
-<% end %>
+    <%= f.label :complete_by %>
+    <%= f.date_field :complete_by %>
+
+    <%= f.submit "Update Task" %>
+
+  <% end %>
+</div>

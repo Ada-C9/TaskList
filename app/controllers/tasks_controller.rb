@@ -47,11 +47,15 @@ class TasksController < ApplicationController
     )
 
     if task.save
-      redirect_to task_path(tasks)
+      redirect_to tasks_path
     end
   end
 
   def destroy
+
+    Task.destroy(params[:id])
+
+    redirect_to tasks_path
   end
 
 end

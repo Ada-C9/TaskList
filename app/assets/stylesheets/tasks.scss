@@ -11,3 +11,61 @@ main h1 {
 ol>li, main strong {
   font-size: 1.5em;
 }
+
+ol>li p {
+  display: inline-block;
+}
+
+.task-list-link {
+  color: rgb(18,55,78);
+  text-decoration: none;
+}
+
+.task-list-link:hover {
+  font-size: 1.1em;
+}
+.form-style h2 {
+  font-size: 2em;
+  margin: 0 auto 1em auto;
+  background-color: rgb(18,55,78);
+  border-top: 1px solid rgb(18,55,78);
+  border-top-right-radius: .4em;
+  border-top-left-radius: .4em;
+  color: rgb(245,245,245);
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px;
+}
+
+.form-style {
+  width: 80%;
+  padding: 30px;
+  margin: 50px auto;
+  border: 2px solid rgb(18,55,78);
+  border-radius: 1em;
+}
+
+label {
+  font-size: 1.5em;
+  display: block;
+  padding: .25em;
+}
+.form-style textarea{
+  resize: none;
+}
+
+input[type="submit"] {
+  display: block;
+  background-color: rgb(18,55,78);
+  border: 1px solid rgb(18,55,78);
+  color: rgb(245,245,245);
+  font-family: 'Indie Flower', cursive;
+  font-weight: 700;
+  padding: 1em 3em;
+  margin: 1em -.05em;
+  text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
