@@ -602,3 +602,187 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 74ms (Views: 60.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 15:45:44 -0700
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 297ms (Views: 270.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 15:45:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 15:02:25 -0700
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (7.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 389ms (Views: 331.2ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 15:45:58 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 56ms (Views: 47.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:10:08 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (314.7ms)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 7.0ms)
+
+
+
+NameError - undefined local variable or method `task' for #<#<Class:0x00007f828694cb58>:0x00007f8285d1c888>
+Did you mean?  @tasks:
+  app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb___3713773903437712968_70099290190140'
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3713773903437712968_70099290190140'
+
+Started POST "/__better_errors/c49e0da8f077b558/variables" for 127.0.0.1 at 2018-03-22 16:10:09 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:11:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (503.1ms)
+Completed 500 Internal Server Error in 513ms (ActiveRecord: 0.3ms)
+
+
+
+NameError - undefined local variable or method `task' for #<#<Class:0x00007f828694cb58>:0x00007f8285ef5240>
+Did you mean?  @tasks:
+  app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb___3713773903437712968_70099284766120'
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3713773903437712968_70099284766120'
+
+Started POST "/__better_errors/c519e8b6500f82f7/variables" for 127.0.0.1 at 2018-03-22 16:11:28 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:11:41 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (245.0ms)
+Completed 500 Internal Server Error in 253ms (ActiveRecord: 0.3ms)
+
+
+
+NoMethodError - undefined method `edit_task_path' for #<#<Class:0x00007f828694cb58>:0x00007f828a822d50>
+Did you mean?  edit_book_path:
+  app/views/tasks/index.html.erb:7:in `block in _app_views_tasks_index_html_erb___3713773903437712968_70099323132720'
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3713773903437712968_70099323132720'
+
+Started POST "/__better_errors/01a99e3aa6aa03ed/variables" for 127.0.0.1 at 2018-03-22 16:11:42 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:12:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 294ms (Views: 289.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:12:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/tasks/show.html.erb:1:in `_app_views_tasks_show_html_erb___2064403481063284195_70099291222400'
+
+Started POST "/__better_errors/f0fe085cb6d9e0a2/variables" for 127.0.0.1 at 2018-03-22 16:12:41 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:14:36 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/tasks/show.html.erb:1:in `_app_views_tasks_show_html_erb___2064403481063284195_70099290843220'
+
+Started POST "/__better_errors/e9525792e86df1f4/variables" for 127.0.0.1 at 2018-03-22 16:14:36 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:19:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (2.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.1ms)
+
+
+
+NoMethodError - undefined method `stringify_keys' for "/tasks/1":String:
+  app/views/tasks/index.html.erb:6:in `block in _app_views_tasks_index_html_erb___3713773903437712968_70099286412600'
+  app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb___3713773903437712968_70099286412600'
+
+Started POST "/__better_errors/b27854c7f1b57a47/variables" for 127.0.0.1 at 2018-03-22 16:19:51 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:21:43 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:21:51 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `name' for nil:NilClass:
+  app/views/tasks/show.html.erb:1:in `_app_views_tasks_show_html_erb___2064403481063284195_70099323419680'
+
+Started POST "/__better_errors/b07f4eafea3cc9dd/variables" for 127.0.0.1 at 2018-03-22 16:21:51 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:22:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/tasks/show.html.erb:1:in `_app_views_tasks_show_html_erb___2064403481063284195_70099324471920'
+
+Started POST "/__better_errors/f26f0a2e80992547/variables" for 127.0.0.1 at 2018-03-22 16:22:17 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:24:09 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `[]' for nil:NilClass:
+  app/views/tasks/show.html.erb:1:in `_app_views_tasks_show_html_erb___2064403481063284195_70099325019140'
+
+Started POST "/__better_errors/350071862ede9970/variables" for 127.0.0.1 at 2018-03-22 16:24:09 -0700
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:27:25 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 39ms (Views: 20.9ms | ActiveRecord: 4.2ms)
+
+

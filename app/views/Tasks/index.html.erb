@@ -1,11 +1,9 @@
 <h3>You have a lot to do today!</h3>
 
 <ul>
-  <% @tasks.each do |index| %>
-    <li>
-      <%= index[:name] %>
-      requires you to <%= index[:description] %>
-      due on <%= index[:completion_date] %>
+  <% @tasks.each do |task| %>
+    <li> <strong><%= link_to(task.name) %></strong>
+       <%= link_to("See details", task_path(task))%>
     </li>
   <% end %>
 </ul>
