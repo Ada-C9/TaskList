@@ -10,8 +10,14 @@
 
   <body>
     <nav>
+      <ul>
+        <li><%=link_to 'View All Tasks', tasks_path %></li>
+        <li>
+          <%= link_to 'Add Task', new_task_path%>
+        </li>
+      </ul>
     </nav>
-    
+
     <main>
       <%= yield %>
     </main>

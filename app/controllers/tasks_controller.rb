@@ -4,21 +4,31 @@ class TasksController < ApplicationController
   end
 
   def new
-
+    @task = Task.new
   end
 
   def create
+    raw_task = params[:task]
+
+    task = Task.new
+    task.name = raw_task[:name]
+    task.start_date = raw_task[:start_date]
+    task.description = raw_task[:description]
+    task.completion_date = raw_task[:completion_date]
+
+    if task.save
+      redirect_to '/tasks'
+    end
 
   end
 
   def show
     task_id = params[:id]
-
-    @tasks = Task.find(task_id)
+    @task = Task.find(task_id)
   end
 
   def edit
-
+    @task = Task.find(params[:id])
   end
 
   def update

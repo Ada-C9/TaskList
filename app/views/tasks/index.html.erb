@@ -1,12 +1,14 @@
-<h2>Welcome to Kiera's Tasklist</h2>
+<h1>Tasklist Application</h1>
 
-<p>We will make sure you have the tools to get things done.</p>
+<strong><h2>Tasks</h2></strong></p>
 
 <ul class="tasks">
   <% @tasks.each do |task| %>
   <li>
-    <p> <%= task.name %> start date: <%=task.start_date %> </p>
-    <p> <%= task.description %> </p>
+    <p> <strong> <%=link_to task.name, task_path(task) %></strong>
+  </li>
+  <li>
+    <%=link_to 'Edit', edit_task_path(task)%>
   </li>
   <% end %>
 </ul>
