@@ -2,3 +2,12 @@
   margin: 20px auto;
   padding: 50px;
 }
+
+.edit_delete {
+  display: flex;
+  justify-content: center;
+}
+
+.edit_delete > a {
+  margin-right: 30px;
+}

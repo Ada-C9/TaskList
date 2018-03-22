@@ -37,7 +37,7 @@ class TasksController < ApplicationController
     new_task = params[:task]
     task = Task.find(params[:id])
 
-    task.asign_attributes(
+    task.assign_attributes(
       name: new_task[:name],
       description: new_task[:description],
       priority: new_task[:priority],
@@ -46,7 +46,7 @@ class TasksController < ApplicationController
     )
 
     if task.save
-      redirect_to book_path(book)
+      redirect_to task_path(task)
     end
   end
 
