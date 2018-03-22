@@ -1,11 +1,9 @@
+
 class TasksController < ApplicationController
   def index
-    @tasks = [
-      { to_do: "feed kitties", when: "everyday" },
-      { to_do: "play with kitties", when: "everyday" },
-      { to_do: "clean up after kitties", when: "today" },
-      { to_do: "brush and groom kitties", when: "tomorrow" }
-    ]
+
+    @tasks = Task.all.order(:date, :time)
+
   end
 
   def new
@@ -15,7 +13,9 @@ class TasksController < ApplicationController
   end
 
   def show
-  
+    task_id = params[:id]
+
+    @task = Task.find(task_id)
   end
 
   def edit

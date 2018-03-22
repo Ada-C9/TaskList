@@ -6,8 +6,9 @@
   <% @tasks.each do |task| %>
     <li>
       <input type="checkbox" />
-      When to <%= task[:to_do] %>?
-      <strong><%= task[:when] %></strong>
+      <em><%= task.date.strftime("%a, %B %-m, %Y") %></em>,
+      <strong><%= task.time %></strong>:
+      <%= task.to_do %>
     </li>
   <% end %>
 </ul>
