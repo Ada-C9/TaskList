@@ -1,8 +1,9 @@
-<h3>Below is a list of tasks for you:</h3>
+<h3>Here is your list:</h3>
 
 <ul>
   <% @tasks.each do |task| %>
-  <li class="row"><input type="checkbox">
+  <li class="row">
+  <input type="checkbox" name="task_id" id="task_id" />
     <span>
       <%= link_to( task.name, task_path(task))%>:
       <%= task.details %>
