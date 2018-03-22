@@ -6,9 +6,23 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1>Tasklist</h1>
+      <%= link_to("Tasks", tasks_path) %>
+      <%= link_to("Add Task", new_task_path, class: "add-task") %>
+
+    </header>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      <p>&copy; 2018</p>
+    </footer>
   </body>
 </html>

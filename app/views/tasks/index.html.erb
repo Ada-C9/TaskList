@@ -1,11 +1,11 @@
-<h1>TASKLIST</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
 
-<h3>Task List</h3>
-<ul>
+<h3>Your Tasks</h3>
+<ol>
 <% @tasks.each do |task| %>
   <li>
-    <%= task[:task_name] %> -- <%= task[:status] %>
+    <%= task.name %> -- <%= task.description %> -- <%= task.completion_date %>
+    <%= link_to("Task Details", task_path(task)) %>
+    <%= link_to("Edit", edit_task_path(task)) %>
   </li>
 <% end %>
-</ul>
+</ol>
