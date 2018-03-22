@@ -23,7 +23,7 @@ class TasksController < ApplicationController
   def edit
     Task.find_by(id: params[:id]) ? (@task = Task.find_by(id: params[:id])) : (redirect_to tasks_path)
   end
-
+# TODO: change the style of the edit page because its showing the form under the footer line inseatd of above it
   def update
     task = Task.find_by(id: params[:id])
     if !task.nil?
@@ -34,10 +34,9 @@ class TasksController < ApplicationController
   def destroy
     id = params[:id]
     @task = Task.find(id)
-
     @task ? @task.destroy : (redirect_to tasks_path)
-    @task.destroy
-    redirect_to tasks_path
+
+    #  TODO: Update the database with the task's completed date
   end
 
   def complete

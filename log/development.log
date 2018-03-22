@@ -4083,3 +4083,31 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 29ms (Views: 23.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks/4?class=title-link" for 127.0.0.1 at 2018-03-22 14:02:38 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/4/edit" for 127.0.0.1 at 2018-03-22 14:02:40 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE Task Load (0.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/4?class=title-link" for 127.0.0.1 at 2018-03-22 14:05:19 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"class"=>"title-link", "id"=>"4"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
