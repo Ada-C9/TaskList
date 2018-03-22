@@ -1,0 +1,16 @@
+
+<%= form_for @task do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :description %>
+  <%=f.text_field :description %>
+
+  <%= f.label "Due Date" %>
+  <%= f.date_field :duedate %>
+
+  <%= f.label "Completed?" %>
+  <%= f.check_box :complete %>
+
+  <%= f.submit "Save Edits" %>
+<% end %>
