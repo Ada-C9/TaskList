@@ -2,6 +2,13 @@
 
 <ul>
 <% @tasks.each do |task| %>
-  <li> <%= task %> </li>
+  <li>
+    <strong><%= link_to(task.name, task_path(task)) %></strong>
+    (Do by: <%= task.duedate %>)
+    <%= link_to("Edit", edit_task_path(task)) %>
+
+  </li>
 <% end %>
 </ul>
+
+<%= link_to("Add a New Task", new_task_path()) %>
