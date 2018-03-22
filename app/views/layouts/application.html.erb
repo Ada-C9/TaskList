@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <%= Time.now%>
-    <%= yield %>
-  </body>
+<body>
+  <header>
+    <ul>
+      <li><%= image_tag "task_icon.jpg", alt:"Task icon", class: "logo"%></li>
+      <li>Todays date: <%= Time.now%></li>
+    </ul>
+  </header>
+  <%= yield %>
+  <footer>
+    <%= link_to "All tasks", all_tasks_path %>
+  </footer>
+</body>
 </html>
