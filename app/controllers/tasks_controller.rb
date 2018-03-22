@@ -26,4 +26,15 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    id = params[:id]
+    @task = Task.find(id)
+    if @task.destroy #it worked
+      redirect_to index_path
+    # else
+    #   render :destroy
+    end
+  end
+
+
 end
