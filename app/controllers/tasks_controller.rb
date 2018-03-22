@@ -10,14 +10,18 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
     @task = Task.new
-    @task.title = params[:task][:title]
-    @task.author = params[:task][:author]
+    @task.name = params[:task][:name]
+    @task.status = params[:task][:status]
     @task.description = params[:task][:description]
-    @task.save
+    @task.due = params[:task][:due]
+    if @task.save
+      redirect_to task_path
+    end
   end
 
   def edit
