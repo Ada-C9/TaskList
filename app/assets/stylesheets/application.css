@@ -106,3 +106,16 @@ main > ul {
   justify-content: space-around;
   align-content: center;
 }
+
+ul section > div {
+  display: flex;
+}
+
+ul section > div p {
+  padding: 0 1vw;
+  border-right: solid thin black;
+}
+
+ul section > div p:last-of-type {
+  border-right: none;
+}

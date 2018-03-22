@@ -23,12 +23,15 @@
           <% end %>
 
         </p>
-        <p>
-          <%= link_to('Mark Complete', ) %>
-        </p>
-        <p>
-          <%= link_to('View', task_path(task)) %>
-        </p>
+        <div>
+          <p>
+            <%= link_to('Mark Complete', task_complete_path(task), method: :patch) %>
+          </p>
+          <p>
+            <%= link_to('View', task_path(task)) %>
+          </p>
+          <p><%= link_to('Delete', task_path(task), method: :delete) %></p>
+        <div>
       </section>
 
   <% end %>

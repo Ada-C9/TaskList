@@ -45,5 +45,17 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    Task.destroy(params[:id])
+
+    redirect_to tasks_path
+  end
+
+  def mark_complete
+    task = Task.find(params[:id])
+    task.status = :COMPLETE
+
+    if task.save
+      redirect_to '/tasks'
+    end
   end
 end
