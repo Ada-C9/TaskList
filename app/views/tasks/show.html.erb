@@ -1,0 +1,9 @@
+<h2><%= @task[:name] %></h2>
+<p><%= @task[:description] %></p>
+<p><%= @task[:target_date].strftime("%D") %></p>
+
+<%= link_to("Done", complete_task_path(task), :data => {:confirm => "Mark this task complete?",
+  :method => "post"}) %>
+<%= link_to("Edit", edit_task_path(@task)) %>
+<%= link_to("Delete", delete_task_path(@task), :data => {:confirm => "Are you sure you want to delete this task?",
+:method => "delete"}) %></p>

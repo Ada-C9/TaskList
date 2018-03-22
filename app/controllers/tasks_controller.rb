@@ -14,7 +14,8 @@ class TasksController < ApplicationController
 
     task.name = raw_task[:name]
     task.description = raw_task[:description]
-    task.completion_date = raw_task[:completion_date]
+    task.target_date = raw_task[:target_date]
+    task.status = "IN PROGRESS"
 
     if task.save
       redirect_to '/tasks'
@@ -29,6 +30,14 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def complete
+    task = Task.find(params[:id])
+    task.completion_date = DateTime.now
+    task.status = "DONE"
+    if task.save
+      redirect_to root_path
+    end
+  end
 
   def update
     raw_task = params[:task]
@@ -39,7 +48,7 @@ class TasksController < ApplicationController
     task.assign_attributes(
       name: raw_task[:name],
       description: raw_task[:description],
-      completion_date: raw_task[:completion_date]
+      target_date: raw_task[:target_date]
     )
 
     if task.save

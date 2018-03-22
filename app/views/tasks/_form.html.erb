@@ -1,0 +1,9 @@
+<%= form_for @task do |f| %>
+  <%= f.label :name, "Task Name" %>
+  <%= f.text_field :name %>
+  <%= f.label :description, "Description" %>
+  <%= f.text_field :description %>
+  <%= f.label :target_date, "Due Date" %>
+  <%= f.date_field :target_date %>
+  <%= f.submit "Edit Task" %>
+<% end %>
