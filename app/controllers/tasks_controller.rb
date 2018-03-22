@@ -17,6 +17,7 @@ class TasksController < ApplicationController
   def edit
     @task = Task.find(params[:id])
   end
+
   def create
     new_task = params[:task]
 
@@ -49,4 +50,8 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    Task.destroy(params[:id])
+    redirect_to tasks_path
+  end
 end

@@ -9,6 +9,7 @@
       <strong>|</strong>
       Due Date: <span class=due_date> <%= task.due_date %> </span>
       <%= link_to "Edit", edit_task_path(task) %>
+      <%= link_to "Delete", task_path(task), method: :delete, data: {confirm: "Are you sure to delete #{task.name}?"} %>
     </li>
     <% end %>
   </ol>
