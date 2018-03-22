@@ -32,19 +32,26 @@ class TasksController < ApplicationController
 
   def update
     raw_task = params[:task]
-    task = Task.find(params[:id])
+    id = params[:id]
 
-    task.name = raw_task[:name]
-    task.description = raw_task[:description]
-    task.completion_date = raw_task[:completion_date]
+    task = Task.find(id)
+
+    task.assign_attributes(
+      name: raw_task[:name],
+      description: raw_task[:description],
+      completion_date: raw_task[:completion_date]
+    )
 
     if task.save
-      redirect_to '/tasks'
+      redirect_to task_path(task.id)
     end
   end
 
   def destroy
-
+    @task = Task.find(params[:id])
+    if @task.destroy
+      redirect_to root_path
+    end
   end
 
 end
