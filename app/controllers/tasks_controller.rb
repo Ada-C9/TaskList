@@ -8,9 +8,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    new_task = Task.new(name: params[:name], description: params[:description], completion_date: params[:completion_date])
+    raw_task = params[:task]
+    task = Task.new
+    task.name = raw_task[:name]
+    task.description = raw_task[:description]
+    task.completion_date = raw_task[:completion_date]
 
-    if new_task.save
+    if task.save
       redirect_to tasks_path
     end
 
