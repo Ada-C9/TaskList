@@ -12,7 +12,7 @@
       <%= task.task_complete %>
     </li>
     <li>
-      <%= button_to "Complete?", task_path(task.id), method: :put %>
+      <%= button_to "Complete?", task_path(task.id), method: :patch %>
     </li>
   <% end %>
 </ul>

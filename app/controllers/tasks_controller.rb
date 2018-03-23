@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.order(:id)
   end
 
   def show
@@ -27,14 +27,13 @@ class TasksController < ApplicationController
   end
 
   def complete
-    # book.title = params[:book][:title]
-    @task = Task.find_by(id: params[:id])
-    if @task.task_complete == false
-      @task.task_complete = true
+    task = Task.find_by(id: params[:id])
+    if task.task_complete == false
+      task.task_complete = true
     else
-      @task.task_complete = false
+      task.task_complete = false
     end
-    @task.save
+    task.save
     redirect_to tasks_path
   end
 
