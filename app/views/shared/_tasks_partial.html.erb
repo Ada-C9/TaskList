@@ -1,0 +1,16 @@
+<% form_for @task do |f| %>
+
+  <%= f.label :to_do %>
+  <%= f.text_field :to_do%>
+
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :when %>
+  <%= f.text_field :when %>
+
+  <%= f.label :instructions %>
+  <%= f.text_field :instructions %>
+
+  <%= f.submit "Create it!" %>
+<% end %>

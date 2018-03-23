@@ -1,6 +1,6 @@
 <h1>Lovely Luxi's Tasks</h1>
 
-<p>How to take care of your two kitties: Mambo and Tango</p>
+<p>How to take care of Mambo and Tango</p>
 
 <ul class="task-list">
   <% @tasks.each do |task| %>
@@ -9,6 +9,9 @@
       <em><%= task.date.strftime("%a, %B %-m, %Y") %></em>,
       <strong><%= task.time %></strong>:
       <%= link_to(task.to_do, task_path(task)) %>
+    </li>
+    <li>
+      <%= link_to("Edit/Update", edit_task_path(book)) %>
     </li>
   <% end %>
 </ul>
