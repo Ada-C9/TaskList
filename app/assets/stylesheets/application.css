@@ -87,19 +87,19 @@ li > ul li:last-of-type {
   background-color: rgb(174, 242, 160);
 }
 
-li > section {
+li section {
   min-width: 20em;
   padding: auto;
   border: thin solid black;
   margin-bottom: 5vw;
-
+  border-radius: 10px;
 }
 
 section > p {
   padding: 0 3vw;
 }
 
-main > ul {
+.list li {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -109,6 +109,7 @@ main > ul {
 
 ul section > div {
   display: flex;
+  justify-content: center;
 }
 
 ul section > div p {
