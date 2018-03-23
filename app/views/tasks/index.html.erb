@@ -6,8 +6,7 @@
       <%= task.id %>.
       <%= link_to task.name, task_path(task) %>:
       <small><%= task.description %></small>
+      | <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete #{ task.name }?" } %>
     </li>
   <% end %>
 </ul>
-
-<!-- use only dot notation  -->
