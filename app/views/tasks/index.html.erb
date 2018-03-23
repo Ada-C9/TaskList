@@ -1,8 +1,12 @@
-<h1>TO DO'S!</h1>
+<h1>TO DO'S</h1>
 <ul>
 <% @tasks.each do |task|%>
   <li>
+  <span class="title">
     <%=link_to task.name, task_path(task.id), class: 'title-link' %>
+    <!-- <p> <%= task.description %> </p>
+    <p> <%= task.completion_date %> </p> -->
+  </span>
   </li>
 <% end %>
 </ul>

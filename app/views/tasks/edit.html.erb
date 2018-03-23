@@ -1,4 +1,4 @@
-<h1>Edit Task</h1>
+<!-- <h1>Edit Task</h1>
 
 <%= form_for @task do |f| %>
 
@@ -12,4 +12,5 @@
   <%= f.text_area :description %>
 
   <%= f.submit %>
-<% end %>
+<% end %> -->
+<%= render partial:"form", locals: {page_title: "Edit #{@task.name}"}%>

@@ -12,12 +12,12 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
-  
+
   def create
-    task = Task.new
-    task.name = params[:task][:name]
-    task.completion_date = params[:task][:completion_date]
-    task.description = params[:task][:description]
+    task = Task.new(task_params)
+    # task.name = params[:task][:name]
+    # task.completion_date = params[:task][:completion_date]
+    # task.description = params[:task][:description]
     if task.save
       redirect_to tasks_path
     else
@@ -32,17 +32,18 @@ class TasksController < ApplicationController
   def update
     task = Task.find_by(id:params[:id])
     if !task.nil?
-      task.name = params[:task][:name]
-      task.completion_date = params[:task][:completion_date]
-      task.description = params[:task][:description]
-      if task.save
+      # task.name = params[:task][:name]
+      # task.completion_date = params[:task][:completion_date]
+      # task.description = params[:task][:description]
+      if task.update(task_params)
         redirect_to task_path(task.id)
-      end
-    else
+      else
       render :edit
+     end
+    else
+     redirect_to tasks_path
     end
   end
-
 
   def destroy
     id = params[:id]
@@ -51,6 +52,19 @@ class TasksController < ApplicationController
       @task.destroy
     end
     redirect_to tasks_path
+  end
+
+def mark_complete
+  @task = Task.find_by(id:params[:id])
+  @task.mark_complete = Time.now
+  @task.save
+  redirect_to tasks_path
+end
+
+
+private
+  def task_params
+    params.require(:task).permit(:name, :completion_date, :description)
   end
 
 end
