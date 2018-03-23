@@ -14,20 +14,18 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
-    task.name = params[:task][:name]
-    task.description = params[:task][:description]
+    task = Task.new(task_params)
     task.save ? (redirect_to tasks_path) : (render :new)
   end
 
   def edit
     Task.find_by(id: params[:id]) ? (@task = Task.find_by(id: params[:id])) : (redirect_to tasks_path)
   end
-# TODO: change the style of the edit page because its showing the form under the footer line inseatd of above it
+  # TODO: change the style of the edit page because its showing the form under the footer line inseatd of above it
   def update
     task = Task.find_by(id: params[:id])
     if !task.nil?
-      task.update(name: params[:task][:name], description: params[:task][:description] ) ? (redirect_to task_path) : (render :edit)
+      task.update(task_params) ? (redirect_to task_path) : (render :edit)
     end
   end
 
@@ -41,4 +39,11 @@ class TasksController < ApplicationController
 
   def complete
   end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:name, :description)
+  end
+
 end
