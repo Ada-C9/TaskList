@@ -12,8 +12,12 @@
     (by <%= task.complete_by %> )
   </em>
   <br>
-  <p>
-    <%= link_to("Mark Complete |", toggle_path(task), method: :patch) %>
+  <p class="incomplete">
+    <% if !task.status %>
+      <%= link_to("Mark Complete |", toggle_path(task), method: :patch) %>
+    <% else %>
+      <%= link_to("Mark Incomplete |", toggle_path(task), method: :patch) %>
+    <% end %>
   </p>
   <p>
     <%= link_to("Edit |", edit_task_path(task.id)) %>
