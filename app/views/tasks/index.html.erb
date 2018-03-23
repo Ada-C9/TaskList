@@ -3,13 +3,15 @@
 <ul id="all-tasks">
   <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.name, task_path(task.id)%>
+      <% if task.task_complete == true %>
+        <%= link_to task.name, task_path(task.id), class: "complete"%>
+      <% else %>
+        <%= link_to task.name, task_path(task.id), class: "incomplete"%>
+      <% end %>
+      <!-- <%= link_to task.name, task_path(task.id)%> -->
     </li>
     <li id="description">
       <%= task.description %>
-    </li>
-    <li>
-      <%= task.task_complete %>
     </li>
     <li>
       <%= button_to "Complete?", task_path(task.id), method: :patch %>
