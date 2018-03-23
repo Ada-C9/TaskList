@@ -1,5 +1,16 @@
 class TasksController < ApplicationController
 
+  def complete
+    task = Task.find_by(id: params[:id])
+    if task.task_complete == false
+      task.task_complete = true
+    else
+      task.task_complete = false
+    end
+    task.save
+    redirect_to tasks_path
+  end
+
   def index
     @tasks = Task.order(:id)
   end
@@ -25,17 +36,6 @@ class TasksController < ApplicationController
 
   def edit
     @task = Task.find_by(id: params[:id])
-  end
-
-  def complete
-    task = Task.find_by(id: params[:id])
-    if task.task_complete == false
-      task.task_complete = true
-    else
-      task.task_complete = false
-    end
-    task.save
-    redirect_to tasks_path
   end
 
   def update
