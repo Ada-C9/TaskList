@@ -1,6 +1,6 @@
 <h1>Lovely Luxi's Tasks</h1>
 
-<p>Find me in app/views/tasks/index.html.erb</p>
+<p>How to take care of your two kitties: Mambo and Tango</p>
 
 <ul class="task-list">
   <% @tasks.each do |task| %>
@@ -8,7 +8,7 @@
       <input type="checkbox" />
       <em><%= task.date.strftime("%a, %B %-m, %Y") %></em>,
       <strong><%= task.time %></strong>:
-      <%= task.to_do %>
+      <%= link_to(task.to_do, task_path(task)) %>
     </li>
   <% end %>
 </ul>
