@@ -1,20 +1,33 @@
 
 <section class="tasks-list">
-<h2>YOUR TASKS</h2>
-<ul>
+  <h2>YOUR TASKS</h2>
+  <ul>
 
-<% num = 0 %>
+    <% num = 0 %>
 
-  <% @tasks.each do |task| %>
-  <li>
-    <% num += 1 %>
-    <strong><%= num %>.</strong>
-      <%= task.name %>
+    <% @tasks.each do |task| %>
+
+    <% if task.completed_date.nil? %>
+    <li>
+      <% num += 1 %>
+
+      <strong><%= num %>. </strong><%= task.name %>
       <p class="actions">
         <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %> |
         <%= link_to "Edit", edit_task_path(task[:id]) %> |
-        <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %> </p>
-  </li>
-  <% end %>
-</ul>
-</section>
+        <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
+      </p>
+
+      <% else %>
+      <li class="completed">
+        <% num += 1 %>
+        <strong><%= num %>. </strong><%= task.name %>
+<!-- TODO: fix: it's  crossing all of the text here intead of just the task.  -->
+        <p class="actions">
+          <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
+        </p>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </section>

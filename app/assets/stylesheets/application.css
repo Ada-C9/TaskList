@@ -68,6 +68,11 @@ a {
 .actions {
   font-size: 0.6em;
 }
+
+.completed {
+  text-decoration:line-through;
+}
+
 /* ___________________________________ */
 /* SHOW: */
 .show {
