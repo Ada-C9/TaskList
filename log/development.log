@@ -3504,3 +3504,868 @@ Processing by TasksController#edit as HTML
 Completed 200 OK in 351ms (Views: 341.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:34:13 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (6.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 16.1ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:38:27 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110119259000'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:38:40 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 51ms (Views: 43.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tasks/1" for 127.0.0.1 at 2018-03-22 16:40:17 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:40:22 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110106736320'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:40:45 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:44:12 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110154344720'
+Started PUT "/__web_console/repl_sessions/55fdbc89016cb1e42ec95bc4210b33e4" for 127.0.0.1 at 2018-03-22 16:44:30 -0700
+Started PUT "/__web_console/repl_sessions/55fdbc89016cb1e42ec95bc4210b33e4" for 127.0.0.1 at 2018-03-22 16:44:31 -0700
+Started PUT "/__web_console/repl_sessions/55fdbc89016cb1e42ec95bc4210b33e4" for 127.0.0.1 at 2018-03-22 16:44:34 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:44:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 3.4ms)
+
+
+Started DELETE "/tasks/1" for 127.0.0.1 at 2018-03-22 16:45:03 -0700
+Processing by TasksController#delete as HTML
+  Parameters: {"authenticity_token"=>"Cg/OB5B76KGG93sykp43CUAHj0f/9JKx0ykAYzCSlHm6RHTjmhhJomk6HiRxhKzHxuh2aoy8EHW/l5QbO0CFRA==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (8.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering tasks/delete.html.erb within layouts/application
+  Rendered tasks/delete.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 34ms (Views: 14.9ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:45:05 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:46:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 40ms (Views: 33.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:46:05 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=id):
+  
+app/controllers/tasks_controller.rb:29:in `edit'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:46:08 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:49:43 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'={:id=>nil}):
+  
+app/controllers/tasks_controller.rb:29:in `edit'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 16:50:42 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 16:50:46 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  
+app/controllers/tasks_controller.rb:30:in `edit'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 22:27:59 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (35.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (74.9ms)
+Completed 200 OK in 130ms (Views: 58.6ms | ActiveRecord: 57.0ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-22 22:28:01 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110153809140'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 22:28:09 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:20:28 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110153492520'
+Started PUT "/__web_console/repl_sessions/e71ea6db9ed90acf80a173f4d7b2e682" for 127.0.0.1 at 2018-03-23 09:20:36 -0700
+Started PUT "/__web_console/repl_sessions/e71ea6db9ed90acf80a173f4d7b2e682" for 127.0.0.1 at 2018-03-23 09:20:42 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:24:02 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 51ms (Views: 33.3ms | ActiveRecord: 3.7ms)
+
+
+Started DELETE "/tasks/3" for 127.0.0.1 at 2018-03-23 09:24:04 -0700
+Processing by TasksController#delete as HTML
+  Parameters: {"authenticity_token"=>"RIPFwCYTU8UJPFiAkPq1VZZwgyDBmOOgTe4qL3Fq7Uz0yH8kLHDyxubxPZZz4C6bEJ96DbLQYWQhUL5Xerj8cQ==", "id"=>"3"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/tasks_controller.rb:49:in `delete'
+Started PUT "/__web_console/repl_sessions/26e2016e324f3f2d2a374555c25f33ce" for 127.0.0.1 at 2018-03-23 09:24:10 -0700
+Started PUT "/__web_console/repl_sessions/26e2016e324f3f2d2a374555c25f33ce" for 127.0.0.1 at 2018-03-23 09:24:12 -0700
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:28:59 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110093843340'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:29:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:29:19 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/edit"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PUT "/__web_console/repl_sessions/490bbe650db4bc779b0daa6b7cbf49dd" for 127.0.0.1 at 2018-03-23 09:30:32 -0700
+Started PUT "/__web_console/repl_sessions/490bbe650db4bc779b0daa6b7cbf49dd" for 127.0.0.1 at 2018-03-23 09:30:35 -0700
+Started POST "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:30:47 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/tasks/edit"):
+  
+actionpack (5.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.5) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.5) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:31:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit.3" for 127.0.0.1 at 2018-03-23 09:31:28 -0700
+Processing by TasksController#edit as 
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110089562880'
+Started PUT "/__web_console/repl_sessions/8e1e5a43ae08702753a366b2c16ee401" for 127.0.0.1 at 2018-03-23 09:31:42 -0700
+Started PUT "/__web_console/repl_sessions/8e1e5a43ae08702753a366b2c16ee401" for 127.0.0.1 at 2018-03-23 09:31:44 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:33:15 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 33ms (Views: 24.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/tasks/edit.8" for 127.0.0.1 at 2018-03-23 09:33:19 -0700
+Processing by TasksController#edit as 
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=):
+  
+app/controllers/tasks_controller.rb:30:in `edit'
+Started PUT "/__web_console/repl_sessions/300a99fcb226f668499e1dc765585a00" for 127.0.0.1 at 2018-03-23 09:33:38 -0700
+Started PUT "/__web_console/repl_sessions/300a99fcb226f668499e1dc765585a00" for 127.0.0.1 at 2018-03-23 09:33:40 -0700
+Started GET "/tasks/edit.8" for 127.0.0.1 at 2018-03-23 09:34:39 -0700
+Processing by TasksController#edit as 
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110104106960'
+Started GET "/tasks/edit.3" for 127.0.0.1 at 2018-03-23 09:35:22 -0700
+Processing by TasksController#edit as 
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110097646500'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:35:27 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:35:28 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110105609040'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:35:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/hello" for 127.0.0.1 at 2018-03-23 09:49:22 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"hello"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=hello):
+  
+app/controllers/tasks_controller.rb:9:in `show'
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 09:59:53 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110157050780'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 10:00:29 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 10:03:18 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1814553749618480552_70110097879660'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 10:03:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 15:10:14 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1362659854356879306_70321530252960'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:10:17 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 260ms (Views: 248.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:10:26 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 38ms (Views: 23.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:11:15 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 15:11:18 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1362659854356879306_70321571174140'
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:11:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 15:16:12 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1362659854356879306_70321581200580'
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:16:21 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks/edit" for 127.0.0.1 at 2018-03-23 15:18:02 -0700
+Processing by TasksController#edit as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Edit Task</h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :title %>
+    4:   <%= f.text_field :title %>
+    5: 
+  
+app/views/tasks/edit.html.erb:2:in `_app_views_tasks_edit_html_erb__1362659854356879306_70321571235100'
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:18:20 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h2><%= @tasks.title %></h2>
+    2: <p><%= @tasks.description %></p>
+    3: <p><%= link_to "Edit", edit_task_path(@task.id), class: "edit" %></p>
+  
+app/views/tasks/show.html.erb:3:in `_app_views_tasks_show_html_erb__4188590366580871628_70321588007280'
+Started GET "/" for 127.0.0.1 at 2018-03-23 15:18:37 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kate/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kate/.rvm/gems/ruby-2.5.0/gems/railties-5.1.5/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:18:54 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:18:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <h2><%= @tasks.title %></h2>
+    2: <p><%= @tasks.description %></p>
+    3: <p><%= link_to "Edit", edit_task_path(@task.id), class: "edit" %></p>
+  
+app/views/tasks/show.html.erb:3:in `_app_views_tasks_show_html_erb__4188590366580871628_70321537522840'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:22:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"tasks"}, missing required keys: [:id]):
+     6: 
+     7:         <div class="actions">
+     8:           <p><a href="#">Mark Completed</a></p>
+     9:           <p><%= link_to "Edit", edit_task_path, class: "edit" %></p>
+    10:           <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
+    11:         </div>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__2963241793846856663_70321587766740'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__2963241793846856663_70321587766740'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:22:57 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"tasks"}, missing required keys: [:id]):
+     6: 
+     7:         <div class="actions">
+     8:           <p><a href="#">Mark Completed</a></p>
+     9:           <p><%= link_to "Edit", edit_task_path, class: "edit" %></p>
+    10:           <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
+    11:         </div>
+    12: 
+  
+app/views/tasks/index.html.erb:9:in `block in _app_views_tasks_index_html_erb__2963241793846856663_70321527140100'
+app/views/tasks/index.html.erb:4:in `_app_views_tasks_index_html_erb__2963241793846856663_70321527140100'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:23:24 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3/edit" for 127.0.0.1 at 2018-03-23 15:23:26 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/3" for 127.0.0.1 at 2018-03-23 15:23:36 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pclH5u3VyDLVfvzhKAJYCd+DG7kn9NIKcl6Q1JVeQOizpire8/FYQOSiAjxgiJYoNjY15q7SYO55MxSW9AgSCA==", "task"=>{"title"=>"Have Fun!", "description"=>"Do some soldering, see some people, go out into nature, sing more songs, play more music, go dancing ...", "completion_date"=>"2018-03-31"}, "commit"=>"Update Task", "id"=>"3"}
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `task' for #<TasksController:0x00007fea0371fc10>):
+  
+app/controllers/tasks_controller.rb:33:in `update'
+Started PATCH "/tasks/3" for 127.0.0.1 at 2018-03-23 15:26:07 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cPdTBAua+AdK/tRqSOJAW/530kNoHxUCQn280Khmv5piGeoGk3K4/LmnkdKORLP6RYmZH7o/pBlt2KLSXOLww==", "task"=>{"title"=>"Have Fun and Eat Good Food!", "description"=>"Do some soldering, see some people, go out into nature, sing more songs, play more music, go dancing ...", "completion_date"=>"2018-03-31"}, "commit"=>"Update Task", "id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 3.8ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/tasks_controller.rb:38:in `update'
+Started PATCH "/tasks/3" for 127.0.0.1 at 2018-03-23 15:26:43 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cPdTBAua+AdK/tRqSOJAW/530kNoHxUCQn280Khmv5piGeoGk3K4/LmnkdKORLP6RYmZH7o/pBlt2KLSXOLww==", "task"=>{"title"=>"Have Fun and Eat Good Food!", "description"=>"Do some soldering, see some people, go out into nature, sing more songs, play more music, go dancing ...", "completion_date"=>"2018-03-31"}, "commit"=>"Update Task", "id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `submit' for #<Task:0x00007fea08992678>):
+  
+app/controllers/tasks_controller.rb:38:in `update'
+Started PATCH "/tasks/3" for 127.0.0.1 at 2018-03-23 15:28:03 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2cPdTBAua+AdK/tRqSOJAW/530kNoHxUCQn280Khmv5piGeoGk3K4/LmnkdKORLP6RYmZH7o/pBlt2KLSXOLww==", "task"=>{"title"=>"Have Fun and Eat Good Food!", "description"=>"Do some soldering, see some people, go out into nature, sing more songs, play more music, go dancing ...", "completion_date"=>"2018-03-31"}, "commit"=>"Update Task", "id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "title" = $1, "completion_date" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["title", "Have Fun and Eat Good Food!"], ["completion_date", "2018-03-31"], ["updated_at", "2018-03-23 22:28:03.258384"], ["id", 3]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 20ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:28:03 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:28:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/4/edit" for 127.0.0.1 at 2018-03-23 15:28:24 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/4" for 127.0.0.1 at 2018-03-23 15:28:41 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vo3QMUjFN4JlXqVIGXwSqsszMWWdxu40auMWJqDzok3HEmsDp827E7WBNlkq3y/7nYenv2D0cv/9A1Qng5AJag==", "task"=>{"title"=>"Eat Chocolate and other Yummy things", "description"=>"Find some good chocolate and eat it. It's good for your health", "completion_date"=>"2018-03-30"}, "commit"=>"Update Task", "id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "title" = $1, "completion_date" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["title", "Eat Chocolate and other Yummy things"], ["completion_date", "2018-03-30"], ["updated_at", "2018-03-23 22:28:41.669984"], ["id", 4]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/4
+Completed 302 Found in 10ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/tasks/4" for 127.0.0.1 at 2018-03-23 15:28:41 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:28:44 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 27.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks/9/edit" for 127.0.0.1 at 2018-03-23 15:28:48 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/9" for 127.0.0.1 at 2018-03-23 15:28:57 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3t5nz/jM1tlAxhi7xwNhjDVGhFhkqd6rBFy3A6OMfXUg1EVCiv/66mJtNspuiQzeePDYZyxk9yM0J5LnVpKNwA==", "task"=>{"title"=>"Edited Task", "description"=>"This is a new task", "completion_date"=>""}, "commit"=>"Update Task", "id"=>"9"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "title" = $1, "completion_date" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["title", "Edited Task"], ["completion_date", ""], ["updated_at", "2018-03-23 22:28:57.555627"], ["id", 9]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/9
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/tasks/9" for 127.0.0.1 at 2018-03-23 15:28:57 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/9/edit" for 127.0.0.1 at 2018-03-23 15:29:00 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:29:04 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+

@@ -6,7 +6,7 @@
 
         <div class="actions">
           <p><a href="#">Mark Completed</a></p>
-          <p><%= link_to "Edit", edit_task_path, class: "edit" %></p>
+          <p><%= link_to "Edit", edit_task_path(task.id), class: "edit" %></p>
           <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
         </div>
 
