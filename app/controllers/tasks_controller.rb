@@ -19,8 +19,6 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    # task.name = params[:task][:name]
-    # task.description = params[:task][:description]
     if @task.save
       redirect_to tasks_path
     else
@@ -32,7 +30,6 @@ class TasksController < ApplicationController
     @task = Task.find_by(id: params[:id])
     if !@task.nil?
       if @task.update(task_params)
-      # if @task.update(name: params[:task][:name], description: params[:task][:description])
         redirect_to task_path
       else
         render :edit
