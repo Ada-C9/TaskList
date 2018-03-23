@@ -14,7 +14,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+    @task = Task.new(book_params)
+    # (name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
     if @task.save
       redirect_to tasks_path
     else
@@ -29,7 +30,8 @@ class TasksController < ApplicationController
   def update
     edit
     if !@task.nil?
-      if @task.update(name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+      if @task.update(book_params)
+        # (name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
         redirect_to tasks_path(@task.id)
       else
         render :edit
@@ -47,4 +49,10 @@ class TasksController < ApplicationController
     end
     redirect_to tasks_path
   end
+end
+
+private
+
+def book_params
+  return params.require(:task).permit(:name, :description, :completion_date)
 end
