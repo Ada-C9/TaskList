@@ -32,10 +32,24 @@ class TasksController < ApplicationController
   end
 
   def update
+    raw_task = params[:task]
 
+    task = Task.find(params[:id])
+    task.name = raw_task[:name]
+    task.start_date = raw_task[:start_date]
+    task.description = raw_task[:description]
+    task.completion_date = raw_task[:completion_date]
+
+    if task.save
+      redirect_to task_path(task)
+    end
   end
 
   def destroy
+    # find first
+    # check the result of destroy
+    Task.destroy(params[:id])
 
+    redirect_to tasks_path
   end
 end
