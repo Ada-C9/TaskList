@@ -9,11 +9,9 @@ def new
 end
 
 def create
-  raw_task = params[:task]
-
   task = Task.new
-  task.name = raw_task[:name]
-  task.description = raw_task[:description]
+  task.assign_attributes(task_params)
+
 
   if task.save
     redirect_to '/tasks'
@@ -31,10 +29,9 @@ def edit
 end
 
 def update
-  raw_task = params[:task]
+
   task = Task.find(params[:id])
-  task.name = raw_task[:name]
-  task.description = raw_task[:description]
+  task.assign_attributes(task_params)
 
   if task.save
     redirect_to task_path(task)
@@ -45,6 +42,12 @@ def destroy
   Task.destroy(params[:id])
 
   redirect_to tasks_path
+end
+
+private
+
+def task_params
+  return params.require(:task).permit(:name, :description)
 end
 
 end
