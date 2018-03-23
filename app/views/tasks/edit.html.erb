@@ -1,14 +1,1 @@
-<strong>Edit Task:</strong>
-
-<%= form_for @task do |t| %>
-<%= t.label :task_name %>
-<%= t.text_field :name %>
-
-<%= t.label :description %>
-<%= t.text_field :details %>
-
-<%= t.label :complete_by %>
-<%= t.date_field :complete %>
-
-<%= t.submit "Update!" %>
-<% end %>
+<%= render partial: "form", locals: {submit: "Update!", page_title: "Edit Task"} %>
