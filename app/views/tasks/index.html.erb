@@ -4,9 +4,8 @@
 <% @tasks.each do |task| %>
   <li>
     <strong><%= link_to(task.name, task_path(task)) %></strong>
-    (Do by: <%= task.due_date %>)
-
-
+    (Do by: <%= task.due_date %>)<br>
+    <%= link_to("Mark Task as Completed!", completed_task_path(task), method: :patch) %>
   </li>
 <% end %>
 </ul>
