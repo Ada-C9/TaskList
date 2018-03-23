@@ -1,0 +1,9 @@
+<%= form_for @tasks do |f|%>
+  <%= f.label :Add_a_task %>
+  <%= f.text_field :todo %>
+  <%= f.label :describe_your_task %>
+  <%= f.text_field :add_description_to_task %>
+  <%= f.label :When_will_it_be_done %>
+  <%= f.text_field :due_date %>
+  <%= f.submit %>
+  <%end%>
