@@ -8,19 +8,16 @@ class TasksController < ApplicationController
   end
 
   def create
-  # this method doesn't send response to the browser, it redirects to the tasks view
-  # by default, the controller will send you to whatever controller shares the name
-    raw_task = params[:task]
-
-    task = Task.new # must create a local instance of a book
-
-    task.name = raw_task[:name]
-    task.description = raw_task[:description]
-    task.completion_date = raw_task[:completion_date]
+    # raw_task = params[:task]
+    #
+    # task = Task.new
+    # task.name = raw_task[:name]
+    # task.description = raw_task[:description]
+    # task.completion_date = raw_task[:completion_date]
+    task = Task.new(task_params)
 
     if task.save
       redirect_to '/tasks'
-      # redirect_to books_path # is another way of redirecting
     end
   end
 
@@ -37,5 +34,10 @@ class TasksController < ApplicationController
 
   # def destroy
   # end
+
+  private
+  def task_params
+    return params.require(:task).permit(:name, :description, :completion_date)
+  end
 
 end

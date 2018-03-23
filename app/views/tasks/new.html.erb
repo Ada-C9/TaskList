@@ -1,0 +1,15 @@
+<form action="/tasks" method="post" accept-charset="utf-8">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+
+  <label for="name">Task</label>
+  <input type="text" name="name" value="" id="name">
+
+  <label for="description">Description</label>
+  <input type="text" name="description" value="" id="description">
+
+  <label for="completion_date">Completion Date</label>
+  <input type="text" name="completion_date" value="" id="completion_date">
+
+  <input type="submit" value="Submit">
+</form>
