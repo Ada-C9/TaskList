@@ -75,6 +75,11 @@ li a.incomplete {
   text-decoration: none;
 }
 
+ul#all-tasks {
+  padding: 0;
+  margin-left: 32vw;
+}
+
 /* SHOW PAGE */
 
 h2 {
@@ -83,6 +88,7 @@ h2 {
 
 ul#task-options {
   padding-right: 1em;
+  margin-left: 25vw;
 }
 
 ul#task-options li {
@@ -107,8 +113,8 @@ form.new_task, form.edit_task {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding-left: 7em;
-  padding-right: 7em;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 label, input, textarea {
