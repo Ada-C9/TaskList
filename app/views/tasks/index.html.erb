@@ -2,13 +2,17 @@
   <h2>Tasks List</h2>
   <ol class="one-task">
     <% @tasks.each do |task| %>
-      <li class="title"><%= link_to task.title, task_path(task.id), class: "task-list" %></li>
+      <li class="title">
+        <%= link_to task.title, task_path(task.id), class: "task-list" %>
+      </li>
 
-        <div class="actions">
-          <p><a href="#">Mark Completed</a></p>
-          <p><%= link_to "Edit", edit_task_path(task.id), class: "edit" %></p>
-          <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
-        </div>
+      <p>Due <span><%= task.completion_date %></span></p>
+
+      <div class="actions">
+        <p><a href="#">Mark Completed</a></p>
+        <p><%= link_to "Edit", edit_task_path(task.id), class: "edit" %></p>
+        <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete" %></p>
+      </div>
 
     <% end %>
   </ol>
