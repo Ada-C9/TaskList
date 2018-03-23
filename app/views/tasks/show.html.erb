@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>show</title>
-</head>
-<body>
-  <nav class="edit_del">
-    <ul>
-      <li>
-        <%= link_to "Edit", edit_task_path %>
-      </li>
-      <li>
-        <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
-      </li>
-    </ul>
-  </nav>
-  <section class="task">
-    <h2><%= @task.name.upcase %></h2>
-    <p>
-      Due by: <%= @task.completion_date %>
-    </p>
-  </section>
-</body>
-</html>
+<nav class="edit_del">
+  <ul>
+    <li>
+      <%= link_to "Edit", edit_task_path %>
+    </li>
+    <li>
+      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
+    </li>
+  </ul>
+</nav>
+<section class="task">
+  <h2><%= @task.name.upcase %></h2>
+  <p>
+    Due by: <%= @task.completion_date %>
+  </p>
+</section>
