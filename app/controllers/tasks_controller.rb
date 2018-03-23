@@ -15,7 +15,6 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(task_params)
-
     if task.save
       redirect_to tasks_path
     else
@@ -27,12 +26,22 @@ class TasksController < ApplicationController
     @task = Task.find_by(id: params[:id])
   end
 
+  def complete
+    # book.title = params[:book][:title]
+    @task = Task.find_by(id: params[:id])
+    if @task.task_complete == false
+      @task.task_complete = true
+    else
+      @task.task_complete = false
+    end
+    @task.save
+    redirect_to tasks_path
+  end
+
   def update
     @task = Task.find_by(id: params[:id])
     if !@task.nil?
       if @task.update(task_params)
-      # if @task.update(name: params[:task][:name], description: params[:task][:description], comp_date: params[:task][:comp_date])
-
         redirect_to task_path
       else
         render :edit
@@ -52,7 +61,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-
-    params.require(:task).permit(:name, :description, :comp_date)
+    params.require(:task).permit(:name, :description, :comp_date, :task_complete)
   end
 end
