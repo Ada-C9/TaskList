@@ -1,11 +1,10 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(:priority, :created_at)
+    @tasks = Task.all.order(:completed, :priority, :created_at)
   end
 
   def show
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find_by(id: params[:id])
   end
 
   def new
@@ -22,26 +21,20 @@ class TasksController < ApplicationController
   end
 
   def edit
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find_by(id: params[:id])
   end
 
   def update
-    id = params[:id]
-    task = Task.find(id)
-    # task.name = params[:task][:name]
-    # task.description = params[:task][:description]
-    # task.priority = params[:task][:priority]
+    task = Task.find_by(id: params[:id])
     if task.update(task_params)
-      redirect_to task_path
+      redirect_to task_path(task.id)
     else
       render :edit
     end
   end
 
   def destroy
-    id = params[:id]
-    task = Task.find(id)
+    task = Task.find_by(id: params[:id])
     if !task.nil?
       if task.destroy
       end
@@ -50,9 +43,10 @@ class TasksController < ApplicationController
   end
 
   def complete
-    id = params[:id]
-    task = Task.find(id)
-    task.completed = !(task.completed)
+    task = Task.find(params[:id])
+    if !task.nil?
+      task.completed = !(task.completed)
+    end
     if task.completed
       task.completion_date = task.updated_at.to_date.to_s
     else
@@ -68,6 +62,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).require(:name, :description, :priority)
+    return params.require(:task).permit(:name, :description, :priority)
   end
 end
