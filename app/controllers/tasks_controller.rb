@@ -12,9 +12,8 @@ class TasksController < ApplicationController
     task_data = params[:task]
 
     task = Task.new
-    task.name = task_data[:name]
-    task.description = task_data[:description]
-    task.complete_by = task_data[:complete_by]
+
+    task.assign_attributes(task(:params))
 
     if task.save
       redirect_to tasks_path
