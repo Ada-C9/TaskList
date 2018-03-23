@@ -38,6 +38,19 @@ class TasksController < ApplicationController
     end
   end
 
+  def toggle_complete
+    task = Task.find(params[:id])
+    if task.completion_date.nil?
+      task.completion_date = Date.today
+    else
+      task.completion_date = nil
+    end
+
+    if task.save
+      redirect_to tasks_path
+    end
+  end
+
   private
   def task_params
     params.require(:task).permit(:name, :description, :completion_date)
