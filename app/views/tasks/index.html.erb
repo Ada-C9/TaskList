@@ -13,5 +13,8 @@
     <li>
       <%= link_to("Edit", edit_task_path(task)) %>
     </li>
+    <li>
+      <%= link_to("Delete", task_path(task.id), method: :delete, date: { confirm: "Are you sure?" }) %>
+    </li>
   <% end %>
 </ul>
