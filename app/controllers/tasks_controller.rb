@@ -55,6 +55,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
+    #getting error with params.require(:task) whyyyyy
     return params.permit(:name, :description, :completion_date)
   end
 
