@@ -16,16 +16,10 @@
 
 body {
   font-family: 'Karla', sans-serif;
-  background: linear-gradient(
-  to bottom,
-  #92defc,
-  #92defc 50%,
-  #eaf5f9 50%,
-  #eaf5f9
-);
-/* The rectangle in which to repeat.
+  background: linear-gradient( to bottom, #92defc, #92defc 50%, #eaf5f9 50%, #eaf5f9);
+  /* The rectangle in which to repeat.
    It can be fully wide in this case */
-background-size: 100% 20px;
+  background-size: 100% 20px;
 }
 
 header {
@@ -59,9 +53,9 @@ header ul li a {
   font-weight: bold;
 }
 
- .completed-task {
-   text-decoration: line-through;
- }
+.completed-task {
+  text-decoration: line-through;
+}
 
 header ul li a:hover {
   color: black;
@@ -75,7 +69,6 @@ header ul li a:hover {
   border: double 2px black;
   margin: 0 auto;
   background-color: white;
-
 }
 
 ul {
@@ -118,18 +111,24 @@ ul {
   border: double 2px black;
   margin: 0 auto;
   background-color: white;
-
 }
 
 .task-options {
   display: flex;
   justify-content: space-around;
-  max-width: 30%;
+  padding-left: 0;
+}
+
+.task-options li {
+  border: solid 1px black;
+  border-radius: 25%;
 }
 
 .task-options li a {
   text-decoration: none;
   color: #4289f4;
+  margin: 1em;
+  text-align: center;
 }
 
 .task-options li a:hover {
@@ -184,4 +183,8 @@ form input:last-child {
 
 .new_form {
   margin: 1em;
+}
+
+li a .completed-task {
+
 }

@@ -3,18 +3,6 @@
     <h1>New Task</h1>
   </section>
   <section class="new_form">
-    <%= form_for @tasks do |f| %>
-      <%= f.label :name %>
-      <%= f.text_field :task_name %>
-
-      <%= f.label :description %>
-      <%= f.text_area :description %>
-
-      <%= f.submit %>
-    <% end %>
+    <%= render partial: "form" %>
   </section>
-
-<!-- <form action="/tasks" method="post"> <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden"> <section class="input-task"> <label for="task_name">Task:</label> <input name="task[task_name]" value="" id="task_name"
-type="text"> </section> <section class="input-description"> <label for="task_description">Description:</label> <textarea name="task[task_description]" id="task_description"></textarea> </section> <input name="submit" value="Create Task" type="submit"
-class="submit"> </form> -->
 </section>
