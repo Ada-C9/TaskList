@@ -8,12 +8,16 @@
     <strong><%= "#{task[:name]}"%></strong>
 
   </li>
-
   <%= link_to("Show", task_path(task)) %>
   <%= link_to("Delete", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want
     to delete Task: #{task.name}?"}) %>
+    <% if !task.completed %>
+    <%= link_to("Mark as complete", completed_task_path(task), method: :patch) %>
+    <% else %>
+    <%= link_to("Unmark as complete", completed_task_path(task), method: :patch) %>
+    <%end%>
 
-  <%end%>
-</ul>
+    <%end%>
+  </ul>
 
-<%= link_to("Add a New Task", new_task_path, class: "important") %>
+  <%= link_to("Add a New Task", new_task_path, class: "important") %>

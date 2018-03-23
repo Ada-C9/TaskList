@@ -2,9 +2,6 @@ class TasksController < ApplicationController
 
   def index
 
-
-    # @tasks = ["Cleaning", "Laundry", "Cooking", "Dishes"]
-
     @tasks = Task.all
 
   end
@@ -15,11 +12,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    # raw_task = params[:task]
-    # task = Task.new
-    # task.name = raw_task[:name]
-    # task.description = raw_task[:description]
-    # task.completion_date= raw_task[:completion_date]
 
     task = Task.new
     task.assign_attributes(task_params)
@@ -39,12 +31,6 @@ class TasksController < ApplicationController
   end
 
   def update
-    # raw_task = params[:task]
-    #
-    # task = Task.find(params[:id])
-    # task.name = raw_task[:name]
-    # task.description = raw_task[:description]
-    # task.completion_date = raw_task[:completion_date]
 
     task = Task.find(params[:id])
     task.assign_attributes(task_params)
@@ -56,13 +42,36 @@ class TasksController < ApplicationController
 
   end
 
+  def completed
+
+    task = Task.find(params[:id])
+
+    if task.completed
+      task.completed = false
+      task.completion_date = nil
+
+    else
+      task.completed = true
+      task.completion_date = Date.today
+
+    end
+
+    if task.save
+      redirect_to tasks_path
+    end
+
+  end
+
   def destroy
     Task.destroy(params[:id])
     redirect_to tasks_path
   end
 
+private
+
   def task_params
     return params.require(:task).permit(:name, :description, :completion_date)
   end
+
 
 end
