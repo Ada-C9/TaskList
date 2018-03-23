@@ -3,8 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 // body styling
 body {
+  width: 100%;
   font-family: sans-serif;
   font-size: 1rem;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
 }
 
 ul {
@@ -16,12 +19,10 @@ ul {
 a {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-
-
-
 
 h2{
   text-align: center;
@@ -29,17 +30,19 @@ h2{
 
 // nav bar styling
 .nav {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
+  grid-row-gap: 40px;
   margin: 50px;
+  padding-bottom: 30px;
 }
 
-nav a {
+.nav a {
   border: 2px solid #000000;
   border-radius: 5px;
-  margin: 10px;
-  padding: 10px;
-
+  margin: 20px;
+  padding: 2px;
+  align-content: center;
 }
 
 .nav a:hover {
@@ -50,7 +53,7 @@ nav a {
 
 .index {
   display: grid;
-  margin: 100px;
+  margin: 50px;
   border: 2px solid #000000;
   border-radius: 10px;
 }
@@ -58,8 +61,34 @@ nav a {
 
 .tasks {
   display:grid;
-  justify-content: space-between;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
 
+.tasks li {
+  padding-bottom: 30px;
+}
+
+.tasks a {
+  border: 2px solid #000000;
+  border-radius: 5px;
+  align-content: center;
+  padding: 2px;
+  font-size: 9px;
+
+}
+.tasks li a:hover {
+  background-color: grey;
+  // color: hotpink;
+}
+
+.tasks a:first-child {
+  border: none;
+  font-size: 18px;
+}
+
+.task a:first-child:hover {
+  background-color: white;
 }
 
 .action {
@@ -89,7 +118,7 @@ footer {
 }
 
 // index page styling
-.index h1 {
+.index h1{
   text-align: center;
 }
 
