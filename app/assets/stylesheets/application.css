@@ -89,21 +89,27 @@ a {
   text-align: center;
 }
 
-.your-tasks p {
-  text-indent: 20px;
-}
-
-.task-links {
+.task-links a {
   font-weight: lighter;
-}
-
-.flex form {
-  display: flex;
-  flex-direction: column;
 }
 
 .task-details li {
   line-height: 2;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_task, .edit_task {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+label {
+  padding-top: 20px;
 }
 
 .strikethrough {

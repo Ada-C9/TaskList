@@ -5,8 +5,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find(params[:id])
   end
 
   def new
@@ -14,10 +13,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
-    task.name = params[:task][:name]
-    task.description = params[:task][:description]
-    task.priority = params[:task][:priority]
+    task = Task.new(task_params)
     if task.save # this saves the new book AND evaluates the conditional
       redirect_to tasks_path
     else
@@ -32,10 +28,7 @@ class TasksController < ApplicationController
   def update
     task = Task.find_by(id: params[:id])
     if !task.nil?
-      if task.update(
-        name: params[:task][:name],
-        description: params[:task][:description],
-        priority: params[:task][:priority])
+      if task.update(task_params)
         redirect_to task_path(task.id)
       else
         render :edit
@@ -46,10 +39,9 @@ class TasksController < ApplicationController
   end
 
   def toggle_complete
-    id = params[:id]
-    task = Task.find(id)
+    task = Task.find(params[:id])
     if task.completed?
-      task.update(completed?: false)
+      task.update(completion_date: nil, completed?: false)
     else
       task.update(completion_date: Date.new, completed?: true)
     end
@@ -57,10 +49,15 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    id = params[:id]
-    @task = Task.find(id)
+    @task = Task.find(params[:id])
     @task.destroy
     redirect_to tasks_path
+  end
+
+private
+
+  def task_params
+    params.require(:task).permit(:name, :description, :priority)
   end
 
 end

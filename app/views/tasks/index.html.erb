@@ -4,15 +4,13 @@
     <% i = 1 %>
     <% @tasks.each do |task| %>
       <li class="<%='strikethrough' if task.completed? %>">
-        <a><%= i %>. <%= link_to task.name, task_path(task.id) %></a>
+        <%= i %>. <%= link_to task.name, task_path(task.id) %>
       </li>
-        <% if !task.completed? || task.completed? == nil %>
-          <%= link_to "Mark Complete", complete_task_path(task.id), method: :put, class: "task-links" %>
-        <% else %>
-          <%= link_to "Unmark Complete", complete_task_path(task.id), method: :put, class: "task-links" %>
-        <% end %>
-        | <%= link_to "Edit", edit_task_path(task.id), class: "task-links" %> |
-        <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "task-links" %>
+      <div class="task-links">
+        <%= link_to !task.completed? || task.completed?.nil? ? "Mark Complete" : "Unmark Complete", complete_task_path(task.id), method: :patch %>
+        | <%= link_to "Edit", edit_task_path(task.id) %> |
+        <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
     <% i += 1 %>
     <% end %>
   </ul>
