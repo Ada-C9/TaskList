@@ -7,12 +7,15 @@
   <li>
     <input type="checkbox" />
     <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
-    <strong><%= task.time %></strong>:
-  </li>
-  <li> Task:
-    <%= link_to(task.to_do, task_path(task)) %>
+    <strong><%= task.time %></strong>
   </li>
   <li>
+    Task: <%= link_to(task.to_do, task_path(task)) %>
+  </li>
+  <li>
+    <button>
+      <%= link_to("Complete", complete_task_path(task.id), method: :patch) %>
+    </button>
     <button>
       <%= link_to("Edit", edit_task_path(task)) %>
     </button>
