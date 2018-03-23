@@ -14,12 +14,27 @@
  *= require_self
  */
 
+ a {
+   text-decoration: none;
+ }
+
  body {
    justify-content: center;
    display: grid;
    grid-template-columns: 2fr;
    grid-template-rows: 1fr 1fr .25fr;
    font-family: Questrial;
+ }
+
+ .button-style {
+   border: 3px solid white;
+   border-radius: 36px;
+   padding: 1px;
+
+ }
+
+ strong {
+   padding: 1em;
  }
 
  header h1 {

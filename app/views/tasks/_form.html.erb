@@ -1,4 +1,6 @@
-<h1><%= page_title %></h1>
+<h1>
+  <%= page_title ||= "Tasklist" %>
+</h1>
 
 <%= form_for @task do |f| %>
   <%= f.label :task %>

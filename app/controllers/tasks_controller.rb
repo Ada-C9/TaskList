@@ -44,6 +44,16 @@ class TasksController < ApplicationController
     end
   end
 
+  def uncomplete
+    @task = Task.find(params[:id])
+    @task.completion_date = nil
+    @task.save
+
+    if @task.save
+      redirect_to tasks_path
+    end
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
@@ -55,8 +65,8 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    #getting error with params.require(:task) whyyyyy
-    return params.permit(:name, :description, :completion_date)
+    #getting error with params.require(:task).permit whyyyyy
+    return params.require(:task).permit(:name, :description, :completion_date)
   end
 
 end

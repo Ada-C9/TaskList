@@ -3,8 +3,13 @@
 <ol>
 <% @tasks.each do |task| %>
   <li>
-    <strong><%= link_to("#{task.name}", task_path(task)) %></strong><br>
-    <%= link_to("Mark Complete", complete_task_path(task), method: :patch) %> |
+    <% if task.completion_date == nil %>
+      <strong><%= link_to("#{task.name}", task_path(task)) %></strong>
+    <% else %>
+      <strong><s><%= link_to("#{task.name}", task_path(task)) %></s></strong>
+    <% end %>
+    <%= link_to("Mark Complete", complete_task_path(task), class: "button-style", method: :patch) %>
+    <%= link_to("Unmark Complete", uncomplete_task_path(task), class: "button-style", method: :patch) %>
     <%= link_to("Edit", edit_task_path(task)) %> |
     <%= link_to("Delete", task_path(task), method: :delete, data: {confirm: "Are you sure you want to delete #{task.name}?" }) %>
   </li>
