@@ -6,12 +6,12 @@
   <% @tasks.each do |task| %>
     <li>
       <input type="checkbox" />
-      <em><%= task.date.strftime("%a, %B %-m, %Y") %></em>,
+      <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
       <strong><%= task.time %></strong>:
       <%= link_to(task.to_do, task_path(task)) %>
     </li>
     <li>
-      <%= link_to("Edit/Update", edit_task_path(task)) %>
+      <%= link_to("Edit", edit_task_path(task)) %>
     </li>
   <% end %>
 </ul>

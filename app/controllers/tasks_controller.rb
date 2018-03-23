@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   def update
     raw_task = params[:task]
 
-    task = Task.new(params[:id])
+    task = Task.find(params[:id])
 
     task.assign_attributes(
       to_do: raw_task[:to_do],
