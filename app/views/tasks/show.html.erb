@@ -1,0 +1,21 @@
+<h1><%=@task.name%></h1>
+
+<ul>
+  <li>Deadline: <%=@task.completion_date%></li>
+  <li><article>Description: <%=@task.description%></article></li>
+</ul>
+
+<p>
+  <ul>
+    <li>
+      <!-- <%= button_to "Edit Task", task_path(@task.id),
+      method: :delete, data: { confirm: "Are you sure?" } %>
+       -->
+      <%= link_to "Edit", edit_task_path %>
+    </li>
+    <li>
+      <%= button_to "Delete Task", task_path(@task.id),
+      method: :delete, data: { confirm: "Are you sure?" } %>
+    </li>
+  </ul>
+</p>

@@ -1,0 +1,15 @@
+
+<h1>To Do:</h1>
+
+<p>
+  <ul>
+    <%@tasks.each do |task| %>
+    <li>
+      <span><%=link_to task.name, task_path(task.id)%></span> </li>
+      <ul>
+        <li>Deadline: <%= task.completion_date%></li>
+      </ul>
+    </li>
+    <%end%>
+  </ul>
+</p>

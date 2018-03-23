@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Projects</title>
+  <head class="header">
+    <title>Task List</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+<nav>
+  <ul >
+    <li><%=link_to "tasks home", show_tasks_path%></li>
+    <li><%=link_to "add a task", new_task_path%></li>
+  </ul>
+</nav>
 
   <body>
     <%= yield %>

@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+/** {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  grid-template-rows: 1.5fr 5fr 1fr;
+}
+
+.header{
+  grid-area: 1 \ 1 \ 2 \ 2;
+}
+
+nav {
+  grid-area: 1 \ 2 \ 1 \ 1;
+}*/
