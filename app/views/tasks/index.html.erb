@@ -39,8 +39,9 @@
 </ul>
 
 <h4> COMPLETED </h4>
-<ul class='list'> <!-- this needs an each loop -->
+<ul class='list'>
   <li>
+    <% completed_tasks = Task.where(status: 'COMPLETE') %>
     <% sorted.each do |task| %>
       <% if task.status == 'COMPLETE' %>
         <section>

@@ -8,13 +8,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    raw_task = params[:task]
-    task = Task.new
-    task.name = raw_task[:name]
-    task.status = 'TODO'
-    task.description = raw_task[:description]
-    task.priority = raw_task[:priority]
-    task.completion_date = raw_task[:completion_date]
+    task = Task.new(task_params)
+    task.status = :TODO
 
     if task.save
       redirect_to '/tasks'
@@ -33,11 +28,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    raw_task = params[:task]
-    task.name = raw_task[:name]
-    task.description = raw_task[:description]
-    task.priority = raw_task[:priority]
-    task.completion_date = raw_task[:completion_date]
+    task.assign_attributes(task_params)
 
     if task.save
       redirect_to '/tasks'
@@ -55,13 +46,21 @@ class TasksController < ApplicationController
 
     if task.status == 'COMPLETE'
       task.status = :TODO
-    else
+      task.completion_date = nil
+    elsif task.status == 'TODO'
       task.status = :COMPLETE
+      task.completion_date = DateTime.now
     end
 
 
     if task.save
       redirect_to '/tasks'
     end
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(:name, :description, :priority)
   end
 end
