@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
-    @featured = @tasks.select { |task| task.priority == 1 }
+    @featured = @tasks.select { |task| task.priority == 1 && task.done != true}
   end
 
   def all
@@ -37,7 +37,7 @@ class TasksController < ApplicationController
   def update
     @task = Task.find_by(id: params[:id])
     if !@task.nil?
-      if @task.update(title:  params[:task][:title], location: params[:task][:location], description: params[:task][:description], priority: params[:task][:priority])
+      if @task.update(title: params[:task][:title], location: params[:task][:location], description: params[:task][:description], priority: params[:task][:priority])
 
         redirect_to task_path(@task.id)
       else
@@ -46,7 +46,13 @@ class TasksController < ApplicationController
     end
   end
 
-  def complete
+  def completed
+    @task = Task.find_by(id: params[:id])
+    @task.done = true
+    @task.priority = 4
+    @task.complete_date = DateTime.now
+    @task.save
+    redirect_to task_path(@task.id)
   end
 
   def destroy

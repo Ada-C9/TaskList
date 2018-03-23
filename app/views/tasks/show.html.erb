@@ -15,7 +15,7 @@
     </nav>
   </section>
   <section class="item">
-    <h1><%=@task.title %></h1>
+    <h2><%=@task.title %></h2>
     <p>
       Description: <%= @task.description %>
     </p>
@@ -30,20 +30,24 @@
           Medium
           <%elsif @task.priority == 3 %>
           Low
+          <%elsif @task.priority == 4 %>
+          Finished
           <% end %>
     </p>
     <p>
       Status:
-        <% if @task.complete.nil?%>
-          incomplete
-        <% else %>
-          <%= @task.complete %>
+        <% if @task.done == true %>
+         <%= "Done: " + @task.complete_date.to_s %>
+         <% else %>
+          Incomplete
           <% end %>
     </p>
     <p>
+      <% if @task.done != true %>
       <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       |
       <%= link_to "Edit", edit_task_path %>
+      <% end %>
     </p>
   </section>
 </section>

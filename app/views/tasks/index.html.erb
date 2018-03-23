@@ -10,28 +10,27 @@
         </li>
       </ul>
     </nav>
+    <article>
+      <h1>Onward + Upward!</h1>
+    </article>
   </section>
+
   <section class="priority">
     <h1>Your #1 Priority Tasks:</h1>
     <ul>
       <% @featured.each do |task| %>
         <li class="list">
           <p class="chore">
-            🥦
+            🌶
             <a ><%= link_to task.title, task_path(task.id) %></a>
           </p>
           <p>
-            <a>Status:
-              <% if task.complete.nil?%>
-                incomplete
-              <% else %>
-                <%= task.complete %>
-              <% end %>
-            </a>
-            |
-            <a><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %></a>
-            |
             <a><%= link_to "Edit", edit_task_path(task.id) %></a>
+            |
+            <%= link_to "Complete", completed_task_path(task.id), method: :patch %>
+            |
+            <a><%= link_to "Delete", task_path(task), method: :delete, data: { confirm: 'Are you sure?' } %></a>
+
           </p>
         </li>
       <% end %>

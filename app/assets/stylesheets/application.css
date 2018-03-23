@@ -18,6 +18,7 @@
 
 h1 {
   font-family: sans-serif;
+  text-align: center;
 }
 
 span.title {
@@ -45,7 +46,7 @@ ul {
 
 nav ul {
   text-align: left;
-  background-color: pink;
+  background-color: #F2B7AE;
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 15px;
@@ -71,7 +72,7 @@ a {
 }
 
 .sidebar {
-  width: 35%;
+  width: 25%;
 }
 
 .chore {
@@ -126,15 +127,15 @@ a {
   color: #B73838;
   font-size: 1.5em;
 }
-/* - -- - -- NEW - -- -- -  */
 
-.add_task {
+/* - -- - -- NEW - -- -- -  */
+.new_task {
   display: flex;
   flex-direction: row;
 }
 
 .form {
-  border: dotted 1em blue;
+  border: dotted 1em #AED3F2;
   text-align: center;
   margin-left: 1em;
   width: 75%;
@@ -143,7 +144,6 @@ a {
 
 .form article {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
@@ -159,13 +159,30 @@ a {
 }
 
 .item {
-  border: dotted 1em green;
+  border: dotted 1em #F2DAAE;
   text-align: center;
   margin-left: 1em;
   width: 75%;
   margin-top: 1em;
 }
 
+/* - -- - -- EDIT - -- -- -  */
+.edit_task {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.formz {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  border: dotted #C9E3E3 1em;
+  width: 75%;
+  margin-left: 1em;
+  text-align: center;
+}
+
 /* * {
-  border: black 1px solid;
+  border: black .2px solid;
 } */

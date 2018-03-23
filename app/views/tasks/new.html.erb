@@ -1,4 +1,4 @@
-<section class="add_task">
+<section class="new_task">
   <section class="sidebar">
     <nav>
       <ul>
@@ -15,36 +15,44 @@
     </nav>
   </section>
   <section class="form">
-    <h2>🍦 Add a Task! 🍦</h2>
-    <%= form_for @task do |f| %>
-    <%= f.label :title %>:
-    <%= f.text_field :title %><br/><br/>
+      <h2>🍦 Add a Task! 🍦</h2>
+      <article>
+        <%= form_for @task do |f| %>
 
-    <article>
-      <%= f.label :description %>:
-      <%= f.text_area :description %>
-    </article>
-    <br/>
-    <%= f.label :Location %>:
-    <%= f.text_field :location %>
-    <br/><br/>
-    <article>
-      <span>
-        Priority:
-      </span>
-      <span>
-        <a><%= f.label :high_priority, 'High' %></a>
-        <%= f.radio_button :priority, 1 %><br/>
+        <span><%= f.label :title %>:
+        <%= f.text_field :title %></span>
+      </article><br/>
 
-        <a><%= f.label :med_priority, 'Medium' %></a>
-        <%= f.radio_button :priority, 2 %><br/>
+      <article>
+        <%= f.label :description %>
+        :
+        <%= f.text_area :description %>
+      </article><br/>
 
-        <a><%= f.label :low_priority, 'Low' %></a>
-        <%= f.radio_button :priority, 3 %>
-      </span>
-    </article>
-    <br/>
-    <%= f.submit %><br/><br/>
-  <% end %>
-</section>
+      <article>
+        <%= f.label :Location %>
+        :
+        <%= f.text_field :location %>
+      </article><br/>
+
+      <article>
+        <span>
+          Priority:
+        </span>
+        <span>
+          <a><%= f.label :high_priority, 'High' %></a>
+          <%= f.radio_button :priority, 1 %><br/>
+
+          <a><%= f.label :med_priority, 'Medium' %></a>
+          <%= f.radio_button :priority, 2 %><br/>
+
+          <a><%= f.label :low_priority, 'Low' %></a>
+          <%= f.radio_button :priority, 3 %>
+        </span>
+        <%= f.submit %>
+        <% end %>
+        
+      </article><br/>
+
+  </section>
 </section>
