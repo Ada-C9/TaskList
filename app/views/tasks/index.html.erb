@@ -2,10 +2,10 @@
 <ol>
   <% @tasks.each do |task|%>
   <li>
-    <%=link_to("#{task.todo}",show_tasks_path(task)) %> <%=link_to("Edit",edit_tasks_path(task))%>
+    <%=link_to("#{task.todo}",task_path(task)) %> <%=link_to("Edit",edit_task_path(task))%>
   </li>
 
   <%end%>
 </ol>
 
-<%= link_to("Add New Todo", new_tasks_path) %>
+<%= link_to("Add New Todo", new_task_path) %>
