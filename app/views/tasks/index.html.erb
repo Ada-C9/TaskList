@@ -1,18 +1,22 @@
 
-<h3>This is your task list</h3>
+<h2>Things I have to do: </h2>
 
-<p>Some more text</p>
+<p>Below are some tasks I have to get done.</p>
 
 
 <ol class="task_list">
-  <% @tasks.each do |task| %>
-    <li class="task_list_item">
-      <h4><%=task.name%></h4>
-      <p><%=task.description%></p>
+  <% @tasks.order(:id).each do |task| %>
+    <li class="<%= task.complete ? 'complete' : 'incomplete' %>">
+      <h4><%= link_to("#{task.name}", task_path(task))%></h4>
+
+      <% if task.complete %>
+      <%= link_to("Mark as INCOMPLETE", complete_task_path(task), method: :patch)%>
+      <% else %>
+      <%= link_to("Mark as COMPLETE", complete_task_path(task), method: :patch)%>
+      <% end %>
 
       <%= link_to("Edit", edit_task_path(task)) %>
       <%= link_to("Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete this item from your to-do list?"}) %>
-
     </li>
   <% end %>
 </ol>

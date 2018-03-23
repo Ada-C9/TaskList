@@ -1,3 +1,37 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.task_list li h4 {
+  margin-bottom: 0;
+}
+
+.task_list li>a {
+  color: darkblue;
+  text-decoration: none;
+  font-size: .75em;
+  border-left: .5px solid;
+  padding: 0 .5vw;
+}
+
+.task_list li a:hover {
+  background-color: lightblue;
+  font-weight: bold;
+}
+
+section .task_list li h4 a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.15em;
+}
+
+section .task_list .complete h4 a {
+  text-decoration: line-through;
+}

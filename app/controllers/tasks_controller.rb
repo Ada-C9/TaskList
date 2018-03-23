@@ -44,6 +44,22 @@ def destroy
   redirect_to tasks_path
 end
 
+def complete
+  task = Task.find(params[:id])
+
+  if task.complete
+    task.complete = false
+    task.completion_date = nil
+  else
+    task.complete = true
+    task.completion_date = Date.today
+  end
+
+  if task.save
+    redirect_to tasks_path
+  end
+end
+
 private
 
 def task_params
