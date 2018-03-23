@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   # Routes that operate on the task collection
+
+
+
   get '/tasks', to: 'tasks#index', as: 'tasks'
 
   get '/tasks/new', to:
@@ -16,6 +19,8 @@ Rails.application.routes.draw do
   patch '/tasks/:id', to: 'tasks#update'
 
   patch '/tasks/:id/complete', to: 'tasks#complete', as: 'complete_task'
+
+  get '/tasks/:id/complete', to: 'tasks#complete'
 
   delete '/tasks/:id', to: 'tasks#destroy'
 
