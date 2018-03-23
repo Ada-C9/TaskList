@@ -1,9 +1,1 @@
-<%= form_for @task do |f| %>
-  <%= f.label :name_of_task %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= f.submit %>
-
-
-<% end %>
+<%= render partial: "form", locals: {page_title: "Edit #{@task.name}"} %>

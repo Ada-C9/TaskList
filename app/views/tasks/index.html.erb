@@ -4,28 +4,50 @@
   <ol>
     <% @tasks.each do |task| %>
     <li class="task">
-      <span class="title">
+
+
+      <% if task.date_of_completion == nil %>
+        <span class="completed-title">
         <%= link_to task.name, task_path(task.id) %>
-      </span><br />
+        </span><br />
+
+      <% else %>
+        <span class="title">
+          <%= link_to task.name, task_path(task.id) %>
+        </span><br />
+      <% end %>
+
       <span class="task-options">
-        <div class="option">
-            <%= link_to "Edit", edit_task_path(task.id) %>
-        </div>
-        <div class="option">
-            <%= link_to "Delete", task_path(task.id), method: :delete %>
-        </div>
-        <div class="option">
-            <%= link_to "Mark as Completed", task_path(task.id), method: :edit %>
-        </div>
         <div class="option">
           <%= link_to "See description", task_path(task.id) %>
         </div>
+
+        <% if task.date_of_completion == nil %>
+          <div class="option">
+              <%= link_to "Edit", edit_task_path(task.id) %>
+          </div>
+        <% else %>
+        <% end %>
+
+        <div class="option">
+            <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+        <% if task.date_of_completion == nil %>
+          <div class="option">
+              <%= link_to "❏ Mark as Completed", mark_complete_path(task.id), method: :patch %>
+          </div>
+        <% else %>
+          <div class="option">
+            ✅Task completed
+          </div>
+        <% end %>
+
       </span>
     </li>
     <%end%>
   </ol>
 </section>
-
 <!-- <div class="add-task-button">
   <h5>Add Task<h5>
 </div> -->
