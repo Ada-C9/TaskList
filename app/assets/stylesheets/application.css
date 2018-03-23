@@ -14,8 +14,19 @@
  *= require_self
  */
 
-/* - -- - -- BASELINE - -- -- -  */
+/* CSS MAP */
 
+ /* - -- - -- BASELINE - -- -- -  */
+ /* - -- - -- INDEX - -- -- -  */
+ /* - -- - -- ALL - -- -- -  */
+ /* - -- - -- NEW - -- -- -  */
+ /* - -- - -- SHOW - -- -- -  */
+ /* - -- - -- EDIT - -- -- -  */
+
+
+
+
+/* - -- - -- BASELINE - -- -- -  */
 h1 {
   font-family: sans-serif;
   text-align: center;
@@ -50,6 +61,7 @@ nav ul {
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 15px;
+
 }
 
 a {
@@ -57,6 +69,15 @@ a {
 }
 
 /* - -- - -- INDEX - -- -- -  */
+.homepage {
+  display: flex;
+  flex-flow: row;
+}
+
+.sidebar {
+  width: 25%;
+  min-width: 140px;
+}
 
 .priority {
   border: dotted 1em red;
@@ -66,26 +87,20 @@ a {
   margin-top: 1em;
 }
 
-.homepage {
-  display: flex;
-  flex-flow: row;
-}
-
-.sidebar {
-  width: 25%;
+.list {
+  background-color: #F9DDD6;
+  border-radius: 15px;
+  margin-right: 3em;
+  margin-bottom: 1em;
+  min-width: 12em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .chore {
   font-size: 2em;
   font-weight: 400;
   padding-top: 10px;
-}
-
-.list {
-  background-color: #F9DDD6;
-  border-radius: 15px;
-  margin-right: 3em;
-  margin-bottom: 1em;
 }
 
 /* - -- - -- ALL - -- -- -  */
@@ -95,10 +110,8 @@ a {
 }
 
 .priorities {
-  /* border: dotted gray .1em; */
   text-align: center;
   margin-left: 1em;
-  width: 75%;
   margin-top: 1em;
   display: flex;
   flex-flow: row wrap;
@@ -109,6 +122,7 @@ a {
   border: dotted 1em red;
   width: 40%;
   margin-bottom: 2em;
+  min-width: 20em;
 }
 
 .priorities article:nth-of-type(2) {
@@ -129,7 +143,7 @@ a {
 }
 
 /* - -- - -- NEW - -- -- -  */
-.new_task {
+.newz {
   display: flex;
   flex-direction: row;
 }
@@ -140,11 +154,6 @@ a {
   margin-left: 1em;
   width: 75%;
   margin-top: 1em;
-}
-
-.form article {
-  display: flex;
-  justify-content: center;
 }
 
 .form a {
@@ -167,7 +176,7 @@ a {
 }
 
 /* - -- - -- EDIT - -- -- -  */
-.edit_task {
+.editz {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -181,6 +190,10 @@ a {
   width: 75%;
   margin-left: 1em;
   text-align: center;
+}
+
+.formz a {
+  font-style: italic;
 }
 
 /* * {

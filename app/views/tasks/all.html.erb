@@ -84,7 +84,7 @@
         <% @tasks.each do |task| %>
           <li class="list">
             <% if task.done == true %>
-              <p>🥕
+              <p>🎖
                 <a><%= link_to task.title, task_path(task.id) %></a>
               </p>
               <p>

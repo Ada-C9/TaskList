@@ -18,11 +18,8 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
-    task.title = params[:task][:title]
-    task.location = params[:task][:location]
-    task.description = params[:task][:description]
-    task.priority = params[:task][:priority]
+    task = Task.new(task_params)
+
     if task.save #it worked! will be true if worked
       redirect_to all_tasks_path
     else
@@ -36,12 +33,12 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(id: params[:id])
-    if !@task.nil?
-      if @task.update(title: params[:task][:title], location: params[:task][:location], description: params[:task][:description], priority: params[:task][:priority])
 
+    if !@task.nil?
+      if @task.update(task_params)
         redirect_to task_path(@task.id)
       else
-      render :edit
+        render :edit
       end
     end
   end
@@ -61,5 +58,11 @@ class TasksController < ApplicationController
       @task.destroy
     end
     redirect_to all_tasks_path
+  end
+
+  private
+
+  def task_params
+    params.require(:task).permit(:title, :description, :location, :priority, :complete_date, :done)
   end
 end
