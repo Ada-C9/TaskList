@@ -1,14 +1,19 @@
-<h1>Tasklist Application</h1>
+<section class="index">
+  <h1>Tasklist Application</h1>
 
-<strong><h2>Tasks</h2></strong></p>
+  <strong><h2>Tasks</h2></strong></p>
 
-<ul class="tasks">
-  <% @tasks.each do |task| %>
-  <li>
-    <p> <strong> <%=link_to task.name, task_path(task) %></strong>  <%=link_to 'Edit', edit_task_path(task)%>
+  <ol class="tasks">
+    <% @tasks.each do |task| %>
+    <li>
+      <strong> <%=link_to task.name, task_path(task) %></strong>
+    </li>
+    <li class="action">
+      <%=link_to 'Edit', edit_task_path(task)%>
 
-    <%=link_to('Delete', task_path(task), method: :delete, data: {confirm: "Are you sure you want to delete Task #{task.name}?"})%>
-  </li>
+      <%=link_to('Delete', task_path(task), method: :delete, data: {confirm: "Are you sure you want to delete Task #{task.name}?"})%>
+    </li>
 
   <% end %>
-</ul>
+  </ol>
+</section>
