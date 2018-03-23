@@ -1,11 +1,5 @@
 class TasksController < ApplicationController
 
-  # TASK_LIST = [
-  #   {id: 1, task_title: "Walk dog", description: "Don't forget poop bags", due: "3/10/18"},
-  #   {id: 2, task_title: "Stop to smell the roses", description: "Be careful on the roses", due: "4/1/18"},
-  #   {id: 3, task_title: "Eat ice cream", description: "At least three scoops", due: "3/20/18"},
-  #   {id: 4, task_title: "Buy more ice cream", description: "Choclate chip cookie dough or Chaco Tacos", due: "3/25/18"}
-  # ]
 
   def index
     @task = Task.all
@@ -22,9 +16,9 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new
-    task.task_name = params[:task_name]
-    task.description = params[:description]
-    task.completion_date = params[:completion_date]
+    task.task_name = params[:task][:task_name]
+    task.description = params[:task][:description]
+    task.completion_date = params[:task][:completion_date]
     if task.save
       redirect_to tasks_path
     else
@@ -33,15 +27,30 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @task = Task.find_by(id: params[:id])
   end
 
   def update
+    @task = Task.find_by(id: params[:id])
+
+    if !@task.nil?
+      if @task.update(task_name: params[:task][:task_name], description: params[:task][:description], completion_date: params[:task][:completion_date])
+
+      redirect_to task_path(@task.id)
+      else
+        render :edit
+      end
+    else
+      redirect_to tasks_path
+    end
   end
 
   def destroy
     id = params[:id]
     @task = Task.find(id)
-    @task.destroy
+    if @task.destroy
+      redirect_to tasks_path
+    end
   end
 
 end

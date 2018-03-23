@@ -13,14 +13,19 @@
  *= require_tree .
  *= require_self
  */
-
+ .nav ul {
+   display: flex;
+   flex-flow: column wrap;
+   justify-content: flex-start;
+ }
 .list {
   list-style: none;
+  display: flex;
 }
-.list::before {
+/* .list::before {
  content: "❍";
  padding-right: 1em;
-}
+} */
 
 a {
   font-weight: bold;
@@ -39,6 +44,7 @@ a {
   display: flex;
   flex-flow: row wrap;
   padding-left: 1em;
+  justify-content: center;
 }
 
 .task-options a::before {

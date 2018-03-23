@@ -5,7 +5,8 @@
     <a> <%= link_to task.task_name, task_path(task.id) %> </a>
     <ul class="task-options">
       <li>
-        <%= link_to "Mark Complete", edit_task_path(task.id)%>
+        <!-- <input type="button" value="Mark Complete" incomplete> -->
+        <%= link_to "Mark Complete", edit_task_path(task.id), class: "complete"%>
       </li>
       <li>
         <%= link_to "Edit", edit_task_path(task.id)%>
