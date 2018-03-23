@@ -1,17 +1,1 @@
-
-<h2 class="form">Add a new Task</h2>
-
-<%= form_for @task do |f| %>
-
-  <%= f.label "Task Name:", class: "form"%>
-  <%= f.text_field :name, class: "form"%>
-
-  <%= f.label "Complete By:", class: "form"%>
-  <%= f.text_field :comp_date, class: "form" %>
-
-  <%= f.label "Description:", class: "form"%>
-  <%= f.text_area :description, class: "form"%>
-
-  <%= f.submit class: "submit"%>
-
-<% end %>
+<%= render partial: "form", locals: {page_title: "New Task"} %>
