@@ -15,12 +15,14 @@ class TasksController < ApplicationController
   end
 
   def create
-    raw_task = params[:task]
-    task = Task.new
-    task.name = raw_task[:name]
-    task.description = raw_task[:description]
-    task.completion_date= raw_task[:completion_date]
+    # raw_task = params[:task]
+    # task = Task.new
+    # task.name = raw_task[:name]
+    # task.description = raw_task[:description]
+    # task.completion_date= raw_task[:completion_date]
 
+    task = Task.new
+    task.assign_attributes(task_params)
 
     if task.save
       redirect_to '/tasks'
@@ -37,12 +39,15 @@ class TasksController < ApplicationController
   end
 
   def update
-    raw_task = params[:task]
+    # raw_task = params[:task]
+    #
+    # task = Task.find(params[:id])
+    # task.name = raw_task[:name]
+    # task.description = raw_task[:description]
+    # task.completion_date = raw_task[:completion_date]
 
     task = Task.find(params[:id])
-    task.name = raw_task[:name]
-    task.description = raw_task[:description]
-    task.completion_date = raw_task[:completion_date]
+    task.assign_attributes(task_params)
 
 
     if task.save
@@ -54,6 +59,10 @@ class TasksController < ApplicationController
   def destroy
     Task.destroy(params[:id])
     redirect_to tasks_path
+  end
+
+  def task_params
+    return params.require(:task).permit(:name, :description, :completion_date)
   end
 
 end
