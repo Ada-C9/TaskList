@@ -4,8 +4,13 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
   <br>
-  <%= f.label :status %>
-  <%= f.text_field :status %>
+  <%= f.label :complete %>
+  <%= f.check_box :status, {}, checked_value = "Complete", unchecked_value = "Incomplete" %>
+  <!-- <%= f.label :Complete %>
+  <%= f.radio_button :status, 'Complete'%>
+  <br>
+  <%= f.label :Incomplete %>
+  <%= f.radio_button :status, 'Incomplete'%> -->
   <br>
   <%= f.label :due %>
   <%= f.date_field :due %>
