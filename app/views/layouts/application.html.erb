@@ -6,13 +6,15 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Playfair+Display" rel="stylesheet">
   </head>
 
   <body>
     <header>
-        <h1><%= link_to "TASKLIST 9000", tasks_path %></h1>
+        <h1><%= link_to "Tasklist 9000", tasks_path %></h1>
     </header>
 
     <%= yield %>
+
   </body>
 </html>

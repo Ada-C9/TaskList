@@ -23,21 +23,18 @@
  /* - -- - -- SHOW - -- -- -  */
  /* - -- - -- EDIT - -- -- -  */
 
-
-
+ /* font-family: 'Playfair Display', serif;
+ font-family: 'EB Garamond', serif; */
 
 /* - -- - -- BASELINE - -- -- -  */
 h1 {
-  font-family: sans-serif;
+  font-family: 'Playfair Display', serif;
   text-align: center;
-}
-
-span.title {
-  font-weight: bold;
 }
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 header {
@@ -52,7 +49,7 @@ header {
 ul {
   list-style-type: none;
   line-height: 2em;
-  font-family: sans-serif;
+  font-family: 'EB Garamond', serif;
 }
 
 nav ul {
@@ -64,9 +61,6 @@ nav ul {
 
 }
 
-a {
-  color: black;
-}
 
 /* - -- - -- INDEX - -- -- -  */
 .homepage {
@@ -150,6 +144,7 @@ a {
 
 .form {
   border: dotted 1em #AED3F2;
+  font-family: 'EB Garamond', serif;
   text-align: center;
   margin-left: 1em;
   width: 75%;
@@ -169,6 +164,7 @@ a {
 
 .item {
   border: dotted 1em #F2DAAE;
+  font-family: 'EB Garamond', serif;
   text-align: center;
   margin-left: 1em;
   width: 75%;
@@ -183,9 +179,9 @@ a {
 }
 
 .formz {
-  margin-top: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;margin-top: 1em;
+  font-family: 'EB Garamond', serif;
   border: dotted #C9E3E3 1em;
   width: 75%;
   margin-left: 1em;
