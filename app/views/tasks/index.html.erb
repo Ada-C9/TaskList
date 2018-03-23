@@ -3,9 +3,11 @@
 <ul>
   <% @tasks.each do |task| %>
     <li>
-      <%= task[:id] %>. 
+      <%= task.id %>.
       <%= link_to task.name, task_path(task) %>:
       <small><%= task.description %></small>
     </li>
   <% end %>
 </ul>
+
+<!-- use only dot notation  -->

@@ -1,6 +1,6 @@
 <h3>Task: <%= @task.name %></h3>
 <p>
-  Completion Date: <%= (@task.completion_date).to_formatted_s(:long) if !@task[:completion_date].nil? %>
+  Completion Date: <%= (@task.completion_date).to_formatted_s(:long) if !@task.completion_date.nil? %>
 </p>
 <p>
   Description: <%= @task.description %>
