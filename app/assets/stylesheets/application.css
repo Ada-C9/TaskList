@@ -14,10 +14,10 @@
  *= require_self
  */
 
-
+/* for the header of the whole site */
 header {
   display: flex;
-  background-color: rgb(207, 180, 241);
+  background-color: rgb(121, 75, 196);
   font-family: 'Raleway', sans-serif;
   box-shadow: 0 3px 5px grey;
 }
@@ -25,6 +25,7 @@ header {
 header h1 {
   display: inline;
   margin-left: 4vw;
+  color: white;
 }
 
 nav ul {
@@ -57,12 +58,13 @@ a:visited {
 }
 
 a:hover {
-  color: rgb(120, 28, 213);
+  color: rgb(205, 188, 233);
 }
 
 /* for the website content */
 main {
   font-family: 'Arimo', sans-serif;
+
 }
 
 li > ul {
@@ -88,11 +90,12 @@ li > ul li:last-of-type {
 }
 
 li section {
-  min-width: 20em;
+  width: 20em;
   padding: auto;
   border: thin solid black;
   margin-bottom: 5vw;
   border-radius: 10px;
+  background-color: whitesmoke;
 }
 
 section > p {
@@ -115,6 +118,7 @@ ul section > div {
 ul section > div p {
   padding: 0 1vw;
   border-right: solid thin black;
+  /*text-overflow: ellipsis;*/
 }
 
 ul section > div p:last-of-type {
@@ -125,10 +129,6 @@ ul section > div p:last-of-type {
   text-decoration: line-through;
 }
 
-main h4:first-of-type {
-  background-color: rgb(224, 155, 52);
-}
-
 main h4 {
-  background-color: rgb(122, 221, 191);
+  background-color: rgb(205, 188, 233);
 }
