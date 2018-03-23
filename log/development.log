@@ -965,3 +965,12 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 09:17:00 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 269ms (Views: 242.5ms | ActiveRecord: 11.6ms)
+
+
