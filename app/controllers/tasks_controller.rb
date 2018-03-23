@@ -1,7 +1,8 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.all.order(:id)
+    # date_created
   end
 
   def show
@@ -22,22 +23,31 @@ class TasksController < ApplicationController
     Task.find_by(id: params[:id]) ? (@task = Task.find_by(id: params[:id])) : (redirect_to tasks_path)
   end
   # TODO: change the style of the edit page because its showing the form under the footer line inseatd of above it
+
   def update
     task = Task.find_by(id: params[:id])
     if !task.nil?
-      task.update(task_params) ? (redirect_to task_path) : (render :edit)
+      task.update(task_params) ? (redirect_to tasks_path) : (render :edit)
     end
   end
 
   def destroy
-    id = params[:id]
-    @task = Task.find(id)
-    @task ? @task.destroy : (redirect_to tasks_path)
+    task = Task.find(params[:id])
 
-    #  TODO: Update the database with the task's completed date
+    if !task.nil?
+      task.destroy
+      redirect_to tasks_path
+    end
   end
 
+  #  TODO: Update the database with the task's completed date
+
+
   def complete
+    task = Task.find_by(id: params[:id])
+    task.update(completed_date: Date.today.to_s)
+
+
   end
 
   private

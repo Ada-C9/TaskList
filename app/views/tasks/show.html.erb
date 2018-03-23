@@ -1,17 +1,23 @@
 <section class="show">
-<h2><%= @task.name %></h2>
+  <h2><%= @task.name %></h2>
 
-<h3>Details: </h3>
-<%= @task.description %>
+  <h3>Details: </h3>
+  <%= @task.description %>
+  <% if @task.completed_date.nil? != true %>
+  <p>Completed on: <%= @task.completed_date %></p>
+  <% end %>
 
-<p>
-<ul>
-  <li>
-    <%= link_to "EDIT", edit_task_path %>
-  </li>
-  <li>
-    <%= link_to "DELETE", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-  </li>
-</ul>
-</p>
+  <p>
+    <ul>
+      <!-- only show edit option if not complete: -->
+      <% if @task.completed_date.nil?%>
+      <li>
+        <%= link_to "EDIT", edit_task_path %>
+      </li>
+      <% end %>
+      <li>
+        <%= link_to "DELETE", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
+    </ul>
+  </p>
 </section>

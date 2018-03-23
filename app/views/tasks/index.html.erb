@@ -2,10 +2,18 @@
 <section class="tasks-list">
 <h2>YOUR TASKS</h2>
 <ul>
+
+<% num = 0 %>
+
   <% @tasks.each do |task| %>
   <li>
-    <strong><%= task[:id] %>.</strong>
-      <%= link_to task.name, task_path(task[:id], class:'title-link') %>
+    <% num += 1 %>
+    <strong><%= num %>.</strong>
+      <%= task.name %>
+      <p class="actions">
+        <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %> |
+        <%= link_to "Edit", edit_task_path(task[:id]) %> |
+        <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %> </p>
   </li>
   <% end %>
 </ul>
