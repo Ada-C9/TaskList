@@ -4,17 +4,19 @@
 
 <ul class="task-list">
   <% @tasks.each do |task| %>
-    <li>
-      <input type="checkbox" />
-      <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
-      <strong><%= task.time %></strong>:
-      <%= link_to(task.to_do, task_path(task)) %>
-    </li>
-    <li>
+  <li>
+    <input type="checkbox" />
+    <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
+    <strong><%= task.time %></strong>:
+    <%= link_to(task.to_do, task_path(task)) %>
+  </li>
+  <li>
+    <button>
       <%= link_to("Edit", edit_task_path(task)) %>
-    </li>
-    <li>
+    </button>
+    <button>
       <%= link_to("Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete task? ... Mambo and Tango won't be happy about it." }) %>
-    </li>
+    </button>
+  </li>
   <% end %>
 </ul>
