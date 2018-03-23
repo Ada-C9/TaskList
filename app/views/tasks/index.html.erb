@@ -1,27 +1,15 @@
-<body>
-  <h2 class="task-list-header">TASKLIST</h2>
-
-  <div class="container">
-    <div class="buttons">
-      <span><%= link_to "Add Task", new_task_path %></span>
-      <span>All Tasks</span>
-    </div>
-
-    <div class="your-tasks">
-      <h2>YOUR TASKS</h2>
-      <% @tasks.each do |task| %>
-        <ul>
-          <li>
-            <a><%= task.id %>. <%= link_to task.name, task_path(task.id) %></a>
-          </li>
-          <p> Mark Complete | <%= link_to "Edit", edit_task_path(task.id) %> |
-            <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-          </p>
-        </ul>
-      <% end %>
-    </div>
-  </div>
-</body>
-<footer>
-    <p class="copyright ">Copyright 2018</p>
-</footer>
+<div class="your-tasks">
+  <h2>YOUR TASKS</h2>
+  <ul>
+    <% i = 1 %>
+    <% @tasks.each do |task| %>
+      <li class="<%='strikethrough' if !task.completion_date.nil? %>">
+        <a><%= i %>. <%= link_to task.name, task_path(task.id) %></a>
+      </li>
+        <%= link_to "Mark Complete", complete_task_path(task.id), method: :put, class: "task-links" %> | <%= link_to "Edit", edit_task_path(task.id), class: "task-links" %> |
+        <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "task-links" %>
+      <!-- </p> -->
+    <% i += 1 %>
+    <% end %>
+  </ul>
+</div>

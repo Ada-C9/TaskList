@@ -19,10 +19,20 @@
   /*border: 1px solid black;*/
 }
 
+html, body {
+  height: 100%;
+}
+
 ul {
   padding: 0;
   list-style-type: none;
   margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .container {
@@ -52,7 +62,7 @@ ul {
   margin: 20px;
 }
 
-.your-tasks {
+.yield {
   display: flex;
   flex-direction: column;
   grid-row-start: 1;
@@ -60,10 +70,16 @@ ul {
   grid-column-end: 3;
   padding: 0 50px 10px 50px;
   justify-content: : center;
+
+}
+
+.your-tasks {
   border: 1px solid black;
   border-radius: 10px;
   width: fit-content;
   height: fit-content;
+  padding: 0 50px 10px 50px;
+  line-height: 2;
 }
 
 .your-tasks h2 {
@@ -72,17 +88,31 @@ ul {
 }
 
 .your-tasks p {
-  font-weight: lighter;
   text-indent: 20px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+.task-links {
+  font-weight: lighter;
+}
+
+.flex form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-details li {
+  line-height: 2;
+}
+
+.strikethrough {
+  text-decoration: line-through;
 }
 
 footer {
   margin-top: 70px;
+  margin-bottom: 20px;
   text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: relative;
 }

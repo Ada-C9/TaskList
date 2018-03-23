@@ -9,6 +9,23 @@
   </head>
 
   <body>
-    <%= yield %>
+    <h2 class="task-list-header">TASKLIST</h2>
+
+    <div class="container">
+
+      <div class="buttons">
+        <span><%= link_to "Add Task", new_task_path %></span>
+        <span><%= link_to "All Tasks", tasks_path %></span>
+      </div>
+      <div class="yield">
+        <%= yield %>
+      </div>
+
+    </div>
+
+
   </body>
+  <footer>
+      <p class="copyright ">Copyright 2018, Nora Peters</p>
+  </footer>
 </html>
