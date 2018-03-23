@@ -35,18 +35,15 @@ class TasksController < ApplicationController
   end
 
   def update
-    task_data = params[:task]
-
     task = Task.find(params[:id])
-
-    task.assign_attributes(task(:params))
+    task.assign_attributes(task_params)
 
     if task.save
       redirect_to tasks_path
     end
   end
 
-  def toggle_completed
+  def toggle
     @task = Task.find(params[:id])
 
     if @task.status
