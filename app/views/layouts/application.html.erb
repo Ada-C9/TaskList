@@ -6,9 +6,40 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+
+    <header>
+      <%= image_tag("taskpic.png", alt: "To Do List")%>
+      <h1>Karinna's Task List</h1>
+    </header>
+
+
+
+    <main>
+      <nav>
+        <ul>
+          <li>
+            <%= link_to("View all Tasks", tasks_path) %>
+          </li>
+          <li>
+            <%= link_to("New Task", new_task_path) %>
+          </li>
+          <li>
+            <%= link_to("Past-Due Tasks") %>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <%= yield %>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Karinna 2018</p>
+    </footer>
+
   </body>
 </html>

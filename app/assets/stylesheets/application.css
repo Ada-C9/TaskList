@@ -1,18 +1,77 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- body {
-   background-color: lightyellow;
- }
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+body {
+  background-color: lightyellow;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.35em;
+}
+
+header {
+  background-color: lightblue;
+  height: 12vh;
+  border: 1px solid;
+  text-align: center;
+}
+
+header img {
+  height: 10vh;
+  float: left;
+  margin: 1vh;
+}
+
+main {
+  border: 2px solid;
+  margin: 2vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+nav {
+  border-right: solid 2px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  border: solid 1px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 5vh 1vw;
+  background-color: lightblue;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+
+}
+
+section {
+  padding: 1vw;
+}
+
+footer {
+  text-align: center;
+  font-size: .75em;
+  background-color: lightblue;
+  border-top: .5px solid;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+}

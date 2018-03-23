@@ -4,16 +4,15 @@
 <p>Some more text</p>
 
 
-<ol>
+<ol class="task_list">
   <% @tasks.each do |task| %>
-    <li>
+    <li class="task_list_item">
       <h4><%=task.name%></h4>
       <p><%=task.description%></p>
 
       <%= link_to("Edit", edit_task_path(task)) %>
+      <%= link_to("Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete this item from your to-do list?"}) %>
 
     </li>
   <% end %>
 </ol>
-
-<%= link_to("Add a new Task", new_task_path) %>
