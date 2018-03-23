@@ -1,4 +1,4 @@
-<h1>Lovely Luxi's Tasks</h1>
+<h1>Lovely Luxi's Task List</h1>
 
 <p>How to take care of Mambo and Tango</p>
 
@@ -8,6 +8,8 @@
     <input type="checkbox" />
     <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
     <strong><%= task.time %></strong>:
+  </li>
+  <li> Task:
     <%= link_to(task.to_do, task_path(task)) %>
   </li>
   <li>
@@ -20,3 +22,5 @@
   </li>
   <% end %>
 </ul>
+
+<%= link_to("Add a new task", new_task_path, class: "Something important") %>
