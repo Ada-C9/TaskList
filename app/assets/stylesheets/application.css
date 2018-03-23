@@ -16,7 +16,12 @@
 
 /* for the header of the whole site */
 header {
+  top: 0;
+  left: 0;
+  position: fixed;
   display: flex;
+  height: 8vh;
+  width: 100vw;
   background-color: rgb(121, 75, 196);
   font-family: 'Raleway', sans-serif;
   box-shadow: 0 3px 5px grey;
@@ -24,13 +29,14 @@ header {
 
 header h1 {
   display: inline;
-  margin-left: 4vw;
+  margin: auto 4vw;
+  /*margin-left: 4vw;*/
   color: white;
 }
 
 nav ul {
   display: flex;
-  padding-top: 2vh;
+  padding-top: 1vh;
 }
 
 nav > ul li {
@@ -47,24 +53,30 @@ nav > ul li:first-of-type {
 
 a {
   color: black;
+  color: rgb(171, 141, 219);
 }
 
 a.header-nav {
   text-decoration: none;
+  color: white;
 }
 
-a:visited {
+a.header-nav:visited {
   color: inherit;
 }
 
+a:visited {
+  color: rgb(171, 141, 219);
+}
+
 a:hover {
-  color: rgb(205, 188, 233);
+  color: black;
 }
 
 /* for the website content */
 main {
   font-family: 'Arimo', sans-serif;
-
+  padding-top: 8vh;
 }
 
 li > ul {
@@ -78,24 +90,32 @@ li > ul li:last-of-type {
 
 /* index page */
 #priority {
-  background-color: rgb(207, 119, 119);
+  color: rgb(207, 119, 119);
 }
 
 #medium {
-  background-color: rgb(223, 216, 165);
+  color: rgb(203, 187, 76);
 }
 
 #low {
-  background-color: rgb(174, 242, 160);
+  color: rgb(103, 194, 84);
 }
 
+/* each task box */
 li section {
   width: 20em;
   padding: auto;
-  border: thin solid black;
+  display: inline-block;
+  border: thin solid grey;
   margin-bottom: 5vw;
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: whitesmoke;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+li section:hover {
+  transform: scale(1.05, 1.05);
 }
 
 section > p {
@@ -121,6 +141,10 @@ ul section > div p {
   /*text-overflow: ellipsis;*/
 }
 
+section strong {
+  font-size: 1.3em;
+}
+
 ul section > div p:last-of-type {
   border-right: none;
 }
@@ -130,5 +154,6 @@ ul section > div p:last-of-type {
 }
 
 main h4 {
+  font-size: 1.5em;
   background-color: rgb(205, 188, 233);
 }

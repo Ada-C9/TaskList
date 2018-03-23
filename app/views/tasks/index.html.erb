@@ -1,6 +1,7 @@
 <h4>TO DO:</h4>
 
 <% sorted = Task.sort.reverse %>
+<% completed_tasks = Task.where(status: 'COMPLETE') %>
 
 <ul class='list'>
   <li>
@@ -8,20 +9,19 @@
     <% if task.status == 'TODO' %>
       <section>
         <p>
-          <strong><%= task.name.capitalize %></strong>
+          <% if task.priority == 5 %>
+          <strong id='priority'><%= task.name.capitalize %></strong>
+          <% elsif task.priority >= 3 && task.priority <= 4 %>
+          <strong id='medium'><%= task.name.capitalize %></strong>
+          <% else %>
+          <strong id='low'><%= task.name.capitalize %></strong>
+          <% end %>
         </p>
+        <sub>
+          Priority: <%= task.priority %>
+        </sub>
         <p>
           <%= task.description %>
-        </p>
-        <p>
-          <% priority = "Priority: #{task.priority}" %>
-          <% if task.priority == 5 %>
-          <span id = 'priority'><%= priority %></span>
-          <% elsif task.priority >= 3 && task.priority <= 4 %>
-          <span id = 'medium'><%= priority %></span>
-          <% else %>
-          <span id = 'low'><%= priority %></span>
-          <% end %>
         </p>
         <div>
           <p>
@@ -41,9 +41,10 @@
 <h4> COMPLETED </h4>
 <ul class='list'>
   <li>
-    <% completed_tasks = Task.where(status: 'COMPLETE') %>
-    <% sorted.each do |task| %>
-      <% if task.status == 'COMPLETE' %>
+    <% if completed_tasks.empty? %>
+      <h3> Complete some tasks! </h3>
+    <% end %>
+    <% completed_tasks.each do |task| %>
         <section>
           <p>
             <strong id='completed-task'><%= task.name.capitalize %></strong>
@@ -63,7 +64,6 @@
             </p>
           <div>
         </section>
-      <% end %>
     <% end %>
   </li>
 </ul>
