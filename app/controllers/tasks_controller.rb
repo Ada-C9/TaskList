@@ -39,11 +39,23 @@ class TasksController < ApplicationController
   end
 
   def update
+    change_task = params[:task]
+
+    task = Task.find()
+
 
   end
 
   def destroy
+    Task.destroy(params[:tasks])
 
+    redirect_to tasks_path
+
+  end
+
+  private
+  def tasks_param
+    return params.require(:tasks).permit(:todo, :add_description_to_task, :due_date)
   end
 
 end

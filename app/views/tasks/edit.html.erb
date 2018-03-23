@@ -5,10 +5,6 @@
   <%= f.label :new_description %>
   <%= f.text_field :add_description_to_task %>
   <%= f.label :When_will_it_be_done %>
-  <%= f.text_field :due_date %>
+  <%= f.date_field :due_date %>
   <%= f.submit %>
   <%end%>
-
-
-<%= link_to "Home", tasks_path %>
-<%= link_to("Add New Todo", new_tasks_path) %>
