@@ -5,11 +5,20 @@ class TasksController < ApplicationController
   end
 
   def new
+    @tasks = Task.new
 
   end
 
   def create
-    task = Task.new(todo: params[:todo], add_description_to_task: params[:add_description_to_task], due_date: params[:due_date] )
+
+    task_info = params[:task]
+
+    task = Task.new
+
+    task.todo = task_info[:todo]
+    task.add_description_to_task = task_info[:add_description_to_task]
+    task.due_date = task_info[:due_date]
+
     if task.save
       redirect_to '/tasks'
     end
@@ -25,6 +34,7 @@ class TasksController < ApplicationController
   end
 
   def edit
+    @tasks = Task.find(params[:id])
 
   end
 

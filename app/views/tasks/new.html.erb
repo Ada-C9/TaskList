@@ -2,18 +2,17 @@
   <!-- SPECIAL INPUT TO ALLOW RAILS TO USE THIS FORM -->
   <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
-<h1>Add some Todos!</h1>
-  <label for="todo">Todo</label>
-  <input type="text" name="todo" value="" id="todo">
-
-  <label for="add_description_to_task">Description of Task</label>
-  <input type="text" name="add_description_to_task" value="" id="add_description_to_task">
-
-  <label for="due_date">Do it by:</label>
-  <input type="date" name="due_date" value="" id="due_date">
-
-  <input type="submit" value="Submit">
-</form>
 
 
-<%= link_to "Home", tasks_index_path %>
+<%= form_for @tasks do |f|%>
+  <%= f.label :Add_a_task %>
+  <%= f.text_field :todo %>
+  <%= f.label :describe_your_task %>
+  <%= f.text_field :add_description_to_task %>
+  <%= f.label :When_will_it_be_done %>
+  <%= f.text_field :due_date %>
+  <%= f.submit %>
+  <%end%>
+
+
+<%= link_to "Home", tasks_path %>

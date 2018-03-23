@@ -547,3 +547,264 @@ Did you mean?  tasks_path:
   app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225943762800'
 
 Started POST "/__better_errors/de2e6787614f6cc7/variables" for 127.0.0.1 at 2018-03-21 12:29:24 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:19:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (508.3ms)
+Completed 500 Internal Server Error in 531ms (ActiveRecord: 3.5ms)
+
+
+
+NameError - undefined local variable or method `tasks_index_path' for #<#<Class:0x00007fbd7bd495f0>:0x00007fbd824f39a8>
+Did you mean?  tasks_path:
+  app/views/tasks/new.html.erb:19:in `_app_views_tasks_new_html_erb___1862014376379132199_70225901539060'
+
+Started POST "/__better_errors/d4b37d510bc1ab0e/variables" for 127.0.0.1 at 2018-03-21 14:19:21 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:20:07 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 14:20:11 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (7.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (378.7ms)
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 7.0ms)
+
+
+
+NameError - undefined local variable or method `tasks_new_path' for #<#<Class:0x00007fbd7bd495f0>:0x00007fbd83af65c0>
+Did you mean?  tasks_path:
+  app/views/tasks/index.html.erb:10:in `_app_views_tasks_index_html_erb___3821647161512951477_70225967429480'
+
+Started POST "/__better_errors/c70a73ee00a632b8/variables" for 127.0.0.1 at 2018-03-21 14:20:11 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:20:19 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:20:59 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 14:21:01 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (464.0ms)
+Completed 500 Internal Server Error in 480ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `new_tasks_path' for #<#<Class:0x00007fbd7bd495f0>:0x00007fbd823c7520>
+Did you mean?  new_task_path:
+  app/views/tasks/index.html.erb:10:in `_app_views_tasks_index_html_erb___3821647161512951477_70225955274520'
+
+Started POST "/__better_errors/a4e2b829c386b3f9/variables" for 127.0.0.1 at 2018-03-21 14:21:01 -0700
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 14:21:49 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:21:52 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 41.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-21 14:21:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 14:22:24 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 15:45:22 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 5.5ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:32: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:34: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:19:in `'
+
+Started POST "/__better_errors/7d3a9d07e66731e6/variables" for 127.0.0.1 at 2018-03-21 15:45:22 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 15:47:11 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:7:in `'
+
+Started POST "/__better_errors/4350ff573d01585e/variables" for 127.0.0.1 at 2018-03-21 15:47:11 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-21 15:50:33 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:7:in `'
+
+Started POST "/__better_errors/8789658af6e05ef3/variables" for 127.0.0.1 at 2018-03-21 15:50:33 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 10:11:54 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:7:in `'
+
+Started POST "/__better_errors/2bc1a828ddba3246/variables" for 127.0.0.1 at 2018-03-22 10:11:55 -0700
+Started GET "/tasks/" for 127.0.0.1 at 2018-03-22 10:16:36 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (5.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 93ms (Views: 84.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 10:16:39 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:7:in `'
+
+Started POST "/__better_errors/431425676065e96e/variables" for 127.0.0.1 at 2018-03-22 10:16:39 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 10:24:49 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected '<'
+  <%= f.label :todo );@output_bu...
+  ^
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+          ^~~~~~
+/Users/jamilacornick/Documents/Ada/week_07/Rails_projects/TaskList/app/views/tasks/new.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+          end
+          ^~~:
+  app/views/tasks/new.html.erb:7:in `'
+
+Started POST "/__better_errors/a39405f48d1d9e75/variables" for 127.0.0.1 at 2018-03-22 10:24:49 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 10:25:51 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (50.9ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `add_a_todo' for #<Task:0x00007fbd83a238a0>:
+  app/views/tasks/new.html.erb:9:in `block in _app_views_tasks_new_html_erb___1862014376379132199_70225966994020'
+  app/views/tasks/new.html.erb:7:in `_app_views_tasks_new_html_erb___1862014376379132199_70225966994020'
+
+Started POST "/__better_errors/7e892a3aaf7d4f91/variables" for 127.0.0.1 at 2018-03-22 10:25:51 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 20:34:20 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (72.7ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `describe_your_todo' for #<Task:0x00007fbd7da40b18>:
+  app/views/tasks/new.html.erb:11:in `block in _app_views_tasks_new_html_erb___1862014376379132199_70225916942920'
+  app/views/tasks/new.html.erb:7:in `_app_views_tasks_new_html_erb___1862014376379132199_70225916942920'
+
+Started POST "/__better_errors/596f6b849cd1a000/variables" for 127.0.0.1 at 2018-03-22 20:34:20 -0700
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-22 20:35:45 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 62ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-22 20:39:30 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (6.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 64ms (Views: 51.6ms | ActiveRecord: 6.8ms)
+
+
