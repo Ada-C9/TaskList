@@ -5,6 +5,7 @@ class CreateTasks < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :duedate
 
+
       t.timestamps
     end
   end
