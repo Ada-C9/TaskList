@@ -1,9 +1,18 @@
 <h2>Edit - <%= @task.name %></h2>
 
-<%= form_for @task do |f| %>
+<%= render partial: "form", locals: { action_name: "Edit" } %>
+
+<!-- <%= form_for @task do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
   <%= f.text_area :description%>
+  <%= f.label :priority %>
+  <%= f.radio_button :priority, '1' %>
+  <%= f.label :priority, value: "High" %>
+  <%= f.radio_button :priority, '2' %>
+  <%= f.label :priority, value: "Mid" %>
+  <%= f.radio_button :priority, '3', checked: true %>
+  <%= f.label :priority, value: "Low" %>
   <%= f.submit %>
-<% end %>
+<% end %> -->

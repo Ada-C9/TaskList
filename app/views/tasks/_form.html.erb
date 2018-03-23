@@ -1,11 +1,8 @@
-<h2>Create New Task</h2>
-
-<%= render partial: "form", locals: { action_name: "New" } %>
-<!-- <%=form_for @task do |f| %>
+<%= form_for @task do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= f.text_area :description%>
   <%= f.label :priority %>
   <%= f.radio_button :priority, '1' %>
   <%= f.label :priority, value: "High" %>
@@ -13,5 +10,5 @@
   <%= f.label :priority, value: "Mid" %>
   <%= f.radio_button :priority, '3', checked: true %>
   <%= f.label :priority, value: "Low" %>
-  <%= f.submit %>
-<% end %> -->
+  <%= f.submit action_name %>
+<% end %>

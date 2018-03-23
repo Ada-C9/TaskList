@@ -1,12 +1,23 @@
 <h1>Tasks List</h1>
-<ul>
+<ol>
   <% @tasks.each do |task| %>
     <li>
       <dl>
-        <dt><%= task.id %>. <%= link_to task.name, task_path(task.id) %></dt>
+        <dt>
+          <% if task.completed == true %>
+            <%= link_to task.name, task_path(task.id), class: "priority-#{task.priority} completed" %>
+          <% else %>
+            <%= link_to task.name, task_path(task.id), class: "priority-#{task.priority}" %>
+          <% end %>
+        </dt>
         <dd><%= task.description %></dd>
-        <dd>Completed? <%= task.completed %></dd>
+        <dd>
+          <% if task.completed == true %>
+            <%= link_to "Mark Not Completed", complete_task_path(task.id), method: :patch %></dd>
+          <% else %>
+            <%= link_to "Mark Completed", complete_task_path(task.id), method: :patch %></dd>
+          <% end %>
       </dl>
     </li>
   <% end %>
-</ul>
+</ol>
