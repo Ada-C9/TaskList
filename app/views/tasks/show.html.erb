@@ -15,4 +15,15 @@
   <li>
     <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' } %>
   </li>
+  <li>
+    <% if @task.date_of_completion == nil %>
+      <div class="option">
+          <%= link_to "❏ Mark as Completed", mark_complete_path(@task.id), method: :patch %>
+      </div>
+    <% else %>
+      <div class="option">
+        ✅Task completed
+      </div>
+    <% end %>
+  </li>
 </ul>
