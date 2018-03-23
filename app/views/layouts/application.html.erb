@@ -12,12 +12,9 @@
 
   <body>
     <header>
-      <h1>Task List</h1>
+      <h1> <%= link_to('Task List', tasks_path, class: 'header-nav') %></h1>
       <nav>
         <ul>
-          <li>
-            <%= link_to('Main Page', tasks_path, class: 'header-nav') %>
-          </li>
           <li>
             <%= link_to('New Task', new_task_path, class: 'header-nav') %>
           </li>
