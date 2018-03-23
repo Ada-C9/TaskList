@@ -4,19 +4,31 @@
 
   <ul>
     <li>
-      Name: <%= @task.name %>
+      <span class="show-field">
+        Name:
+      </span>
+      <%= @task.name %>
       <hr>
     </li>
     <li>
-      Details: <%= @task.description %>
+      <span class="show-field">
+        Details:
+      </span>
+      <%= @task.description %>
       <hr>
     </li>
     <li>
-      Deadline: <%= @task.complete_by %>
+      <span class="show-field">
+        Deadline:
+      </span>
+      <%= @task.complete_by %>
       <hr>
     </li>
     <li>
-      Status: <%= @task.status %>
+      <span class="show-field">
+        Status:
+      </span>
+      <%= @task.status %>
     </li>
   </ul>
 

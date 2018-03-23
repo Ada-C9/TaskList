@@ -40,10 +40,6 @@ p a:hover {
   font-weight: bold;
 }
 
-#is-complete:active {
-  text-decoration: line-through;
-}
-
 .task-list-link {
   color: rgb(18,55,78);
   text-decoration: none;
@@ -77,6 +73,11 @@ p a:hover {
 .form-style ul>li {
   font-family: 'Indie Flower', cursive;
   font-size: 2em;
+}
+
+.show-field {
+  font-weight: 700;
+  font-size: 1em;
 }
 
 label {

@@ -40,15 +40,23 @@ class TasksController < ApplicationController
 
     task = Task.find(params[:id])
 
-    task.update_attributes(
-      name: task_data[:name],
-      description: task_data[:description],
-      complete_by: task_data[:complete_by]
-    )
+    task.assign_attributes(task(:params))
 
     if task.save
       redirect_to tasks_path
     end
+  end
+
+  def toggle_completed
+    @task = Task.find(params[:id])
+
+    if @task.status
+      @task.update(status: false)
+    else
+      @task.update(status: true)
+    end
+
+    redirect_to tasks_path
   end
 
   def destroy
@@ -56,6 +64,11 @@ class TasksController < ApplicationController
     Task.destroy(params[:id])
 
     redirect_to tasks_path
+  end
+
+  private
+  def task_params
+    return params.require(:task).permit(:name, :description, :complete_by, :status)
   end
 
 end
