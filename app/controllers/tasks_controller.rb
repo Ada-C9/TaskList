@@ -14,11 +14,11 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new
-    @task.name = params[:task][:name]
-    @task.description = params[:task][:description]
-    @task.due_date = params[:task][:due_date]
-    @task.status = params[:task][:status]
+    @task = Task.new(task_params)
+    # @task.name = params[:task][:name]
+    # @task.description = params[:task][:description]
+    # @task.due_date = params[:task][:due_date]
+    # @task.status = params[:task][:status]
 
     if @task.save
       redirect_to tasks_path
@@ -33,8 +33,9 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(id: params[:id])
-
-    if @task.update(name: params[:task][:name],   description: params[:task][:description], due_date: params[:task][:due_date], status: params[:task][:status])
+    if @task.update(task_params)
+    #
+    # if @task.update(name: params[:task][:name],   description: params[:task][:description], due_date: params[:task][:due_date], status: params[:task][:status])
 
       redirect_to task_path(@task.id)
     else
@@ -51,6 +52,12 @@ class TasksController < ApplicationController
       redirect_to tasks_path
     end
 
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(:name, :description, :due_date, :status)
   end
 
 end
