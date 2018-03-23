@@ -1,7 +1,4 @@
-<%= render partial: "form", locals: {page_title: "Edit #{@task.name}"} %>
-
-<!-- <h2>Edit <%= @task.name %>:</h2>
-  <br /><br />
+<!-- <h2 class="form-title"> <%= page_title %></h2> -->
 
 <%= form_for @task do |f| %>
 
@@ -15,4 +12,4 @@
 
   <%= f.submit %>
 
-<% end %> -->
+<% end %>
