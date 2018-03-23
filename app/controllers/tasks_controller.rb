@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task.completion_date = raw_task[:completion_date]
 
     if task.save
-      redirect_to '/task'
+      redirect_to '/tasks'
     end
   end
 
@@ -52,7 +52,13 @@ class TasksController < ApplicationController
 
   def mark_complete
     task = Task.find(params[:id])
-    task.status = :COMPLETE
+
+    if task.status == 'COMPLETE'
+      task.status = :TODO
+    else
+      task.status = :COMPLETE
+    end
+
 
     if task.save
       redirect_to '/tasks'
