@@ -1,8 +1,6 @@
 <section class="new-task-view">
-  <section class="new-header">
-    <h1>New Task</h1>
-  </section>
+
   <section class="new_form">
-    <%= render partial: "form" %>
+  <%= render partial: "form", locals: { page_title: "New Task" } %>
   </section>
 </section>

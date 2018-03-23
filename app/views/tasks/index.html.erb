@@ -6,7 +6,7 @@
         <% if task.completion_date == nil %>
           <%= link_to task.task_name, task_path(task.id) %>
         <% else %>
-          <%= link_to task.task_name, task_path(task.id), class: 'completed-task' %>
+          <%= link_to task.task_name, task_path(task.id), id: 'completed-task' %>
         <% end %>
       </li>
     <% end %>

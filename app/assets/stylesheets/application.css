@@ -185,6 +185,6 @@ form input:last-child {
   margin: 1em;
 }
 
-li a .completed-task {
-
+#completed-task {
+  text-decoration: line-through;
 }
