@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def show
-    #allows the task I want to be identified
+    #allows the task I want, to be identified
     task_id = params[:id]
 
 

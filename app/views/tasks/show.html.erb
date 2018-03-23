@@ -1,0 +1,11 @@
+<h1>Here are some details about the task at hand</h1>
+<%= @tasks[:todo]%>
+
+
+<ul>
+  <li><span>What:</span> <%= @tasks[:add_description_to_task]%></li>
+  <li><span>When:</span> <%= @tasks[:due_date]%></li>
+</ul>
+
+<%= link_to "Home", tasks_path %>
+<%= link_to("Add New Todo", new_tasks_path) %>

@@ -1,11 +1,11 @@
 <h1>Check out Your Todos!</h1>
-<ul>
+<ol>
   <% @tasks.each do |task|%>
   <li>
-    <%= task[:todo] %> : <%= task[:add_description_to_task] %> ; <%= task[:due_date] =%>
+    <%=link_to("#{task[:todo]}",show_tasks_path(task)) %>
   </li>
 
   <%end%>
-</ul>
+</ol>
 
 <%= link_to("Add New Todo", new_tasks_path) %>
