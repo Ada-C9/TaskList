@@ -70,7 +70,7 @@ a {
   grid-column-end: 3;
   padding: 0 50px 10px 50px;
   justify-content: : center;
-
+  align-items: center;
 }
 
 .your-tasks {
@@ -78,8 +78,10 @@ a {
   border-radius: 10px;
   width: fit-content;
   height: fit-content;
-  padding: 0 50px 10px 50px;
+  padding: 0 60px 10px 60px;
   line-height: 2;
+  align-items: center;
+  justify-content: center;
 }
 
 .your-tasks h2 {

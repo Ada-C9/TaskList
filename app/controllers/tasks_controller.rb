@@ -32,7 +32,10 @@ class TasksController < ApplicationController
   def update
     task = Task.find_by(id: params[:id])
     if !task.nil?
-      if task.update(name: params[:task][:name], description: params[:task][:description], priority: params[:task][:priority])
+      if task.update(
+        name: params[:task][:name],
+        description: params[:task][:description],
+        priority: params[:task][:priority])
         redirect_to task_path(task.id)
       else
         render :edit
@@ -45,7 +48,11 @@ class TasksController < ApplicationController
   def toggle_complete
     id = params[:id]
     task = Task.find(id)
-    task.update(completion_date: Date.new)
+    if task.completed?
+      task.update(completed?: false)
+    else
+      task.update(completion_date: Date.new, completed?: true)
+    end
     redirect_to tasks_path
   end
 
