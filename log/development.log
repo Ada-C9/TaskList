@@ -3051,3 +3051,85 @@ Completed 200 OK in 86ms (Views: 73.9ms | ActiveRecord: 1.2ms)
 
 
   [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/tasks/3/edit" for 127.0.0.1 at 2018-03-23 14:21:26 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 60ms (Views: 33.2ms | ActiveRecord: 8.0ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4169262226251541860)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4169262226251541860)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/tasks" for 127.0.0.1 at 2018-03-23 15:07:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 93ms (Views: 84.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/3/edit" for 127.0.0.1 at 2018-03-23 15:08:01 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (1.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (419.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (430.4ms)
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `page_title' for #<#<Class:0x00007f946dd41738>:0x00007f946dae2be0>):
+    1: <h2><%= page_title %></h2>
+    2: <%= form_for @task do |f| %>
+    3:   <%= f.label :task_name %>
+    4:   <%= f.text_field :task_name %>
+  
+app/views/tasks/_form.html.erb:1:in `_app_views_tasks__form_html_erb__3144399103928404599_70137735878180'
+app/views/tasks/edit.html.erb:1:in `_app_views_tasks_edit_html_erb___1192541464409571865_70137731940700'
+Started GET "/tasks/3/edit" for 127.0.0.1 at 2018-03-23 15:09:08 -0700
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/edit.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (2.5ms)
+  Rendered tasks/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/3" for 127.0.0.1 at 2018-03-23 15:09:31 -0700
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MUeDAOlAQXbkwe8WSFDQap6l7ViENUFJjNGLjTYBzmM1vqtLuSXSUFlHnL0OIDFkUQrZEiChUIT8kjvEieQFAQ==", "task"=>{"task_name"=>"Buy more ice cream", "description"=>"Choclate chip cookie dough or Chaco Tacos or mint", "completion_date"=>""}, "commit"=>"Update Task", "id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "tasks" SET "description" = $1, "completion_date" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["description", "Choclate chip cookie dough or Chaco Tacos or mint"], ["completion_date", ""], ["updated_at", "2018-03-23 22:09:31.139172"], ["id", 3]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks/3
+Completed 302 Found in 14ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/tasks/3" for 127.0.0.1 at 2018-03-23 15:09:31 -0700
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering tasks/show.html.erb within layouts/application
+  Rendered tasks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-23 15:09:40 -0700
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (5.3ms)
+  Rendered tasks/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 62ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
