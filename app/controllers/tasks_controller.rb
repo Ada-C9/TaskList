@@ -1,7 +1,9 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    # @tasks = Task.all
+    @complete = Task.where(:status => "Complete")
+    @incomplete = Task.where(:status => "Incomplete")
   end
 
   def show

@@ -19,8 +19,8 @@ body {
   font-size: 2em;
   color: white;
   display: grid;
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: 15% 1fr;
+  grid-template-columns: 25% 1fr;
+  grid-template-rows: 20% 1fr;
   grid-template-areas:
   "title title"
   "aside main";
@@ -31,8 +31,8 @@ aside {
 }
 
 .status {
-  font-size: .5em;
-  font-weight: lighter;
+  font-size: 1em;
+  text-decoration: underline;
 }
 
 .edit-delete {
@@ -64,6 +64,7 @@ aside ul li:first-of-type {
   padding: 0;
 }
 
+}
 .options {
   font-size: .5em;
 }
@@ -77,20 +78,59 @@ h1 {
 }
 
 .heading {
-  font-weight: bold;
   text-decoration: none;
 }
 
 main {
   grid-area: main;
-  height: auto;
-  width: 550px;
+  display: flex;
+  width: 650px;
   background-color: white;
   opacity: .7;
-  padding-left: .5em;
   font-size: 1.1em;
+  justify-content: space-around;
 }
 
+.task-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list li:first-of-type{
+  display: flex;
+  justify-content: center;
+  padding-bottom: .75em;
+  padding-top: .5em;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.task-list li a {
+  padding-left: .3em;
+}
+
+#incomplete {
+  color: red;
+  font-style: none;
+  font-weight: bold;
+}
+
+#complete {
+  color: green;
+  font-style: none;
+  font-weight: bold;
+}
+
+.task-page {
+  display: flex;
+  flex-direction: column;
+}
 .task-page p {
   padding: .5em 0;
   margin: 0;
