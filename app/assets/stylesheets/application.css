@@ -65,6 +65,7 @@ h1 {
 
 li#description {
   font-size: 1rem;
+  margin-bottom: 2em;
 }
 
 li a.complete {
@@ -101,6 +102,14 @@ li#edit a {
 
 li#delete a {
   color: red;
+}
+
+.title-button, .button_to {
+  display: inline-block;
+}
+
+form.button_to {
+  margin-left: 2em;
 }
 
 /* NEW TASK PAGE */
