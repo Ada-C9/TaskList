@@ -28,7 +28,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    raw_task = params[:task]
+    # raw_task = params[:task]
 
     task = Task.find(params[:id])
 
@@ -47,7 +47,7 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
-    task.date = DateTime.now
+    task.completion_date = DateTime.now.strftime("%a, %B %d, %Y")
 
     if task.status == "complete"
       task.assign_attributes( status: "not complete" )
@@ -62,6 +62,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    return params.require(:task).permit(:to_do, :date, :time, :instructions, :status)
+    return params.require(:task).permit(:to_do, :date, :time, :instructions, :status, :completion_date)
   end
 end

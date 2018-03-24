@@ -6,7 +6,7 @@
   <% @tasks.each do |task| %>
   <li>
     <!-- <input type="checkbox" /> -->
-    Due: 
+    Due:
     <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
     <strong><%= task.time %></strong>
   </li>
@@ -15,6 +15,9 @@
   </li>
   <li>
     Status: <%= task.status %>
+  </li>
+  <li>
+    Completed date: <%= task.completion_date %>
   </li>
   <li>
     <button>
