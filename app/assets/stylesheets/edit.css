@@ -1,9 +1,12 @@
+
 .main > ul {
   list-style: none;
-
-  font-size: 2em;
 }
 .main .button {
-  /* font-size: 1em; */
   margin-bottom: 30px;
+}
+
+.edit_page * {
+  font-size: 1em;
+  margin: 5px auto;
 }

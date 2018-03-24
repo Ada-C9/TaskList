@@ -6,6 +6,7 @@
 <li><strong>Priority:</strong> <%= @task.priority %></li>
 <li><strong>Due Date:</strong> <%= @task.due_date %></li>
 <li><strong>Status:</strong> <%= @task.status %></li>
+<li><strong>Completion Date:</strong> <%= @task.completion_date %></li>
 <li class=edit_delete><%= link_to "Edit", edit_task_path(@task) %>
 <%= link_to "Delete", task_path(@task), method: :delete, data: {confirm: "Are you sure to delete #{@task.name}?"} %></li>
 </ul>

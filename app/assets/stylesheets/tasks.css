@@ -1,17 +1,30 @@
-ol {
+.tasklist {
   display: flex;
   flex-direction: column;
-}
-ol > li {
-  background: linear-gradient(white, rgb(224, 116, 191));
-  font-size: 1.5em;
-  padding: 10px;
-}
-
-li > strong {
-  font-weight: bold;
+  padding-left: 0;
+  border: solid 2px rgba(91, 143, 222, 0.67)
 }
 
 .due_date, .status {
   color: teal;
+}
+
+.main_page > .tasklist > li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2em;
+  padding: 20px;
+  border: solid 5px rgba(91, 143, 222, 0.67)
+}
+
+.editor .edit_link {
+  color: teal;
+}
+
+.editor .delete_link {
+  color: rgb(224, 34, 102);
+}
+
+.main_page > .tasklist .task_name {
+  text-decoration: line-through;
 }

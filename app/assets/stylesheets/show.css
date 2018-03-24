@@ -5,9 +5,22 @@
 
 .edit_delete {
   display: flex;
-  justify-content: center;
+  font-size: 2em;
+  padding: 10px;
+  margin-right: 20px;
 }
 
 .edit_delete > a {
   margin-right: 30px;
+  border-radius: 10%;
+  width: 200px;
+  margin-left: 300px;
+  text-align: center;
+  padding: 10px 3px;
+  color: white;
+  background-image: url("https://images.pexels.com/photos/732548/pexels-photo-732548.jpeg?auto=compress&cs=tinysrgb&h=350");
+}
+
+.edit_delete > a:hover {
+  color: black;
 }

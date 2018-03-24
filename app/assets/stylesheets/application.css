@@ -68,6 +68,19 @@ header {
   background-image: url("https://images.pexels.com/photos/675977/blue-sky-merge-clouds-675977.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
+.button_style {
+  font-size: 1.5em;
+  margin-left: 500px;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10%;
+  background-image: url("https://images.pexels.com/photos/732548/pexels-photo-732548.jpeg?auto=compress&cs=tinysrgb&h=350");
+}
+
+.button_style:hover {
+  color: black;
+}
+
 .bottom {
   height: 20px;;
   text-align: center;

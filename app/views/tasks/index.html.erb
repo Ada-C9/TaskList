@@ -1,18 +1,34 @@
-
-
-<main class=main>
-  <ol>
+<main class="main_page">
+  <ol class="tasklist">
     <% @tasks.each do |task| %>
     <li>
-      <%= link_to task.name, task_path(task) %>
-      Status: <span class=status><%= task.status %></span>
-      <strong>|</strong>
-      Due Date: <span class=due_date> <%= task.due_date %> </span>
+      <span class="task_info">
+        <% if task.status == "Complete" %>
+        <span class="task_name">
+          <%= link_to task.name, task_path(task) %>
+        </span>
+        <% else %>
+        <span>
+          <%= link_to task.name, task_path(task) %>
+        </span>
+        <% end %>
+        Status: <span class="status"><%= task.status %></span>
+        <strong>|</strong>
+        Due Date: <span class="due_date"> <%= task.due_date %> </span>
+      </span>
+      <span class="editor">
+        <% if task.status == "Complete" %>
+        😺
+        <%= link_to "Unmark complete", mark_task_path(task), method: :patch %>
 
-      <%= link_to "Edit", edit_task_path(task) %>
-      <%= link_to "Delete", task_path(task), method: :delete, data: {confirm: "Are you sure to delete #{task.name}?"} %>
+        <% else %>
+        📝
+        <%= link_to "Mark complete", mark_task_path(task), method: :patch%>
+        <% end %>
 
-      Mark Complete
+        <%= link_to "Edit", edit_task_path(task), class: "edit_link" %>
+        <%= link_to "Delete", task_path(task), method: :delete, data: {confirm: "Are you sure to delete #{task.name}?"}, class: "delete_link" %>
+      </span>
     </li>
     <% end %>
   </ol>
