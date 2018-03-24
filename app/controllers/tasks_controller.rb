@@ -18,7 +18,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.task = params[:task][:task]
     task.description = params[:task][:description]
-    task.completed = "no"  #default answer is no
+    task.completed = "No"  #default answer is no
     if task.save # == true - it worked!
       redirect_to tasks_path
     else
@@ -34,7 +34,6 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
     task.task = params[:task][:task]
     task.description = params[:task][:description]
-    task.completed = params[:task][:completed]
     if task.save
       redirect_to task_path
     else
@@ -48,5 +47,25 @@ class TasksController < ApplicationController
     @task.destroy
     redirect_to tasks_path
   end
+
+  def mark_completed
+    @task = Task.find_by(id: params[:id])
+    # if @task.completed != "No"
+      @task.completed = Time.now
+      @task.save
+      redirect_to tasks_path
+    # else
+    #   @task.completed = "No"
+    #   @task.save
+    #   redirect_to tasks_path
+    # end
+  end
+
+  private
+
+  def task_params
+    return params.require(:book).permit(:task,:description) #require is a rails helper method
+  end
+
 
 end

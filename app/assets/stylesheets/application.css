@@ -67,8 +67,17 @@ h2 {
   padding-top: 30px;
 }
 
-.each::before {
-  content: "❏";
+
+.pending::before {
+  content: "🔲 ";
+}
+
+.done::before {
+  content: "☑️ ";
+}
+
+.each a.option {
+  color: #B8059A;
 }
 
 .whole-list {
@@ -80,6 +89,11 @@ border-color: #B8059A;
 margin-left: auto;
 margin-right: auto;
 width: 800px;
+}
+
+.option {
+  font-size: 0.75em;
+  color: #B8059A;
 }
 
 .task-list {
@@ -96,7 +110,7 @@ width: 800px;
   font-weight: bolder;
   color: #147A75;
   text-decoration: none;
-  width: 140px;
+
   padding: 10px;
   /*margin: auto;*/
 
@@ -115,7 +129,7 @@ width: 800px;
 
 .task-info {
   padding-top: 30px;
-  padding-right: 15px;
+  padding-left: 15px;
   padding-bottom: 30px;
   height: auto;
   background-color: white;
