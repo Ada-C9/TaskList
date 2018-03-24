@@ -1,14 +1,18 @@
+
+<!-- diseno de todas las paginas  -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <h2>This weeks tasks</h2>
     <%= yield %>
+    <h3><%= link_to "Go back to the index", tasks_path%></h3>
   </body>
 </html>
