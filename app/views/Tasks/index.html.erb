@@ -4,7 +4,8 @@
   <% @tasks.each do |task| %>
     <li> <strong><%= link_to(task.name) %></strong>
        <%= link_to("See Details", task_path(task))%>
-       <%= link_to("Create Task", tasks_path)%>
+       <!-- <%= link_to("Create Task", tasks_path)%> -->
+       <%= link_to("Edit", edit_task_path(task)) %>
     </li>
   <% end %>
 </ul>
