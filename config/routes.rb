@@ -20,6 +20,4 @@ Rails.application.routes.draw do
 
   # Non-restful routes
   post "/tasks/:id", to: "tasks#complete", as: "complete_task"
-
-  patch "/tasks/:id", to: "tasks#unmark", as: "unmark"
 end

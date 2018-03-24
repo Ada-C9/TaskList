@@ -32,17 +32,15 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
-    task.completion_date = DateTime.now
-    task.status = "DONE"
-    if task.save
-      redirect_to root_path
-    end
-  end
 
-  def unmark
-    task = Task.find(params[:id])
-    task.completion_date = nil
-    task.status = "IN PROGRESS"
+    if task.status == "IN PROGRESS"
+      task.completion_date = DateTime.now
+      task.status = "DONE"
+    else
+      task.completion_date = nil
+      task.status = "IN PROGRESS"
+    end
+
     if task.save
       redirect_to root_path
     end
