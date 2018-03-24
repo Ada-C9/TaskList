@@ -45,8 +45,12 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find_by(id: params[:id])
-    task.update(completed_date: Date.today.to_s)
-  redirect_to tasks_path
+
+    if task.completed_date.nil?
+      task.update(completed_date: Date.today.to_s)
+    else task.update(completed_date: nil)
+    end
+    redirect_to tasks_path
 
   end
 

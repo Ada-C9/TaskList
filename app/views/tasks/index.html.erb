@@ -12,7 +12,7 @@
     <li>
       <% num += 1 %>
 
-      <strong><%= num %>. </strong><%= task.name %>
+      <strong><%= num %>. </strong><%= link_to task.name, task_path(task[:id]) %>
       <p class="actions">
         <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %> |
         <%= link_to "Edit", edit_task_path(task[:id]) %> |
@@ -22,10 +22,9 @@
       <% else %>
       <li class="completed">
         <% num += 1 %>
-        <strong><%= num %>. </strong><em><%= task.name %></em>
-        <!-- TODO: fix: it's  crossing all of the text here intead of just the task.  -->
+        <strong><%= num %>. </strong><em><%= link_to task.name, task_path(task[:id]) %></em>
         <p class="actions">
-          <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %> | <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to "Mark Incomplete", mark_complete_path(task[:id]), method: :patch %> | <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
         </p>
         <% end %>
       </li>
