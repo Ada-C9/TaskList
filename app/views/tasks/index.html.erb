@@ -1,3 +1,4 @@
+<!-- TODO: DRY this code, specially on the if statment for completed or not. -->
 
 <section class="tasks-list">
   <h2>YOUR TASKS</h2>
@@ -21,10 +22,10 @@
       <% else %>
       <li class="completed">
         <% num += 1 %>
-        <strong><%= num %>. </strong><%= task.name %>
-<!-- TODO: fix: it's  crossing all of the text here intead of just the task.  -->
+        <strong><%= num %>. </strong><em><%= task.name %></em>
+        <!-- TODO: fix: it's  crossing all of the text here intead of just the task.  -->
         <p class="actions">
-          <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
+          <%= link_to "Mark Complete", mark_complete_path(task[:id]), method: :patch %> | <%= link_to "Delete", task_path(task[:id]), method: :delete, data: { confirm: 'Are you sure?'} %>
         </p>
         <% end %>
       </li>

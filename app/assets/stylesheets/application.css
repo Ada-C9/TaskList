@@ -69,7 +69,7 @@ a {
   font-size: 0.6em;
 }
 
-.completed {
+.completed em  {
   text-decoration:line-through;
 }
 
