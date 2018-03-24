@@ -5,11 +5,12 @@
     <strong>Details:</strong> <%= @task.description %>
   </li>
   <li id="complete-by">
-    <strong>Complete By:</strong> <%= @task.comp_date %>
+    <strong>Completed Date:</strong> <%= @task.comp_date %>
   </li>
-  <li>
+
+  <!-- <li>
     <strong>Completed? </strong><%=@task.task_complete %>
-  </li>
+  </li> -->
 
   <li id="edit">
     <%= link_to "Edit Task", edit_task_path %>
