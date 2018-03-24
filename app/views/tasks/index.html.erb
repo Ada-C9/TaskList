@@ -13,10 +13,12 @@
         <dd><%= task.description %></dd>
         <dd>
           <% if task.completed == true %>
-            <%= link_to "Mark Not Completed", complete_task_path(task.id), method: :patch %></dd>
+            <%= link_to "Mark Not Completed", complete_task_path(task.id), method: :patch %>
           <% else %>
-            <%= link_to "Mark Completed", complete_task_path(task.id), method: :patch %></dd>
+            <%= link_to "Mark Completed", complete_task_path(task.id), method: :patch %>
           <% end %>
+          <%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: "Do you need this to do the d'dew?" } %>
+        </dd>
       </dl>
     </li>
   <% end %>

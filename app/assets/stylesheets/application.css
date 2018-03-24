@@ -14,8 +14,131 @@
  *= require_self
  */
 
-/* main {
+/* application base css */
+
+body {
   background-image: url("background.JPG");
   background-repeat: no-repeat;
   background-size: cover;
-} */
+  color: #CC9;
+  background-color: #330;
+  margin: 0;
+  padding: 0;
+}
+
+.container-all {
+  display: grid;
+  grid-template: 70px 1fr/ 100%;
+  min-width: 425px;
+  border-bottom: 5px dotted #CC9;
+}
+
+/* all hyperlinks */
+a {
+  text-decoration: none;
+}
+
+a:link, a:visited {
+  color: #CC9;
+}
+
+a:hover {
+  color: #996;
+}
+
+/* header specific styling */
+header {
+  grid-row: 1 / span 1;
+  background-color: rgba(51, 51, 0, 0.9);
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  color: #eed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 5px dotted #CC9;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* main styles */
+main {
+  min-width: 250px;
+  max-width: 250px;
+  grid-row: 2 / span 1;
+  background-color: rgba(51, 51, 0, 0.8);
+  border: 5px dotted #CC9;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+main > h1, main > h2 {
+  border-bottom: 5px dotted #CC9;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* styling for completed tasks */
+.completed {
+  text-decoration: line-through;
+}
+
+/* index styling */
+ol {
+  margin: 0;
+  padding: 0 15px;
+}
+
+ol li:not(:last-child) {
+  border-bottom: 2px dotted #CC9;
+}
+
+dd:nth-child(2) {
+  margin-left: 10px;
+  color: #eed;
+}
+
+dd:last-child {
+  margin-left: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+/* show styling */
+p {
+  color: #eed;
+  margin: 10px auto;
+}
+
+p:last-of-type {
+  text-align: center;
+  border-bottom: 2.5px dotted #CC9;
+  padding-bottom: 5px;
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+.show-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+/* form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > * {
+  margin-bottom: 2.5px;
+}
+
+form > :not(label) {
+  margin-bottom: 10px;
+}

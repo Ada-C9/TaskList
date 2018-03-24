@@ -17,5 +17,9 @@
   <% end %>
 </h4>
 
-<%= link_to "edit", edit_task_path %>
-<%= link_to "delete", task_path(@task.id), method: :delete, data: { confirm: "Do you need this to do the d'dew?" } %>
+<div class="show-options">
+  <% if @task.completed == false %>
+  <%= link_to "edit", edit_task_path %>
+  <% end %>
+  <%= link_to "delete", task_path(@task.id), method: :delete, data: { confirm: "Do you need this to do the d'dew?" } %>
+</div>

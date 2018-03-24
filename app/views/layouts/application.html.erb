@@ -9,21 +9,23 @@
   </head>
 
   <body>
-    <header>
-      <h1>TO DO THE D'DEW</h1>
-      <nav>
-        <ul>
-          <li>
-            <%= link_to "home", tasks_path %>
-          </li>
-          <li>
-            <%= link_to "new d'dew", new_task_path %>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <%= yield %>
-    </main>
+    <div class="container-all">
+      <header>
+        <h1>TO DO THE D'DEW</h1>
+        <nav>
+          <ul>
+            <li>
+              <%= link_to "home", tasks_path %>
+            </li>
+            <li>
+              <%= link_to "new d'dew", new_task_path %>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+    </div>
   </body>
 </html>
