@@ -49,11 +49,11 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.date = DateTime.now
 
-    # if task.status == "complete"
-    #   task.assign_attributes("complete")
-    # else
-    #   task.assign_attributes("incomplete")
-    # end
+    if task.status == "complete"
+      task.assign_attributes( status: "not complete" )
+    else
+      task.assign_attributes( status: "complete" )
+    end
 
     if task.save
       redirect_to tasks_path
@@ -62,6 +62,6 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    return params.require(:task).permit(:to_do, :date, :time, :instructions)
+    return params.require(:task).permit(:to_do, :date, :time, :instructions, :status)
   end
 end

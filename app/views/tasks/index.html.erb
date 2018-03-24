@@ -5,7 +5,8 @@
 <ul class="task-list">
   <% @tasks.each do |task| %>
   <li>
-    <input type="checkbox" />
+    <!-- <input type="checkbox" /> -->
+    Due: 
     <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
     <strong><%= task.time %></strong>
   </li>
@@ -13,8 +14,19 @@
     Task: <%= link_to(task.to_do, task_path(task)) %>
   </li>
   <li>
+    Status: <%= task.status %>
+  </li>
+  <li>
     <button>
+      <% if task.status == "complete" %>
+
+      <%= link_to("Unmark complete", complete_task_path(task.id), method: :patch) %>
+
+      <% else %>
+
       <%= link_to("Complete", complete_task_path(task.id), method: :patch) %>
+
+      <% end %>
     </button>
     <button>
       <%= link_to("Edit", edit_task_path(task)) %>

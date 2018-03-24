@@ -11,6 +11,9 @@
 <p>
   Instructions: <%= @task[:instructions] %>
 </p>
+<p>
+  Status: <%= @task[:status] %>
+</p>
 
 <button>
 <%= link_to("Edit task", edit_task_path) %>
