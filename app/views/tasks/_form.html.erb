@@ -1,0 +1,26 @@
+<%= form_for @task do |f| %>
+<ul>
+  <li>
+<%= f.label :name %>
+<%= f.text_field :name %>
+</li>
+<li>
+<%= f.label :description %>
+<%= f.text_field :description %>
+</li>
+<li>
+<%= f.label :completion %>
+<%= f.date_field :completion %>
+</li>
+<li>
+
+<%= f.label :priority %>
+<ul>
+<li><%= f.radio_button :priority, "HIGH" %> HIGH<br /></li>
+<li><%= f.radio_button :priority, "MEDIUM" %> MEDIUM <br /></li>
+<li><%= f.radio_button :priority, "LOW" %> LOW <br /></li>
+</ul>
+</li>
+</ul>
+<%= f.submit %>
+<%end%>

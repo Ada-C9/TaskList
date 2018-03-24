@@ -1,17 +1,20 @@
-<h2> <%= @task.name %> <h2>
-  <ul>
-    <li>
-      <p> <%= @task.description %> </p>
-    </li>
-    <li>
-      <p>
-        Priority:
-        <%= @task.priority %>
-      </p>
+<h2><%= @task.name %> </h2>
+<ul>
+  <li>
+    <p>
+      <strong>Description:</strong>
+      <%= @task.description %>
+    </p>
+  </li>
+  <li>
+    <p>
+      <strong>Priority:</strong>
+      <%= @task.priority %>
+    </p>
     <% if @task.completion != nil %>
     <li>
       Completed on:
       <%= @task.completion %>
     </li>
-      <% end %>
-    </ul>
+    <% end %>
+  </ul>

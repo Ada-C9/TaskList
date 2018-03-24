@@ -1,0 +1,6 @@
+#container_task_options {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+
+}
