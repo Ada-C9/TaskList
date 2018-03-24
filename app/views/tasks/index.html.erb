@@ -1,0 +1,19 @@
+<div class="list">
+
+  <% @tasks.each do |task|  %>
+  <div class="task_actions">
+    <div class="task">
+      <%= task[:name] %> is <%= task[:status].downcase %>.
+      <br>
+      This is a level <%= task[:priority] %> task. It needs to be complete by <%= task[:due] %>.
+    </div>
+
+    <div class="actions">
+      <%= link_to "More", task_path(task.id) %>
+      <%= link_to "Edit", edit_task_path(task) %>
+      <%= link_to "Done", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete #{task.name}?"} %>
+    </div>
+  </div>
+  <% end %>
+
+</div>

@@ -1,0 +1,53 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  background-color: #d5ebf6;
+  font-family: 'Itim', cursive;
+  font-size: 1.03em;
+}
+
+.show h2, .form h2 {
+  font-size: 1.5em;
+}
+
+.entry, .form ul li, .show > h2, .form > h2, .title , .show p {
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+.form, .show, .task {
+  background-color: white;
+  border: solid 3px #f5dfb8;
+  padding: 15px;
+  color: #f77d75;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 20px 10px 10px 10px;
+  font-size: 1.3em;
+}
+
+.button a, .show a, .actions a, .submit {
+  background-color: #f77d75;
+  border: solid 3px white;
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: 0px 5px 20px 0px;
+}
+
+.button:hover, .show a:hover, .actions a:hover, .submit:hover {
+  color: #f5dfb8;
+}
+
+.actions {
+  text-align: right;
+  margin: 20px 10px 40px 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+}

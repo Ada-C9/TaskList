@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet">
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav>
+      <ul>
+        <li><%= image_tag "pencil.png", alt: "pencil" %></li>
+        <li><%= link_to "All Tasks", tasks_path %></li>
+        <li><%= link_to "New Task", new_task_path %></li>
+      </ul>
+    </nav>
+
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer>
+      	&copy; Brandy Austin
+    </footer>
+
+  </body>
+</html>

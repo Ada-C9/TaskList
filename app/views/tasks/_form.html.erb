@@ -1,0 +1,25 @@
+<div class="form">
+
+  <ul>
+  <%= form_for @task do |f| %>
+    <li><%= f.label :name, :class => 'entry' %>:
+      <%= f.text_field :name %></li>
+
+    <li><%= f.label :description, :class => 'entry' %>:
+      <%= f.text_area :description, size: "20x10" %></li>
+
+    <li><%= f.label :priority, :class => 'entry' %>:
+      <%= f.number_field :priority, in: 1..5 %></li>
+
+    <li><%= f.label :due, :class => 'entry' %>:
+      <%= f.date_field :due %></li>
+
+    <li><%= f.label :status, :class => 'entry' %>:
+      <%= f.select :status, ['Not Started','In Progress'] %></li>
+
+    </ul>
+
+    <%= f.submit "Submit", :class => 'submit' %>
+
+  <% end %>
+</div>
