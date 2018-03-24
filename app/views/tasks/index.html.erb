@@ -12,7 +12,7 @@
 
         <div class ="user-options">
           <% if !task.completed %>
-          <%= link_to("Mark Complete", completed_task_path(task), method: :patch, class: "link") %>
+          <%= link_to("Mark Complete", completed_task_path(task), method: :patch, class: "link-complete") %>
           <% else %>
           <%= link_to("Unmark Complete", completed_task_path(task), method: :patch, class: "link") %>
           <%end%>
