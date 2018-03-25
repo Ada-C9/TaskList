@@ -1,13 +1,15 @@
 
-<h2>Things I have to do: </h2>
+<h2>OVERDUE TASKS:</h2>
 
-<p>Below are some tasks I have to get done.  Click on the name for more details.</p>
+<p>The following are overdue tasks.</p>
 
 
-<ol class="task_list">
-  <% @tasks.order(:id).each do |task| %>
+<ol class="overdue_tasks">
+  <% @overdue.each do |task| %>
     <li class="<%= task.complete ? 'complete' : 'incomplete' %>">
       <h4><%= link_to("#{task.name}", task_path(task))%></h4>
+      <h5>Due on: <%= "#{task.due_date.month}/#{task.due_date.day}" %></h5>
+      <h5><%= (Date.today - task.due_date).to_i %> days overdue!</h5>
 
       <% if task.complete %>
       <%= link_to("Mark as INCOMPLETE", complete_task_path(task), method: :patch)%>

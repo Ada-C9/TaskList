@@ -12,7 +12,6 @@ def create
   task = Task.new
   task.assign_attributes(task_params)
 
-
   if task.save
     redirect_to '/tasks'
   end
@@ -60,10 +59,17 @@ def complete
   end
 end
 
+def overdue
+  @overdue = Task.all.select do |task|
+    task.due_date && Date.today > task.due_date
+  end
+
+end
+
 private
 
 def task_params
-  return params.require(:task).permit(:name, :description)
+  return params.require(:task).permit(:name, :description, :due_date)
 end
 
 end
