@@ -49,6 +49,10 @@ class TasksController < ApplicationController
     end
   end
 
+  def mark_task_complete
+
+  end
+
 private
 
 def task_params
