@@ -50,9 +50,9 @@ class TasksController < ApplicationController
     task.completion_date = DateTime.now.strftime("%a, %B %d, %Y")
 
     if task.status == "complete"
-      task.assign_attributes( status: "not complete", completion_date: nil )
+      task.assign_attributes(status: "not complete", completion_date: nil)
     else
-      task.assign_attributes( status: "complete" )
+      task.assign_attributes(status: "complete")
     end
 
     if task.save

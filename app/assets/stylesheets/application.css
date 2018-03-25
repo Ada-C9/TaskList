@@ -19,15 +19,50 @@ body {
 }
 
 h1 {
+  text-align: center;
   width: 500px;
-  color: #688BF3;
+  color: purple;
   font-family: arial;
   font-size: 30pt;
   border-style: dotted;
-  border-radius: 20px;
-  background-color: lightyellow;
+  border-radius: 10px;
+  background-color: lightgrey;
 }
 
-nav {
+h2 {
+  color: purple;
+  font-family: arial;
+  font-size: 15pt;
+}
+
+h4 {
+  color: #71777C;
+  font-family: arial;
+  font-size: 15pt;
+  margin-left: 40px;
+}
+
+.nav ul {
   list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.nav ul li {
+  margin: 10px;
+  border: #bcd9e2 2px solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+section {
+  margin: 20px 40px;
+  border: #bcd9e2 2px solid;
+  padding: 10px;
+  border-radius: 10px;
+  height: 20px;
+  width: 100px;
 }

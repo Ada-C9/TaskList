@@ -1,11 +1,13 @@
+<body>
+
 <h1>Lovely Luxi's Task List</h1>
 
-<p>How to take care of Mambo and Tango</p>
+<h4>How to take care of Mambo and Tango</h4>
 
 <ul class="task-list">
   <% @tasks.each do |task| %>
   <li>
-    <!-- <input type="checkbox" /> -->
+    <input type="checkbox">
     Task: <%= link_to(task.to_do, task_path(task)) %>
   </li>
   <li>
@@ -35,10 +37,14 @@
       <%= link_to("Edit", edit_task_path(task)) %>
     </button>
     <button class="button-selects">
-      <%= link_to("Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete task? ... Mambo and Tango won't be happy about it." }) %>
+      <%= link_to("Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete this task? ... Mambo and Tango won't be happy about it." }) %>
     </button>
   </li>
   <% end %>
 </ul>
 
-<%= link_to("Add a new task", new_task_path, class: "Something important") %>
+<section>
+  <%= link_to("Add a new task", new_task_path, class: "Something important") %>
+</section>
+
+</body>
