@@ -1,21 +1,22 @@
 <section>
-<h2 id="hp-header">TaskList</h2>
+<!-- <h2 id="hp-header-index"TaskList</h2> -->
 
-  <ol>
+  <ol id="task-list">
   <% @tasks.each do |task| %>
     <li>
-      <span>
+      <span id="tasks">
       <% if task.actual_completion_date == nil %>
         <div><%=link_to task[:description], task_path(task[:id]) %></div>
       <% else %>
       <div><%=link_to task[:description], task_path(task[:id]) %></div>
       <%end%>
-      <div>
-      <%= button_to "Edit", edit_task_path(task.id), method: :get%>
-      <%= button_to "Mark Complete", tasks_completed_path(task.id), method: :patch%>
-      <%= button_to "Delete", remove_item_path(task.id), method: :delete, data: {confirm: "Are you sure?"}%>
-    </div>
-    </span>
+    </span id="buttons">
+      <%= button_to "Edit", edit_task_path(task.id), method: :get, :id => "edit-button"%>
+
+      <%= button_to "Mark Complete", tasks_completed_path(task.id), method: :patch, :id => "complete-button"%>
+
+      <%= button_to "Delete", remove_item_path(task.id), method: :delete, data: {confirm: "Are you sure?"}, :id => "delete-button"%></span>
+
     </li>
       <%end%>
   </ol>
