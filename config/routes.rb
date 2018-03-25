@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  root 'tasks#index'
+  # root_path exists
+
   get '/tasks', to: 'tasks#index'
 
   get '/tasks/new', to: 'tasks#new', as: 'new_task'
