@@ -2,3 +2,7 @@
 <p>Task Name: <%= @task[:name] %></p>
 <p>Description: <%= @task[:details] %></p>
 <p>Complete By: <%= @task[:complete]%></p>
+
+<button>
+  <%= link_to("Edit", edit_task_path(@task)) %>
+</button>

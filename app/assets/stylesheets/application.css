@@ -1,31 +1,50 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+body {
+  color: rgb(36, 26, 77);
+  background-color: whitesmoke;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1em;
+  border: 2px solid lightgrey;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: goldenrod;
+}
+
+/* ------Layout page---- */
+
 .header {
   font-family: 'Oswald', sans-serif;
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .header > h1 {
   text-align: center;
-  background-color: rgb(236, 171, 214);
+  background-color: rgb(232, 200, 237);
   font-family: 'Oswald', sans-serif;
   border-radius: 8%;
-  border: 1px dotted pink;
-  position: sticky;
+  border: 1px groove lightgrey;
 }
+
 
 .home ul > li {
   display: inline-block;
@@ -39,31 +58,20 @@
   text-align: center;
 }
 
-ul {
-   list-style-type: none;
-   font-size: 1.5em;
-   color: rgba(43, 4, 128, 0.96);
- }
+/* ---------landing page-------- */
 
-a:hover {
-  color: goldenrod;
-}
-
-.row input:checked + span {
-  text-decoration: line-through
-}
-
-
-body {
-  color: rgb(36, 26, 77);
-  background-color: whitesmoke;
-  font-family: 'Alegreya Sans', sans-serif;
+.list {
+  list-style-type: decimal;
   font-size: 1em;
-  border: 2px solid lightgrey;
+  color: rgba(43, 4, 128, 0.96);
 }
 
-a {
-  text-decoration: none;
+.options {
+  padding-bottom: 10px;
+}
+
+.options:checked + label {
+  text-decoration: line-through;
 }
 
 
