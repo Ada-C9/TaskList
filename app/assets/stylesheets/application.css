@@ -75,11 +75,13 @@ nav ul li:nth-child(2), nav ul li:nth-child(3) {
 nav ul li:nth-child(2):hover {
   background-color: rgb(18,55,78);
   cursor: pointer;
+  color: rgb(245,245,245);
 }
 
 nav ul li:nth-child(3):hover {
   background-color: rgb(18,55,78);
   cursor: pointer;
+  color: rgb(245,245,245);
 }
 
 main {

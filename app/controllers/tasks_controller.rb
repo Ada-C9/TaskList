@@ -47,9 +47,9 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.status
-      @task.update(status: false)
+      @task.update(status: false, complete_by: DateTime.now)
     else
-      @task.update(status: true)
+      @task.update(status: true, complete_by: DateTime.now)
     end
 
     redirect_to tasks_path
