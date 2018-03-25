@@ -1,17 +1,15 @@
-<form action="/tasks" method="patch" accept-charset="utf-8">
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
 
 <h4>Update your tasks!</h4>
 
 <%= form_for @task do |f| %>
-  <% f.label :name %>
-  <% f.text_field :name %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-  <% f.label :description %>
-  <% f.text_field :description %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
 
-  <% f.label :completion_date %>
-  <% f.date_field :completion_date %>
+  <%= f.label :completion_date %>
+  <%= f.date_field :completion_date %>
 
-  <%= f.submit%>
+  <%= f.submit "Fix this!"%>
 <% end %>

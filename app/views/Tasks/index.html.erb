@@ -3,8 +3,9 @@
 <ul>
   <% @tasks.each do |task| %>
     <li> <strong><%= link_to(task.name) %></strong>
-       <%= link_to("See Details", task_path(task))%>
-       <%= link_to("Edit", edit_task_path(task)) %>
+       <%= link_to "See Details", task_path(task.id) %>
+       <%= link_to "Edit", edit_task_path(task.id) %>
     </li>
   <% end %>
+
 </ul>

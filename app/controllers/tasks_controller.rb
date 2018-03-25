@@ -1,3 +1,5 @@
+require 'date'
+
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
@@ -8,22 +10,19 @@ class TasksController < ApplicationController
   end
 
   def create
-    # raw_task = params[:task]
-    #
-    # task = Task.new
-    # task.name = raw_task[:name]
-    # task.description = raw_task[:description]
-    # task.completion_date = raw_task[:completion_date]
-    task = Task.new(task_params)
+    task = Task.new(params[:id])
 
     if task.save
       redirect_to tasks_path
+    else
+      render :new
     end
   end
 
   def show
     task_id = params[:id]
-    @task = Task.find(task_id)
+    # @task = Task.find(task_id)
+    @task = Task.find(params[:id])
   end
 
   def edit
@@ -31,21 +30,42 @@ class TasksController < ApplicationController
   end
 
   def update
-    #local variable cause you save the user input to db
-    task = Task.find(params[:id])
-    task.assign_attributes(task_params)
+    # task = Task.find(params[:id])
+    # task.assign_attributes(task_params)
+    @task = Task.new
+    @task.update({
+      name: params[:task][:name],
+      description: params[:task][:description],
+      completion_date: params[:task][:completion_date]
+      })
 
     if task.save
-      redirect_to task_path(task)
+      redirect_to task_path(task.id)
+    else
+      render :edit
     end
   end
 
-  # def destroy
+  # def complete
+  #   @task = Task.find_by(id: params[:id])
+  #
+  #   @task.completion_date = Date.today.to_s
+  #   redirect_to tasks_path
   # end
 
-  private
-  def task_params
-    return params.require(:task).permit(:name, :description, :completion_date)
-  end
+
+  # def destroy
+    # @task = Task.find_by(id: params[:id])
+    # if @task.destroy
+    #   redirect_to tasks_path
+    # else
+    #   render :destroy
+    # end
+  # end
+
+  # private
+  # def task_params
+  #   return params.require(:task).permit(:name, :description, :completion_date)
+  # end
 
 end
