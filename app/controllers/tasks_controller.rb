@@ -1,3 +1,4 @@
+require 'date'
 class TasksController < ApplicationController
 
   def index
@@ -49,4 +50,12 @@ class TasksController < ApplicationController
       render :destroy
     end
   end
+
+  def complete
+    @task = Task.find_by(id: params[:id])
+
+    @task.completion_date = Date.today.to_s
+    redirect_to show_tasks_path
+  end
+
 end
