@@ -6,7 +6,8 @@
   <%= f.text_field :description, class: "desc-input", placeholder: "Do you have details?" %>
 
   <%= f.label :completion_date, "Date To Be Completed by" %>
-  <%= f.date_field :completion_date, min: Date.today %>
+  <%= f.text_field :completion_date %>
+<!-- <%# TODO: revert formfield to date_field, min: Date.today after research about why the date in the DB was getting overwritten when edited %> -->
 
   <%= f.submit action_name %>
 <% end %>
