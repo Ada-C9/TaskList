@@ -71,7 +71,6 @@ nav ul li:last-of-type{
 #task-list{
   display:flex;
   flex-wrap: wrap;
-
 }
 
 #task-list li{
@@ -79,4 +78,23 @@ nav ul li:last-of-type{
   flex-basis:0;
   flex-grow:1;
   margin: 15px;
+}
+#buttons{
+  display:flex;
+}
+
+#edit-button{
+  background-color:#ffff4d;
+  width:100px;
+}
+
+
+#complete-button{
+  background-color: #4dff4d;
+  width:100px;
+}
+
+#delete-button{
+  background-color: #ff5050;
+  width:100px;
 }
