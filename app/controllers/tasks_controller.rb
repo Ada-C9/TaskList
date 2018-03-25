@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task = Task.new(task_params)
 
     if task.save
-      redirect_to '/tasks'
+      redirect_to tasks_path
     end
   end
 
@@ -30,8 +30,15 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
-  # def update
-  # end
+  def update
+    #local variable cause you save the user input to db
+    task = Task.find(params[:id])
+    task.assign_attributes(task_params)
+
+    if task.save
+      redirect_to task_path(task)
+    end
+  end
 
   # def destroy
   # end
