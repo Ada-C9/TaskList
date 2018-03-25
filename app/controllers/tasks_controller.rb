@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task.assign_attributes(task_params)
 
     if task.save
-      redirect_to '/tasks'
+      redirect_to tasks_path
     end
   end
 

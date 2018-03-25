@@ -22,8 +22,7 @@
  }
 
  .logo {
-   display: flex;
-   flex-wrap: wrap;
+   float: left;
    justify-content: center;
  }
  .box {
@@ -37,29 +36,22 @@
    font-size: 14pt;
  }
 
+.complete {
+  text-decoration: line-through;
+}
+
  .box .text {
    align-items: left;
    color: red;
  }
  .big-box {
-   // display: flex;
-   // flex-direction: row;
-   /* width: 30%; */
-   // background-color: lightgray;
-   // border: purple;
-
- }
- .link {
-   text-decoration: none;
-   padding-right: 12pt;
-
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  background-color: #c2d6d6;
+  border: black;
  }
 
-.link-complete {
-   text-decoration: none;
-   padding-right: 12pt;
-   text-decoration: line-through;
- }
 
  .link:visited {
    color: black;
@@ -69,3 +61,11 @@
  .link:unvisited {
    color: black;
  }
+
+.main_page > .tasklist .completed{
+  text-decoration: line-through;
+}
+
+.main_page >.tasklist .incomplete{
+  text-decoration: none;
+}
