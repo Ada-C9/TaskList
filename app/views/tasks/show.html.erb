@@ -1,12 +1,23 @@
 <h1><%= @task.name %></h1>
-<h3><%= @task.description %></h3>
-<h3><%= @task.completion_date %></h3>
+<!-- <h3><%= @task.description %></h3> -->
+<!-- <h3><%= @task.completion_date %></h3> -->
 
 <ul>
   <li>
     <%= link_to "Edit", edit_task_path %>
   </li>
   <li>
-    <%= link_to "Delete", task_path(@task.id),:data =>{:confirm =>"Are you sure ?", :method => "delete"} %>
+    <%= link_to "Delete", task_path(@task.id),:data =>{:confirm =>"Are you sure about this?", :method => "delete"} %>
   </li>
+  <li>
+   <% if @task.completion_date == nil %>
+     <!-- <div class="option"> -->
+         <%= link_to "❏ Mark as Completed", mark_complete_path(@task.id), method: :patch %>
+     <!-- </div> -->
+   <% else %>
+     <!-- <div class="option"> -->
+       ✅Task completed
+     <!-- </div> -->
+   <% end %>
+ </li>
 </ul>

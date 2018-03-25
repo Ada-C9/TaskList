@@ -4,9 +4,26 @@
   <li>
   <span class="title">
     <%=link_to task.name, task_path(task.id), class: 'title-link' %>
-    <!-- <p> <%= task.description %> </p>
-    <p> <%= task.completion_date %> </p> -->
+    <!-- <p> <%= task.description %> </p> -->
+    <!-- <p> <%= task.completion_date %> </p> -->
   </span>
   </li>
+
+  <li>
+   <% if task.completion_date == nil %>
+     <!-- <div class="option"> -->
+         <%= link_to "❏ Mark as Completed", mark_complete_path(task.id), method: :patch %>
+     </div>
+   <% else %>
+     <!-- <div class="option"> -->
+       ✅Task completed
+     </div>
+   <% end %>
+ </li>
+
+<!-- <%= check_box_tag(:name) %>
+<%= label_tag(:name, "Complete") %>
+<%= check_box_tag(:name) %>
+<%= label_tag(:name, "Uncomplete") %> -->
 <% end %>
 </ul>
