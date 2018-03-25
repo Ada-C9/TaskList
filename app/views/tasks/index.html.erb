@@ -9,7 +9,7 @@
         <%= link_to task.name, task_path(task.id), class: "incomplete"%>
       <% end %>
 
-      <%= button_to "Complete?", task_path(task.id), method: :patch %>
+      <%= button_to "Complete?", task_path(task.id), method: :put %>
     </li>
 
     <li id="description">
