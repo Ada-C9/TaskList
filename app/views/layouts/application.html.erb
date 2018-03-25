@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TaskList</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
+  <div class="container">
     <header>
       <nav >
         <ul>
@@ -17,7 +18,8 @@
         </ul>
       </nav>
     </header>
-
-    <%= yield %>
-  </body>
+  </div>
+  
+  <%= yield %>
+</body>
 </html>

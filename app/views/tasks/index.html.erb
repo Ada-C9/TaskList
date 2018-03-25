@@ -1,29 +1,20 @@
 <h1>TO DO'S</h1>
 <ul>
-<% @tasks.each do |task|%>
+  <% @tasks.each do |task|%>
   <li>
-  <span class="title">
-    <%=link_to task.name, task_path(task.id), class: 'title-link' %>
-    <!-- <p> <%= task.description %> </p> -->
-    <!-- <p> <%= task.completion_date %> </p> -->
-  </span>
+    <span class="title">
+      <%=link_to task.name, task_path(task.id), class: 'title-link' %>
+    </span>
   </li>
 
   <li>
-   <% if task.completion_date == nil %>
-     <!-- <div class="option"> -->
-         <%= link_to "❏ Mark as Completed", mark_complete_path(task.id), method: :patch %>
-     </div>
-   <% else %>
-     <!-- <div class="option"> -->
-       ✅Task completed
-     </div>
-   <% end %>
- </li>
-
-<!-- <%= check_box_tag(:name) %>
-<%= label_tag(:name, "Complete") %>
-<%= check_box_tag(:name) %>
-<%= label_tag(:name, "Uncomplete") %> -->
+    <% if task.completion_date == nil %>
+    <%= link_to "❏ Mark as Completed", mark_complete_path(task.id), method: :patch %>
+  </div>
+  <% else %>
+  ✅Task completed
+</div>
+<% end %>
+</li>
 <% end %>
 </ul>

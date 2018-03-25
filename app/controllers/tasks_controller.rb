@@ -15,9 +15,6 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(task_params)
-    # task.name = params[:task][:name]
-    # task.completion_date = params[:task][:completion_date]
-    # task.description = params[:task][:description]
     if task.save
       redirect_to tasks_path
     else
@@ -32,9 +29,6 @@ class TasksController < ApplicationController
   def update
     task = Task.find_by(id:params[:id])
     if !task.nil?
-      # task.name = params[:task][:name]
-      # task.completion_date = params[:task][:completion_date]
-      # task.description = params[:task][:description]
       if task.update(task_params)
         redirect_to task_path(task.id)
       else
@@ -55,9 +49,9 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    @task = Task.find_by(id:params[:id])
-    @task.completion_date = Time.now
-    @task.save
+    task = Task.find_by(id:params[:id])
+    task.completion_date = Time.now
+    task.save
     redirect_to tasks_path
   end
 
