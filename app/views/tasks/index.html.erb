@@ -1,0 +1,12 @@
+<h1>Daily Tasks</h1>
+
+<p> Hello! Lets review what we should get done today:</p>
+
+<ol><% @tasks.each do |task| %>
+  <li>
+    <!-- TODO: PUT A LINK TO SHOW AND EDIT IN HERE -->
+    <%= "Morning Task: #{task[:name]}" %>
+  </li>
+  <% end %>
+
+</ol>
