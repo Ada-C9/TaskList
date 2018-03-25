@@ -58,7 +58,6 @@ nav ul {
   padding-top: 1em;
   padding-bottom: 1em;
   border-radius: 15px;
-
 }
 
 
@@ -178,19 +177,10 @@ nav ul {
   justify-content: center;
 }
 
-.formz {
-  display: flex;
-  flex-direction: column;margin-top: 1em;
-  font-family: 'EB Garamond', serif;
+.editz .form {
   border: dotted #C9E3E3 1em;
-  width: 75%;
-  margin-left: 1em;
-  text-align: center;
 }
 
-.formz a {
-  font-style: italic;
-}
 
 /* * {
   border: black .2px solid;

@@ -61,7 +61,7 @@
       <ul>
         <% @tasks.each do |task| %>
           <li class="list">
-            <% if task.priority == 3 %>
+            <% if task.done != true && task.priority == 3 || task.priority == nil %>
               <p>🥕
                 <a><%= link_to task.title, task_path(task.id) %></a>
               </p>
