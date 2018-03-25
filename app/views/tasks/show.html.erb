@@ -28,7 +28,11 @@
       <span class="show-field">
         Status:
       </span>
-      <%= @task.status %>
+      <% if @task.status %>
+        <%= "completed" %>
+      <% else %>
+        <%= "incomplete" %>
+      <% end %>
     </li>
   </ul>
 

@@ -23,8 +23,15 @@ main ol li:before {
   font-size: 1.5em;
 }
 
-ol>li, main strong {
+ol>li, main span.incomplete {
   font-size: 1.5em;
+  font-weight: bold;
+}
+
+ol>li, main span.complete {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: line-through;
 }
 
 ol>li p {
@@ -38,6 +45,14 @@ p a {
 
 p a:hover {
   font-weight: bold;
+}
+
+p.incomplete {
+  text-decoration: none;
+}
+
+p.complete {
+  text-decoration: line-through;
 }
 
 .task-list-link {
