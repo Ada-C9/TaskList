@@ -50,15 +50,14 @@ class TasksController < ApplicationController
 
   def mark_completed
     @task = Task.find_by(id: params[:id])
-    # if @task.completed != "No"
+     if @task.completed == "No"
       @task.completed = Time.now
+     else
+       @task.completed = "No"
+     end
       @task.save
-      redirect_to tasks_path
-    # else
-    #   @task.completed = "No"
-    #   @task.save
-    #   redirect_to tasks_path
-    # end
+      redirect_to root_path
+
   end
 
   private

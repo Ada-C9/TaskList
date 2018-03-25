@@ -8,7 +8,7 @@
 
       <span class="each">
         <%= link_to task.task, task_path(task[:id]), class: "done" %> |
-        <!-- <%= link_to "UnMark Complete", mark_completed_path(task.id), method: :patch, class: "option"%> | -->
+        <%= link_to "UnMark Complete", mark_completed_path(task.id), method: :patch, class: "option"%> |
         <%= link_to "Delete", task_path(task.id), class: "option", method: :delete, data: { confirm: 'Are you really sure about that?' } %>
       </span>
 
@@ -16,7 +16,7 @@
 
       <span class="each">
         <%= link_to task.task, task_path(task[:id]), class: "pending" %> |
-        <%= link_to "Mark Complete", mark_completed_path(task.id), method: :patch, class: "option selections",  data: { confirm: 'Once you change this task to marked, it cannot be undone. Are you sure?' }%> |
+        <%= link_to "Mark Complete", mark_completed_path(task.id), method: :patch, class: "option selections",  data: { confirm: 'Are you sure?' }%> |
         <%= link_to "Edit", edit_task_path(task.id), class: "option"%> |
         <%= link_to "Delete", task_path(task.id), class: "option", method: :delete, data: { confirm: 'Are you really sure about that?' } %>
       </span>

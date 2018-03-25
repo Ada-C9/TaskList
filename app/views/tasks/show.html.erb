@@ -24,7 +24,7 @@
   <ul class="edit_things">
 
     <li class="edit-list">
-      <%= link_to "Mark Complete", mark_completed_path(@task.id), method: :patch, class: "change-task", data: { confirm: 'Once you change this task to marked, it cannot be undone. Are you sure?' }%>
+      <%= link_to "Mark Complete", mark_completed_path(@task.id), method: :patch, class: "change-task", data: { confirm: 'Are you sure?' }%>
     </li>
 
     <li class="edit-list">
