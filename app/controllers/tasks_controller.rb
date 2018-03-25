@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.name = params[:task][:name]
     task.description = params[:task][:description]
-    task.completion_date = params[:task][:completion_date]
+    task.complete = "not complete"
 
     if task.save
       redirect_to show_tasks_path
@@ -31,11 +31,10 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = Task.find_by(id: params[:id])
-    task.name = params[:task][:name]
-    task.completion_date = params[:task][:completion_date]
-    task.description = params[:task][:description]
-    if task.save
+    @task = Task.find_by(id: params[:id])
+    @task.name = params[:task][:name]
+    @task.description = params[:task][:description]
+    if @task.save
       redirect_to show_tasks_path
     else
       render :edit
@@ -52,9 +51,10 @@ class TasksController < ApplicationController
   end
 
   def complete
-    @task = Task.find_by(id: params[:id])
+    task = Task.find_by(id: params[:id])
+    task.complete = "completed on #{Date.today}"
+    task.save
 
-    @task.completion_date = Date.today.to_s
     redirect_to show_tasks_path
   end
 

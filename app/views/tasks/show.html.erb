@@ -1,7 +1,7 @@
 <h1><%=@task.name%></h1>
 
 <ul>
-  <li>Completed: <%=@task.completion_date%></li>
+  <li>Completed: <%=@task.complete%></li>
   <li><article>Description: <%=@task.description%></article></li>
 </ul>
 
@@ -16,8 +16,8 @@
       method: :delete, data: { confirm: "Are you sure?" } %>
     </li>
     <li>
-      <%= button_to "Complete Task", task_path(@task.id),
-      method: :post, data: { confirm: "Are you sure?" } %>
+      <%= button_to "Complete Task", complete_task_path(@task.id),
+      method: :patch, data: { confirm: "Are you sure?" } %>
     </li>
 
   </ul>

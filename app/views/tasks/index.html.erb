@@ -6,7 +6,9 @@
     <li>
       <span><%=link_to task.name, task_path(task.id)%></span> </li>
       <ul>
-        <li>Completed: <%= task.completion_date%></li>
+        <li>
+          Status: <%= task.complete%>
+        </li>
         <li>
           <%= button_to "Edit Task", edit_task_path(task.id),
           method: :get, data: { confirm: "Are you sure?" } %>
