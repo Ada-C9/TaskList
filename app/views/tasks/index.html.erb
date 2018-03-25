@@ -1,19 +1,23 @@
-<h2>My Morning Task List</h2>
+<header>
+  <h2>My Morning Task List</h2>
+</header>
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <h3>
-        <%= task.completion_date ? "<del>".html_safe : "" %>
-        <%= task.name %>
-        <%= task.completion_date ? "</del>".html_safe : "" %>
-      </h3>
-      <p>Deadline: <%= format_date(task.deadline) %></p>
-      <% action = task.completion_date ? "Unmark" : "Mark" %>
-      <%= link_to "#{action} as complete", mark_task_path(task), method: :patch %>
-      <%= link_to("Edit", edit_task_path(task))%>
-      <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete #{ task.name}?"}%>
-      <%= link_to "See task details", task_path(task)%>
-    </li>
-  <% end %>
-</ul>
+<main>
+  <ol>
+    <% @tasks.each do |task| %>
+      <li>
+        <h3>
+          <%= task.completion_date ? "<del>".html_safe : "" %>
+          <%= task.name %>
+          <%= task.completion_date ? "</del>".html_safe : "" %>
+        </h3>
+        <p class="deadline">Deadline: <%= format_date(task.deadline) %></p>
+        <% action = task.completion_date ? "Unmark" : "Mark" %>
+        <%= link_to "#{action} as complete", mark_task_path(task), method: :patch %>
+        <%= link_to("Edit", edit_task_path(task))%>
+        <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete #{ task.name}?"}%>
+        <%= link_to "See task details", task_path(task)%>
+      </li>
+    <% end %>
+  </ol>
+</main>

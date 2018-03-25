@@ -1,13 +1,18 @@
-<h2><%= action_name.titleize %></h2>
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<header>
+  <h2><%= action_name.titleize %></h2>
+</header>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
+<main>
+  <%= form_for @task do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-  <%= f.label :deadline %>
-  <%= f.date_field :deadline %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
 
-  <%= f.submit action_name %>
-<% end %>
+    <%= f.label :deadline %>
+    <%= f.date_field :deadline %>
+
+    <%= f.submit action_name %>
+  <% end %>
+</main>
