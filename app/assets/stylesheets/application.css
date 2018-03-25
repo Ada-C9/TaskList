@@ -14,16 +14,39 @@
  *= require_self
  */
 
-/** {
-  display: grid;
-  grid-template-columns: 2fr 4fr;
-  grid-template-rows: 1.5fr 5fr 1fr;
+h1{
+  text-align: center;
 }
 
-.header{
-  grid-area: 1 \ 1 \ 2 \ 2;
+.tasks {
+  display: flex;
+  flex-wrap: column wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-top: 1em;
+
 }
 
-nav {
-  grid-area: 1 \ 2 \ 1 \ 1;
-}*/
+.task_details, .task_details ul li {
+  display: flex;
+  flex-wrap: row wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-left: 0.25em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: row wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+.details li {
+  display: flex;
+  flex-wrap: column wrap;
+  list-style: none;
+  justify-content: space-between;
+  margin: 1em;
+}

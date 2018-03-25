@@ -1,11 +1,19 @@
 <h1><%= page_title%></h1>
 
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<ul>
+  <%= form_for @task do |f| %>
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
 
-  <%= f.label :description %>
-  <%= f.text_area :description %>
+  <li>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </li>
 
-  <%= f.submit %>
-<% end %>
+  <li>
+    <%= f.submit %>
+  </li>
+  <% end %>
+</ul>

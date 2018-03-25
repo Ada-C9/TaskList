@@ -1,25 +1,23 @@
-<h1>To Do:</h1>
+<h1>Tasks To Do</h1>
 
 <p>
   <ul>
     <%@tasks.each do |task| %>
-    <li>
+    <li class="tasks">
       <span><%=link_to task.name, task_path(task.id)%></span> </li>
-      <ul>
+      <ul class="task_details">
         <li>
           Status: <%= task.complete%>
-        </li>
-        <li>
-          <%= button_to "Edit Task", edit_task_path(task.id),
-          method: :get, data: { confirm: "Are you sure?" } %>
-        </li>
-        <li>
-          <%= button_to "Delete Task", task_path(task.id),
-          method: :delete, data: { confirm: "Are you sure?" } %>
-        </li>
-        <li>
-          <%= button_to "Complete Task", complete_task_path(task.id),
-          method: :patch, data: { confirm: "Are you sure?" } %>
+          <ul>
+            <li>
+              <%= button_to "Edit Task", edit_task_path(task.id),
+              method: :get, data: { confirm: "Are you sure?" } %>
+              <%= button_to "Delete Task", task_path(task.id),
+              method: :delete, data: { confirm: "Are you sure?" } %>
+              <%= button_to "Complete Task", complete_task_path(task.id),
+              method: :patch, data: { confirm: "Are you sure?" } %>
+            </li>
+          </ul>
         </li>
       </ul>
     </li>
