@@ -6,12 +6,12 @@
   <% @tasks.each do |task| %>
   <li>
     <!-- <input type="checkbox" /> -->
-    Due:
-    <em><%= task.date.strftime("%a, %B %d, %Y") %></em>,
-    <strong><%= task.time %></strong>
+    Task: <%= link_to(task.to_do, task_path(task)) %>
   </li>
   <li>
-    Task: <%= link_to(task.to_do, task_path(task)) %>
+    Due:
+    <em><%= task.date.strftime("%a, %B %d, %Y") %></em> @
+    <strong><%= task.time %></strong>
   </li>
   <li>
     Status: <%= task.status %>
@@ -20,7 +20,7 @@
     Completed date: <%= task.completion_date %>
   </li>
   <li>
-    <button>
+    <button class="button-selects">
       <% if task.status == "complete" %>
 
       <%= link_to("Unmark complete", complete_task_path(task.id), method: :patch) %>
@@ -31,10 +31,10 @@
 
       <% end %>
     </button>
-    <button>
+    <button class="button-selects">
       <%= link_to("Edit", edit_task_path(task)) %>
     </button>
-    <button>
+    <button class="button-selects">
       <%= link_to("Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure you want to delete task? ... Mambo and Tango won't be happy about it." }) %>
     </button>
   </li>

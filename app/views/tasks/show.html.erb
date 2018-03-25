@@ -1,20 +1,20 @@
 <h2>Mambo and Tango's Guide to Happy Cats </h2>
 <p>
-  Task: <%= @task[:to_do] %>
+  Task: <%= @task.to_do %>
 </p>
 <p>
-  Date: <%= @task[:date] %>
+  Date: <%= @task.date.strftime("%a, %B %d, %Y") %>
 </p>
 <p>
-  When: <%= @task[:time] %>
+  When: <%= @task.time %>
 </p>
 <p>
-  Instructions: <%= @task[:instructions] %>
+  Instructions: <%= @task.instructions %>
 </p>
 <p>
-  Status: <%= @task[:status] %>
+  Status: <%= @task.status %>
 </p>
 
 <button>
-<%= link_to("Edit task", edit_task_path) %>
+<%= link_to("Edit", edit_task_path) %>
 </button>
