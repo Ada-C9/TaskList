@@ -34,8 +34,6 @@ class TasksController < ApplicationController
       t = Time.now
       task.comp_date = t.strftime("%m/%d/%Y")
       task.task_complete = true
-    # else
-    #   task.task_complete = false
     end
     task.save
     redirect_to tasks_path

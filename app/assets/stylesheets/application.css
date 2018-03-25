@@ -19,7 +19,6 @@
 .site-flex {
   display: flex;
   flex-direction: column;
-  /* border: black 1px solid; */
 }
 
 body {
