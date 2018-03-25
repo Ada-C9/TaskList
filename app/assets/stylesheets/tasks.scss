@@ -20,16 +20,16 @@ main ol li {
 main ol li:before {
   content:counter(oli)". ";
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
-ol>li, main span.incomplete {
-  font-size: 1.5em;
+main ol>li .incomplete {
+  font-size: 2em;
   font-weight: bold;
 }
 
-ol>li, main span.complete {
-  font-size: 1.5em;
+main ol>li .complete {
+  font-size: 2em;
   font-weight: bold;
   text-decoration: line-through;
 }
@@ -61,7 +61,7 @@ p.complete {
 }
 
 .task-list-link:hover {
-  font-size: 1.1em;
+  font-size: 2.5em;
 }
 .form-style h2 {
   font-size: 2em;
