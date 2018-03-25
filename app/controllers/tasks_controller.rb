@@ -32,8 +32,8 @@ class TasksController < ApplicationController
   def update
     # task = Task.find(params[:id])
     # task.assign_attributes(task_params)
-    @task = Task.new
-    @task.update({
+    task = Task.new
+    task.update({
       name: params[:task][:name],
       description: params[:task][:description],
       completion_date: params[:task][:completion_date]
@@ -46,6 +46,15 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    if task.destroy
+      redirect_to tasks_path(task.id)
+    else
+      render :index
+    end
+  end
+
   # def complete
   #   @task = Task.find_by(id: params[:id])
   #
@@ -53,15 +62,6 @@ class TasksController < ApplicationController
   #   redirect_to tasks_path
   # end
 
-
-  # def destroy
-    # @task = Task.find_by(id: params[:id])
-    # if @task.destroy
-    #   redirect_to tasks_path
-    # else
-    #   render :destroy
-    # end
-  # end
 
   # private
   # def task_params
