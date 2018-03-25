@@ -13,7 +13,7 @@ class TasksController < ApplicationController
 
     task = Task.new
 
-    task.assign_attributes(task(:params))
+    task.assign_attributes(task_params)
 
     if task.save
       redirect_to tasks_path

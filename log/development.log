@@ -8820,3 +8820,81 @@ Processing by TasksController#new as HTML
 Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 17:33:56 -0400
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for 127.0.0.1 at 2018-03-25 17:34:13 -0400
+Processing by TasksController#new as HTML
+  Rendering tasks/new.html.erb within layouts/application
+  Rendered tasks/_form.html.erb (3.4ms)
+  Rendered tasks/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tasks" for 127.0.0.1 at 2018-03-25 17:34:43 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n689fFLUH+7lg1GzF8wUHF8CSBcMdJZDfHx4kEV/Q0ADe2Kl8h47r6+BEqMbewCpgcn5ku86o2RNVo7WUar8EQ==", "task"=>{"name"=>"Get sauce", "description"=>"honey mustard, flour ", "complete_by"=>"2018-03-25"}, "commit"=>"Create Task"}
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `task' for #<TasksController:0x00007ff584c9c210>:
+  app/controllers/tasks_controller.rb:16:in `create'
+
+Started POST "/__better_errors/1752947f12167b1a/variables" for 127.0.0.1 at 2018-03-25 17:34:43 -0400
+Started POST "/tasks" for 127.0.0.1 at 2018-03-25 17:35:41 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n689fFLUH+7lg1GzF8wUHF8CSBcMdJZDfHx4kEV/Q0ADe2Kl8h47r6+BEqMbewCpgcn5ku86o2RNVo7WUar8EQ==", "task"=>{"name"=>"Get sauce", "description"=>"honey mustard, flour ", "complete_by"=>"2018-03-25"}, "commit"=>"Create Task"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - When assigning attributes, you must pass a hash as an argument.:
+  app/controllers/tasks_controller.rb:16:in `create'
+
+Started POST "/__better_errors/9cb033cf5575006f/variables" for 127.0.0.1 at 2018-03-25 17:35:41 -0400
+Started POST "/tasks" for 127.0.0.1 at 2018-03-25 17:36:04 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n689fFLUH+7lg1GzF8wUHF8CSBcMdJZDfHx4kEV/Q0ADe2Kl8h47r6+BEqMbewCpgcn5ku86o2RNVo7WUar8EQ==", "task"=>{"name"=>"Get sauce", "description"=>"honey mustard, flour ", "complete_by"=>"2018-03-25"}, "commit"=>"Create Task"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveModel::ForbiddenAttributesError - ActiveModel::ForbiddenAttributesError:
+  app/controllers/tasks_controller.rb:16:in `create'
+
+Started POST "/__better_errors/8c367b9f46f5fa7d/variables" for 127.0.0.1 at 2018-03-25 17:36:04 -0400
+Started POST "/tasks" for 127.0.0.1 at 2018-03-25 17:36:08 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAMBeruKIISXzjcP40UpCfYyUHhA18TrekF3wYY68EGi1s43Kr1AMgLbyDPkxbw8V9M2Zy7rA2b1DOzYQ+S1Bg==", "task"=>{"name"=>"Get sauce", "description"=>"honey mustard, flour ", "complete_by"=>"2018-03-25"}, "commit"=>"Create Task"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveModel::ForbiddenAttributesError - ActiveModel::ForbiddenAttributesError:
+  app/controllers/tasks_controller.rb:16:in `create'
+
+Started POST "/__better_errors/53342c6c3748ae93/variables" for 127.0.0.1 at 2018-03-25 17:36:08 -0400
+Started POST "/tasks" for 127.0.0.1 at 2018-03-25 17:38:16 -0400
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wAMBeruKIISXzjcP40UpCfYyUHhA18TrekF3wYY68EGi1s43Kr1AMgLbyDPkxbw8V9M2Zy7rA2b1DOzYQ+S1Bg==", "task"=>{"name"=>"Get sauce", "description"=>"honey mustard, flour ", "complete_by"=>"2018-03-25"}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.2ms)[0m  [1m[32mINSERT INTO "tasks" ("name", "description", "complete_by", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Get sauce"], ["description", "honey mustard, flour "], ["complete_by", "2018-03-25"], ["created_at", "2018-03-25 21:38:17.001877"], ["updated_at", "2018-03-25 21:38:17.001877"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 16ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 17:38:17 -0400
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
