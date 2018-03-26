@@ -13,7 +13,7 @@
               data: { confirm: 'This will delete your task. Are you sure?' } %></span>
 
 <span class="completed">
-  <%= link_to 'Complete', complete_task_path(task[:id]), class: 'complete-link'%></span>
+  <%= link_to 'Complete', complete_task_path(task[:id]), method: :patch, class: 'complete-link'%></span>
 
   </li>
 <% end %>

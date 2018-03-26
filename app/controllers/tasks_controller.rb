@@ -38,7 +38,9 @@ class TasksController < ApplicationController
 
   def complete
     @task = Task.find(params[:id])
-    @task.completed
+    @task.update_attribute(:completed, Time.now)
+    redirect_to @task, notice: "Task Completed"
+
   end
 
   def destroy
