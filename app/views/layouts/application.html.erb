@@ -4,19 +4,21 @@
   <title>TaskList</title>
   <%= csrf_meta_tags %>
 
+  <%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </head>
 
 <body>
   <header>
     <nav>
       <ul>
-        <li>
+        <li class="fa fa-home">
           <%= link_to "Home", tasks_path %>
         </li>
-        <li class="add">
-          <%= link_to "Add a Task", new_task_path %>
+        <li class="fa fa-plus">
+          <%= link_to "Add", new_task_path %>
         </li>
       </ul>
     </nav>

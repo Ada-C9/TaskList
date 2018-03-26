@@ -3,10 +3,24 @@
   <ul class="tasklist">
     <%@tasks.each do |task| %>
     <li>
-      <%= link_to task.name.upcase, task_path(task.id) %>:
-      <span class="title">
-        <%= task.description %>
-      </span>
+      <% if !(task.complete.nil?) %>
+      <div class="completed">
+      <% else %>
+      <div>
+      <% end %>
+        <%= link_to task.name.upcase, task_path(task.id) %>:
+        <span class="title">
+          <%= task.description %>
+        </span>
+      </div>
+      <div class="taskactions"><% if task.complete.nil? %>
+        <%= button_to "Mark Complete", mark_complete_path(task.id), method: :patch, form_class:'btn'%>
+        <%else%>
+        <%= button_to "Unmark Complete", unmark_complete_path(task.id), :method => :patch, form_class:'btn' %>
+        <% end %>
+        <%= button_to "Edit", edit_task_path(task.id), form_class:'btn'%>
+        <%= button_to "Delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }, form_class:'btn'%>
+      </div>
     </li>
     <%end%>
   </ul>

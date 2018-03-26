@@ -1,11 +1,17 @@
 <nav class="edit_del">
   <ul>
     <li>
-      <%= link_to "Edit", edit_task_path %>
+      <%= button_to "Edit", edit_task_path, form_class:'btn_show' %>
     </li>
     <li>
-      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }%>
+      <%= button_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }, form_class:'btn_show'%>
     </li>
+    <% if !(@task.complete.nil?) %>
+    <li>
+      <div>Completed On: <%= @task[:complete] %></div>
+    </li>
+    <% end %>
+
   </ul>
 </nav>
 <section class="task">
