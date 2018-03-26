@@ -49,10 +49,25 @@ class TasksController < ApplicationController
     end
     redirect_to tasks_path
   end
+
+  def mark_complete
+    @task = Task.find(params[:id].to_i)
+    @task.complete = Date.today
+    @task.save
+    redirect_to tasks_path
+  end
+
+  def unmark_complete
+    @task = Task.find(params[:id].to_i)
+    @task.complete = nil
+    @task.save
+    redirect_to tasks_path
+  end
+
 end
 
 private
 
 def book_params
-  return params.require(:task).permit(:name, :description, :completion_date)
+  return params.require(:task).permit(:name, :description, :completion_date, :complete)
 end
