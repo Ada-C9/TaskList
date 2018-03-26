@@ -13,14 +13,9 @@
  *= require_tree .
  *= require_self
  */
-
- /* html{
-   background-image: url('solar_sys.jpg') no-repeat center center fixed;
-   /* background-image:url('solar_sys.jpg');
-   background-repeat:no-repeat;
-   background-size:contain; */
-   /* margin:0px;
- } */
+html{
+  color:white;
+}
 
  body{
    margin: 0px;
@@ -40,6 +35,7 @@ nav ul {
     justify-content: flex-start;
     margin-top:0px;
     list-style-type: none;
+    color: black;
 }
 
 #add_image{
@@ -75,10 +71,10 @@ nav ul li:last-of-type{
 }
 
 #task-list li{
-  color:white;
+
   flex-basis:0;
   flex-grow:1;
-  margin: 15px;
+  margin: 20px;
   font-family: Courier;
 }
 #buttons{
@@ -105,4 +101,23 @@ nav ul li:last-of-type{
   text-decoration: none;
   color:white;
   text-decoration: line-through;
+}
+
+#show{
+  padding:10px;
+  margin-left: 10px;
+}
+
+#show h2{
+  color:#f2f2f2;
+  text-decoration: underline;
+}
+
+#show div{
+  margin-bottom: 7px;
+}
+
+#show div span{
+  color: #bfbfbf;
+  font-weight: bold;
 }
