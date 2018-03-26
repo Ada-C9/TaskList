@@ -12,7 +12,7 @@ class TasksController < ApplicationController
 
     task = Task.new
     task.assign_attributes(task_params)
-  
+
 
     if task.save
       redirect_to '/tasks'
@@ -51,6 +51,17 @@ class TasksController < ApplicationController
     Task.destroy(params[:id])
 
     redirect_to tasks_path
+  end
+
+  def completed
+    task = Task.find(params[:id])
+
+    task.mark_complete = true
+    task.completion_date = Date.today
+
+    if task.save
+      redirect_to task_path
+    end
   end
 
 
