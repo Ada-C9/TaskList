@@ -1,13 +1,2 @@
 <h2>Create A New Task</h2>
-<%= form_for @task do |f| %>
-  <%= f.label :title, class: "title-lable" %>
-  <%= f.text_field :title, class: "title-input", placeholder: "Do This" %>
-
-  <%= f.label :description, class: "desc-label" %>
-  <%= f.text_field :description, class: "desc-input", placeholder: "Do you have details?" %>
-
-  <%= f.label :completion_date, "Date To Be Completed by" %>
-  <%= f.date_field :completion_date, min: Date.today %>
-
-  <%= f.submit %>
-<% end %>
+<%= render partial: "form", locals: { action_name: "Create" } %>
