@@ -1,13 +1,28 @@
-<h2> Taco Tuesday Task List!</h2>
+<section class="incomplete-task">
+  <h3> Incomplete Tasks</h3>
+  <ul>
+  <% @tasks.each do |task| %>
+    <% if task.complete == false %>
+      <li>
+        <strong><%= link_to(task.name, task_path(task)) %></strong>
+        (Do by: <%= task.due_date %>)<br>
+        <%= link_to("Mark Task as Completed!", completed_task_path(task), method: :patch) %>
+      </li>
+    <% end %>
+  <% end %>
+  </ul>
+</section>
 
-<ul>
-<% @tasks.each do |task| %>
-  <li>
-    <strong><%= link_to(task.name, task_path(task)) %></strong>
-    (Do by: <%= task.due_date %>)<br>
-    <%= link_to("Mark Task as Completed!", completed_task_path(task), method: :patch) %>
-  </li>
-<% end %>
-</ul>
-
-<%= link_to("Add a New Task", new_task_path()) %>
+<section class="completed-tasks">
+  <h3> Completed Tasks </h3>
+  <ul>
+  <% @tasks.each do |task| %>
+    <% if task.complete == true %>
+      <li>
+        <strong><%= link_to(task.name, task_path(task)) %></strong>
+        <p>Completed on: <%= task.complete_date %></p>
+      </li>
+    <% end %>
+  <% end %>
+  </ul>
+</section>
