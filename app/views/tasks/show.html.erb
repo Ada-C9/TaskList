@@ -1,4 +1,19 @@
-<h2>Details of Task:<%= @task[:name] %></h2>
-<p>Description: <%= @task[:description] %></p>
-<p>Date to be completed: <%= @task[:description] %></p>
-<%= link_to("Edit", edit_task_path(@task)) %>
+
+<main class ="form-box">
+  <h2>Details of Task: <%= @task[:name] %></h2>
+  <div>
+
+    <div>
+      <p>Description: <%= @task[:description] %></p>
+    </div>
+
+    <div>
+      <p>Date to be completed: <%= @task[:completion_date] %></p>
+    </div>
+
+    <div>
+      <%= button_to "Edit", edit_task_path(@task), method: :get, class:"button" %>
+    </div>
+
+  </div>
+</main>

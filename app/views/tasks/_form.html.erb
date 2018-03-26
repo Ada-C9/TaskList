@@ -1,14 +1,26 @@
-<%= form_for @task do |f| %>
+<main class ="form-box">
+  <ul>
+    <%= form_for @task do |f| %>
 
-<%= f.label :name %>
-<%= f.text_field :name %>
+    <li>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </li>
 
-<%= f.label :description %>
-<%= f.text_area :description %>
+    <li>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </li>
 
-<%= f.label :completion_date%>
-<%= f.date_field :completion_date%>
+    <li>
+      <%= f.label :completion_date%>
+      <%= f.date_field :completion_date%>
+    </li>
 
-<%= f.submit "Save the new task!" %>
+    <li>
+      <%= f.submit "Save!", class:"button" %>
+    </li>
 
-<% end%>
+    <% end%>
+  </ul>
+</main>

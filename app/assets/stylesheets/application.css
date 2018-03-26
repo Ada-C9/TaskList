@@ -1,71 +1,110 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- body {
-   font-family: Arial;
-   /* margin-left: 10%; */
- }
- h1 {
-   text-align: center;
- }
-
- .logo {
-   float: left;
-   justify-content: center;
- }
- .box {
-   color: purple;
-   line-height: 25pt;
-   /* display: flex;
-   align-items: center;
-   justify-content: center; */
-   /* border: solid; */
-   /* width: 45%; */
-   font-size: 14pt;
- }
-
-.complete {
-  text-decoration: line-through;
-}
-
- .box .text {
-   align-items: left;
-   color: red;
- }
- .big-box {
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+body {
+  font-family: Arial;
   display: flex;
   flex-direction: row;
-  width: 30%;
-  background-color: #c2d6d6;
-  border: black;
- }
+  justify-content: center;
+  background-color: #e6e6ff;
+}
 
+h1 {
+  font-family: Love Ya Like a Sister;
+  color: #660066;
+  font-size: 40pt;
+}
 
- .link:visited {
-   color: black;
+h2 {
+  font-size: 16pt;
+  font-family: Love Ya Like a Sister;
+}
 
- }
+.small-box {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
 
- .link:unvisited {
-   color: black;
- }
+.side-bar {
+  padding-right: 40pt;
+}
 
-.main_page > .tasklist .completed{
+.side-bar li {
+  padding: 10pt;
+}
+
+.button {
+  font-size: 14pt;
+  color: #660066;
+  border-color: #660066;
+  border-radius: 5pt;
+}
+
+section {
+  border: solid #660066 1.5pt;
+  border-radius: 10pt;
+  padding-left: 10%;
+  font-size: 15pt;
+  width: 450pt;
+  background-color: #e0e0eb;
+}
+
+#top-text {
+  text-align: center;
+  font-family: Love Ya Like a Sister;
+  font-size: 25pt;
+  color: #660066;
+  margin-right: 10%;
+}
+
+#tasklist {
+  line-height: 30pt;
+  color: #4d4dff;
+}
+
+.link {
+  text-decoration: none;
+  padding: 10pt;
+  color: black;
+}
+
+.link:visited {
+  color: black;
+}
+
+.link:unvisited {
+  color: black;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: #660066;
+  background-color: lightgray;
+}
+
+.main_page > #tasklist .completed{
   text-decoration: line-through;
 }
 
-.main_page >.tasklist .incomplete{
-  text-decoration: none;
+.form-box li {
+  list-style-type: none;
+  line-height: 40pt;
+}
+
+footer {
+  text-align: center;
+  padding-top: 30pt;
 }

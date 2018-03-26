@@ -6,28 +6,37 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <%= image_tag "to_do.jpg", alt:"site logo", class:"logo"%>
+  <div>
+    <header>
+      <h1>Task List</h1>
+    </header>
 
-    <h1>Welcome to Task List Application</h1>
-    <nav>
-      <ul>
-        <li><%= button_to "All Tasks", tasks_path %></li>
-        <li><%= button_to "Add Task", new_task_path %></li>
-      </ul>
+    <main>
 
-    </nav>
-  </header>
+      <div class ="small-box">
+        <div class ="side-bar">
+          <li><%= button_to "All Tasks", tasks_path, method: :get, class:"button" %></li>
+          <li><%= button_to "Add Task", new_task_path, method: :get, class:"button" %></li>
+        </div>
 
-  <main class ="big-box">
-    <%= yield %>
-  </main>
 
-  <footer>
-    <p>&copy; Brenda Rios, 2018</p>
-  </footer>
+        <section>
+          <%= yield %>
+        </section>
+
+      </div>
+
+    </main>
+
+
+
+    <footer>
+      <p>&copy; Brenda Rios, 2018</p>
+    </footer>
+  </div>
 </body>
 </html>
