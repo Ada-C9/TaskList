@@ -14,11 +14,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new
-    task.title = params[:task][:title]
-    task.description = params[:task][:description]
-    task.due_date = params[:task][:due_date]
-
+    task = Task.new(task_params)
     if task.save
       redirect_to tasks_path
     end
@@ -31,10 +27,7 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find_by(id: params[:id])
-    task.title = params[:task][:title]
-    task.description = params[:task][:description]
-    task.due_date = params[:task][:due_date]
-
+    task.update!(task_params)
     if task.save
       redirect_to task_path
     else
@@ -49,5 +42,11 @@ class TasksController < ApplicationController
     id = params[:id]
     @task = Task.find(id)
     @task.destroy
+  end
+
+  private
+
+  def task_params
+    return params.require(:task).permit(:title, :description, :due_date, :completed)
   end
 end
