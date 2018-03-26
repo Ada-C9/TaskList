@@ -1,16 +1,26 @@
+<section id="edit-page">
+  <h2>Edit: <%=@task.name%></h2>
 <%=form_for @task do |f| %>
-
+<span>
 <%= f.label :name%>
 <%= f.text_field :name%>
+</span>
 
-
-<%= f.label :completion_date, 'Predicted Completion Date' %>
+<span>
+<%= f.label :completion_date, 'Predicted Completion Date'%>
 <%= f.text_field :completion_date%>
+</span>
 
+<span>
 <%= f.label :actual_completion_date, 'Task Completed on' %>
 <%= f.text_field :actual_completion_date%>
+</span>
 
+<span>
 <%= f.label :description%>
 <%= f.text_field :description%>
+</span>
 <%= f.submit%>
 <%end%>
+
+</section>
