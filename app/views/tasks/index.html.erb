@@ -1,7 +1,6 @@
 <h4>TO DO:</h4>
 
 <% sorted = Task.sort.reverse %>
-<% completed_tasks = Task.where(status: 'COMPLETE') %>
 
 <ul class='list'>
   <li>
@@ -20,7 +19,7 @@
         <sub>
           Priority: <%= task.priority %>
         </sub>
-        <p>
+        <p class='description'>
           <%= task.description %>
         </p>
         <div>
@@ -41,6 +40,7 @@
 <h4> COMPLETED </h4>
 <ul class='list'>
   <li>
+    <% completed_tasks = Task.where(status: 'COMPLETE') %>
     <% if completed_tasks.empty? %>
       <h3> Complete some tasks! </h3>
     <% end %>

@@ -17,8 +17,8 @@
 /* for the header of the whole site */
 header {
   top: 0;
-  left: 0;
-  position: fixed;
+  left: -2vw;
+  position: sticky;
   display: flex;
   height: 8vh;
   width: 100vw;
@@ -30,7 +30,6 @@ header {
 header h1 {
   display: inline;
   margin: auto 4vw;
-  /*margin-left: 4vw;*/
   color: white;
 }
 
@@ -76,7 +75,7 @@ a:hover {
 /* for the website content */
 main {
   font-family: 'Arimo', sans-serif;
-  padding-top: 8vh;
+  padding-top: 2vh;
 }
 
 li > ul {
@@ -103,7 +102,8 @@ li > ul li:last-of-type {
 
 /* each task box */
 li section {
-  width: 20em;
+  width: 21vw;
+  min-height: 28vh;
   padding: auto;
   display: inline-block;
   border: thin solid grey;
@@ -112,14 +112,30 @@ li section {
   background-color: whitesmoke;
   box-shadow: 0 3px 5px rgba(0,0,0,0.15);
   transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 li section:hover {
   transform: scale(1.05, 1.05);
 }
 
-section > p {
+.list section > p {
   padding: 0 3vw;
+  margin-bottom: 1vw;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description::after {
+  content: '...';
+}
+
+li section > sub {
+  padding-left: 3vw;
 }
 
 .list li {
@@ -131,14 +147,17 @@ section > p {
 }
 
 ul section > div {
+  position: absolute;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  min-width: 20vw;
+  bottom: 0.5vw;
 }
 
 ul section > div p {
   padding: 0 1vw;
   border-right: solid thin black;
-  /*text-overflow: ellipsis;*/
 }
 
 section strong {
@@ -153,6 +172,7 @@ ul section > div p:last-of-type {
   text-decoration: line-through;
 }
 
+/* to do and completed bar */
 main h4 {
   font-size: 1.5em;
   background-color: rgb(205, 188, 233);
