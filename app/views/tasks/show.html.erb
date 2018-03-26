@@ -1,16 +1,12 @@
-<h2><%= @task.name%></h2>
+<section id="show">
+ <h2><%= @task.name%></h2>
 
+<div><span>Description:</span> <%= @task.description%> </div>
+<div><span>Predicted Completion Date:</span> <%= @task.completion_date%></div>
+<%printed_date = 'Pending'%>
+<% if @task.actual_completion_date !=nil %>
+  <%printed_date = @task.actual_completion_date%>
+<%end%>
 
-<p>
-<%@task.description%>
-</p>
-<!--
-<ul>
-  <li>
-  <%=link_to "Edit", edit_task_path%>
-    </li>
-    <li>
-<li>
-  <%=link_to "Delete", remove_item_path(@task.id), method: :delete%> </div>
-</li>
-</ul> -->
+<div><span>Actual Completion Date: </span><%= printed_date%></div>
+</section>
