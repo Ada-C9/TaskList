@@ -14,11 +14,37 @@
  *= require_self
  */
 
+.page {
+  font-family: 'Lato', sans-serif;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(250px, 4fr);
+  grid-template-areas:
+    "h h"
+    "n m"
+    "f f";
+}
 
 nav {
+  grid-area: n;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 15px;
+}
 
+nav > a {
+  margin-bottom: 10px;
+  background-color: lightgray;
+}
+
+nav > a:hover {
+  background-color: darkgray;
 }
 
 footer {
-
+  grid-area: f;
+  background-color: lightgray;
+  text-align: center;
+  padding: 5px;
 }

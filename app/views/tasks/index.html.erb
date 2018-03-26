@@ -11,12 +11,16 @@
           <%= task.name %>
           <%= task.completion_date ? "</del>".html_safe : "" %>
         </h3>
-        <p class="deadline">Deadline: <%= format_date(task.deadline) %></p>
-        <% action = task.completion_date ? "Unmark" : "Mark" %>
-        <%= link_to "#{action} as complete", mark_task_path(task), method: :patch %>
-        <%= link_to("Edit", edit_task_path(task))%>
-        <%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete #{ task.name}?"}%>
-        <%= link_to "See task details", task_path(task)%>
+
+        <p>Deadline: <%= format_date(task.deadline) %></p>
+
+        <section class="buttons">
+          <% action = task.completion_date ? "Unmark" : "Mark" %>
+          <div><%= link_to "#{action} as complete", mark_task_path(task), method: :patch %></div>
+          <div><%= link_to("Edit", edit_task_path(task))%></div>
+          <div><%= link_to "Delete", task_path(task), method: :delete, data: { confirm: "Are you sure you want to delete #{ 'task.name'}?"}%></div>
+          <div><%= link_to "See task details", task_path(task)%></div>
+        </section>
       </li>
     <% end %>
   </ol>

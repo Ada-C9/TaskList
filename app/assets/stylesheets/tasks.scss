@@ -1,20 +1,6 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  display: grid;
-  grid-template-areas:
-    "h n"
-    "m ."
-    "f f";
-}
-
-nav {
-  grid-area: n;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
 header {
   grid-area: h;
@@ -22,10 +8,6 @@ header {
 
 main {
   grid-area: m;
-}
-
-footer {
-  grid-area: f;
 }
 
 ol {
@@ -43,16 +25,9 @@ h2 {
   font-size: 1.5rem;
 }
 
-h3 {
+h3, label, input[type="submit"] {
   font-size: 1.15rem;
-}
-
-li>p, li>a {
-  font-size: 1rem;
-}
-
-li>p {
-  padding-bottom: 0.5rem;
+  font-weight: 400;
 }
 
 a {
@@ -65,10 +40,55 @@ a {
   border-radius: 0.75rem;
 }
 
-li>a:first-of-type {
-  width: 100px;
+a:hover, input[type="submit"]:hover {
+  background-color: lightgray;
 }
 
-a:hover {
-  background-color: lightgray;
+li > p {
+  font-style: italic;
+  font-weight: lighter;
+  padding-bottom: 0.5rem;
+}
+
+li > p, .buttons, input {
+  font-size: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.buttons > div {
+  margin: 0 1px 30px 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+form > div {
+  padding: 10px 0 10px 0;
+}
+
+input {
+  height: 20px;
+  border: 1px solid darkgray;
+}
+
+#task_name {
+  width: 250px;
+}
+
+#task_description {
+  width: 500px;
+}
+
+input[type="submit"] {
+  padding: 0.25rem 2rem 1.75rem 2rem;
+  background-color: lightblue;
+  border: 2px solid darkgray;
+  border-radius: 0.75rem;
 }

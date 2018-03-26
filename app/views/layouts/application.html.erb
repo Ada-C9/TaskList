@@ -6,12 +6,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application' 'https://fonts.googleapis.com/css?family=Lato' %>
   </head>
-  <nav>
-    <%= link_to "All Tasks", tasks_path %>
-    <%= link_to "New Task", new_task_path %>
-  </nav>
-  <body>
-    <%= yield %>
-  </body>
+
+  <div class="page">
+    <nav>
+      <%= link_to "All Tasks", tasks_path %>
+      <%= link_to "New Task", new_task_path %>
+    </nav>
+
+    <body>
+      <%= yield %>
+    </body>
+
+    <footer>
+      &copy 2018
+    </footer>
+  </div>
 </html>
