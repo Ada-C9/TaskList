@@ -1,12 +1,11 @@
-<h2>Task List</h2>
+<h1>Task List</h1>
 <ul>
   <% @task.each do |task| %>
   <li class="list">
-    <a> <%= link_to task.task_name, task_path(task.id) %> </a>
+    <%= link_to task.task_name, task_path(task.id), class: "title" %>
     <ul class="task-options">
       <li>
-        <!-- <input type="button" value="Mark Complete" incomplete> -->
-        <%= link_to "Mark Complete", mark_task_complete_path(task.id), class: "complete"%>
+        <%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch, class: "mark-complete",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
       </li>
       <li>
         <%= link_to "Edit", edit_task_path(task.id)%>

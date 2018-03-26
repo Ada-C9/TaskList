@@ -50,7 +50,10 @@ class TasksController < ApplicationController
   end
 
   def mark_task_complete
-
+    @task = Task.find_by(id: params[:id])
+      @task.completion_date = Time.now
+      @task.save
+      redirect_to root_path
   end
 
 private

@@ -14,24 +14,22 @@
  *= require_self
  */
 
-/* Linked Fonts
-font-family: 'Poiret One', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Satisfy', cursive; */
-/* body{
-  background-image:                    url("https://i0.wp.com/loecpa.com/wp-content/uploads/2016/11/Legal-pad-background.png");
-} */
  * {
-   font-family: 'Permanent Marker', cursive;
+   /* font-family: 'Poiret One', cursive; */
+   /* font-family: 'Permanent Marker', cursive; */
+   font-family: 'Satisfy', cursive;
  }
- .nav ul {
-   display: flex;
-   flex-flow: column wrap;
-   justify-content: flex-start;
- }
+
+.title {
+  font-size: 1.5em;
+}
+
 .list {
   list-style: none;
   display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+
 }
 /* .list::before {
  content: "❍";
@@ -56,6 +54,7 @@ a {
   flex-flow: row wrap;
   padding-left: 1em;
   justify-content: center;
+  padding-left: 0;
 }
 
 .task-options a::before, .navigation ul li::before {
@@ -74,4 +73,9 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  padding-left: 0
+}
+
+.mark-complete {
+  text-decoration: line-through;
 }

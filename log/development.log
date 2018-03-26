@@ -3806,3 +3806,392 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:02:25 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:04:16 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:04:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:04:53 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:05:28 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 41ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:06:06 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 34ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:06:51 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:08:19 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:11:10 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:12:26 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  Rendered tasks/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/marikoanderson/Documents/ada/rails/TaskList/app/views/tasks/index.html.erb:5: syntax error, unexpected '='
+...ame, task_path(task.id), class="title" );@output_buffer.safe...
+...                              ^):
+  
+app/views/tasks/index.html.erb:5: syntax error, unexpected '='
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:13:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 32.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:13:39 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:13:52 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:14:20 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:14:56 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:15:23 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:17:22 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 14:17:50 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 20:38:50 -0500
+  
+NoMethodError (undefined method `patch' for main:Object
+Did you mean?  catch):
+  
+config/routes.rb:13:in `<top (required)>'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 20:39:16 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (247.8ms)
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 9.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `mark_complete_path' for #<#<Class:0x00007f946d688478>:0x00007f946d682708>
+Did you mean?  mark_task_complete_path):
+     5:     <%= link_to task.task_name, task_path(task.id), class: "title" %>
+     6:     <ul class="task-options">
+     7:       <li>
+     8:         <%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch, class: "option selections",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure' }%>
+     9:       </li>
+    10:       <li>
+    11:         <%= link_to "Edit", edit_task_path(task.id)%>
+  
+app/views/tasks/index.html.erb:8:in `block in _app_views_tasks_index_html_erb___3106392196307807167_70137733727800'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3106392196307807167_70137733727800'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 20:40:15 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 20:40:20 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"YsXpNADf2L/W+om/MAaDBpD3wVdtKlT+XsNiESe1df1mPMF/ULpLmWt8+hR2dmIIX1j1Hcm+RTMugNJYmFC+nw==", "id"=>"1"}
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `mark_task_complete=' for #<Task:0x00007f946dc71100>):
+  
+app/controllers/tasks_controller.rb:54:in `mark_task_complete'
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 20:42:19 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"YsXpNADf2L/W+om/MAaDBpD3wVdtKlT+XsNiESe1df1mPMF/ULpLmWt8+hR2dmIIX1j1Hcm+RTMugNJYmFC+nw==", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `mark_task_complete=' for #<Task:0x00007f946d74b478>):
+  
+app/controllers/tasks_controller.rb:54:in `mark_task_complete'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 20:42:24 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 20:42:30 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"/MeaR4PMMSdEKBpBPJpjLw8/NC9QXfBSfcoPmdPAQdD4PrIM06miAfmuaep66oIhwJAAZfTJ4Z8Nib/QbCWKsg==", "id"=>"1"}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `mark_task_complete=' for #<Task:0x00007f94688ba5c0>):
+  
+app/controllers/tasks_controller.rb:54:in `mark_task_complete'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 20:57:12 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (198.5ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `mark_task_complete_path' for #<#<Class:0x00007f946b4937c8>:0x00007f946b470570>
+Did you mean?  mark_complete_path):
+     5:     <%= link_to task.task_name, task_path(task.id), class: "title" %>
+     6:     <ul class="task-options">
+     7:       <li>
+     8:         <%= link_to "Mark Complete", mark_task_complete_path(task.id), method: :patch, class: "mark-complete",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
+     9:       </li>
+    10:       <li>
+    11:         <%= link_to "Edit", edit_task_path(task.id)%>
+  
+app/views/tasks/index.html.erb:8:in `block in _app_views_tasks_index_html_erb___3106392196307807167_70137715950340'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3106392196307807167_70137715950340'
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 20:57:23 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"/MeaR4PMMSdEKBpBPJpjLw8/NC9QXfBSfcoPmdPAQdD4PrIM06miAfmuaep66oIhwJAAZfTJ4Z8Nib/QbCWKsg==", "id"=>"1"}
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `mark_complete=' for #<Task:0x00007f94686cf328>):
+  
+app/controllers/tasks_controller.rb:54:in `mark_task_complete'
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 21:16:58 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"/MeaR4PMMSdEKBpBPJpjLw8/NC9QXfBSfcoPmdPAQdD4PrIM06miAfmuaep66oIhwJAAZfTJ4Z8Nib/QbCWKsg==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completion_date", "2018-03-25 21:16:58 -0500"], ["updated_at", "2018-03-26 02:16:58.565408"], ["id", 1]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 12.3ms)
+
+
+  
+NameError (undefined local variable or method `root_path' for #<TasksController:0x00007f946de3ab58>):
+  
+app/controllers/tasks_controller.rb:60:in `mark_task_complete'
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 21:22:06 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"/MeaR4PMMSdEKBpBPJpjLw8/NC9QXfBSfcoPmdPAQdD4PrIM06miAfmuaep66oIhwJAAZfTJ4Z8Nib/QbCWKsg==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completion_date", "2018-03-25 21:22:06 -0500"], ["updated_at", "2018-03-26 02:22:06.191265"], ["id", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-25 21:22:06 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (187.0ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `mark_task_complete_path' for #<#<Class:0x00007f946d491480>:0x00007f946d4a3220>
+Did you mean?  mark_complete_path):
+     5:     <%= link_to task.task_name, task_path(task.id), class: "title" %>
+     6:     <ul class="task-options">
+     7:       <li>
+     8:         <%= link_to "Mark Complete", mark_task_complete_path(task.id), method: :patch, class: "mark-complete",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
+     9:       </li>
+    10:       <li>
+    11:         <%= link_to "Edit", edit_task_path(task.id)%>
+  
+app/views/tasks/index.html.erb:8:in `block in _app_views_tasks_index_html_erb___3106392196307807167_70137732698100'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3106392196307807167_70137732698100'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 21:22:56 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (173.2ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `mark_task_complete_path' for #<#<Class:0x00007f94699391a8>:0x00007f946d4080b8>
+Did you mean?  mark_complete_path):
+     5:     <%= link_to task.task_name, task_path(task.id), class: "title" %>
+     6:     <ul class="task-options">
+     7:       <li>
+     8:         <%= link_to "Mark Complete", mark_task_complete_path(task.id), method: :patch, class: "mark-complete",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
+     9:       </li>
+    10:       <li>
+    11:         <%= link_to "Edit", edit_task_path(task.id)%>
+  
+app/views/tasks/index.html.erb:8:in `block in _app_views_tasks_index_html_erb___3106392196307807167_70137701585980'
+app/views/tasks/index.html.erb:3:in `_app_views_tasks_index_html_erb___3106392196307807167_70137701585980'
+Started GET "/tasks" for 127.0.0.1 at 2018-03-25 21:24:02 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/tasks2" for 127.0.0.1 at 2018-03-25 21:24:07 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"rDXs60MxRnvXjAKC9/G5l6K1aYbKwZEFc4xjlsFNazKozMSgE1TVXWoKcSmxgViZbRpdzG5VgMgDz9PffqigUA==", "id"=>"2"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completion_date", "2018-03-25 21:24:07 -0500"], ["updated_at", "2018-03-26 02:24:07.724725"], ["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-25 21:24:07 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 21:24:20 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"8ITDrKbBdxYijLFtGmQRog18nkwz0Be3HeO0/SPXZM/0fevn9qTkMJ8KwsZcFPCswtOqBpdEBnptoAS0nDKvrQ==", "id"=>"1"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completion_date", "2018-03-25 21:24:20 -0500"], ["updated_at", "2018-03-26 02:24:20.950102"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-25 21:24:20 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks1" for 127.0.0.1 at 2018-03-25 21:24:31 -0500
+Processing by TasksController#mark_task_complete as HTML
+  Parameters: {"authenticity_token"=>"iTtdDhvJM3RtSsz4BTILF4EL1AH0Nok3TeDl2EOIDh2NwnVFS6ygUtDMv1NDQuoZTqTgS1CimPo9o1WR/G3Ffw==", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "completion_date" = $1, "updated_at" = $2 WHERE "tasks"."id" = $3[0m  [["completion_date", "2018-03-25 21:24:31 -0500"], ["updated_at", "2018-03-26 02:24:31.281296"], ["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-25 21:24:31 -0500
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
