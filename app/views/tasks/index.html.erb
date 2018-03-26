@@ -5,13 +5,24 @@
     <div class="task">
       <%= task[:name] %> is <%= task[:status].downcase %>.
       <br>
-      This is a level <%= task[:priority] %> task. It needs to be complete by <%= task[:due] %>.
+
+      <% if task[:date_completed].nil? %>
+        This is a level <%= task[:priority] %> task. It's targeted due date is <%= task[:due]%>.
+      <% else %>
+        This was a level <%= task[:priority] %> task.
+          <% if task[:due] >= task[:date_completed] %>
+            It was completed on time or ahead of schedule as of <%= task[:date_completed] %>.
+          <% else %>
+            It was completed <%= task[:date_completed] - task[:due] %> days late.
+          <% end %>
+      <% end %>
+
     </div>
 
     <div class="actions">
       <%= link_to "More", task_path(task.id) %>
-      <%= link_to "Edit", edit_task_path(task) %>
-      <%= link_to "Done", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete #{task.name}?"} %>
+      <%= link_to "Done", mark_complete_path(task.id), method: :patch, data: {confirm: "Are you sure you want to mark #{task.name.downcase} complete?"} %>
+      <%= link_to "Delete", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete #{task.name.downcase} from your list?"} %>
     </div>
   </div>
   <% end %>

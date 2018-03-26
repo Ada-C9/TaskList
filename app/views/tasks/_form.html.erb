@@ -1,7 +1,11 @@
 <div class="form">
 
-  <ul>
+  <h2><%= page_title %></h2>
+
   <%= form_for @task do |f| %>
+
+  <ul>
+
     <li><%= f.label :name, :class => 'entry' %>:
       <%= f.text_field :name %></li>
 
@@ -17,9 +21,9 @@
     <li><%= f.label :status, :class => 'entry' %>:
       <%= f.select :status, ['Not Started','In Progress'] %></li>
 
-    </ul>
+    <li><%= f.submit "Save", :class => 'submit' %></li>
 
-    <%= f.submit "Submit", :class => 'submit' %>
+  </ul>
 
   <% end %>
 </div>

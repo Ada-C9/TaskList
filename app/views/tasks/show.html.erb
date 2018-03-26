@@ -1,8 +1,12 @@
 <div class ="show">
   <h2>Details for <%= @task.name %></h2>
-  <p>Description: <%= @task.description %></p>
-  <p>Priority: <%= @task.priority %></p>
-  <p>Due: <%= @task.due %></p>
-  <p>Status: <%= @task.status %></p>
-  <%= link_to "Edit", edit_task_path(@task) %>
+
+  <ul>
+    <li>Description: <%= @task.description %></li>
+    <li>Priority: <%= @task.priority %></li>
+    <li>Due: <%= @task.due %></li>
+    <li>Status: <%= @task.status %></li>
+    <li><%= link_to "Edit", edit_task_path(@task) %></li>
+  </ul>
+  
 </div>

@@ -37,6 +37,24 @@ class TasksController < ApplicationController
     end
   end
 
+
+  def mark_complete
+
+    task = Task.find(params[:id])
+
+    if task.date_completed.nil?
+      task.date_completed = Date.today
+      task.status = "Complete"
+    else
+      task.date_completed == nil
+    end
+
+    if task.save
+      redirect_to tasks_path
+    end
+
+  end
+
   def destroy
     if Task.destroy(params[:id])
       redirect_to tasks_path
@@ -45,7 +63,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    return params.require(:task).permit(:name, :description, :priority, :due, :status)
+    return params.require(:task).permit(:name, :description, :priority, :due, :status, :date_completed)
   end
 
 end
