@@ -1,15 +1,51 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+   font-family: Arial;
+   background-color: lightblue;
+ }
+ h1 {
+   text-align: center;
+ }
+
+ .logo {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ .big_box {
+   color: purple;
+   line-height: 25pt;
+   font-size: 14pt;
+ }
+
+ .box .text {
+   align-items: left;
+   color: red;
+ }
+
+ .link {
+   text-decoration: none;
+   padding-right: 12pt;
+
+ }
+
+.link-complete {
+   text-decoration: none;
+   padding-right: 12pt;
+   text-decoration: line-through;
+ }
+
+ .link:visited {
+   color: black;
+
+ }
+
+ .link:unvisited {
+   color: black;
+ }
+ .main_page > .tasklist .completed{
+  text-decoration: line-through;
+}
+
+.main_page >.tasklist .incomplete{
+  text-decoration: none;
+}
