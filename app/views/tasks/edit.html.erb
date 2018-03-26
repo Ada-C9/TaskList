@@ -1,0 +1,12 @@
+<%= form_for @task do |f| %>
+  <%= f.label :time_of_day %>
+  <%= f.text_field :time_of_day %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :completed %>
+  <%= f.text_field :completed %>
+
+  <%= f.submit "Update task!" %>
+<% end %>

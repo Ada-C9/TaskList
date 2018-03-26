@@ -5,9 +5,16 @@
 <ol><% @tasks.each do |task| %>
   <li>
     <!-- TODO: PUT A LINK TO SHOW AND EDIT IN HERE -->
-    <%= "Morning Task: #{task.name}" %>
+    <%= "Task: #{task.name}" %>
     <%= link_to 'Show Details', task_path(task) %>
     <%= link_to 'Edit Task', edit_task_path(task) %>
+    <%= link_to 'Delete', task_path(task),
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %>
   </li>
   <% end %>
+
+  <p>
+    <%= link_to("Add a New Task", new_task_path, class: "important") %>
+  </p>
 </ol>
