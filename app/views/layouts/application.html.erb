@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>TaskList</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
     <nav>
       <ul>
-        <li>
-          <%= link_to "All Tasks", tasks_path %>
-        </li>
-        <li>
-          <%= link_to "Add a Task", new_task_path %>
-        </li>
+        <li class="nav-list-item"><%= link_to "All Tasks", tasks_path %></li>
+        <li class="nav-list-item"><%= link_to "Add a Task", new_task_path %></li>
       </ul>
     </nav>
 
-    <%= yield %>
+    <section class="main-page">
+      <%= yield %>
+    </section>
+    
   </body>
+
 </html>

@@ -29,6 +29,7 @@ class TasksController < ApplicationController
 
   def mark_complete
     @task = Task.find(params[:id])
+    @task[:status] = "complete"
     redirect_to tasks_path
   end
 
@@ -36,6 +37,7 @@ class TasksController < ApplicationController
     Task.find(params[:id]).destroy
     redirect_to tasks_path
   end
+
 
   private
 

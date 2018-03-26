@@ -1,12 +1,15 @@
-<h1>Tasks Index</h1>
-<ul>
+<p class="header">
+  TaskList
+</p>
+</div>
+<ul class="tasks-list-list">
 <% @tasks.each do |task| %>
   <li>
-    <span class="entry">
-      <%= link_to task.name, task_path(task.id), class: 'teal-font' %>
-    </span>
-    due by <%= task.due %>
-    status <%= task.status %>
+    <ul class="tasks-list-task">
+      <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
+      <li class="task-list-property task-status">Status: <%= task.status %></li>
+      <li class="task-list-property task-due">Due: <%= task.due %></li>
+    </ul>
   </li>
 <% end %>
 <ul>
