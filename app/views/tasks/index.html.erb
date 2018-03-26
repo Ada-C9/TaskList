@@ -1,9 +1,9 @@
-<% if (Time.now.hour < 12) && (Time.now.hour > 4)%>
-  <h2> Good morning Wini!</h2>
-  <%elsif (Time.now.hour > 17) && (Time.now.hour < 4)%>
-  <h2> Good evening Wini!</h2>
+<% if (Time.now < Time.parse("12:00")) && (Time.now > Time.parse("4:00"))%>
+  <h2>Good morning Wini!</h2>
+  <%elsif (Time.now > Time.parse("17:00")) || (Time.now < Time.parse("4:00"))%>
+  <h2>Good evening Wini!</h2>
   <%else%>
-  <h2> Good afternoon Wini! </h2>
+  <h2>Good afternoon Wini!</h2>
 <% end %>
 
 
