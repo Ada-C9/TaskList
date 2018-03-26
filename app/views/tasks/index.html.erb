@@ -16,18 +16,19 @@
 </ul>
 
 
-<section class="incomplete">
+<section class="completed-tasks-list">
   <p class="subheader">
     Completed
   </p>
   <ul class="tasks-list-list">
   <% @tasks.each do |task| %>
     <% next if task.status == "Incomplete" %>
-    <!-- <li> -->
+    <li>
+    <ul class="tasks-list-task">
         <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
-        <li class="?">Complted on: <%= task.completed_on %></li>
-      <!-- </ul> -->
-    <!-- </li> -->
+        <li class="task-completed-on">Completed on: <%= task.completed_on %></li>
+      </ul>
+    </li>
   <% end %>
   </ul>
 </section>

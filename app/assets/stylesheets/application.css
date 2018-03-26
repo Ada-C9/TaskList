@@ -111,8 +111,10 @@ nav ul {
 }
 
 .subheader {
-  border-top: 2px solid #441151;
-  padding-top: 10px;
+  border-top: 0.5em solid #883677;
+  /* margin-top: 1em; */
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .tasks-list-list {
@@ -152,16 +154,23 @@ nav ul {
   padding-left: 5px;
 }
 
-.incomplete * {
+.completed-tasks-list * {
   color: #441151;
-  font-size: 90%;
+  font-size: 95%;
 }
 
-.incomplete .tasks-list-list {
-  background: rgba(202,97,195,0.10);
+.completed-tasks-list .tasks-list-list {
+  background: rgba(202,97,195,0.07);
+  border-bottom: 0.5px solid white;
 }
 
 .form-fields {
   background: #883677;
   /* color: white; */
+}
+
+.tasks-list-list .task-completed-on {
+ /* color: red; */
+ font-size: 60%;
+ padding-left: 15px;
 }
