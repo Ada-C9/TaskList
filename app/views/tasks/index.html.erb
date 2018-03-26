@@ -1,0 +1,17 @@
+<h1>Tasks List</h1>
+<ul class="tasks">
+  <% @tasks.each do |task| %>
+  <li>
+    <input type="checkbox" >
+    <strong><%= task.name %></strong> : <%= task.description %> : <%= task.completion_date %>
+
+    <%= link_to("Edit", edit_task_path(task)) %>
+    <%= link_to("Delete", task_path(task.id), method: :delete, data: { confirm: "Are you sure?" }) %>
+    <% if task.completed? %>
+      <%= link_to("Complete", complete_task_path(task.id), method: :patch) %>
+    <% else %>
+      <%= link_to("incomplete", incomplete_task_path(task.id), method: :patch) %>
+    <% end %>
+  </li>
+  <% end %>
+</ul>

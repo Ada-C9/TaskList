@@ -1,0 +1,57 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 100%;
+  border-style: solid;
+  border-radius: 15px;
+  width: 800px;
+  background-color: lightskyblue;
+  padding: 20px;
+}
+
+.tasks {
+  list-style-type: none;
+  line-height: 100%;
+  border-style: solid;
+  border-radius: 15px;
+  width: 800px;
+  background-color: lightskyblue;
+  padding: 20px;
+
+}
+
+.tasks li {
+  font-size: 1.5em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+.tasks li:hover {
+  font-size: 2em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+nav ul li {
+  list-style-type: none;
+  text-align: center;
+  line-height: 200%;
+  border-style: solid;
+  border-radius: 15px;
+  width: 200px;
+  background-color: lightgreen;
+}

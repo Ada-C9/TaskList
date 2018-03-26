@@ -1,0 +1,15 @@
+<!-- <%=form_for @task do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :description %>
+<%= f.text_field :description %>
+
+<%= f.label :completion_date %>
+<%= f.date_field :completion_date %>
+
+<%= f.submit "New task" %>
+<% end %> -->
+
+
+<%= render partial: "form", locals: {task_name: "Create a new task"} %>
