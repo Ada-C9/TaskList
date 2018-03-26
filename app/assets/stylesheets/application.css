@@ -13,6 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Josefin Slab', serif;
+  background-color: rgb(240, 222, 226);
+  color: gray;
+}
+a {
+  text-decoration: none;
+  color: gray;
+  line-height: 1.3rem;
+}
+
+.task_name {
+  font-size: 1.5rem;
+}
+
+
+a:hover {
+  color: black;
+  font-size: 1.2rem;
+}
+
 img.logo {
   height: 5rem;
 }
@@ -24,4 +46,12 @@ ul {
 header ul {
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+footer {
+  margin: 10%;
+  margin-left: 5%;
+}
+footer span {
+  padding: 2%;
+  border: 2px solid #aaa;
 }

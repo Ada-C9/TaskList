@@ -5,19 +5,20 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 </head>
 
 
 <body>
   <header>
     <ul>
-      <li><%= image_tag "task_icon.jpg", alt:"Task icon", class: "logo"%></li>
+      <li><%= image_tag "task.png", alt:"Task icon", class: "logo"%></li>
       <li>Todays date: <%= Time.now%></li>
     </ul>
   </header>
   <%= yield %>
   <footer>
-    <%= link_to "All tasks", tasks_path %>
+    <span><%= link_to "All tasks", tasks_path %></span>
   </footer>
 </body>
 </html>

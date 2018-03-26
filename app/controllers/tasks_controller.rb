@@ -22,7 +22,7 @@ class TasksController < ApplicationController
     new_task.priority = incoming_task[:priority]
 
     if new_task.save
-      redirect_to all_tasks_path
+      redirect_to tasks_path
     end
   end
 
