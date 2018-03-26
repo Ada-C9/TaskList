@@ -16,7 +16,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-    if task.save
+    if @task.save
       redirect_to tasks_path
     else
       render :new
@@ -32,6 +32,7 @@ class TasksController < ApplicationController
 
     if !@task.nil?
       if @task.update(task_params)
+      # if @task.save
       redirect_to task_path(@task.id)
       else
         render :edit
@@ -51,7 +52,14 @@ class TasksController < ApplicationController
 
   def mark_task_complete
     @task = Task.find_by(id: params[:id])
-      @task.completion_date = Time.now
+      @task.status = "Complete"
+      @task.save
+      redirect_to root_path
+  end
+
+  def mark_task_incomplete
+    @task = Task.find_by(id: params[:id])
+      @task.status = "Incomplete"
       @task.save
       redirect_to root_path
   end
@@ -59,7 +67,7 @@ class TasksController < ApplicationController
 private
 
 def task_params
-  return params.require(:task).permit(:task_name, :description, :completion_date)
+  return params.require(:task).permit(:task_name, :description, :completion_date, :status)
 end
 
 end

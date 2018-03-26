@@ -4,9 +4,17 @@
   <li class="list">
     <%= link_to task.task_name, task_path(task.id), class: "title" %>
     <ul class="task-options">
-      <li>
-        <%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch, class: "mark-complete",  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
-      </li>
+      <% if task.status == "Complete" %>
+
+        <li>
+          <%= link_to "Mark Incomplete", mark_incomplete_path(task.id), method: :patch%>
+        </li>
+
+      <% else %>
+        <li>
+          <%= link_to "Mark Complete", mark_complete_path(task.id), method: :patch,  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
+        </li>
+      <% end %>
       <li>
         <%= link_to "Edit", edit_task_path(task.id)%>
       </li>
