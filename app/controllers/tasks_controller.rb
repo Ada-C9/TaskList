@@ -53,7 +53,9 @@ class TasksController < ApplicationController
 
   def mark_complete
     @task = Task.find_by(id: params[:id])
-    @task.update_attribute(:completion_date, Time.now)
+    # @task.update(:completion_date, Time.now)
+
+    @task.update(id: params[:id], completion_date: Time.now)
     redirect_to index_path
     # if @task.completion_date.kind_of?(Time)
     #   redirect_to index_path
@@ -77,7 +79,7 @@ class TasksController < ApplicationController
 
   def task_params
     # You don't need an explicit return here, but if it helps keep things straight in your head, it's okay to do it.
-    return params.require(:task).permit(:name, :completion_date, :description)
+    params.require(:task).permit(:name, :completion_date, :description)
     # If you want to add new fields, you have to add them here, not in the create or update methods.
   end
 end
