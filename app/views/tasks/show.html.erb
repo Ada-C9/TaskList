@@ -1,7 +1,18 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
 
+<section id = "show_container">
+
 <h2><%= @task.name %></h2>
-<h3><%= @task.description %></h3>
-<p>
-  <%= @task.complete_by %>
-</p>
+<h3>Details: <%= @task.description %></h3>
+<h3>Complete by: <%= @task.complete_by %></h3>
+<h3>Completed: <%= @task.completed %></h3>
+</section>
+
+<section class = "button_container">
+  <p>
+    <%= link_to "Edit Task", edit_task_path, class: "button" %>
+  </p>
+  <p>
+    <%= link_to "Delete Task", task_path(@task.id), method: :delete, class: "button" %>
+  </p>
+</section>

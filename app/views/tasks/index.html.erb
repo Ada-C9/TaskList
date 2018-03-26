@@ -1,20 +1,23 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' />
 <header>
-<h1>Tasks</h1>
+<h1>Task Time!</h1>
 </header>
 
-<p id="list_container">
+<section id="list_container">
+
 <ol>
   <% @tasks.each do |task| %>
 
       <li>  <%= link_to task.name, task_path(task.id) %></li>
       <ul>
       <li>Description: <%= task.description.capitalize %></li>
-      <li>Completion Date: <%= task.complete_by %></li>
+      <li>Complete By: <%= task.complete_by %></li>
+        <%= link_to "Completed", task_completed_path(task.id), method: :patch, id: "completed_button" %>
     </ul>
   <% end %>
 </ol>
-</p>
+</section>
 
 <aside>
   <p>
