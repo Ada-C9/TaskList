@@ -28,9 +28,11 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
-    @task = Task.find(params[:id])
-    @task[:status] = "complete"
+    @task = Task.find(params[:id].to_i)
+    @task.update(status: "complete")
+    @task.save #? (redirect_to task_path(@task.id)) : (render :edit)
     redirect_to tasks_path
+      # @task.update(task_params) ? (redirect_to task_path(@task.id)) : (render :edit)
   end
 
   def destroy
