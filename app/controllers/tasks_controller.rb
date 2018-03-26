@@ -32,13 +32,6 @@ class TasksController < ApplicationController
     @task.update(status: "Complete")
     @task.save
     redirect_to task_path(@task.id)
-    # @task = Task.find_by(id: params[:id])
-    # @task.status = "complete"
-    # @task.update(task_params) ? (redirect_to task_path(@task.id)) : (render :edit)
-
-    # @task.save #? (redirect_to task_path(@task.id)) : (render :edit)
-    # redirect_to tasks_path
-      # @task.update(task_params) ? (redirect_to task_path(@task.id)) : (render :edit)
   end
 
   def destroy

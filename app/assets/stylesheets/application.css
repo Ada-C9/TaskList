@@ -23,10 +23,6 @@
   color: rgb(50, 92, 126);
   margin: 0;
   padding: 0;
-/*
-  border-style: solid;
-  border-width: 0.25px; */
-
 }
 
 a {
@@ -34,8 +30,6 @@ a {
 }
 
 ul {
-  /* margin: 0;
-  padding: 0; */
   list-style-type: none;
 }
 
@@ -45,9 +39,8 @@ body {
  max-width: 40vw;
  display: grid;
  flex-flow: column;
- /* padding: 0.5em; */
- border-style: solid;
- border-width: 1px;
+ /* border-style: solid;
+ border-width: 1px; */
 
 }
 
@@ -80,11 +73,7 @@ nav {
 nav ul {
   min-height: inherit;
   display: flex;
-  /* height: 100%; */
-  /* flex-basis: auto; */
   flex-flow: row nowrap;
-  /* padding: 0em; */
-  /* margin: 0em; */
   justify-content: flex-end;
   margin-top: -3px;
   margin-bottom: 0px;
@@ -95,14 +84,11 @@ nav ul {
   padding-top: 0em;
   padding-left: 0em;
   padding-right: 0.5em;
-  /* color: white; */
-    /* border-left: 1px solid white; */
 }
 
 .nav-list-item a {
   font-size: 70%;
   color: white;
-  /* border: 0.2px solid white; */
   padding-bottom: 5px;
   padding-top: 5px;
   padding-left: 5px;
@@ -113,7 +99,6 @@ nav ul {
 .nav-list-item a:hover {
   background-color: white;
   color: #883677;
-
 }
 
 
@@ -122,44 +107,21 @@ nav ul {
   margin: 0px;
   color: #441151;
   font-size: 150%;
-
-/* display: flex; */
-/* font-size: 120%; */
-
-  /* height: 100%; */
 }
-
-
-/* nav li {
-  font-size: 14pt;
-} */
 
 .tasks-list-list {
   background: rgba(202,97,195,0.25);
-
-  /* display: flex;
-  flex-flow: column; */
 }
 
 .tasks-list-task {
-  border-top: 0.5px solid #883677;
+  border-top: 0.5px solid white;
   padding-top: 5px;
   padding-bottom: 5px;
-  /* height: 0%; */
   display: grid;
-  /* grid-row: nowrap; */
-  /* grid-row: 2;
-  grid-column: 2; */
-  /* grid-template-rows: repeat(2, 1fr); */
-/* color: red; */
   grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: 2em 2em; */
   grid-template-areas:
   "task-name task-name"
   "task-status task-due"
-
-  /* grid-template-rows: 2 1; */
-
 }
 
 .tasks-list-task * {
@@ -171,39 +133,17 @@ nav ul {
 .task-name {
   grid-area: task-name;
   padding-left: 5px;
-
-  /* color: green; */
-  /* grid-column-start: 1;
-  grid-column-end: 3; */
-  /* padding: 0;
-  margin: 0; */
 }
 
 .task-list-property {
   font-size: 70%;
-    /* font-weight:lighter; */
-  /* width: 30%; */
 }
 
 .task-due {
-
-  /* grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-start: 3; */
   grid-area: task-due;
-  /* color: red; */
 }
 
 .task-status {
   grid-area: task-status;
   padding-left: 5px;
-  /* grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-start: 3; */
 }
-
-/* .task-name + ul {
-  margin-left: 2em;
-} */
