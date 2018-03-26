@@ -1,3 +1,5 @@
+require 'pry'
+
 class TasksController < ApplicationController
 
   def index
@@ -46,13 +48,11 @@ class TasksController < ApplicationController
   def completion_status
     @task = Task.find(params[:id])
 
-    @task.completion_status = !@task.completion_status
+    @task[:completion_status] = true
 
-    if @task.completion_status == true
-      @task.completion_date = Datetime.now
-    else
-      @task.completion_date = nil
-    end
+    @task[:completion_date] = Time.now.getutc
+
+    @task.save
 
     redirect_to tasks_path
   end

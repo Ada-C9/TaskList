@@ -3,7 +3,7 @@
 <h3>Task <%= @task.name %></h3>
 <ul>
   <li>Description: <%= @task.description %></li>
-  <li>Completion Date: <%=@task.completion_date%></li>
+  <li>Completion Date: <%= @task.completion_date %></li>
 </ul>
 
 <%= link_to("Edit this Task", edit_task_path) %>
