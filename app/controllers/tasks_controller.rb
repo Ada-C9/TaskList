@@ -62,5 +62,14 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to tasks_path
     end
-end
+  end
+
+  def uncomplete
+    @task = Task.find_by(id: params[:id])
+    @task.actual_completion_date = nil
+    if @task.save
+      redirect_to tasks_path
+    end
+  end
+
 end
