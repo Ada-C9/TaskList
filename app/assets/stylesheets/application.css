@@ -60,10 +60,11 @@ nav ul li:last-of-type{
   margin-left: 65%;
   margin-top:1%;
   font-family: Courier;
-  font-size: 30px;
+  font-size: 40px;
+  font-weight: bold;
 }
 
-#tasks *{
+#uncompleted-task{
   text-decoration:none;
   color:white;
 }
@@ -78,6 +79,7 @@ nav ul li:last-of-type{
   flex-basis:0;
   flex-grow:1;
   margin: 15px;
+  font-family: Courier;
 }
 #buttons{
   display:flex;
@@ -97,4 +99,10 @@ nav ul li:last-of-type{
 #delete-button{
   background-color: #ff5050;
   width:100px;
+}
+
+#completed-task{
+  text-decoration: none;
+  color:white;
+  text-decoration: line-through;
 }
