@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.title = params[:task][:title]
     task.description = params[:task][:description]
-    task.completion_date = params[:task][:completion_date]
+    task.due_date = params[:task][:due_date]
 
     if task.save
       redirect_to tasks_path
@@ -33,7 +33,7 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
     task.title = params[:task][:title]
     task.description = params[:task][:description]
-    task.completion_date = params[:task][:completion_date]
+    task.due_date = params[:task][:due_date]
 
     if task.save
       redirect_to task_path
