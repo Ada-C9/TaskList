@@ -1,16 +1,10 @@
 <h1>Edit Task</h1>
-
 <%= form_for task_path(@task), method: "patch" do%>
-  <label>Task title:</label><br>
-  <%= text_field_tag :title, @task.title%><br>
-
-  <label>Task Due Date</label><br>
-  <%= date_field_tag :duedate, @task.duedate%><br>
-
-  <label>Task Description</label><br>
-  <%= text_area_tag :description, @task.description %><br>
-
-
-
-  <%= submit_tag "Edit Task" %>
+<label>Task title:</label><br>
+<%= text_field_tag :title, @task.title%><br>
+<label>Task Due Date</label><br>
+<%= date_field_tag :duedate, @task.duedate%><br>
+<label>Task Description</label><br>
+<%= text_area_tag :description, @task.description %><br>
+<%= submit_tag "Edit Task" %>
 <% end %>

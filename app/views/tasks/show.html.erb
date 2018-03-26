@@ -1,20 +1,20 @@
 <h2><%= @task[:title] %></h2>
-<h3>To complete this task, you need to: </h3><p><ul><li><%= @task[:description]%></li></ul></p></h>
-  <h3>Your deadline is scheduled for:</h3><%= @task[:duedate] %>
-  <ul>
-    <li>
-      <%= link_to "Edit Task", edit_task_path %>
-    </li>
-    <li>
-      <%= link_to "Delete Task", task_path(@task.id),
-      :data => {:confirm => "You sure about this?", :method => "delete"} %></p>
-
-    </li>
-
-
-
-
-
-
-
-  </ul>
+<h3>To complete this task, you need to: </h3>
+<p>
+<ul>
+  <li><%= @task[:description]%></li>
+</ul>
+</p></h>
+<h3>Your deadline is scheduled for:</h3>
+<%= @task[:duedate] %>
+<ul>
+  <li>
+    <%= link_to "Edit Task", edit_task_path %>
+  </li>
+  <li>
+    <%= link_to "Delete Task", task_path(@task.id),
+      :data => {:confirm => "You sure about this?", :method => "delete"} %>
+  </li>
+  <li>
+    <%= link_to 'Complete Task', complete_task_path(@task[:id]), method: :patch, data: { confirm: 'Good Work. Click to confirm that you have completed this task.' }, class: 'complete-link'%>
+</ul>

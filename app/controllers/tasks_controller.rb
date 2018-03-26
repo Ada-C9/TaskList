@@ -17,10 +17,10 @@ class TasksController < ApplicationController
     @task.title = params[:task][:title]
     @task.duedate = params[:task][:duedate]
     @task.description = params[:task][:description]
-    if @task.save
+    if
+      @task.save
       redirect_to tasks_path
     end
-
   end
 
   def edit
@@ -28,26 +28,22 @@ class TasksController < ApplicationController
   end
 
   def update
-
-  @task = Task.find(params[:id])
-  @task.update(title: params[:title], duedate: params[:duedate], description: params[:description])
-  redirect_to task_path(@task)
-
+    @task = Task.find(params[:id])
+    @task.update(title: params[:title], duedate: params[:duedate], description: params[:description])
+    redirect_to task_path(@task)
   end
-
 
   def complete
     @task = Task.find(params[:id])
     @task.update_attribute(:completed, Time.now)
-    redirect_to @task, notice: "Task Completed"
-
+    redirect_to tasks_path, notice: "Task Completed"
   end
 
   def destroy
     id = params[:id]
     @task = Task.find(id)
-  @task.destroy
-      redirect_to tasks_path
-    end
+    @task.destroy
+    redirect_to tasks_path
+  end
 
 end

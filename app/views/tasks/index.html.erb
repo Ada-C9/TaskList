@@ -1,20 +1,18 @@
 <h2>Tasks List</h2>
 <ul>
-<% @tasks.each do |task| %>
+  <% @tasks.each do |task| %>
   <li>
-      <span class="title">
-        <%= link_to task[:title], task_path(task[:id]), class: 'title-link' %>
-      </span>
-      <span class="edit">
-        <%= link_to "Edit", edit_task_path(task[:id]),class: 'edit-link' %>
-      </span>
-        <span class ="delete"> <%= link_to 'Delete', task_path(task),
-              method: :delete,
-              data: { confirm: 'This will delete your task. Are you sure?' } %></span>
-
-<span class="completed">
-  <%= link_to 'Complete', complete_task_path(task[:id]), method: :patch, class: 'complete-link'%></span>
-
+    <span class="title">
+    <%= link_to task[:title], task_path(task[:id]), class: 'title-link' %>
+    </span>
+    <span class="edit">
+    <%= link_to "Edit", edit_task_path(task[:id]),class: 'edit-link' %>
+    </span>
+    <span class ="delete"> <%= link_to 'Delete', task_path(task),
+      method: :delete,
+      data: { confirm: 'This will delete your task. Are you sure?' } %></span>
+    <span class="completed">
+    <%= link_to 'Complete', complete_task_path(task[:id]), method: :patch, data: { confirm: 'Good Work. Click to confirm that you have completed this task.' }, class: 'complete-link'%></span>
   </li>
-<% end %>
+  <% end %>
 </ul>
