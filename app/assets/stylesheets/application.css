@@ -53,21 +53,34 @@ header ul li a {
   font-weight: bold;
 }
 
-.completed-task {
-  text-decoration: line-through;
-}
-
 header ul li a:hover {
   color: black;
 }
 
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .your-tasks {
   display: grid;
-  grid-template-rows: 100px auto;
-  max-width: 40%;
+  grid-template-rows: 1fr 3fr;
+  min-width: 300px;
   color: #4289f4;
   border: double 2px black;
   margin: 0 auto;
+  margin-right: 5%;
+  background-color: white;
+}
+
+.complete-tasks {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  min-width: 300px;
+  color: #4289f4;
+  border: double 2px black;
+  margin: 0 auto;
+  margin-left: 5%;
   background-color: white;
 }
 
