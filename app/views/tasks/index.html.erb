@@ -5,8 +5,8 @@
   <li>
     <span class="task_name">
       <%= link_to task.name, task_path(task[:id]) %>
-    </span>
-    due by <%= task.completion_date %>
+    date completed: <%= task.completion_date %>     </span>
+    <span>  <%= button_to "Mark Complete", {:action =>"mark_complete", id: task.id }, method: :patch %></span>
   </li>
   <% end %>
 </ul>
