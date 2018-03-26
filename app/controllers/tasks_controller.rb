@@ -2,7 +2,7 @@ class TasksController < ApplicationController
 
 
   def index
-    @task = Task.all
+    @tasks = Task.all
   end
 
   def show
@@ -52,7 +52,8 @@ class TasksController < ApplicationController
 
   def mark_task_complete
     @task = Task.find_by(id: params[:id])
-      @task.status = "Complete"
+      # @task.status = "Complete"
+      @task.status = Time.now
       @task.save
       redirect_to root_path
   end
