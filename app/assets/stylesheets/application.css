@@ -51,7 +51,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   * {
     font-size: 6vw;
-    /* font-size: 20pt; */
   }
 
   body {
@@ -93,7 +92,6 @@ nav ul {
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
-
 }
 
 .nav-list-item a:hover {
@@ -102,11 +100,19 @@ nav ul {
 }
 
 
-.header {
-  padding: 0px;
+.header, .subheader {
   margin: 0px;
   color: #441151;
+}
+
+.header {
+  padding: 0px;
   font-size: 150%;
+}
+
+.subheader {
+  border-top: 2px solid #441151;
+  padding-top: 10px;
 }
 
 .tasks-list-list {
@@ -128,8 +134,6 @@ nav ul {
   color:  #441151;
 }
 
-
-
 .task-name {
   grid-area: task-name;
   padding-left: 5px;
@@ -146,4 +150,18 @@ nav ul {
 .task-status {
   grid-area: task-status;
   padding-left: 5px;
+}
+
+.incomplete * {
+  color: #441151;
+  font-size: 90%;
+}
+
+.incomplete .tasks-list-list {
+  background: rgba(202,97,195,0.10);
+}
+
+.form-fields {
+  background: #883677;
+  /* color: white; */
 }

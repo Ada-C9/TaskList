@@ -1,17 +1,22 @@
 <!-- Creates a generic form for task -->
-<h2 class='basic-form'><%= page_title %></h2>
-<%= form_for @task do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <br>
-  <%= f.label :complete %>
-  <%= f.check_box :status, {}, checked_value = "Complete", unchecked_value = "Incomplete" %>
-  <br>
-  <%= f.label :due %>
-  <%= f.date_field :due %>
-  <br>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <br>
-  <%= f.submit %>
-<% end %>
+<section class='basic-form'>
+  <h2 class='basic-form-header'><%= page_title %></h2>
+  <section class="form-fields">
+    <%= form_for @task do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <br>
+      <%= f.label :complete %>
+      <%= f.check_box :status, {}, checked_value = "Complete",
+        unchecked_value = "Incomplete" %>
+      <br>
+      <%= f.label :due %>
+      <%= f.date_field :due %>
+      <br>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+      <br>
+      <%= f.submit %>
+    <% end %>
+  </section>
+</section>

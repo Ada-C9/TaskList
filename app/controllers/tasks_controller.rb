@@ -30,6 +30,7 @@ class TasksController < ApplicationController
   def mark_complete
     @task = Task.find(params[:id])
     @task.update(status: "Complete")
+    @task.update(completed_on: Time.now)
     @task.save
     redirect_to task_path(@task.id)
   end

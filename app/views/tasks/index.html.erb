@@ -1,9 +1,10 @@
 <p class="header">
   TaskList
 </p>
-</div>
+
 <ul class="tasks-list-list">
 <% @tasks.each do |task| %>
+  <% next if task.status == "Complete" %>
   <li>
     <ul class="tasks-list-task">
       <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
@@ -12,4 +13,21 @@
     </ul>
   </li>
 <% end %>
-<ul>
+</ul>
+
+
+<section class="incomplete">
+  <p class="subheader">
+    Completed
+  </p>
+  <ul class="tasks-list-list">
+  <% @tasks.each do |task| %>
+    <% next if task.status == "Incomplete" %>
+    <!-- <li> -->
+        <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
+        <li class="?">Complted on: <%= task.completed_on %></li>
+      <!-- </ul> -->
+    <!-- </li> -->
+  <% end %>
+  </ul>
+</section>
