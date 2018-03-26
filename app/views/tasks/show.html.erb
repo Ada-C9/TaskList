@@ -1,16 +1,22 @@
 <section class="show">
-  <h2><%= @task.name %></h2>
+  <h2><%= @task.name.split.map(&:capitalize).join(' ') %></h2>
 
+  <% if @task.description != ""  %>
   <h3>Details: </h3>
   <%= @task.description %>
+  <% end %>
+
   <% if @task.completed_date.nil? != true %>
-  <p>Completed on: <%= @task.completed_date %></p>
+  <p><em>Completed on: <%= @task.completed_date %></em></p>
   <% end %>
 
   <p>
     <ul>
       <!-- only show edit option if not complete: -->
       <% if @task.completed_date.nil?%>
+      <li>
+        <%= link_to "Mark Complete", mark_complete_path(@task.id), method: :patch %>
+      </li>
       <li>
         <%= link_to "EDIT", edit_task_path %>
       </li>
