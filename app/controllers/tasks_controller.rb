@@ -29,7 +29,12 @@ class TasksController < ApplicationController
   def update
     @task = Task.find_by(id: params[:id])
     if @task.update(task_params)
-      @task.update(completed_on: nil) if @task.status == "Incomplete"
+      if @task.status == "Incomplete"
+        @task.update(completed_on: nil)
+      else # is complete
+        # only set to Time.now if the task does not already have a completed date
+        @task.update(completed_on: Time.now) if @task.completed_on.nil?
+      end
       redirect_to task_path(@task.id)
     else
       render :edit
