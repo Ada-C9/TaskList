@@ -1,18 +1,19 @@
 <section class="task-details">
   <div class="header">Task Details</div>
   <div class="subheader"><%= @task.name %></div>
-  <ul class="task info">
-    <li>Due:  <%= @task.due %></li>
-    <li>Status: <%= @task.status %></li>
-    <li>Description: <%= @task.description %></li>
+  <ul class="task-info-list">
+    <li class="due-info info">Due</li>
+    <li class="due-info-field"><%= @task.due %></li>
+    <li class="status-info info">Status</li>
+    <li class="status-info-field"><%= @task.status %></li>
+    <li class="description-info info">Description</li>
+    <li class="description-info-field"><%= @task.description %></li>
   </ul>
-</section>
 
-<section class="task-options">
-  <h2>Options</h2>
-  <ul>
-    <li><%= button_to "📝 Edit", edit_task_path(@task.id), method: :get %></li>
-    <li><%= link_to "❌ Delete", task_path(@task.id), method: :delete,
+  <section class="options">
+
+    <%= button_to "📝 Edit", edit_task_path(@task.id), method: :get %>
+    <%= button_to "❌ Delete", task_path(@task.id), method: :delete,
       data: { confirm: 'Are you sure?' } %></li>
-  </ul>
+    </section>
 </section>
