@@ -15,6 +15,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    # @task.update(completed_on: nil) if @task.status == "Incomplete"
     redirect_to tasks_path if @task.save
   end
 
@@ -24,7 +25,15 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find_by(id: params[:id])
-    @task.update(task_params) ? (redirect_to task_path(@task.id)) : (render :edit)
+    # if @task.status == "Incomplete"
+    # @task.update(completed_on: nil) if @task.status == "Incomplete"
+    # @task.update(task_params) ? (redirect_to task_path(@task.id)) : (render :edit)
+    if @task.update(task_params)
+      @task.update(completed_on: nil) if @task.status == "Incomplete"
+      redirect_to task_path(@task.id)
+    else
+      render :edit
+    end
   end
 
   def mark_complete
@@ -43,6 +52,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    return params.require(:task).permit(:name, :status, :description, :due)
+    return params.require(:task).permit(:name, :status, :description, :due, :completed_on)
   end
 end
