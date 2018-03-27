@@ -145,20 +145,16 @@ nav ul {
 }
 
 .task-name {
-
   grid-area: task-name;
-    grid: nowrap;
-    padding-left: 5px;
-    /* border: 0.5px solid black; */
+  grid: nowrap;
+  padding-left: 5px;
 }
 
 .task-list-property {
-
   font-size: 70%;
 }
 
 .tasks-list-list * {
-  /* border: 0.5px solid black; */
   justify-content: center;
 }
 
@@ -170,58 +166,29 @@ nav ul {
   grid-area: task-due;
   padding: 0px;
   margin: 0px;
-  /* text-align: right; */
   padding-left: 10px;
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
-
-
-
 .tasks-list-list  .tasks-list-task:nth-child(3) {
-
-    grid-area: complete-button;
-    /* justify-content: center; */
-    /* padding-left: 5px; */
-  }
+  grid-area: complete-button;
+}
 
 .tasks-list-list  .tasks-list-task:last-child {
     grid-area: edit-button;
-    /* text-align: center; */
-    /* justify-content: center; */
-    /* padding-left: 5px; */
-  }
+}
 
 .tasks-list-task .button_to {
   text-align: center;
   font-size: 100%;
-  /* margin-bottom: 8px; */
 }
-
-/* .complete-button {
-  grid-area: complete-button;
-  justify-content: center;
-} */
-
-/* .edit-button {
-  grid-area: edit-button;
-} */
-
-/* .task-due, .complete-button, .edit-button {
-    border: 0.5px solid black;
-} */
 
 .completed-tasks-list * {
   color: #441151;
   font-size: 95%;
-
 }
 
 .completed-tasks-list .tasks-list-task {
-  /* border-top: 0.5px solid white;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  display: grid; */
   grid-template-columns: 89%;
   grid-template-areas:
   "task-name"
