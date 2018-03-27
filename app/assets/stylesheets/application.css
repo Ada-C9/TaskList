@@ -190,7 +190,6 @@ nav ul {
 
 .completed-tasks-list .tasks-list-list {
   background: rgba(50, 92, 126, 0.07);
-  /* background: rgba(202,97,195,0.07); */
   border-bottom: 0.5px solid white;
 }
 
@@ -219,11 +218,8 @@ nav ul {
   margin: 5px;
   padding-left: 2px;
   font-size: 75%;
-    color: rgb(50, 92, 126);
-
+  color: rgb(50, 92, 126);
 }
-
-
 
 .submit-button input {
   margin: 5px;
@@ -233,14 +229,6 @@ nav ul {
   background: white;
 }
 
-
-/* @media only screen
-and (min-device-width: 0px)
-and (max-device-width: 414px)
-and (-webkit-min-device-pixel-ratio: 2) {
-.submit-button
-} */
-
 /*********************************************************************** Info */
 
 .task-info-list {
@@ -248,11 +236,9 @@ and (-webkit-min-device-pixel-ratio: 2) {
   padding-bottom: 5px;
   margin-bottom: 5px;
   padding-left: 5px;
-
   display: grid;
   grid-template-columns: 6em auto;
   grid-auto-flow: row;
-  /* border-top: 0.5px solid #441151; */
   grid-template-areas:
   "due-info description-info"
   "due-info-field description-info-field"
@@ -286,30 +272,21 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 .task-info-list * {
   font-size: 80%;
-  /* color: #441151; */
-  /* border-top: 0.5px solid white; */
-
 }
 
 .task-info-list li:nth-child(even) {
   color: #441151;
   margin-left: 15px;
-  /* border-top: 0.5px solid #441151; */
-
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .task-info-list li:nth-child(5) {
-
-    margin-left: 10px;
+  margin-left: 10px;
 }
-
 
 .task-info-list li:nth-child(odd) {
-    /* border-top: 0.5px solid #441151; */
   background: rgba(202,97,195,0.25);
 }
-
 
 .options {
   display: flex;
