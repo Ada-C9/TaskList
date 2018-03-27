@@ -1,6 +1,6 @@
 <!-- Creates a generic form for task -->
 <section class='basic-form'>
-  <h2 class='basic-form-header'><%= page_title %></h2>
+  <h2 class='subheader'><%= page_title %></h2>
   <section class="form-fields">
     <%= form_for @task do |f| %>
       <%= f.label :name %>
@@ -15,7 +15,8 @@
       <%= f.label :description %>
       <%= f.text_area :description %>
       <br>
-      <%= f.submit %>
+      <div class="submit-button"><%= f.submit %></div>
     <% end %>
   </section>
+  
 </section>

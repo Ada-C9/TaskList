@@ -15,7 +15,7 @@
   <ul>
     <!-- <li><%= link_to "✅ Completed", mark_task_complete_path(@task.id),
       method: :patch %></li> -->
-    <li><%= link_to "📝 Edit", edit_task_path %></li>
+    <li><%= button_to "📝 Edit", edit_task_path %></li>
     <li><%= link_to "❌ Delete", task_path(@task.id), method: :delete,
       data: { confirm: 'Are you sure?' } %></li>
   </ul>

@@ -12,10 +12,10 @@
       <!-- <li class="task-name"><%= task.name %></li> -->
       <li class="task-list-property task-due">Due: <%= task.due %></li>
       <!-- <li class="complete-button"> -->
-        <%= button_to " ✅", mark_task_complete_path(task.id), method: :patch %>
+        <%= button_to "✅ Done", mark_task_complete_path(task.id), method: :patch %>
       <!-- </li> -->
       <!-- <li class="edit-button"> -->
-        <%= button_to " 📝", edit_task_path(task.id), method: :get %>
+        <%= button_to "📝 Edit", edit_task_path(task.id), method: :get %>
       <!-- </li> -->
       <!-- <li class="task-list-property task-status">Status: <%= task.status %></li> -->
 
