@@ -17,12 +17,14 @@
  */
 
 * {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 16pt;
   color: rgb(50, 92, 126);
   margin: 0;
   padding: 0;
+  /* border: 0.5px solid black; */
 }
 
 a {
@@ -126,10 +128,16 @@ nav ul {
   padding-top: 5px;
   padding-bottom: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 7em 3em 3em 5em 5em;
   grid-template-areas:
-  "task-name task-name"
-  "task-status task-due"
+  "task-name task-name task-name task-name complete-button"
+  "task-name task-name task-name task-name edit-button"
+  "task-due   . ." */
+  /* grid-template-columns: 17em 3em 3em; */
+ grid-template-columns: 68% 10% 10%;
+  grid-template-areas:
+  "task-name task-name task-name"
+  "task-due complete-button edit-button"
 }
 
 .tasks-list-task * {
@@ -137,28 +145,92 @@ nav ul {
 }
 
 .task-name {
+
   grid-area: task-name;
-  padding-left: 5px;
+    grid: nowrap;
+    padding-left: 5px;
+    /* border: 0.5px solid black; */
 }
 
 .task-list-property {
+
   font-size: 70%;
+}
+
+.tasks-list-list * {
+  /* border: 0.5px solid black; */
+  justify-content: center;
+}
+
+.tasks-list-task * {
+
 }
 
 .task-due {
   grid-area: task-due;
+  padding: 0px;
+  margin: 0px;
+  /* text-align: right; */
+  padding-left: 10px;
+    padding-top: 5px;
 }
 
-.task-status {
-  grid-area: task-status;
-  padding-left: 5px;
+
+
+
+.tasks-list-list  .tasks-list-task:nth-child(3) {
+
+    grid-area: complete-button;
+    /* justify-content: center; */
+    /* padding-left: 5px; */
+  }
+
+.tasks-list-list  .tasks-list-task:last-child {
+    grid-area: edit-button;
+    /* text-align: center; */
+    /* justify-content: center; */
+    /* padding-left: 5px; */
+  }
+
+.tasks-list-task .button_to {
+  text-align: center;
+  font-size: 100%;
+  /* margin-bottom: 8px; */
 }
+
+/* .complete-button {
+  grid-area: complete-button;
+  justify-content: center;
+} */
+
+/* .edit-button {
+  grid-area: edit-button;
+} */
+
+/* .task-due, .complete-button, .edit-button {
+    border: 0.5px solid black;
+} */
 
 .completed-tasks-list * {
   color: #441151;
   font-size: 95%;
+
 }
 
+.completed-tasks-list .tasks-list-task {
+  /* border-top: 0.5px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: grid; */
+  grid-template-columns: 89%;
+  grid-template-areas:
+  "task-name"
+  "task-completed-on"
+}
+
+.task-completed-on {
+  grid-area: task-completed-on;
+}
 .completed-tasks-list .tasks-list-list {
   background: rgba(202,97,195,0.07);
   border-bottom: 0.5px solid white;
@@ -174,3 +246,8 @@ nav ul {
  font-size: 60%;
  padding-left: 15px;
 }
+
+/* .button_to {
+  margin-bottom: 0.5em;
+  display: inline;
+} */

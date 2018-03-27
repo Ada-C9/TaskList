@@ -32,14 +32,13 @@ class TasksController < ApplicationController
     @task.update(status: "Complete", completed_on: Time.now)
     # @task.update(completed_on: Time.now)
     @task.save
-    redirect_to task_path(@task.id)
+    redirect_to tasks_path
   end
 
   def destroy
     Task.find(params[:id]).destroy
     redirect_to tasks_path
   end
-
 
   private
 

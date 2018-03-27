@@ -8,8 +8,17 @@
   <li>
     <ul class="tasks-list-task">
       <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
-      <li class="task-list-property task-status">Status: <%= task.status %></li>
+
+      <!-- <li class="task-name"><%= task.name %></li> -->
       <li class="task-list-property task-due">Due: <%= task.due %></li>
+      <!-- <li class="complete-button"> -->
+        <%= button_to " ✅", mark_task_complete_path(task.id), method: :patch %>
+      <!-- </li> -->
+      <!-- <li class="edit-button"> -->
+        <%= button_to " 📝", edit_task_path(task.id), method: :get %>
+      <!-- </li> -->
+      <!-- <li class="task-list-property task-status">Status: <%= task.status %></li> -->
+
     </ul>
   </li>
 <% end %>
