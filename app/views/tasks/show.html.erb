@@ -1,4 +1,5 @@
 <h2><%= @tasks.title %></h2>
 <p><%= @tasks.description %></p>
+<p><%= link_to "Mark Completed", mark_complete_path, method: :mark_complete, class: "mark_complete" %></p>
 <p><%= link_to "Edit", edit_task_path, class: "edit" %></p>
 <p><%= link_to "Delete", task_path, method: :delete, class: "delete", data: {confirm: "Are you sure?"} %></p>

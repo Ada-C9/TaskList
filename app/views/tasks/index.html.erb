@@ -2,14 +2,14 @@
   <h2>Tasks List</h2>
   <ol class="one-task">
     <% @tasks.each do |task| %>
-      <li class="title">
+      <li class="<%= 'complete' if task.completed %> title">
         <%= link_to task.title, task_path(task.id), class: "task-list" %>
       </li>
 
       <p>Due <span><%= task.due_date %></span></p>
 
       <div class="actions">
-        <p><a href="#">Mark Completed</a></p>
+        <p><%= link_to "Mark Completed", mark_complete_path(task.id), method: :mark_complete, class: "mark_complete" %></p>
         <p><%= link_to "Edit", edit_task_path(task.id), class: "edit" %></p>
         <p><%= link_to "Delete", task_path(task.id), method: :delete, class: "delete", data: {confirm: "Are you sure?"} %></p>
       </div>

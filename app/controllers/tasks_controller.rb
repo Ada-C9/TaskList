@@ -36,6 +36,14 @@ class TasksController < ApplicationController
   end
 
   def mark_complete
+    task = Task.find_by(id: params[:id])
+    task.completed = true
+    task.save
+    if task.save
+      redirect_to tasks_path
+    else
+      render :show
+    end
   end
 
   def delete

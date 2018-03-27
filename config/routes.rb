@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'tasks/:id', to: 'tasks#show', as: 'task'
 
-  patch 'tasks/:id', to: 'tasks#mark_complete'
+  post 'tasks/:id/mark_complete', to: 'tasks#mark_complete', as: 'mark_complete'
 
   delete 'tasks/:id', to: 'tasks#delete'
 

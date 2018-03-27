@@ -18,6 +18,10 @@
   list-style-type: decimal;
 }
 
+.one-task .complete {
+  text-decoration: line-through;
+}
+
 .actions {
   display: flex;
   margin: 2% auto;
