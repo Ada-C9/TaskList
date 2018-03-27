@@ -8,11 +8,14 @@ class TasksController < ApplicationController
   end
 
   def create
-    task = Task.new(task_params)
-    task.status = :TODO
+    @task = Task.new(task_params)
+    @task.status = :TODO
 
-    if task.save
+
+    if @task.save
       redirect_to '/tasks'
+    else
+      render 'new'
     end
   end
 
@@ -27,11 +30,13 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = Task.find(params[:id])
-    task.assign_attributes(task_params)
+    @task = Task.find(params[:id])
+    @task.assign_attributes(task_params)
 
-    if task.save
+    if @task.save
       redirect_to '/tasks'
+    else
+      render 'edit'
     end
   end
 
@@ -61,6 +66,6 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    return params.require(:task).permit(:name, :description, :priority)
+    return params.require(:task).permit(:name, :description, :priority, :completion_date)
   end
 end
