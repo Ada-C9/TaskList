@@ -22,7 +22,7 @@
     Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   font-size: 16pt;
-  color: rgb(50, 92, 126);
+
   margin: 0;
   padding: 0;
 }
@@ -38,7 +38,8 @@ ul {
 body {
  margin: 2em;
  min-width: 20em;
- max-width: 40vw;
+ max-width: 25vw;
+ height: auto;
  display: grid;
  flex-flow: column;
 }
@@ -101,7 +102,7 @@ nav ul {
 /****************************************************************** task list */
 .header, .subheader {
   margin: 0px;
-  color: #441151;
+    color: rgb(50, 92, 126);
 }
 
 .header {
@@ -188,7 +189,8 @@ nav ul {
 }
 
 .completed-tasks-list .tasks-list-list {
-  background: rgba(202,97,195,0.07);
+  background: rgba(50, 92, 126, 0.07);
+  /* background: rgba(202,97,195,0.07); */
   border-bottom: 0.5px solid white;
 }
 
@@ -200,7 +202,7 @@ nav ul {
 /*********************************************************************** form */
 
 .form-fields  {
-  background: #883677;
+  background: rgba(202,97,195,0.07);
   padding-top:10px;
   padding-bottom: 10px;
 
@@ -210,19 +212,33 @@ nav ul {
   padding-left: 15px;
   padding-right: 10px;
   font-size: 85%;
-  color: white;
+    color: #883677;
 }
 
 .form-fields input, textarea {
   margin: 5px;
   padding-left: 2px;
-  font-size: 80%;
-  color: #883677;
+  font-size: 75%;
+    color: rgb(50, 92, 126);
+
 }
 
-.submit-button {
+
+
+.submit-button input {
+  margin: 5px;
+  padding: 5px;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 15px;
+  background: white;
 }
+
+
+/* @media only screen
+and (min-device-width: 0px)
+and (max-device-width: 414px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.submit-button
+} */
 
 /*********************************************************************** Info */

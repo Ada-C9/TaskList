@@ -1,9 +1,7 @@
 <section class="task-details">
-  <h2>Task Details</h2>
-  <p class="task-name">
-    <%= @task.name %>
-  </p>
-  <ul>
+  <div class="header">Task Details</div>
+  <div class="subheader"><%= @task.name %></div>
+  <ul class="task info">
     <li>Due:  <%= @task.due %></li>
     <li>Status: <%= @task.status %></li>
     <li>Description: <%= @task.description %></li>
@@ -13,9 +11,7 @@
 <section class="task-options">
   <h2>Options</h2>
   <ul>
-    <!-- <li><%= link_to "✅ Completed", mark_task_complete_path(@task.id),
-      method: :patch %></li> -->
-    <li><%= button_to "📝 Edit", edit_task_path %></li>
+    <li><%= button_to "📝 Edit", edit_task_path(@task.id), method: :get %></li>
     <li><%= link_to "❌ Delete", task_path(@task.id), method: :delete,
       data: { confirm: 'Are you sure?' } %></li>
   </ul>

@@ -1,6 +1,6 @@
-<p class="header">
+<div class="header">
   TaskList
-</p>
+</div>
 
 <ul class="tasks-list-list">
 <% @tasks.each do |task| %>
@@ -24,11 +24,10 @@
 <% end %>
 </ul>
 
-
+<div class="subheader">
+  Completed
+</div>
 <section class="completed-tasks-list">
-  <p class="subheader">
-    Completed
-  </p>
   <ul class="tasks-list-list">
   <% @tasks.each do |task| %>
     <% next if task.status == "Incomplete" %>
