@@ -72,23 +72,27 @@ aside ul li:first-of-type {
 h1 {
   grid-area: title;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   border-bottom: dotted;
   border-width: .1em;
+  padding-right: 12%;
 }
 
 .heading {
   text-decoration: none;
+  font-weight: bold;
 }
 
 main {
   grid-area: main;
   display: flex;
-  width: 650px;
+  flex-direction: column;
+  width: 50%;
   background-color: white;
   opacity: .7;
   font-size: 1.1em;
-  justify-content: space-around;
+  padding-left: .5em;
+  padding-bottom: .5em;
 }
 
 .task-list {
@@ -100,7 +104,7 @@ main {
 
 .task-list li:first-of-type{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding-bottom: .75em;
   padding-top: .5em;
 }

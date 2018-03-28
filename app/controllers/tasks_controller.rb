@@ -39,7 +39,7 @@ class TasksController < ApplicationController
     #
     # if @task.update(name: params[:task][:name],   description: params[:task][:description], due_date: params[:task][:due_date], status: params[:task][:status])
 
-      redirect_to task_path(@task.id)
+      redirect_to tasks_path
     else
       render :edit
     end

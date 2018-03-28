@@ -10,7 +10,7 @@
     </li>
     <% @incomplete.each do |task| %>
     <li>
-      <span class="heading"><% num += 1 %><%= num %><span>.</span><%= link_to task.name, task_path(task.id) %>
+      <span><% num += 1 %><%= num %><span>.</span><%= link_to task.name, task_path(task.id) %>
     </li>
     <% end %>
   </ol>
@@ -20,7 +20,7 @@
     </li>
     <% @complete.each do |task| %>
     <li>
-      <span class="heading"><% num2 += 1 %><%= num2 %><span>.</span><%= link_to task.name, task_path(task.id) %>
+      <span><% num2 += 1 %><%= num2 %><span>.</span><%= link_to task.name, task_path(task.id) %>
     </li>
     <% end %>
   </ol>
