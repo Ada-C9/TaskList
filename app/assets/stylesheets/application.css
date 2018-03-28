@@ -13,6 +13,57 @@
 *= require_tree .
 *= require_self
 */
-ul li {
+/* ul li {
   list-style: none;
+} */
+
+* {
+  font-family: 'Dosis', sans-serif;
+
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 250%;
+}
+
+header h1 {
+  /* display: flex;
+  flex-direction: column; */
+  float: left;
+}
+
+header img.logo {
+  height: 3em;
+  /* float: left; */
+  padding-bottom: 0.5em;
+
+
+}
+
+header nav {
+  clear: left
+}
+
+header nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2em 0;
+
+}
+
+header nav li {
+  display: inline-block;
+}
+
+header nav li a {
+  padding: 0.7em;
+  border: solid 2px black;
+  border-radius: 10%;
+  text-decoration: none;
+}
+
+
+header nav li a:hover {
+  background-color: #8fbc8f;
 }

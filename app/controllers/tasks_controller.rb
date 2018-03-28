@@ -10,7 +10,6 @@ class TasksController < ApplicationController
 
   def create
     task = Task.new(task_params)
-
     if task.save
       redirect_to tasks_path
     end
@@ -26,9 +25,8 @@ class TasksController < ApplicationController
   end
 
   def update
-    task = task.find(params[:id])
+    task = Task.find(params[:id])
     task.assign_attributes(task_params)
-
     if task.save
       redirect_to task_path(task)
     end
@@ -41,7 +39,7 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find(params[:id])
-    task.complete! # <-- this method will modify the objects
+    task.complete!
     if task.save
       redirect_to tasks_path
     end
@@ -49,15 +47,11 @@ class TasksController < ApplicationController
 
   def uncomplete
     task = Task.find(params[:id])
-    task.uncomplete!   # <-- this method will modify the objects
+    task.uncomplete!
     if task.save
       redirect_to tasks_path
     end
   end
-
-    #TODO
-    # make the button for uncomplete???
-    # IF it doesn't render you might need to redirect and make a new template for it in the views
 
   private
   def task_params

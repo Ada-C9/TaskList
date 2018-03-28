@@ -8,11 +8,21 @@
 
     <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:600" rel="stylesheet">
   </head>
 
   <body>
-    <h2>This weeks tasks</h2>
+    <header>
+      <h1><%= image_tag "to_do_icon.png", alt: "Site logo", class: "logo" %></h1>
+      <h1>TaskList</h1>
+      <nav>
+        <ul>
+          <li><%= link_to "All Tasks", tasks_path %></li>
+          <li><%= link_to "New Task", new_task_path %></li>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
-    <h3><%= link_to "Go back to the index", tasks_path%></h3>
+    <!-- <h3><%= link_to "Go back to the index", tasks_path%></h3> -->
   </body>
 </html>

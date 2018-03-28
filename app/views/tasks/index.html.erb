@@ -1,19 +1,28 @@
-<h1>To-dos</h1>
-<p>For week of March 19th 2018</p>
+
+
+<!-- <h1>TaskList</h1>
+<p>Keeping Track of To-do's</p> -->
 
 <ul>
   <% @tasks.each do |task| %>
   <li>
+
     <input type="checkbox" <%="checked" if task.completed? %> disabled >
-    <strong> <%= link_to task.name, task_path(task.id)%></strong> : <%= task.description %> : <%= task.completion_date %>
+
+    <strong> <%= link_to task.name, task_path(task.id)%></strong> : <%= task.description %> <%= task.completion_date %>
 
     <% if task.completed? %>
       <%= button_to("Unmark Complete", uncompleted_tasks_path(task.id), method: :patch) %>
-        <% else %>
-      <%= button_to("Complete a Task", completed_tasks_path(task.id), method: :patch, data: {confirm: "Are you sure you want to mark your task as 'Complete'?"}) %>
+    <% else %>
+      <%= button_to("Complete this Task", completed_tasks_path(task.id), method: :patch, data: {confirm: "Are you sure you want to mark your task as 'Complete'?"}) %>
     <% end %>
-    <%= button_to("Delete this Task", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to Delete the Task?"} ) %>
+
+    <%= button_to("Delete this Task", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to Delete the Task?"}) %>
+
+    <%= button_to("Edit this Task", edit_task_path(task.id)) %>
 
   </li>
 <% end %>
 </ul>
+
+<!-- <%= link_to("Add a New Task", new_task_path, method: :get) %> -->
