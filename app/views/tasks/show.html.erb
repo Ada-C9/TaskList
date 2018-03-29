@@ -1,0 +1,25 @@
+<body>
+
+<h2>Completed task == Happy Cats </h2>
+
+<p>
+  Task: <%= @task.to_do %>
+</p>
+<p>
+  Date: <%= @task.date.strftime("%a, %B %d, %Y") %>
+</p>
+<p>
+  When: <%= @task.time %>
+</p>
+<p>
+  Instructions: <%= @task.instructions %>
+</p>
+<p>
+  Status: <%= @task.status %>
+</p>
+
+<button>
+<%= link_to("Edit", edit_task_path) %>
+</button>
+
+</body>

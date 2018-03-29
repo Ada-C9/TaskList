@@ -1,0 +1,22 @@
+<%= form_for @task do |f| %>
+
+  <%= f.label :to_do %>
+  <%= f.text_field :to_do%>
+
+  <%= f.label :date %>
+  <%= f.date_field :date %>
+
+  <%= f.label :time %>
+  <%= f.text_field :time %>
+
+  <%= f.label :instructions %>
+  <%= f.text_area :instructions %>
+
+  <%= f.label :status %>
+  <%= f.text_field :status %>
+
+  <%= f.label :completion_date %>
+  <%= f.text_field :completion_date %>
+
+  <%= f.submit action_name %>
+<% end %>
