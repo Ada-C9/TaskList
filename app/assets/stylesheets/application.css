@@ -1,0 +1,185 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* for the header of the whole site */
+header {
+  top: 0;
+  left: -2vw;
+  position: sticky;
+  display: flex;
+  height: 8vh;
+  width: 100vw;
+  background-color: rgb(121, 75, 196);
+  font-family: 'Raleway', sans-serif;
+  box-shadow: 0 3px 5px grey;
+}
+
+header h1 {
+  display: inline;
+  margin: auto 4vw;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  padding-top: 1vh;
+}
+
+nav > ul li {
+  list-style-type: none;
+  padding-right: 3vw;
+  padding-left: 3vw;
+  color: white;
+  border-right: solid thin black;
+}
+
+nav > ul li:first-of-type {
+  border-left: solid thin black;
+}
+
+a {
+  color: black;
+  color: rgb(171, 141, 219);
+}
+
+a.header-nav {
+  text-decoration: none;
+  color: white;
+}
+
+a.header-nav:visited {
+  color: inherit;
+}
+
+a:visited {
+  color: rgb(171, 141, 219);
+}
+
+a:hover {
+  color: black;
+}
+
+/* for the website content */
+main {
+  font-family: 'Arimo', sans-serif;
+  padding-top: 2vh;
+}
+
+li > ul {
+  list-style-type: none;
+  width: 25vw;
+}
+
+li > ul li:last-of-type {
+  margin-bottom: 1.5em;
+}
+
+/* index page */
+#priority {
+  color: rgb(207, 119, 119);
+}
+
+#medium {
+  color: rgb(203, 187, 76);
+}
+
+#low {
+  color: rgb(103, 194, 84);
+}
+
+/* each task box */
+li section {
+  width: 21vw;
+  min-height: 28vh;
+  padding: auto;
+  display: inline-block;
+  border: thin solid grey;
+  margin-bottom: 5vw;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+li section:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.list section > p {
+  padding: 0 3vw;
+  margin-bottom: 1vw;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description::after {
+  content: '...';
+}
+
+li section > sub {
+  padding-left: 3vw;
+}
+
+.list li {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+ul section > div {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 20vw;
+  bottom: 0.5vw;
+}
+
+ul section > div p {
+  padding: 0 1vw;
+  border-right: solid thin black;
+}
+
+section strong {
+  font-size: 1.3em;
+}
+
+ul section > div p:last-of-type {
+  border-right: none;
+}
+
+#completed-task {
+  text-decoration: line-through;
+}
+
+/* to do and completed bar */
+main h4 {
+  font-size: 1.5em;
+  background-color: rgb(205, 188, 233);
+}
+
+/* error display */
+.errors {
+  background-color: rgb(245, 146, 146);
+  color: white;
+}
