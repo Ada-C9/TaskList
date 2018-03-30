@@ -1,0 +1,45 @@
+<% if (Time.now < Time.parse("12:00")) && (Time.now > Time.parse("4:00"))%>
+  <h2>Good morning Wini!</h2>
+  <%elsif (Time.now > Time.parse("17:00")) || (Time.now < Time.parse("4:00"))%>
+  <h2>Good evening Wini!</h2>
+  <%else%>
+  <h2>Good afternoon Wini!</h2>
+<% end %>
+
+
+<p> Your tasks for this week are:</p>
+<p>
+  <ul >
+    <% @tasks.each do |task|%>
+
+    <% if task.completion != nil%>
+
+    <li class="each_task">
+        <span class="task_name"><strong><strike><%= link_to task.name, task_path(task.id) %></strong></strike></span>
+        <ul class="container_task_options">
+        <li><%= link_to("Mark Complete", task_path(task.id), method: :put) %></li>
+        <li><%= link_to"Update", edit_task_path(task.id) %></li>
+        <li><%= link_to("Delete", task_path(task.id), method: :delete, data: {confirm: "Are you done with this task?"}) %></li>
+      </ul>
+    </li>
+
+    <%else%>
+    <li class="each_task">
+
+      <span class="task_name"><strong><%= link_to task.name, task_path(task.id) %></strong></span>
+      <ul class="container_task_options">
+        <li><%= link_to("Mark Complete", task_path(task.id), method: :put) %></li>
+        <li><%= link_to"Update", edit_task_path(task.id) %></li>
+        <li><%= link_to("Delete", task_path(task.id), method: :delete, data: {confirm: "Are you done with this task?"}) %></li>
+      </ul>
+    </li>
+
+
+
+
+    <% end %>
+    <%end%>
+  </ul>
+</p>
+
+<span><%= link_to"Add new task", new_task_path %></span>

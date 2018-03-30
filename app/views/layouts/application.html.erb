@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+</head>
+
+
+<body>
+  <header>
+    <ul>
+      <li><%= image_tag "task.png", alt:"Task icon", class: "logo"%></li>
+      <li>Todays date: <%= Time.now%></li>
+    </ul>
+  </header>
+  <%= yield %>
+  <footer>
+    <span><%= link_to "All tasks", tasks_path %></span>
+  </footer>
+</body>
+</html>
