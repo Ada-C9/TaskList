@@ -1,0 +1,11 @@
+
+<h2><strong>Details for task:</strong> <%= @task.name %></h2>
+<p>
+  <strong>Description:</strong> <%= @task.description %>
+</p>
+<p>
+  <strong>Completion_date:</strong> <%= @task.completion_date %>
+</p>
+
+
+<%= link_to "Edit this task", edit_task_path(@task) %>
