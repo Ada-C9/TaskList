@@ -1,0 +1,16 @@
+<h1>Check out Your Todos!</h1>
+<ol>
+  <% @tasks.each do |task|%>
+  <li>
+    <%=link_to("#{task.todo}",task_path(task)) %>
+    <%=link_to("Edit",edit_task_path(task))%>
+    <%= link_to("Delete", task_path(task.id), method: :delete)%>
+    
+
+
+  </li>
+
+  <%end%>
+</ol>
+
+<%= link_to("Add New Todo", new_task_path) %>
