@@ -1,0 +1,34 @@
+
+<div>
+  <p  id= "top-text"><strong>YOUR TASKS</strong></p>
+</div>
+
+<div class="main_page">
+  <ol id="tasklist">
+    <%  @tasks.each do |task| %>
+    <li>
+      <span>
+        <% if task.completed %>
+        <p class="completed">
+          <%= "#{task.name}"%>
+        </p>
+      </span>
+
+      <% else %>
+      <span>
+        <%= "#{task.name}"%>
+      </span>
+      <%end%>
+
+    </li>
+    <% if !task.completed %>
+    <%= link_to("Mark Complete", completed_task_path(task), method: :patch, class:"link") %>
+    <% else %>
+    <%= link_to("Unmark Complete", completed_task_path(task), method: :patch, class:"link") %>
+    <%end%>
+    <%= link_to("Show details", task_path(task), class: "link") %>
+    <%= link_to("Delete", task_path(task.id), method: :delete, data: {confirm: "Are you sure you want to delete Task: #{task.name}?"}, class: "link") %>
+    <%end%>
+
+  </ol>
+</div>

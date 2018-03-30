@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TaskList</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>Task List</h1>
+    </header>
+
+    <main>
+
+      <div class ="small-box">
+        <div class ="side-bar">
+          <li><%= button_to "All Tasks", tasks_path, method: :get, class:"button" %></li>
+          <li><%= button_to "Add Task", new_task_path, method: :get, class:"button" %></li>
+        </div>
+
+
+        <section>
+          <%= yield %>
+        </section>
+
+      </div>
+
+    </main>
+
+
+
+    <footer>
+      <p>&copy; Brenda Rios, 2018</p>
+    </footer>
+  </div>
+</body>
+</html>
