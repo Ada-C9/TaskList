@@ -1,0 +1,28 @@
+<h3>Tasks for March 19th, 2018</h3>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+
+      <%= task.id %>.
+
+      <%= link_to task.name, task_path(task) %>:
+
+      <small><%= task.description %></small>
+
+      | <%= link_to "Delete", task_path(task), method: :delete %>
+
+      |
+      <% if task.completion_date.nil? %>
+
+        <%= link_to "Mark Complete", toggle_complete_path(task), method: :patch %>
+
+      <% else %>
+
+        <%= link_to "Mark Incomplete", toggle_complete_path(task), method: :patch %>
+
+      <% end %>
+
+    </li>
+  <% end %>
+</ul>
