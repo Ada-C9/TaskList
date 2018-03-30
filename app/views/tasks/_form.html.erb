@@ -1,0 +1,14 @@
+<strong><%=page_title%>: </strong>
+
+<%= form_for @task do |t| %>
+<%= t.label :task_name %>
+<%= t.text_field :name %>
+
+<%= t.label :description %>
+<%= t.text_field :details %>
+
+<%= t.label :complete_by %>
+<%= t.date_field :complete %>
+
+<%= t.submit submit %>
+<% end %>
