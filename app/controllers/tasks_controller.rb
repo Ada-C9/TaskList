@@ -60,10 +60,10 @@ class TasksController < ApplicationController
       task.update_attributes(completion: Time.now)
     else
       task.update_attributes(completion: nil)
+    end
 
       redirect_to tasks_path
 
-    end
   end
 
   private
