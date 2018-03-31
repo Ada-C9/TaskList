@@ -19,12 +19,8 @@ h1{
 }
 
 .tasks {
-  display: flex;
-  flex-wrap: column wrap;
   list-style: none;
-  justify-content: space-between;
   margin-top: 1em;
-
 }
 
 .task_details, .task_details ul li {
@@ -32,7 +28,8 @@ h1{
   flex-wrap: row wrap;
   list-style: none;
   justify-content: space-between;
-  margin-left: 0.25em;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul {

@@ -4,17 +4,17 @@
   <ul>
     <%@tasks.each do |task| %>
     <li class="tasks">
-      <span><%=link_to task.name, task_path(task.id)%></span> </li>
+      <span><%=link_to task.name, task_path(task.id)%></span>
       <ul class="task_details">
         <li>
-          Status: <%= task.complete%>
+          Status: <%= (task.complete.nil?) ? "Not yet done" : task.complete %>
           <ul>
             <li>
               <%= button_to "Edit Task", edit_task_path(task.id),
               method: :get, data: { confirm: "Are you sure?" } %>
               <%= button_to "Delete Task", task_path(task.id),
               method: :delete, data: { confirm: "Are you sure?" } %>
-              <%= button_to "Complete Task", complete_task_path(task.id),
+              <%= button_to (task.complete.nil?) ? "Complete Task" : "Uncomplete Task", complete_task_path(task.id),
               method: :patch, data: { confirm: "Are you sure?" } %>
             </li>
           </ul>

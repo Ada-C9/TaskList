@@ -17,7 +17,7 @@ class TasksController < ApplicationController
     task = Task.new
     task.name = params[:task][:name]
     task.description = params[:task][:description]
-    task.complete = "not complete"
+    task.complete = nil
 
     if task.save
       redirect_to show_tasks_path
@@ -52,7 +52,13 @@ class TasksController < ApplicationController
 
   def complete
     task = Task.find_by(id: params[:id])
-    task.complete = "completed on #{Date.today}"
+
+    if task.complete.nil?
+      task.complete = "completed on #{Date.today}"
+    else
+      task.complete = nil
+    end
+    
     task.save
 
     redirect_to show_tasks_path

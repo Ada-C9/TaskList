@@ -15,7 +15,7 @@
     method: :delete, data: { confirm: "Are you sure?" } %>
   </li>
   <li>
-    <%= button_to "Complete Task", complete_task_path(@task.id),
+    <%= button_to (@task.complete.nil?) ? "Complete Task" : "Uncomplete Task", complete_task_path(@task.id),
     method: :patch, data: { confirm: "Are you sure?" } %>
   </li>
 
