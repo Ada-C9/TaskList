@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   def index
-    @tasks = Task.all
+    @tasks = Task.order(:completion_date)
   end
 
   def show
@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(book_params)
+    @task = Task.new(task_params)
     # (name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
     if @task.save
       redirect_to tasks_path
@@ -30,7 +30,7 @@ class TasksController < ApplicationController
   def update
     edit
     if !@task.nil?
-      if @task.update(book_params)
+      if @task.update(task_params)
         # (name: params[:task][:name], description: params[:task][:description], completion_date: params[:task][:completion_date])
         redirect_to tasks_path(@task.id)
       else
@@ -68,6 +68,6 @@ end
 
 private
 
-def book_params
+def task_params
   return params.require(:task).permit(:name, :description, :completion_date, :complete)
 end
