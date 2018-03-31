@@ -1,0 +1,35 @@
+<div class="header">
+  TaskList
+</div>
+
+<ul class="tasks-list-list">
+  <% @tasks.each do |task| %>
+    <% next if task.status == "Complete" %>
+    <li>
+      <ul class="tasks-list-task">
+        <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
+        <li class="task-list-property task-due">Due: <%= task.due %></li>
+        <%= button_to "✅ Done", mark_task_complete_path(task.id), method: :patch %>
+        <%= button_to "📝 Edit", edit_task_path(task.id), method: :get %>
+      </ul>
+    </li>
+  <% end %>
+</ul>
+
+<div class="subheader">
+  Completed
+</div>
+
+<section class="completed-tasks-list">
+  <ul class="tasks-list-list">
+    <% @tasks.each do |task| %>
+      <% next if task.status == "Incomplete" %>
+      <li>
+        <ul class="tasks-list-task">
+          <li class="task-name"><%= link_to task.name, task_path(task.id) %></li>
+          <li class="task-completed-on">Completed on: <%= task.completed_on %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</section>

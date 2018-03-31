@@ -1,0 +1,296 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will
+ * include all the files listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any
+ * plugin's vendor/assets/stylesheets directory can be referenced here using a
+ * relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at
+ * the bottom of the compiled file so the styles you add here take precedence
+ * over styles defined in any other CSS/SCSS files in this directory. Styles in
+ * this file should be added after the last require_* statement. It is generally
+ * better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/******************************************************************** overall */
+* {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 16pt;
+
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+ margin: 2em;
+ min-width: 20em;
+ max-width: 25vw;
+ height: auto;
+ display: grid;
+ flex-flow: column;
+}
+
+/********************************************************************** media */
+/* This sections is kinda busted? */
+@media only screen
+and (min-device-width: 0px)
+and (max-device-width: 414px)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  * {
+    font-size: 4.5vw;
+  }
+
+  body {
+    margin-top:  2vw;
+    margin-left:  2vw;
+    margin-right:  2vw;
+    margin-bottom: 0vw;
+    padding:  0px;
+    min-width:96vw;
+  }
+}
+
+/**************************************************************** nav section */
+nav {
+  background-color: #883677;
+}
+
+nav ul {
+  min-height: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-top: -3px;
+  margin-bottom: 0px;
+}
+
+.nav-list-item {
+  padding-top: 0em;
+  padding-left: 0em;
+  padding-right: 0.5em;
+}
+
+.nav-list-item a {
+  font-size: 70%;
+  color: white;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.nav-list-item a:hover {
+  background-color: white;
+  color: #883677;
+}
+
+/****************************************************************** task list */
+.header, .subheader {
+  margin: 0px;
+    color: rgb(50, 92, 126);
+}
+
+.header {
+  padding: 0px;
+  font-size: 150%;
+}
+
+.subheader {
+  border-top: 0.5em solid #883677;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tasks-list-list {
+  background: rgba(202,97,195,0.25);
+}
+
+.tasks-list-task {
+  border-top: 0.5px solid white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 58% 18% 15%;
+  grid-template-areas:
+  "task-name task-name task-name"
+  "task-due complete-button edit-button"
+}
+
+.tasks-list-task * {
+  color:  #441151;
+}
+
+.task-name {
+  grid-area: task-name;
+  grid: nowrap;
+  padding-left: 5px;
+}
+
+.task-list-property {
+  font-size: 70%;
+}
+
+.tasks-list-list * {
+  justify-content: center;
+}
+
+.task-due {
+  grid-area: task-due;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.tasks-list-list .tasks-list-task:nth-child(3) {
+  grid-area: complete-button;
+  text-align: justify;
+}
+
+.tasks-list-list .tasks-list-task:last-child {
+    grid-area: edit-button;
+}
+
+.tasks-list-task .button_to {
+  text-align: center;
+  font-size: 100%;
+}
+
+.completed-tasks-list * {
+  color: #441151;
+  font-size: 95%;
+}
+
+.completed-tasks-list .tasks-list-task {
+  grid-template-columns: 91%;
+  grid-template-areas:
+  "task-name"
+  "task-completed-on"
+}
+
+.task-completed-on {
+  grid-area: task-completed-on;
+}
+
+.completed-tasks-list .tasks-list-list {
+  background: rgba(50, 92, 126, 0.07);
+  border-bottom: 0.5px solid white;
+}
+
+.tasks-list-list .task-completed-on {
+ font-size: 60%;
+ padding-left: 15px;
+}
+
+/*********************************************************************** form */
+
+.form-fields  {
+  background: rgba(202,97,195,0.07);
+  padding-top:10px;
+  padding-bottom: 10px;
+
+}
+
+.form-fields label {
+  padding-left: 15px;
+  padding-right: 10px;
+  font-size: 85%;
+  color: #883677;
+}
+
+.form-fields input, textarea {
+  margin: 5px;
+  padding-left: 2px;
+  font-size: 75%;
+  color: rgb(50, 92, 126);
+}
+
+.submit-button input {
+  margin: 5px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-left: 15px;
+  background: white;
+}
+
+/*********************************************************************** Info */
+
+.task-info-list {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  padding-left: 5px;
+  display: grid;
+  grid-template-columns: 6em auto;
+  grid-auto-flow: row;
+  grid-template-areas:
+  "due-info description-info"
+  "due-info-field description-info-field"
+  "status-info description-info-field"
+  "status-info-field description-info-field"
+}
+
+.due-info {
+  grid-area: due-info;
+}
+
+.due-info-field {
+  grid-area: due-info-field;
+}
+
+.status-info {
+  grid-area: status-info;
+}
+
+.status-info-field {
+  grid-area: status-info-field;
+}
+
+.description-info {
+  grid-area: description-info;
+}
+
+.description-info-field {
+  grid-area: description-info-field;
+}
+
+.task-info-list * {
+  font-size: 80%;
+}
+
+.task-info-list li:nth-child(even) {
+  color: #441151;
+  margin-left: 15px;
+  padding-bottom: 10px;
+}
+
+.task-info-list li:nth-child(5) {
+  margin-left: 10px;
+}
+
+.task-info-list li:nth-child(odd) {
+  background: rgba(202,97,195,0.25);
+}
+
+.options {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 10em;
+  justify-content:space-around;
+}
