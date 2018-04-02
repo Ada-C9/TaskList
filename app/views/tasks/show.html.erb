@@ -1,0 +1,16 @@
+<div class='show-container'>
+  <h2><%= @task.task_name %></h2>
+  <p class="notes"><%= @task.description %></p>
+  <p> Complete this task by: <br><%= @task.completion_date %></p>
+  <ul class="task-options">
+    <li>
+      <%= link_to "Mark Complete", edit_task_path%>
+    </li>
+    <li>
+      <%= link_to "Edit", edit_task_path%>
+    </li>
+    <li>
+      <%= link_to "Delete", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%>
+    </li>
+  </ul>
+</div>

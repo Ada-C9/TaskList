@@ -1,0 +1,23 @@
+<h1>Task List</h1>
+<ul>
+  <% @tasks.each do |task| %>
+  <li class="list">
+    <% if task.status == nil %>
+      <%= link_to task.task_name, task_path(task.id), class: "title" %>
+      <ul class="task-options">
+        <li>
+          <%= link_to "Mark Complete", mark_complete_path(task.id), method: :put,  data: { confirm: 'Are you really done with this task? Because if you\'re not you\'ll just have to re-add it to the list... Are you sure?' }%>
+        </li>
+    <% else %>
+      <%= link_to task.task_name, task_path(task.id), class: "title mark-complete" %>
+      <ul class="task-options">
+        <li>
+          <%= link_to "Mark Incomplete", mark_incomplete_path(task.id), method: :put%>
+        </li>
+    <% end %>
+      <li><%= link_to "Edit", edit_task_path(task.id)%></li>
+      <li><%= link_to "Delete", task_path(task.id), method: :delete, data: { confirm: 'Are you sure you want to delete the task?' }%></li>
+    </ul>
+  </li>
+  <% end %>
+</ul>

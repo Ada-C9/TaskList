@@ -1,0 +1,81 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+   /* font-family: 'Poiret One', cursive; */
+   /* font-family: 'Permanent Marker', cursive; */
+   font-family: 'Satisfy', cursive;
+ }
+
+.title {
+  font-size: 1.5em;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+
+}
+/* .list::before {
+ content: "❍";
+ padding-right: 1em;
+} */
+
+a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  }
+
+.show-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-options{
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 1em;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.task-options a::before, .navigation ul li::before {
+  content: "●";
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* .task-options :last-child a::after, .navigation ul :last-child li::after {
+  content: "●";
+  padding-left: 1em;
+} */
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  padding-left: 0
+}
+
+.mark-complete {
+  text-decoration: line-through;
+}
