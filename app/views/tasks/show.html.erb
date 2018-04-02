@@ -1,0 +1,12 @@
+<section id="show">
+ <h2><%= @task.name%></h2>
+
+<div><span>Description:</span> <%= @task.description%> </div>
+<div><span>Predicted Completion Date:</span> <%= @task.completion_date%></div>
+<%printed_date = 'Pending'%>
+<% if @task.actual_completion_date !=nil %>
+  <%printed_date = @task.actual_completion_date%>
+<%end%>
+
+<div><span>Actual Completion Date: </span><%= printed_date%></div>
+</section>

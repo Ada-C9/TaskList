@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html{
+  color:white;
+}
+
+ body{
+   margin: 0px;
+   background-image: url('solar_sys.jpg') no-repeat center center fixed;
+   background-image:url('solar_sys.jpg');
+   background-repeat:no-repeat;
+   background-size:contain;
+   background-size: cover;
+ }
+
+nav{
+  background-color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    margin-top:0px;
+    list-style-type: none;
+    color: black;
+}
+
+#add_image{
+  margin-top: 7px;
+  height: auto;
+  width: 100px;
+  margin-left: 0px;
+}
+
+#list_image{
+  margin-top: 3px;
+  height: auto;
+  width: 55px;
+  margin-left: 0px;
+}
+
+nav ul li:last-of-type{
+  margin-left: 65%;
+  margin-top:1%;
+  font-family: Courier;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#uncompleted-task{
+  text-decoration:none;
+  color:white;
+}
+
+#task-list{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#task-list li{
+
+  flex-basis:0;
+  flex-grow:1;
+  margin: 20px;
+  font-family: Courier;
+}
+#buttons{
+  display:flex;
+}
+
+#edit-button{
+  background-color:#ffff4d;
+  width:100px;
+}
+
+
+#complete-button{
+  background-color: #4dff4d;
+  width:100px;
+}
+
+#delete-button{
+  background-color: #ff5050;
+  width:100px;
+}
+
+#completed-task{
+  text-decoration: none;
+  color:white;
+  text-decoration: line-through;
+}
+
+#show{
+  padding:10px;
+  margin-left: 10px;
+}
+
+#show h2{
+  color:#f2f2f2;
+  text-decoration: underline;
+}
+
+#show div{
+  margin-bottom: 7px;
+}
+
+#show div span{
+  color: #bfbfbf;
+  font-weight: bold;
+}
+
+#edit-page span{
+  margin-left:5px;
+  margin-right:5px;
+  font-size:15px;
+}
+#edit-page h2{
+  text-align:15%;
+  font-size:50px;
+}
+#edit-page{
+  margin-top:15%;
+  margin-left:15%;
+}
