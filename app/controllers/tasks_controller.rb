@@ -48,6 +48,18 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
+  # def mark_complete
+  #   id = params[:id]
+  #   @task = Task.find(id)
+  #
+  #   # if @task
+  #     # @task.complete = true
+  #     # @task.update_attributes() = Time.now.strftime('%m-%d-%Y')
+  #   end
+  #   redirect_to tasks_path
+  #
+  # end
+
   private
 
   def task_params

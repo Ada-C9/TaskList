@@ -3,14 +3,18 @@
   <% @tasks.each do |task| %>
   <li>
     <span class="name">
-      <%=link_to "Task: #{task.name} ", task_path(task.id) %>
+      <%=link_to "Task: #{task.name}  ", task_path(task.id) %>
     </span>
+        <p> </p>
+
     <p> </p>
 
-      <span class="description">
-        <%= "- #{task.description}  (#{task.owner})" %>
-      </span>
-    </p>
-  </li>
-  <% end%>
+    <span class="description">
+      <%= "- #{task.description} | #{task.owner} " %>
+    </span>
+  </p>
+</li>
+<% end%>
 </ul>
+
+<!-- Need to include way to check off complete items-->
