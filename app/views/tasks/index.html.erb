@@ -1,0 +1,12 @@
+
+<h2>Task List</h2>
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <span class="task_name">
+      <%= link_to task.name, task_path(task[:id]) %>
+    date completed: <%= task.completion_date %>     </span>
+    <span>  <%= button_to "Mark Complete", {:action =>"mark_complete", id: task.id }, method: :patch %></span>
+  </li>
+  <% end %>
+</ul>
