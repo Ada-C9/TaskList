@@ -10,6 +10,7 @@ body {
   border: 4px solid black;
   margin: 10px;
   width: 450px;
+  min-width: 450px;
   padding: 20px;
 }
 
