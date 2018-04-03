@@ -8554,3 +8554,31 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/tasks" for 127.0.0.1 at 2018-04-03 10:07:07 -0700
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (3.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 311ms (Views: 276.9ms | ActiveRecord: 20.1ms)
+
+
+Started PUT "/tasks/20" for 127.0.0.1 at 2018-04-03 10:07:14 -0700
+Processing by TasksController#complete as HTML
+  Parameters: {"authenticity_token"=>"5cwkhvgPteFbF5Dn6ofg3WB67rOaJVmd8vc9cnZX0H7J7u2itJy8X7DB1e4Hy1VACDaXUrsTovZ7OOCPT1Dy7Q==", "id"=>"20"}
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (10.7ms)[0m  [1m[33mUPDATE "tasks" SET "task_complete" = $1, "comp_date" = $2, "updated_at" = $3 WHERE "tasks"."id" = $4[0m  [["task_complete", "t"], ["comp_date", "04/03/2018"], ["updated_at", "2018-04-03 17:07:14.017928"], ["id", 20]]
+  [1m[35m (8.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/tasks
+Completed 302 Found in 28ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/tasks" for 127.0.0.1 at 2018-04-03 10:07:14 -0700
+Processing by TasksController#index as HTML
+  Rendering tasks/index.html.erb within layouts/application
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY "tasks"."id" ASC[0m
+  Rendered tasks/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.2ms)
+
+
