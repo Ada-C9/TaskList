@@ -1,0 +1,16 @@
+<h2><%= @task.name %></h2>
+
+<ul id="task-options">
+  <li id="task-description">
+    <strong>Details:</strong> <%= @task.description %>
+  </li>
+  <li id="complete-by">
+    <strong>Completed Date:</strong> <%= @task.comp_date %>
+  </li>
+  <li id="edit">
+    <%= link_to "Edit Task", edit_task_path %>
+  </li>
+  <li id="delete">
+    <%= link_to "Delete Task", task_path(@task.id), method: :delete, data: { confirm: 'Are you sure?' }%>
+  </li>
+</ul>

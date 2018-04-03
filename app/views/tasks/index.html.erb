@@ -1,0 +1,19 @@
+<h1>All Tasks</h1>
+
+<ul id="all-tasks">
+  <% @tasks.each do |task| %>
+    <li class="title-button">
+      <% if task.task_complete == true %>
+        <%= link_to task.name, task_path(task.id), class: "complete"%>
+      <% else %>
+        <%= link_to task.name, task_path(task.id), class: "incomplete"%>
+      <% end %>
+
+      <%= button_to "Complete?", task_path(task.id), method: :put %>
+    </li>
+
+    <li id="description">
+      <%= task.description %>
+    </li>
+  <% end %>
+</ul>

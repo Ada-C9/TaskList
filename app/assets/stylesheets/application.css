@@ -1,0 +1,135 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* OVERALL SITE */
+
+.site-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 6em;
+}
+
+ul#site-nav, ul#site-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  background-color: mediumaquamarine;
+  text-align: center;
+  padding: 0;
+}
+
+footer {
+  margin-top: 1em;
+}
+
+ul#site-footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* MAIN PAGE */
+
+h1 {
+  text-align: center;
+}
+
+li#description {
+  font-size: 1rem;
+  margin-bottom: 2em;
+}
+
+li a.complete {
+  text-decoration: line-through;
+}
+
+li a.incomplete {
+  text-decoration: none;
+}
+
+ul#all-tasks {
+  padding: 0;
+  margin-left: 32vw;
+}
+
+/* SHOW PAGE */
+
+h2 {
+  text-align: center;
+}
+
+ul#task-options {
+  padding-right: 1em;
+  margin-left: 25vw;
+}
+
+ul#task-options li {
+  font-size: 1rem;
+}
+
+li#edit a {
+  color: blue;
+}
+
+li#delete a {
+  color: red;
+}
+
+.title-button, .button_to {
+  display: inline-block;
+}
+
+form.button_to {
+  margin-left: 2em;
+}
+
+/* NEW TASK PAGE */
+
+h2.form {
+  text-align: center;
+}
+
+form.new_task, form.edit_task {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+label, input, textarea {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+input.submit {
+  width: fit-content;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header class="site-flex">
+      <nav>
+        <ul id="site-nav">
+          <li>
+            <%= link_to "Home", tasks_path %>
+          </li>
+          <li>
+            <%= link_to "Add Task", new_task_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-flex">
+      <%= yield %>
+    </main>
+
+    <footer class="site-flex">
+      <nav>
+        <ul id="site-footer">
+          <li>
+            <p> © PM (2018) </p>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
+  </body>
+</html>
