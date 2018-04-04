@@ -11,6 +11,11 @@
 
     <span class="description">
       <%= "- #{task.description} | #{task.owner} " %>
+      <%= form_for task do |f| %>
+      <%= f.label :complete %>
+      <%= f.check_box :complete %>
+      <%= f.submit%>
+      <% end %>
     </span>
   </p>
 </li>
