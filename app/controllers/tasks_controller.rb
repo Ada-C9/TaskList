@@ -20,8 +20,9 @@ class TasksController < ApplicationController
     task.complete = nil
 
     if task.save
-      redirect_to show_tasks_path
+      redirect_to task_path(task.id)
     else
+
       render :new
     end
   end
@@ -35,7 +36,7 @@ class TasksController < ApplicationController
     @task.name = params[:task][:name]
     @task.description = params[:task][:description]
     if @task.save
-      redirect_to show_tasks_path
+      redirect_to tasks_path
     else
       render :edit
     end
@@ -44,9 +45,9 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find_by(id: params[:id])
     if @task.destroy
-      redirect_to show_tasks_path
+      redirect_to tasks_path
     else
-      render :destroy
+      render :not_found
     end
   end
 
@@ -58,10 +59,10 @@ class TasksController < ApplicationController
     else
       task.complete = nil
     end
-    
+
     task.save
 
-    redirect_to show_tasks_path
+    redirect_to tasks_path
   end
 
 end
