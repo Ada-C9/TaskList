@@ -7,7 +7,7 @@
       <br>
 
       <% if task[:date_completed].nil? %>
-        This is a level <%= task[:priority] %> task. It's targeted due date is <%= task[:due]%>.
+        This is a level <%= task[:priority] %> task. Its targeted due date is <%= task[:due]%>.
       <% else %>
         This was a level <%= task[:priority] %> task.
           <% if task[:due] >= task[:date_completed] %>
