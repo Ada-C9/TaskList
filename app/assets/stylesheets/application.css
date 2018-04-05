@@ -19,14 +19,14 @@
    background-size: cover;
    margin: 0;
    padding: 0;
-   font-family: 'Londrina Solid',cursive;sans-serif;
+   font-family: 'Londrina Solid';
  }
 
 .container {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   min-width: 425px;
-  font-family: 'Londrina Solid',cursive;
+  font-family: 'Londrina Solid';
 }
 
 nav ul li {
