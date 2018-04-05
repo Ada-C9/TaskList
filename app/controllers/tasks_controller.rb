@@ -57,7 +57,6 @@ class TasksController < ApplicationController
      end
       @task.save
       redirect_to root_path
-
   end
 
   private
