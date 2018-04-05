@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   patch '/tasks/completed/:id', to: 'tasks#completed', as: 'completed_task'
 
   resources :tasks
+  
   root 'tasks#index'
 
 
