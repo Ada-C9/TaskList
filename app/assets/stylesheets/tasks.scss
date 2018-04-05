@@ -40,7 +40,7 @@ ol>li p {
 
 p a {
   text-decoration: none;
-  color: rgb(18,55,78);
+  color: rgba(18,55,78,1);
   font-size: 1.5em;
 }
 
@@ -57,7 +57,7 @@ p.complete {
 }
 
 .task-list-link {
-  color: rgb(18,55,78);
+  color: rgba(18,55,78,1);
   text-decoration: none;
 }
 
@@ -68,11 +68,11 @@ p.complete {
   font-size: 2em;
   font-family: 'Indie Flower', cursive;
   margin: 0 auto 1em auto;
-  background-color: rgb(18,55,78);
-  border-top: 1px solid rgb(18,55,78);
+  background-color: rgba(18,55,78,1);
+  border-top: 1px solid rgba(18,55,78,1);
   border-top-right-radius: .4em;
   border-top-left-radius: .4em;
-  color: rgb(245,245,245);
+  color: rgba(245,245,245,1);
   font-weight: 100;
   padding: 20px;
   margin: -30px -30px 30px -30px;
@@ -82,7 +82,7 @@ p.complete {
   width: 80%;
   padding: 30px;
   margin: 50px auto;
-  border: 2px solid rgb(18,55,78);
+  border: 2px solid rgba(18,55,78,1);
   border-radius: 1em;
 }
 
@@ -102,14 +102,14 @@ label {
   width: 100%;
   padding: .25em;
   border: none;
-  border-bottom: 1px solid rgb(18,55,78);
+  border-bottom: 1px solid rgba(18,55,78,1);
   margin-bottom: .5em;
   font-size: 1.5em;
 }
 
 .form-style {
   font-family: 'Open Sans Condensed', arial, sans;
-  background: rgb(245,245,245);
+  background: rgba(245,245,245,1);
   margin: 50px auto;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -126,17 +126,17 @@ input {
   font-style: italic;
   border: none;
   margin: .5em 0;
-  color: rgb(18,55,78);
-  background-color: rgb(245,245,245);
-  border: 1.5px solid rgb(18,55,78);
+  color: rgba(18,55,78,1);
+  background-color: rgba(245,245,245,1);
+  border: 1.5px solid rgba(18,55,78,1);
   border-radius: .4em;
 }
 
 input[type="submit"] {
   display: block;
-  background-color: rgb(18,55,78);
-  border: 1px solid rgb(18,55,78);
-  color: rgb(245,245,245);
+  background-color: rgba(18,55,78,1);
+  border: 1px solid rgba(18,55,78,1);
+  color: rgba(245,245,245,1);
   font-family: 'Indie Flower', cursive;
   font-weight: 400;
   padding: .5em 1.5em;
