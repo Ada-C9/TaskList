@@ -20,7 +20,7 @@ html{
  body{
    margin: 0px;
    background-image: url('solar_sys.jpg') no-repeat center center fixed;
-   background-image:url('solar_sys.jpg');
+   background-image: url('solar_sys.jpg');
    background-repeat:no-repeat;
    background-size:contain;
    background-size: cover;
