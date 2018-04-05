@@ -64,7 +64,6 @@ aside ul li:first-of-type {
   padding: 0;
 }
 
-}
 .options {
   font-size: .5em;
 }
@@ -102,7 +101,7 @@ main {
   flex-direction: column;
 }
 
-.task-list li:first-of-type{
+.task-list li:first-of-type {
   display: flex;
   justify-content: flex-start;
   padding-bottom: .75em;
