@@ -68,7 +68,7 @@
    color: #000;
  }
 
- .flash-message {
+ .flash-message, .errors {
   animation: blinker 1s linear infinite;
   color: red;
 }
