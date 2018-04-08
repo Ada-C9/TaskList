@@ -1,0 +1,12 @@
+<h3>You have a lot to do today!</h3>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li> <strong><%= link_to(task.name) %></strong>
+       <%= link_to "See Details", task_path(task.id) %>
+       <%= link_to "Edit", edit_task_path(task.id) %>
+       <%= link_to "Delete", destroy_task_path(task.id) %>
+    </li>
+  <% end %>
+
+</ul>
