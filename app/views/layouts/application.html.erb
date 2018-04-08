@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class = "header-container">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <%=link_to "Home", tasks_path %>
+          </li>
+          <li>
+            <%=link_to "Add a task", new_task_path %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

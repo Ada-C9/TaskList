@@ -1,0 +1,25 @@
+<h2> Birthday Party Action Items </h2>
+<ul>
+  <% @tasks.each do |task| %>
+  <li>
+    <span class="name">
+      <%=link_to "Task: #{task.name}  ", task_path(task.id) %>
+    </span>
+        <p> </p>
+
+    <p> </p>
+
+    <span class="description">
+      <%= "- #{task.description} | #{task.owner} " %>
+      <%= form_for task do |f| %>
+      <%= f.label :complete %>
+      <%= f.check_box :complete %>
+      <%= f.submit%>
+      <% end %>
+    </span>
+  </p>
+</li>
+<% end%>
+</ul>
+
+<!-- Need to include way to check off complete items-->
