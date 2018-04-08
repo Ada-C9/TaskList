@@ -1,7 +1,7 @@
 <nav class="edit_del">
   <ul>
     <li>
-      <%= button_to "Edit", edit_task_path, form_class:'btn_show' %>
+      <%= button_to "Edit", edit_task_path, form_class:'btn_show', method: :get%>
     </li>
     <li>
       <%= button_to "Delete", task_path(@task.id), method: :delete, data: { confirm: "You sure?" }, form_class:'btn_show'%>

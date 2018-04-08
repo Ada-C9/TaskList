@@ -18,7 +18,7 @@
         <%else%>
         <%= button_to "Unmark Complete", unmark_complete_path(task.id), :method => :patch, form_class:'btn' %>
         <% end %>
-        <%= button_to "Edit", edit_task_path(task.id), form_class:'btn'%>
+        <%= button_to "Edit", edit_task_path(task.id), form_class:'btn', method: :get%>
         <%= button_to "Delete", task_path(task.id), method: :delete, data: { confirm: "You sure?" }, form_class:'btn'%>
       </div>
     </li>
