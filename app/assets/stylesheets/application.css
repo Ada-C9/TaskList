@@ -67,3 +67,14 @@
    background-color: cyan;
    color: #000;
  }
+
+ .flash-message {
+  animation: blinker 1s linear infinite;
+  color: red;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}

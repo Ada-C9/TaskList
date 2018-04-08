@@ -47,6 +47,7 @@ class TasksController < ApplicationController
     if @task = Task.find(id)
       @task.destroy
     end
+    flash[:notice] = "You have successfully deleted the trip."
     redirect_to tasks_path
   end
 

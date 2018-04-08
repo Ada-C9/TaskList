@@ -25,6 +25,12 @@
   </header>
 
   <main>
+    <div class="flash-message">
+      <% flash.each do |key, value| %>
+      <div><%= value %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
   </main>
 
