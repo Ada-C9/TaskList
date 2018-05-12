@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TaskList</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag   'normalize.css' %>
+    <%= stylesheet_link_tag   'styles.css' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>🗓 Task List</h1>
+    </header>
+
+    <div class="main">
+      <nav>
+        <ul>
+          <li>
+            📌<%= link_to "All Tasks", tasks_path %>
+          </li>
+          <li>
+            🖌<%= link_to "Add Task", new_task_path %>
+          </li>
+        </ul>
+      </nav>
+
+      <%= yield %>
+
+    </div>
+
+    <footer>
+      <h4>Zheng Cao ©2018</h4>
+    </footer>
+  </body>
+</html>

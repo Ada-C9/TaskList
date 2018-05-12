@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Lakki+Reddy|Reenie+Beanie|Rochester');
+/*
+font-family: 'Rochester', cursive; header & footer
+font-family: 'Reenie Beanie', cursive; title & description
+font-family: 'Lakki Reddy', cursive; link
+*/
+
+/* RGB */
+/* // $color1: rgba(73, 54, 87, 1); #493657; purple
+// $color2: rgba(129, 114, 106, 1); #81726A; brown
+// $color3: rgba(239, 235, 206, 1); #EFEBCE; cream
+// $color4: rgba(0, 52, 89, 1); #003459; blue
+// $color5: rgba(206, 125, 165, 1); #CE7DA5; pink */
+
+/********** global **********/
+ul {
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #CE7DA5;
+}
+
+a:hover {
+  color: #81726A;
+}
+
+li {
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.task_content {
+  font-family: 'Reenie Beanie', cursive;
+  color: #003459;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.task_content .page_title {
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 80px 10px 20px;
+}
+
+.operations {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.operations li {
+  text-align: left;
+}
+
+.operations li a {
+  text-decoration: underline;
+  font-size: 0.9em;
+  margin: 0 30px 0 10px;
+}
+
+/********** layout **********/
+body {
+  background-image: url(/assets/background.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100%;
+  width: 100%;
+  padding: 40px 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  background-color: rgba(239, 235, 206, 0.7);
+
+  min-height: 700px;
+  width: 800px;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/********** header & footer **********/
+h1, h4 {
+  font-family: 'Rochester', cursive;
+  font-size: 1.2em;
+  color: #493657;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+/********** nav **********/
+nav {
+  height: 100%;
+  grid-column: 1 / 2;
+}
+
+nav ul {
+  height: 150px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+nav a {
+  margin: 10px;
+  text-decoration: underline;
+  font-size: 1.2em;
+  height: 60px;
+}
+
+/********** index **********/
+.table {
+  grid-column: 2 / 3;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+}
+
+.table h3 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 2.4em;
+  color: #81726A;
+  margin: 0;
+}
+
+.table h3 a {
+  color: #003459;
+}
+
+.table h3 a:hover {
+  color: #81726A;
+}
+
+.table span {
+  font-size: 0.7em;
+}
+
+/********** new / edit **********/
+.task_content form, .task_content p {
+  font-size: 2em;
+}
+
+.task_content #task_title {
+  margin-bottom: 10px;
+}
+
+.task_content #task_description {
+  height: 200px;
+  width: 450px;
+  margin-bottom: 10px;
+}
+
+.task_content form input:last-child {
+  font-family: 'Lakki Reddy', cursive;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #CE7DA5;
+  background: none;
+  text-decoration: underline;
+
+  border: none;
+  padding-top: 10px;
+}
+
+.task_content form input:last-child:hover {
+  color: #81726A;
+}
+
+/********** show **********/
+.task_content strong {
+  font-weight: bold;
+}
+
+.task_content p {
+  margin: 10px 80px 10px 10px;
+  text-align: justify;
+}
+
+.task_content ul {
+  width: 90%;
+  padding-left: 10px;
+}
