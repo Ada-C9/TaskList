@@ -1,0 +1,39 @@
+<div class="form-style">
+
+<h2>Summary of Task <%= @task.id %></h2>
+
+  <ul>
+    <li>
+      <span class="show-field">
+        Name:
+      </span>
+      <%= @task.name %>
+      <hr>
+    </li>
+    <li>
+      <span class="show-field">
+        Details:
+      </span>
+      <%= @task.description %>
+      <hr>
+    </li>
+    <li>
+      <span class="show-field">
+        Deadline:
+      </span>
+      <%= @task.complete_by %>
+      <hr>
+    </li>
+    <li>
+      <span class="show-field">
+        Status:
+      </span>
+      <% if @task.status %>
+        <%= "completed" %>
+      <% else %>
+        <%= "incomplete" %>
+      <% end %>
+    </li>
+  </ul>
+
+</div>
