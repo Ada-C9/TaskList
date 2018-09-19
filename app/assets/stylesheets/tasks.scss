@@ -1,0 +1,11 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.task-list {
+  list-style-type: none;
+}
+
+.task-list li{
+  font-family: sans-serif;
+  font-size: 1.5em;
+}
