@@ -1,0 +1,212 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+
+body {
+  background-color: #F0E7FD;
+  background-image: url("background2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  background-color: #6CB185;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-color: #B8059A;
+  border-bottom-width: thin;
+  position: fixed;
+}
+
+.nav-links {
+  list-style-type: none;
+  text-decoration: none;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  background-color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+}
+
+.nav-links:hover {
+  color: #0BADA5;
+}
+
+h2 {
+  font-size: 4em;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+
+.pending::before {
+  content: "🔲 ";
+}
+
+.done::before {
+  content: "☑️ ";
+}
+
+.each a.option {
+  color: #B8059A;
+}
+
+.whole-list {
+display: flex;
+flex-flow:  column;
+background-color: white;
+border-style: solid;
+border-color: #B8059A;
+margin-left: auto;
+margin-right: auto;
+width: 800px;
+}
+
+.option {
+  font-size: 0.75em;
+  color: #B8059A;
+}
+
+.task-list {
+  font-size: 1.5em;
+  list-style-type: none;
+  padding-bottom: 5px;
+  padding: 10px;
+  margin: 20px;
+  justify-content: flex-start;
+  /*background-color: white;*/
+}
+
+.each a {
+  font-weight: bolder;
+  color: #147A75;
+  text-decoration: none;
+
+  padding: 10px;
+  /*margin: auto;*/
+
+}
+
+
+.each a:hover {
+  color: #B0F63E;
+}
+
+.task-info p {
+  padding-left: 30px;
+  font-size: 2em;
+  color: #87B805;
+}
+
+.task-info {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  height: auto;
+  background-color: white;
+  border-style: solid;
+  border-color: #B8059A;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.edit_things {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  list-style-type: none;
+  padding-right: 30px;
+  margin: 10px;
+}
+
+.edit-list {
+  padding: 20px;
+  margin: 10px;
+  border-style: solid;
+  border-width: thin;
+  border-radius: 20%;
+  background-color: white;
+  padding: 5px;
+}
+
+.change-task {
+  text-decoration: none;
+  color: #B8059A;
+  font-weight: bold;
+}
+
+.change-task:hover {
+  color: #0BADA5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 30px;
+  height: auto;
+  background-color: white;
+  border-style: solid;
+  border-color: #B8059A;
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+}
+
+.form-fields {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.form-text {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  padding: 10px;
+  color: #147A75;
+  font-size: 1.5em;
+}
+
+.form-field {
+  height: 1.5em;
+  margin-top: 15px;
+}
+
+.submit-button {
+
+  margin-top: 30px;
+  color: #147A75;
+  
+}
