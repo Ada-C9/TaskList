@@ -1,0 +1,42 @@
+.all-tasks-list {
+  background-color: #caebf2;
+  padding: 10px 30px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.all-tasks-list ol {
+  padding: 2% 0;
+  color: #7f1d1f;
+}
+
+.all-tasks-list a {
+  color: #7f1d1f;
+}
+
+.one-task .title {
+  list-style-type: decimal;
+}
+
+.one-task .complete {
+  text-decoration: line-through;
+}
+
+.actions {
+  display: flex;
+  margin: 2% auto;
+  justify-content: space-around;
+}
+
+.actions p {
+  padding-bottom: 3%;
+  // border-right: 2px solid #7f1d1f;
+}
+
+.delete {
+  border: none;
+}
+
+.actions a {
+  font-size: 1.2rem;
+}
